@@ -59,3 +59,11 @@ gui/vizkit3d:
   debian,ubuntu: rock-gui-vizkit3d
 tools/orogen_metadata:
   debian,ubuntu: rock-tools-orogen-metadata
+orogen:
+  debian,ubuntu: ruby-orogen
+tools/roby:
+  debian,ubuntu: ruby-tools-roby
+tools/syskit:
+  debian,ubuntu: ruby-tools-syskit
+tools/telemetry:
+  debian,ubuntu: ruby-tools-telemetry
