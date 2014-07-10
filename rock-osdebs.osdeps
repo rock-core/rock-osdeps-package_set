@@ -1,7 +1,0 @@
-base/types:
-  debian,ubuntu: rock-base-types
-base/cmake:
-  debian,ubuntu: rock-base-cmake
-rtt:
-  debian,ubuntu: rock-rtt
-

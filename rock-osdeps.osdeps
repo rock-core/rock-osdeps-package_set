@@ -1,0 +1,61 @@
+---
+base/types:
+  debian,ubuntu: rock-base-types
+base/cmake:
+  debian,ubuntu: rock-base-cmake
+rtt:
+  debian,ubuntu: rock-rtt
+base/console_bridge:
+  debian,ubuntu: rock-base-console-bridge
+bundles/rock:
+  debian,ubuntu: ruby-bundles-rock
+tools/pocolog_cpp:
+  debian,ubuntu: rock-tools-pocolog-cpp
+tools/service_discovery:
+  debian,ubuntu: rock-tools-service-discovery
+base/templates/ruby_lib:
+  debian,ubuntu: rock-base-templates-ruby-lib
+base/numeric:
+  debian,ubuntu: rock-base-numeric
+base/templates/cmake_lib:
+  debian,ubuntu: rock-base-templates-cmake-lib
+base/templates/cmake_vizkit_widget:
+  debian,ubuntu: rock-base-templates-cmake-vizkit-widget
+base/templates/vizkit:
+  debian,ubuntu: rock-base-templates-vizkit
+base/templates/bundle:
+  debian,ubuntu: rock-base-templates-bundle
+base/templates/doc:
+  debian,ubuntu: rock-base-templates-doc
+external/sisl:
+  debian,ubuntu: rock-external-sisl
+base/orogen/std:
+  debian,ubuntu: rock-base-orogen-std
+tools/orocos.rb:
+  debian,ubuntu: ruby-tools-orocos.rb
+tools/pocolog:
+  debian,ubuntu: ruby-tools-pocolog
+tools/logger:
+  debian,ubuntu: rock-tools-logger
+base/orogen/types:
+  debian,ubuntu: rock-base-orogen-types
+drivers/aggregator:
+  debian,ubuntu: rock-drivers-aggregator
+drivers/transformer:
+  debian,ubuntu: rock-drivers-transformer
+drivers/orogen/aggregator:
+  debian,ubuntu: rock-drivers-orogen-aggregator
+drivers/orogen/transformer:
+  debian,ubuntu: rock-drivers-orogen-transformer
+image_processing/jpeg_conversion:
+  debian,ubuntu: rock-image-processing-jpeg-conversion
+image_processing/frame_helper:
+  debian,ubuntu: rock-image-processing-frame-helper
+gui/rock_widget_collection:
+  debian,ubuntu: rock-gui-rock-widget-collection
+gui/vizkit:
+  debian,ubuntu: ruby-gui-vizkit
+gui/vizkit3d:
+  debian,ubuntu: rock-gui-vizkit3d
+tools/orogen_metadata:
+  debian,ubuntu: rock-tools-orogen-metadata
