@@ -1,0 +1,6 @@
+Autobuild.env_add_path('PATH','/opt/rock/include')
+Autobuild.env_add_path('PATH','/opt/rock/share')
+Autobuild.env_add_path('CMAKE_PREFIX_PATH','/opt/rock')
+Autobuild.env_add_path('PKG_CONFIG_PATH','/opt/rock/lib/pkgconfig')
+Autobuild.env_add_path('RUBYLIB','/opt/rock/lib/ruby/1.9.1/')
+Autobuild.env_add_path('PATH','/opt/rock/lib/ruby/1.9.1/x86_64-linux')
