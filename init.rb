@@ -16,7 +16,7 @@ if (Autoproj.user_config('use_deb')) then
 	Autobuild.env_add_path('OROGEN_PLUGIN_PATH','/opt/rock/share/orogen/plugins')
 	Autobuild.env_add_path('RUBYLIB','/opt/rock/lib/ruby/1.9.1/i686-linux')
 		if !File.exist?("/etc/apt/sources.list.d/rock.list")
-		system("sudo sh -c \"echo 'deb http://download.opensuse.org/repositories/home:/roehr:/rock-robotics/xUbuntu_12.04/ /' > /etc/apt/sources.list.d/rock.list\"")
+		system("sudo sh -c \"echo 'deb http://rimres-gcs2-u/release/test test main' > /etc/apt/sources.list.d/rock.list\"")
 		system("wget http://download.opensuse.org/repositories/home:roehr:rock-robotics/xUbuntu_12.04/Release.key")
 		system("sudo apt-key add - < Release.key") 
 		system("sudo apt-get update > /dev/null")
