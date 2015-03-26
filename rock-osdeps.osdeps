@@ -137,8 +137,8 @@ drivers/phins_ixsea:
   debian,ubuntu: rock-drivers-phins-ixsea
 drivers/velodyne_lidar:
   debian,ubuntu: rock-drivers-velodyne-lidar
-drivers/base_schilling:
-  debian,ubuntu: rock-drivers-base-schilling
+#drivers/base_schilling:
+#  debian,ubuntu: rock-drivers-base-schilling
 simulation/imumodel:
   debian,ubuntu: rock-simulation-imumodel
 slam/octomap:
@@ -187,8 +187,8 @@ control/waypoint_navigation:
   debian,ubuntu: rock-control-waypoint-navigation
 drivers/iodrivers_base:
   debian,ubuntu: rock-drivers-iodrivers-base
-drivers/canbus:
-  debian,ubuntu: rock-drivers-canbus
+#drivers/canbus:
+#  debian,ubuntu: rock-drivers-canbus
 drivers/mb500:
   debian,ubuntu: rock-drivers-mb500
 drivers/hokuyo:
@@ -197,8 +197,8 @@ drivers/xsens_imu:
   debian,ubuntu: rock-drivers-xsens-imu
 drivers/dynamixel:
   debian,ubuntu: rock-drivers-dynamixel
-drivers/controldev:
-  debian,ubuntu: rock-drivers-controldev
+#drivers/controldev:
+#  debian,ubuntu: rock-drivers-controldev
 drivers/parport:
   debian,ubuntu: rock-drivers-parport
 drivers/camera_interface:
@@ -353,9 +353,9 @@ control/orogen/waypoint_navigation:
   debian,ubuntu: rock-control-orogen-waypoint-navigation
 control/orogen/skid4_control:
   debian,ubuntu: rock-control-orogen-skid4-control
-drivers/orogen/canbus:
-  debian,ubuntu: rock-drivers-orogen-canbus
-drivers/orogen/gps:
+#drivers/orogen/canbus:
+#  debian,ubuntu: rock-drivers-orogen-canbus
+idrivers/orogen/gps:
   debian,ubuntu: rock-drivers-orogen-gps
 drivers/orogen/hokuyo:
   debian,ubuntu: rock-drivers-orogen-hokuyo
