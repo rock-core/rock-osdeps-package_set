@@ -1,443 +1,81 @@
 ---
-base/types:
-  debian,ubuntu: rock-base-types
+hoe:
+  debian,ubuntu: ruby-hoe
+hoe-yard:
+  debian,ubuntu: ruby-hoe-yard
+thin:
+  debian,ubuntu: ruby-thin
+grape:
+  debian,ubuntu: ruby-grape
+rack-cors:
+  debian,ubuntu: ruby-rack-cors
+faye-websocket:
+  debian,ubuntu: ruby-faye-websocket
+sprockets:
+  debian,ubuntu: ruby-sprockets
+activesupport:
+  debian,ubuntu: ruby-activesupport
+bundler:
+  debian,ubuntu: ruby-bundler
+cucumber:
+  debian,ubuntu: ruby-cucumber
+rice:
+  debian,ubuntu: ruby-rice
+kramdown:
+  debian,ubuntu: ruby-kramdown
+facets:
+  debian,ubuntu: ruby-facets
+state_machine:
+  debian,ubuntu: ruby-state-machine
+binding_of_caller:
+  debian,ubuntu: ruby-binding-of-caller
+rb-readline:
+  debian,ubuntu: ruby-rb-readline
+concurrent-ruby:
+  debian,ubuntu: ruby-concurrent-ruby
+rake-compiler:
+  debian,ubuntu: ruby-rake-compiler
+tools/rubigen:
+  debian,ubuntu: ruby-tools-rubigen
 base/cmake:
   debian,ubuntu: rock-base-cmake
-rtt:
-  debian,ubuntu: rock-rtt
-base/console_bridge:
-  debian,ubuntu: rock-base-console-bridge
-bundles/rock:
-  debian,ubuntu: ruby-bundles-rock
-tools/pocolog_cpp:
-  debian,ubuntu: rock-tools-pocolog-cpp
-tools/service_discovery:
-  debian,ubuntu: rock-tools-service-discovery
-base/templates/ruby_lib:
-  debian,ubuntu: rock-base-templates-ruby-lib
-base/numeric:
-  debian,ubuntu: rock-base-numeric
 base/templates/cmake_lib:
   debian,ubuntu: rock-base-templates-cmake-lib
-base/templates/cmake_vizkit_widget:
-  debian,ubuntu: rock-base-templates-cmake-vizkit-widget
-base/templates/vizkit:
-  debian,ubuntu: rock-base-templates-vizkit
-base/templates/bundle:
-  debian,ubuntu: rock-base-templates-bundle
+base/templates/vizkit3d_plugin:
+  debian,ubuntu: rock-base-templates-vizkit3d-plugin
 base/templates/doc:
   debian,ubuntu: rock-base-templates-doc
-external/sisl:
-  debian,ubuntu: rock-external-sisl
-base/orogen/std:
-  debian,ubuntu: rock-base-orogen-std
-tools/orocos.rb:
-  debian,ubuntu: ruby-tools-orocos.rb
-tools/pocolog:
-  debian,ubuntu: ruby-tools-pocolog
-tools/logger:
-  debian,ubuntu: rock-tools-logger
-base/orogen/types:
-  debian,ubuntu: rock-base-orogen-types
-drivers/aggregator:
-  debian,ubuntu: rock-drivers-aggregator
-drivers/transformer:
-  debian,ubuntu: rock-drivers-transformer
-drivers/orogen/aggregator:
-  debian,ubuntu: rock-drivers-orogen-aggregator
-drivers/orogen/transformer:
-  debian,ubuntu: rock-drivers-orogen-transformer
-image_processing/jpeg_conversion:
-  debian,ubuntu: rock-image-processing-jpeg-conversion
-image_processing/frame_helper:
-  debian,ubuntu: rock-image-processing-frame-helper
-gui/rock_widget_collection:
-  debian,ubuntu: rock-gui-rock-widget-collection
-gui/vizkit:
-  debian,ubuntu: ruby-gui-vizkit
+rtt:
+  debian,ubuntu: rock-rtt
 gui/vizkit3d:
   debian,ubuntu: rock-gui-vizkit3d
+base/templates/ruby_lib:
+  debian,ubuntu: rock-base-templates-ruby-lib
+base/templates/cmake_vizkit_widget:
+  debian,ubuntu: rock-base-templates-cmake-vizkit-widget
+external/sisl:
+  debian,ubuntu: rock-external-sisl
+utilrb:
+  debian,ubuntu: ruby-utilrb
+tools/rest_api:
+  debian,ubuntu: ruby-tools-rest-api
+base/types:
+  debian,ubuntu: rock-base-types
+base/templates/bundle:
+  debian,ubuntu: rock-base-templates-bundle
+typelib:
+  debian,ubuntu: rock-typelib
+tools/metaruby:
+  debian,ubuntu: ruby-tools-metaruby
+gui/rock_webapp:
+  debian,ubuntu: rock-gui-rock-webapp
 tools/orogen_metadata:
   debian,ubuntu: rock-tools-orogen-metadata
-orogen:
-  debian,ubuntu: ruby-orogen
+base/console_bridge:
+  debian,ubuntu: rock-base-console-bridge
+tools/pocolog_cpp:
+  debian,ubuntu: rock-tools-pocolog-cpp
 tools/roby:
   debian,ubuntu: ruby-tools-roby
-tools/syskit:
-  debian,ubuntu: ruby-tools-syskit
-tools/telemetry:
-  debian,ubuntu: ruby-tools-telemetry
-external/sbpl:
-  debian,ubuntu: rock-external-sbpl
-external/ompl:
-  debian,ubuntu: rock-external-ompl
-drivers/aravis:
-  debian,ubuntu: rock-drivers-aravis
-drivers/camera_aravis:
-  debian,ubuntu: rock-drivers-camera-aravis
-drivers/video_streamer_vlc:
-  debian,ubuntu: rock-drivers-video-streamer-vlc
-external/aruco:
-  debian,ubuntu: rock-external-aruco
-external/lemon:
-  debian,ubuntu: rock-external-lemon
-external/gexf:
-  debian,ubuntu: rock-external-gexf
-multiagent/fipa_services:
-  debian,ubuntu: rock-multiagent-fipa-services
-drivers/tofcamera_mesasr:
-  debian,ubuntu: rock-drivers-tofcamera-mesasr
-planning/motion_planning_libraries:
-  debian,ubuntu: rock-planning-motion-planning-libraries
-bundles/rock_auv:
-  debian,ubuntu: ruby-bundles-rock-auv
-image_processing/projection:
-  debian,ubuntu: rock-image-processing-projection
-gui/point_cloud:
-  debian,ubuntu: rock-gui-point-cloud
-gui/qcam_calib:
-  debian,ubuntu: rock-gui-qcam-calib
-planning/lama:
-  debian,ubuntu: rock-planning-lama
-planning/pddl_planner:
-  debian,ubuntu: rock-planning-pddl-planner
-planning/simple_path_planner:
-  debian,ubuntu: rock-planning-simple-path-planner
-control/hysteresis_model:
-  debian,ubuntu: rock-control-hysteresis-model
-slam/mtk:
-  debian,ubuntu: rock-slam-mtk
-slam/pose_estimation:
-  debian,ubuntu: rock-slam-pose-estimation
-slam/terrain_estimator:
-  debian,ubuntu: rock-slam-terrain-estimator
-slam/eslam:
-  debian,ubuntu: rock-slam-eslam
-gui/map2d:
-  debian,ubuntu: rock-gui-map2d
-gui/vizkit_3d_plugins:
-  debian,ubuntu: rock-gui-vizkit-3d-plugins
-drivers/stim300:
-  debian,ubuntu: rock-drivers-stim300
-drivers/imar:
-  debian,ubuntu: rock-drivers-imar
-drivers/alt_imagenex:
-  debian,ubuntu: rock-drivers-alt-imagenex
-drivers/ctd_seabird:
-  debian,ubuntu: rock-drivers-ctd-seabird
-drivers/mbeam_imagenex:
-  debian,ubuntu: rock-drivers-mbeam-imagenex
-drivers/pressure_paroscientific:
-  debian,ubuntu: rock-drivers-pressure-paroscientific
-drivers/ucm_schilling:
-  debian,ubuntu: rock-drivers-ucm-schilling
-drivers/act_schilling:
-  debian,ubuntu: rock-drivers-act-schilling
-drivers/phins_ixsea:
-  debian,ubuntu: rock-drivers-phins-ixsea
-drivers/velodyne_lidar:
-  debian,ubuntu: rock-drivers-velodyne-lidar
-#drivers/base_schilling:
-#  debian,ubuntu: rock-drivers-base-schilling
-simulation/imumodel:
-  debian,ubuntu: rock-simulation-imumodel
-slam/octomap:
-  debian,ubuntu: rock-slam-octomap
-external/freenect:
-  debian,ubuntu: rock-external-freenect
-control/urdfdom:
-  debian,ubuntu: rock-control-urdfdom
-control/urdfdom_headers:
-  debian,ubuntu: rock-control-urdfdom-headers
-control/kdl_parser:
-  debian,ubuntu: rock-control-kdl-parser
-gui/robot_model:
-  debian,ubuntu: rock-gui-robot-model
-gui/control_ui:
-  debian,ubuntu: rock-gui-control-ui
-control/joint_dispatcher:
-  debian,ubuntu: rock-control-joint-dispatcher
-control/kdl_conversions:
-  debian,ubuntu: rock-control-kdl-conversions
-data_processing/openann:
-  debian,ubuntu: rock-data-processing-openann
-data_processing/type_to_vector:
-  debian,ubuntu: rock-data-processing-type-to-vector
-drivers/phidgets:
-  debian,ubuntu: rock-drivers-phidgets
-control/reflexxes:
-  debian,ubuntu: rock-control-reflexxes
-drivers/actuator_dispatcher:
-  debian,ubuntu: rock-drivers-actuator-dispatcher
-bundles/rock_ugv_nav:
-  debian,ubuntu: ruby-bundles-rock-ugv-nav
-control/kdl:
-  debian,ubuntu: rock-control-kdl
-drivers/ptu_directedperception:
-  debian,ubuntu: rock-drivers-ptu-directedperception
-drivers/aria:
-  debian,ubuntu: rock-drivers-aria
-external/yaml-cpp:
-  debian,ubuntu: rock-external-yaml-cpp
-control/motor_controller:
-  debian,ubuntu: rock-control-motor-controller
-control/trajectory_follower:
-  debian,ubuntu: rock-control-trajectory-follower
-control/waypoint_navigation:
-  debian,ubuntu: rock-control-waypoint-navigation
-drivers/iodrivers_base:
-  debian,ubuntu: rock-drivers-iodrivers-base
-#drivers/canbus:
-#  debian,ubuntu: rock-drivers-canbus
-drivers/mb500:
-  debian,ubuntu: rock-drivers-mb500
-drivers/hokuyo:
-  debian,ubuntu: rock-drivers-hokuyo
-drivers/xsens_imu:
-  debian,ubuntu: rock-drivers-xsens-imu
-drivers/dynamixel:
-  debian,ubuntu: rock-drivers-dynamixel
-#drivers/controldev:
-#  debian,ubuntu: rock-drivers-controldev
-drivers/parport:
-  debian,ubuntu: rock-drivers-parport
-drivers/camera_interface:
-  debian,ubuntu: rock-drivers-camera-interface
-drivers/camera_prosilica:
-  debian,ubuntu: rock-drivers-camera-prosilica
-drivers/camera_usb:
-  debian,ubuntu: rock-drivers-camera-usb
-drivers/dvl_teledyne:
-  debian,ubuntu: rock-drivers-dvl-teledyne
-drivers/camera_firewire:
-  debian,ubuntu: rock-drivers-camera-firewire
-drivers/fog_kvh:
-  debian,ubuntu: rock-drivers-fog-kvh
-drivers/iCharger:
-  debian,ubuntu: rock-drivers-icharger
-drivers/vicon:
-  debian,ubuntu: rock-drivers-vicon
-drivers/qualisys:
-  debian,ubuntu: rock-drivers-qualisys
-drivers/sonar_tritech:
-  debian,ubuntu: rock-drivers-sonar-tritech
-drivers/laserscanner_sick:
-  debian,ubuntu: rock-drivers-laserscanner-sick
-drivers/laser_filter:
-  debian,ubuntu: rock-drivers-laser-filter
-image_processing/stereo:
-  debian,ubuntu: rock-image-processing-stereo
-image_processing/libelas:
-  debian,ubuntu: rock-image-processing-libelas
-planning/nav_graph_search:
-  debian,ubuntu: rock-planning-nav-graph-search
-planning/corridor_planner:
-  debian,ubuntu: rock-planning-corridor-planner
-planning/vfh_star:
-  debian,ubuntu: rock-planning-vfh-star
-planning/corridor_navigation:
-  debian,ubuntu: rock-planning-corridor-navigation
-external/libply:
-  debian,ubuntu: rock-external-libply
-slam/envire:
-  debian,ubuntu: rock-slam-envire
-slam/pose_ekf:
-  debian,ubuntu: rock-slam-pose-ekf
-slam/quater_ikf:
-  debian,ubuntu: rock-slam-quater-ikf
-external/cminpack:
-  debian,ubuntu: rock-external-cminpack
-slam/flann:
-  debian,ubuntu: rock-slam-flann
-slam/hogman:
-  debian,ubuntu: rock-slam-hogman
-slam/quater_ukf:
-  debian,ubuntu: rock-slam-quater-ukf
-slam/odometry:
-  debian,ubuntu: rock-slam-odometry
-slam/graph_slam:
-  debian,ubuntu: rock-slam-graph-slam
-slam/g2o:
-  debian,ubuntu: rock-slam-g2o
-drivers/orogen/camera_aravis:
-  debian,ubuntu: rock-drivers-orogen-camera-aravis
-multiagent/orogen/fipa_services:
-  debian,ubuntu: rock-multiagent-orogen-fipa-services
-planning/orogen/motion_planning_libraries:
-  debian,ubuntu: rock-planning-orogen-motion-planning-libraries
-drivers/orogen/video_streamer_vlc:
-  debian,ubuntu: rock-drivers-orogen-video-streamer-vlc
-image_processing/orogen/projection:
-  debian,ubuntu: rock-image-processing-orogen-projection
-image_processing/orogen/virtual_view:
-  debian,ubuntu: rock-image-processing-orogen-virtual-view
-control/orogen/trajectory_generation:
-  debian,ubuntu: rock-control-orogen-trajectory-generation
-control/orogen/cart_ctrl_wdls:
-  debian,ubuntu: rock-control-orogen-cart-ctrl-wdls
-image_processing/orogen/viso2:
-  debian,ubuntu: rock-image-processing-orogen-viso2
-control/orogen/torque_estimator:
-  debian,ubuntu: rock-control-orogen-torque-estimator
-slam/orogen/north_seeker:
-  debian,ubuntu: rock-slam-orogen-north-seeker
-slam/orogen/terrain_estimator:
-  debian,ubuntu: rock-slam-orogen-terrain-estimator
-slam/orogen/eslam:
-  debian,ubuntu: rock-slam-orogen-eslam
-slam/orogen/local_mapper:
-  debian,ubuntu: rock-slam-orogen-local-mapper
-slam/orogen/localization:
-  debian,ubuntu: rock-slam-orogen-localization
-slam/orogen/pose_estimation:
-  debian,ubuntu: rock-slam-orogen-pose-estimation
-planning/orogen/pddl_planner:
-  debian,ubuntu: rock-planning-orogen-pddl-planner
-planning/orogen/simple_path_planner:
-  debian,ubuntu: rock-planning-orogen-simple-path-planner
-planning/orogen/heading_calculator:
-  debian,ubuntu: rock-planning-orogen-heading-calculator
-planning/orogen/traversability:
-  debian,ubuntu: rock-planning-orogen-traversability
-drivers/orogen/phidgets:
-  debian,ubuntu: rock-drivers-orogen-phidgets
-drivers/orogen/stim300:
-  debian,ubuntu: rock-drivers-orogen-stim300
-drivers/orogen/imar:
-  debian,ubuntu: rock-drivers-orogen-imar
-drivers/orogen/alt_imagenex:
-  debian,ubuntu: rock-drivers-orogen-alt-imagenex
-drivers/orogen/ctd_seabird:
-  debian,ubuntu: rock-drivers-orogen-ctd-seabird
-drivers/orogen/mbeam_imagenex:
-  debian,ubuntu: rock-drivers-orogen-mbeam-imagenex
-drivers/orogen/pressure_paroscientific:
-  debian,ubuntu: rock-drivers-orogen-pressure-paroscientific
-drivers/orogen/ucm_schilling:
-  debian,ubuntu: rock-drivers-orogen-ucm-schilling
-drivers/orogen/act_schilling:
-  debian,ubuntu: rock-drivers-orogen-act-schilling
-drivers/orogen/phins_ixsea:
-  debian,ubuntu: rock-drivers-orogen-phins-ixsea
-drivers/orogen/kinect:
-  debian,ubuntu: rock-drivers-orogen-kinect
-drivers/orogen/velodyne_lidar:
-  debian,ubuntu: rock-drivers-orogen-velodyne-lidar
-drivers/orogen/tofcamera_mesasr:
-  debian,ubuntu: rock-drivers-orogen-tofcamera-mesasr
-simulation/orogen/imumodel:
-  debian,ubuntu: rock-simulation-orogen-imumodel
-drivers/orogen/servo_dynamixel:
-  debian,ubuntu: rock-drivers-orogen-servo-dynamixel
-control/orogen/motor_controller:
-  debian,ubuntu: rock-control-orogen-motor-controller
-control/orogen/joint_dispatcher:
-  debian,ubuntu: rock-control-orogen-joint-dispatcher
-data_processing/orogen/statistics:
-  debian,ubuntu: rock-data-processing-orogen-statistics
-data_processing/orogen/type_to_vector:
-  debian,ubuntu: rock-data-processing-orogen-type-to-vector
-control/orogen/auv_rel_pos_controller:
-  debian,ubuntu: rock-control-orogen-auv-rel-pos-controller
-control/orogen/auv_control:
-  debian,ubuntu: rock-control-orogen-auv-control
-control/orogen/kdl:
-  debian,ubuntu: rock-control-orogen-kdl
-drivers/orogen/ptu_directedperception:
-  debian,ubuntu: rock-drivers-orogen-ptu-directedperception
-drivers/orogen/aria:
-  debian,ubuntu: rock-drivers-orogen-aria
-control/orogen/trajectory_follower:
-  debian,ubuntu: rock-control-orogen-trajectory-follower
-control/orogen/waypoint_navigation:
-  debian,ubuntu: rock-control-orogen-waypoint-navigation
-control/orogen/skid4_control:
-  debian,ubuntu: rock-control-orogen-skid4-control
-#drivers/orogen/canbus:
-#  debian,ubuntu: rock-drivers-orogen-canbus
-idrivers/orogen/gps:
-  debian,ubuntu: rock-drivers-orogen-gps
-drivers/orogen/hokuyo:
-  debian,ubuntu: rock-drivers-orogen-hokuyo
-drivers/orogen/xsens_imu:
-  debian,ubuntu: rock-drivers-orogen-xsens-imu
-drivers/orogen/dynamixel:
-  debian,ubuntu: rock-drivers-orogen-dynamixel
-drivers/orogen/controldev:
-  debian,ubuntu: rock-drivers-orogen-controldev
-drivers/orogen/parport:
-  debian,ubuntu: rock-drivers-orogen-parport
-drivers/orogen/wifimon:
-  debian,ubuntu: rock-drivers-orogen-wifimon
-drivers/orogen/camera_base:
-  debian,ubuntu: rock-drivers-orogen-camera-base
-drivers/orogen/camera_prosilica:
-  debian,ubuntu: rock-drivers-orogen-camera-prosilica
-drivers/orogen/fog_kvh:
-  debian,ubuntu: rock-drivers-orogen-fog-kvh
-drivers/orogen/dvl_teledyne:
-  debian,ubuntu: rock-drivers-orogen-dvl-teledyne
-drivers/orogen/camera_usb:
-  debian,ubuntu: rock-drivers-orogen-camera-usb
-drivers/orogen/iodrivers_base:
-  debian,ubuntu: rock-drivers-orogen-iodrivers-base
-drivers/orogen/camera_firewire:
-  debian,ubuntu: rock-drivers-orogen-camera-firewire
-drivers/orogen/vicon:
-  debian,ubuntu: rock-drivers-orogen-vicon
-drivers/orogen/camera_v4l:
-  debian,ubuntu: rock-drivers-orogen-camera-v4l
-drivers/orogen/sonar_tritech:
-  debian,ubuntu: rock-drivers-orogen-sonar-tritech
-drivers/orogen/laserscanner_sick:
-  debian,ubuntu: rock-drivers-orogen-laserscanner-sick
-drivers/orogen/qualisys:
-  debian,ubuntu: rock-drivers-orogen-qualisys
-drivers/orogen/laser_filter:
-  debian,ubuntu: rock-drivers-orogen-laser-filter
-drivers/orogen/taskmon:
-  debian,ubuntu: rock-drivers-orogen-taskmon
-slam/orogen/orientation_estimator:
-  debian,ubuntu: rock-slam-orogen-orientation-estimator
-slam/orogen/envire:
-  debian,ubuntu: rock-slam-orogen-envire
-slam/orogen/graph_slam:
-  debian,ubuntu: rock-slam-orogen-graph-slam
-slam/orogen/odometry:
-  debian,ubuntu: rock-slam-orogen-odometry
-slam/orogen/tilt_scan:
-  debian,ubuntu: rock-slam-orogen-tilt-scan
-image_processing/orogen/image_preprocessing:
-  debian,ubuntu: rock-image-processing-orogen-image-preprocessing
-image_processing/orogen/stereo:
-  debian,ubuntu: rock-image-processing-orogen-stereo
-planning/orogen/corridor_navigation:
-  debian,ubuntu: rock-planning-orogen-corridor-navigation
-planning/orogen/corridor_planner:
-  debian,ubuntu: rock-planning-orogen-corridor-planner
-tutorials/rock_tutorial:
-  debian,ubuntu: rock-tutorials-rock-tutorial
-tutorials/vizkit3d_plugin_tutorial:
-  debian,ubuntu: rock-tutorials-vizkit3d-plugin-tutorial
-tutorials/message_driver:
-  debian,ubuntu: rock-tutorials-message-driver
-tutorials/designer_widget_tutorial:
-  debian,ubuntu: rock-tutorials-designer-widget-tutorial
-tutorials/orogen/tut_follower:
-  debian,ubuntu: rock-tutorials-orogen-tut-follower
-tutorials/orogen/tut_brownian:
-  debian,ubuntu: rock-tutorials-orogen-tut-brownian
-tutorials/orogen/tut_deployment:
-  debian,ubuntu: rock-tutorials-orogen-tut-deployment
-tutorials/orogen/rock_tutorial:
-  debian,ubuntu: rock-tutorials-orogen-rock-tutorial
-tutorials/orogen/tut_sensor:
-  debian,ubuntu: rock-tutorials-orogen-tut-sensor
-tutorials/orogen/message_producer:
-  debian,ubuntu: rock-tutorials-orogen-message-producer
-tutorials/orogen/message_consumer:
-  debian,ubuntu: rock-tutorials-orogen-message-consumer
-external/ode:
-  debian,ubuntu: rock-external-ode
-simulation/orogen/mars_core:
-  debian,ubuntu: rock-simulation-orogen-mars-core
+drivers/aggregator:
+  debian,ubuntu: rock-drivers-aggregator
