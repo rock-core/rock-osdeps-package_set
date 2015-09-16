@@ -2,7 +2,7 @@ qtruby:
     gentoo:
         kde-base/kdebindings-ruby
     arch: kdebindings-qtruby
-    debian: qtbindings 
+    debian: ruby-qtbindings 
     default,ubuntu:
         gem: qtbindings
         osdep: [qt4, qt4-opengl, qt-designer, qt4-webkit]
