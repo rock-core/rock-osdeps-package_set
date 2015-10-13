@@ -79,3 +79,45 @@ tools/roby:
   debian,ubuntu: ruby-tools-roby
 drivers/aggregator:
   debian,ubuntu: rock-drivers-aggregator
+perception/jpeg_conversion:
+  debian,ubuntu: rock-perception-jpeg-conversion
+rtt_typelib:
+  debian,ubuntu: rock-rtt-typelib
+tools/class_loader:
+  debian,ubuntu: rock-tools-class-loader
+tools/service_discovery:
+  debian,ubuntu: rock-tools-service-discovery
+drivers/transformer:
+  debian,ubuntu: rock-drivers-transformer
+perception/frame_helper:
+  debian,ubuntu: rock-perception-frame-helper
+orogen:
+  debian,ubuntu: ruby-orogen
+base/scripts:
+  debian,ubuntu: ruby-base-scripts
+tools/pocolog:
+  debian,ubuntu: ruby-tools-pocolog
+tools/log_tools:
+  debian,ubuntu: ruby-tools-log-tools
+gui/rock_widget_collection:
+  debian,ubuntu: rock-gui-rock-widget-collection
+base/orogen/std:
+  debian,ubuntu: rock-base-orogen-std
+tools/orocos.rb:
+  debian,ubuntu: ruby-tools-orocos.rb
+base/orogen/types:
+  debian,ubuntu: rock-base-orogen-types
+tools/telemetry:
+  debian,ubuntu: ruby-tools-telemetry
+tools/syskit:
+  debian,ubuntu: ruby-tools-syskit
+tools/logger:
+  debian,ubuntu: rock-tools-logger
+drivers/orogen/aggregator:
+  debian,ubuntu: rock-drivers-orogen-aggregator
+drivers/orogen/transformer:
+  debian,ubuntu: rock-drivers-orogen-transformer
+gui/vizkit:
+  debian,ubuntu: ruby-gui-vizkit
+bundles/rock:
+  debian,ubuntu: ruby-bundles-rock
