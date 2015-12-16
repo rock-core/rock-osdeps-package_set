@@ -2,7 +2,11 @@
 Autoproj.configuration_option 'use_deb', 'boolean',
 	:default => 'yes',
 	:doc => ["Add Rock-Debian-Repo?",
-	"This enables the precompiled Debian-Packages. Using this will same a lot of time as there are only very few packages you need to compile yourself. Every package you enter into your manifest will be downloaded and compiled the usual way, so you still have all posibilities left. The installed packages will be stored in /opt/rock/<flavour>/"]
+	"This enables the precompiled Debian-Packages.",
+    "Using this will save a lot of time as there are only very few packages you need to compile yourself.",
+    "Every package you enter into your manifest will be downloaded and compiled the usual way,",
+    "so you still have all posibilities left.",
+    "The installed packages will be stored in /opt/rock/<flavour>/"]
 
 Autoproj.configuration_option 'release', 'string',
     :default => 'master',
