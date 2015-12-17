@@ -4,6 +4,7 @@ qtruby:
     arch: kdebindings-qtruby
     debian: ruby-qtbindings 
     default,ubuntu:
-        gem: qtbindings
-        #osdep: [qt4, qt4-opengl, qt-designer, qt4-webkit]
+       #gem: qtbindings
+       # osdep: [qt4, qt4-opengl, qt-designer, qt4-webkit]
+       ruby-qtbindings
 
