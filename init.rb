@@ -22,12 +22,15 @@ Autoproj.configuration_option 'distribution', 'string',
     "There are builds for 'jessie' (Debian), 'wheezy' (Debian), 'trusty' (Ubuntu), 'vivid' (Ubuntu)",
     "Which distribuion do you use?"]
 
+Autoproj.user_config('DEB_USE') # To have a reasonable order of questions
+
 Autoproj.configuration_option 'DEB_AUTOMATIC', 'boolean',
     :default => 'yes',
     :doc => ["Do you want the installation be done automatically?",
     "This installation uses sudo and may ask for your password",
     "You can do the installation yourself with:",
-    "sudo sh -c \"echo 'deb http://rimres-gcs2-u/release/#{Autoproj.user_config('release')} #{Autoproj.user_config('distribution'    )} main' > /etc/apt/sources.list.d/rock.list\"",
+    #"sudo sh -c \"echo 'deb http://rimres-gcs2-u/release/#{Autoproj.user_config('release')} #{Autoproj.user_config('distribution'    )} main' > /etc/apt/sources.list.d/rock.list\"",
+    "sudo sh -c \"echo 'deb http://rimres-gcs2-u/release/#{Autoproj.user_config('ROCK_SELECTED_FLAVOR')} #{Autoproj.user_config('distribution'    )} main' > /etc/apt/sources.list.d/rock.list\"",
     "wget http://rimres-gcs2-u/conf/Rock-debian.gpg.key",
     "sudo apt-key add Rock-debian.gpg.key < Rock-debian.gpg.key",
     "rm Rock-debian.gpg.key",
@@ -39,14 +42,21 @@ Autoproj.configuration_option 'DEB_AUTOMATIC', 'boolean',
 
 #the actural settings if enabled
 if (Autoproj.user_config('DEB_USE') && Autoproj.user_config('DEB_AUTOMATIC')) then
-	Autobuild.env_add_path('PATH',"/opt/rock/#{Autoproj.user_config('release')}/include")
-	Autobuild.env_add_path('PATH',"/opt/rock/#{Autoproj.user_config('release')}/share")
-	Autobuild.env_add_path('PATH',"/opt/rock/#{Autoproj.user_config('release')}/lib/#{`gcc -dumpmachine`}/ruby/#{RUBY_VERSION}")
-	Autobuild.env_add_path('CMAKE_PREFIX_PATH',"/opt/rock/#{Autoproj.user_config('release')}")
-	Autobuild.env_add_path('PKG_CONFIG_PATH',"/opt/rock/#{Autoproj.user_config('release')}/lib/pkgconfig")
-	Autobuild.env_add_path('RUBYLIB',"/opt/rock/#{Autoproj.user_config('release')}/lib/ruby/#{RUBY_VERSION}/")
-	Autobuild.env_add_path('RUBYLIB',"/opt/rock/#{Autoproj.user_config('release')}/lib/#{`gcc -dumpmachine`}/ruby/#{RUBY_VERSION}/")
-	Autobuild.env_add_path('OROGEN_PLUGIN_PATH',"/opt/rock/#{Autoproj.user_config('release')}/share/orogen/plugins")
+    architecture = "#{`gcc -dumpmachine`}".strip
+    #release = Autoproj.user_config('release')
+    release = Autoproj.user_config('ROCK_SELECTED_FLAVOR')
+	Autobuild.env_add_path('PATH',"/opt/rock/#{release}/include")
+	Autobuild.env_add_path('PATH',"/opt/rock/#{release}/share")
+	Autobuild.env_add_path('PATH',"/opt/rock/#{release}/lib/#{architecture}/ruby/#{RUBY_VERSION}")
+	Autobuild.env_add_path('CMAKE_PREFIX_PATH',"/opt/rock/#{release}")
+	Autobuild.env_add_path('PKG_CONFIG_PATH',"/opt/rock/#{release}/lib/pkgconfig")
+	Autobuild.env_add_path('RUBYLIB',"/opt/rock/#{release}/lib/ruby/#{RUBY_VERSION}")
+	Autobuild.env_add_path('RUBYLIB',"/opt/rock/#{release}/lib/#{architecture}/ruby/#{RUBY_VERSION}")
+	Autobuild.env_add_path('RUBYLIB',"/opt/rock/#{release}/lib/#{architecture}/ruby")
+	Autobuild.env_add_path('RUBYLIB',"/opt/rock/#{release}/lib/ruby/vendor_ruby")
+	Autobuild.env_add_path('RUBYLIB',"/opt/rock/#{release}/lib/ruby")
+	Autobuild.env_add_path('LD_LIBRARY_PATH',"/opt/rock/#{release}/lib")
+	Autobuild.env_add_path('OROGEN_PLUGIN_PATH',"/opt/rock/#{release}/share/orogen/plugins")
 		if !File.exist?("/etc/apt/sources.list.d/rock.list")
 		system("sudo sh -c \"echo 'deb http://rimres-gcs2-u/release/#{Autoproj.user_config('release')} #{Autoproj.user_config('distribution')} main' > /etc/apt/sources.list.d/rock.list\"")
 		system("wget http://rimres-gcs2-u/conf/Rock-debian.gpg.key > /dev/null")
@@ -56,6 +66,8 @@ if (Autoproj.user_config('DEB_USE') && Autoproj.user_config('DEB_AUTOMATIC')) th
 		Autoproj.message "You need to run source env.sh before changes take effect"
 	end
 end
+
 if (!Autoproj.user_config('DEB_USE')) then
   Autoproj.message "You need to delete the rock-osdeps-Package from your autoproj/manifest"
 end
+
