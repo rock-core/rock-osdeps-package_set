@@ -38,59 +38,59 @@ rake-compiler:
 tools/rubigen:
   debian,ubuntu: ruby-tools-rubigen
 base/cmake:
-  debian,ubuntu: rock-base-cmake
+  debian,ubuntu: rock-master-base-cmake
 base/templates/cmake_lib:
-  debian,ubuntu: rock-base-templates-cmake-lib
+  debian,ubuntu: rock-master-base-templates-cmake-lib
 base/templates/vizkit3d_plugin:
-  debian,ubuntu: rock-base-templates-vizkit3d-plugin
+  debian,ubuntu: rock-master-base-templates-vizkit3d-plugin
 base/templates/doc:
-  debian,ubuntu: rock-base-templates-doc
+  debian,ubuntu: rock-master-base-templates-doc
 rtt:
-  debian,ubuntu: rock-rtt
+  debian,ubuntu: rock-master-rtt
 gui/vizkit3d:
-  debian,ubuntu: rock-gui-vizkit3d
+  debian,ubuntu: rock-master-gui-vizkit3d
 base/templates/ruby_lib:
-  debian,ubuntu: rock-base-templates-ruby-lib
+  debian,ubuntu: rock-master-base-templates-ruby-lib
 base/templates/cmake_vizkit_widget:
-  debian,ubuntu: rock-base-templates-cmake-vizkit-widget
+  debian,ubuntu: rock-master-base-templates-cmake-vizkit-widget
 external/sisl:
-  debian,ubuntu: rock-external-sisl
+  debian,ubuntu: rock-master-external-sisl
 utilrb:
   debian,ubuntu: ruby-utilrb
 tools/rest_api:
   debian,ubuntu: ruby-tools-rest-api
 base/types:
-  debian,ubuntu: rock-base-types
+  debian,ubuntu: rock-master-base-types
 base/templates/bundle:
-  debian,ubuntu: rock-base-templates-bundle
+  debian,ubuntu: rock-master-base-templates-bundle
 typelib:
-  debian,ubuntu: rock-typelib
+  debian,ubuntu: rock-master-typelib
 tools/metaruby:
   debian,ubuntu: ruby-tools-metaruby
 gui/rock_webapp:
-  debian,ubuntu: rock-gui-rock-webapp
+  debian,ubuntu: rock-master-gui-rock-webapp
 tools/orogen_metadata:
-  debian,ubuntu: rock-tools-orogen-metadata
+  debian,ubuntu: rock-master-tools-orogen-metadata
 base/console_bridge:
-  debian,ubuntu: rock-base-console-bridge
+  debian,ubuntu: rock-master-base-console-bridge
 tools/pocolog_cpp:
-  debian,ubuntu: rock-tools-pocolog-cpp
+  debian,ubuntu: rock-master-tools-pocolog-cpp
 tools/roby:
   debian,ubuntu: ruby-tools-roby
 drivers/aggregator:
-  debian,ubuntu: rock-drivers-aggregator
+  debian,ubuntu: rock-master-drivers-aggregator
 perception/jpeg_conversion:
-  debian,ubuntu: rock-perception-jpeg-conversion
+  debian,ubuntu: rock-master-perception-jpeg-conversion
 rtt_typelib:
-  debian,ubuntu: rock-rtt-typelib
+  debian,ubuntu: rock-master-rtt-typelib
 tools/class_loader:
-  debian,ubuntu: rock-tools-class-loader
+  debian,ubuntu: rock-master-tools-class-loader
 tools/service_discovery:
-  debian,ubuntu: rock-tools-service-discovery
+  debian,ubuntu: rock-master-tools-service-discovery
 drivers/transformer:
-  debian,ubuntu: rock-drivers-transformer
+  debian,ubuntu: rock-master-drivers-transformer
 perception/frame_helper:
-  debian,ubuntu: rock-perception-frame-helper
+  debian,ubuntu: rock-master-perception-frame-helper
 orogen:
   debian,ubuntu: ruby-orogen
 base/scripts:
@@ -100,23 +100,23 @@ tools/pocolog:
 tools/log_tools:
   debian,ubuntu: ruby-tools-log-tools
 gui/rock_widget_collection:
-  debian,ubuntu: rock-gui-rock-widget-collection
+  debian,ubuntu: rock-master-gui-rock-widget-collection
 base/orogen/std:
-  debian,ubuntu: rock-base-orogen-std
+  debian,ubuntu: rock-master-base-orogen-std
 tools/orocos.rb:
   debian,ubuntu: ruby-tools-orocos.rb
 base/orogen/types:
-  debian,ubuntu: rock-base-orogen-types
+  debian,ubuntu: rock-master-base-orogen-types
 tools/telemetry:
   debian,ubuntu: ruby-tools-telemetry
 tools/syskit:
   debian,ubuntu: ruby-tools-syskit
 tools/logger:
-  debian,ubuntu: rock-tools-logger
+  debian,ubuntu: rock-master-tools-logger
 drivers/orogen/aggregator:
-  debian,ubuntu: rock-drivers-orogen-aggregator
+  debian,ubuntu: rock-master-drivers-orogen-aggregator
 drivers/orogen/transformer:
-  debian,ubuntu: rock-drivers-orogen-transformer
+  debian,ubuntu: rock-master-drivers-orogen-transformer
 gui/vizkit:
   debian,ubuntu: ruby-gui-vizkit
 bundles/rock:
