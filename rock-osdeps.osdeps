@@ -1,8 +1,6 @@
 ---
 hoe:
   debian,ubuntu: ruby-hoe
-hoe-yard:
-  debian,ubuntu: ruby-hoe-yard
 thin:
   debian,ubuntu: ruby-thin
 grape:
