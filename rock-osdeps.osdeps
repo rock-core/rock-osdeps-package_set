@@ -17,8 +17,6 @@ activesupport:
   debian,ubuntu: ruby-activesupport
 bundler:
   debian,ubuntu: ruby-bundler
-cucumber:
-  debian,ubuntu: ruby-cucumber
 rice:
   debian,ubuntu: ruby-rice
 kramdown:
