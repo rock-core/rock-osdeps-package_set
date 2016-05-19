@@ -55,8 +55,6 @@ base/templates/cmake_vizkit_widget:
   debian,ubuntu: rock-master-base-templates-cmake-vizkit-widget
 external/sisl:
   debian,ubuntu: rock-master-external-sisl
-utilrb:
-  debian,ubuntu: ruby-utilrb
 tools/rest_api:
   debian,ubuntu: ruby-tools-rest-api
 base/types:
@@ -65,8 +63,6 @@ base/templates/bundle:
   debian,ubuntu: rock-master-base-templates-bundle
 typelib:
   debian,ubuntu: rock-master-typelib
-tools/metaruby:
-  debian,ubuntu: ruby-tools-metaruby
 gui/rock_webapp:
   debian,ubuntu: rock-master-gui-rock-webapp
 tools/orogen_metadata:
@@ -75,8 +71,6 @@ base/console_bridge:
   debian,ubuntu: rock-master-base-console-bridge
 tools/pocolog_cpp:
   debian,ubuntu: rock-master-tools-pocolog-cpp
-tools/roby:
-  debian,ubuntu: ruby-tools-roby
 drivers/aggregator:
   debian,ubuntu: rock-master-drivers-aggregator
 perception/jpeg_conversion:
@@ -93,19 +87,13 @@ perception/frame_helper:
   debian,ubuntu: rock-master-perception-frame-helper
 base/scripts:
   debian,ubuntu: ruby-base-scripts
-tools/pocolog:
-  debian,ubuntu: ruby-tools-pocolog
 tools/log_tools:
   debian,ubuntu: ruby-tools-log-tools
 gui/rock_widget_collection:
   debian,ubuntu: rock-master-gui-rock-widget-collection
 base/orogen/std:
   debian,ubuntu: rock-master-base-orogen-std
-tools/orocos.rb:
-  debian,ubuntu: ruby-tools-orocos.rb
 tools/telemetry:
   debian,ubuntu: ruby-tools-telemetry
-drivers/orogen/aggregator:
-  debian,ubuntu: rock-master-drivers-orogen-aggregator
 gui/vizkit:
   debian,ubuntu: ruby-gui-vizkit
