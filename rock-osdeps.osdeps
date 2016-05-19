@@ -15,8 +15,6 @@ activesupport:
   debian,ubuntu: ruby-activesupport
 bundler:
   debian,ubuntu: ruby-bundler
-rice:
-  debian,ubuntu: ruby-rice
 kramdown:
   debian,ubuntu: ruby-kramdown
 facets:
