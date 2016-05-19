@@ -25,18 +25,6 @@ kramdown:
   debian,ubuntu: ruby-kramdown
 facets:
   debian,ubuntu: ruby-facets
-state_machine:
-  debian,ubuntu: ruby-state-machine
-binding_of_caller:
-  debian,ubuntu: ruby-binding-of-caller
-rb-readline:
-  debian,ubuntu: ruby-rb-readline
-concurrent-ruby:
-  debian,ubuntu: ruby-concurrent-ruby
-rake-compiler:
-  debian,ubuntu: ruby-rake-compiler
-tools/rubigen:
-  debian,ubuntu: ruby-tools-rubigen
 base/cmake:
   debian,ubuntu: rock-master-base-cmake
 base/templates/cmake_lib:
