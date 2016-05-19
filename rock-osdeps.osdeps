@@ -71,12 +71,8 @@ drivers/transformer:
   debian,ubuntu: rock-master-drivers-transformer
 perception/frame_helper:
   debian,ubuntu: rock-master-perception-frame-helper
-base/scripts:
-  debian,ubuntu: ruby-base-scripts
 tools/log_tools:
   debian,ubuntu: ruby-tools-log-tools
-gui/rock_widget_collection:
-  debian,ubuntu: rock-master-gui-rock-widget-collection
 base/orogen/std:
   debian,ubuntu: rock-master-base-orogen-std
 tools/telemetry:
