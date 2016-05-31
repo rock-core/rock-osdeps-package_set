@@ -1,12 +1,14 @@
 ---
 hoe:
-  debian,ubuntu: ruby-hoe
+  debian,ubuntu: rock-master-ruby-hoe
+hoe-yard:
+  debian,ubuntu: ruby-hoe-yard
 thin:
   debian,ubuntu: ruby-thin
 grape:
   debian,ubuntu: ruby-grape
 rack-cors:
-  debian,ubuntu: ruby-rack-cors
+  debian,ubuntu: rock-master-ruby-rack-cors
 faye-websocket:
   debian,ubuntu: ruby-faye-websocket
 sprockets:
@@ -15,10 +17,26 @@ activesupport:
   debian,ubuntu: ruby-activesupport
 bundler:
   debian,ubuntu: ruby-bundler
+cucumber:
+  debian,ubuntu: ruby-cucumber
+rice:
+  debian,ubuntu: rock-master-ruby-rice
 kramdown:
-  debian,ubuntu: ruby-kramdown
+  debian,ubuntu: rock-master-ruby-kramdown
 facets:
-  debian,ubuntu: ruby-facets
+  debian,ubuntu: rock-master-ruby-facets
+state_machine:
+  debian,ubuntu: rock-master-ruby-state-machine
+binding_of_caller:
+  debian,ubuntu: ruby-binding-of-caller
+rb-readline:
+  debian,ubuntu: ruby-rb-readline
+concurrent-ruby:
+  debian,ubuntu: ruby-concurrent-ruby
+rake-compiler:
+  debian,ubuntu: ruby-rake-compiler
+tools/rubigen:
+  debian,ubuntu: rock-master-ruby-tools-rubigen
 base/cmake:
   debian,ubuntu: rock-master-base-cmake
 base/templates/cmake_lib:
@@ -37,14 +55,18 @@ base/templates/cmake_vizkit_widget:
   debian,ubuntu: rock-master-base-templates-cmake-vizkit-widget
 external/sisl:
   debian,ubuntu: rock-master-external-sisl
+utilrb:
+  debian,ubuntu: rock-master-ruby-utilrb
 tools/rest_api:
-  debian,ubuntu: ruby-tools-rest-api
+  debian,ubuntu: rock-master-ruby-tools-rest-api
 base/types:
   debian,ubuntu: rock-master-base-types
 base/templates/bundle:
   debian,ubuntu: rock-master-base-templates-bundle
 typelib:
   debian,ubuntu: rock-master-typelib
+tools/metaruby:
+  debian,ubuntu: rock-master-ruby-tools-metaruby
 gui/rock_webapp:
   debian,ubuntu: rock-master-gui-rock-webapp
 tools/orogen_metadata:
@@ -53,6 +75,8 @@ base/console_bridge:
   debian,ubuntu: rock-master-base-console-bridge
 tools/pocolog_cpp:
   debian,ubuntu: rock-master-tools-pocolog-cpp
+tools/roby:
+  debian,ubuntu: rock-master-ruby-tools-roby
 drivers/aggregator:
   debian,ubuntu: rock-master-drivers-aggregator
 perception/jpeg_conversion:
@@ -67,11 +91,91 @@ drivers/transformer:
   debian,ubuntu: rock-master-drivers-transformer
 perception/frame_helper:
   debian,ubuntu: rock-master-perception-frame-helper
+orogen:
+  debian,ubuntu: rock-master-ruby-orogen
+base/scripts:
+  debian,ubuntu: rock-master-ruby-base-scripts
+tools/pocolog:
+  debian,ubuntu: rock-master-ruby-tools-pocolog
 tools/log_tools:
-  debian,ubuntu: ruby-tools-log-tools
+  debian,ubuntu: rock-master-ruby-tools-log-tools
+gui/rock_widget_collection:
+  debian,ubuntu: rock-master-gui-rock-widget-collection
 base/orogen/std:
   debian,ubuntu: rock-master-base-orogen-std
+tools/orocos.rb:
+  debian,ubuntu: rock-master-ruby-tools-orocos.rb
+base/orogen/types:
+  debian,ubuntu: rock-master-base-orogen-types
 tools/telemetry:
-  debian,ubuntu: ruby-tools-telemetry
+  debian,ubuntu: rock-master-ruby-tools-telemetry
+tools/syskit:
+  debian,ubuntu: rock-master-ruby-tools-syskit
+tools/logger:
+  debian,ubuntu: rock-master-tools-logger
+drivers/orogen/aggregator:
+  debian,ubuntu: rock-master-drivers-orogen-aggregator
+drivers/orogen/transformer:
+  debian,ubuntu: rock-master-drivers-orogen-transformer
 gui/vizkit:
-  debian,ubuntu: ruby-gui-vizkit
+  debian,ubuntu: rock-master-ruby-gui-vizkit
+bundles/rock:
+  debian,ubuntu: rock-master-ruby-bundles-rock
+pastel:
+  debian,ubuntu: ruby-pastel
+hooks:
+  debian,ubuntu: ruby-hooks
+flexmock:
+  debian,ubuntu: ruby-flexmock
+base/numeric:
+  debian,ubuntu: rock-master-base-numeric
+utilrb-ext:
+  debian,ubuntu: ruby-utilrb-ext
+drivers/camera_interface:
+  debian,ubuntu: rock-master-drivers-camera-interface
+drivers/camera_usb:
+  debian,ubuntu: rock-master-drivers-camera-usb
+drivers/orogen/camera_base:
+  debian,ubuntu: rock-master-drivers-orogen-camera-base
+drivers/orogen/camera_usb:
+  debian,ubuntu: rock-master-drivers-orogen-camera-usb
+minitest:
+  debian,ubuntu: ruby-minitest
+yard:
+  debian,ubuntu: ruby-yard
+tty-screen:
+  debian,ubuntu: ruby-tty-screen
+drivers/libusb:
+  debian,ubuntu: rock-master-drivers-libusb
+slam/mtk:
+  debian,ubuntu: rock-master-slam-mtk
+external/sbpl:
+  debian,ubuntu: rock-master-external-sbpl
+planning/ompl:
+  debian,ubuntu: rock-master-planning-ompl
+planning/sbpl:
+  debian,ubuntu: rock-master-planning-sbpl
+external/lemon:
+  debian,ubuntu: rock-master-external-lemon
+slam/octomap:
+  debian,ubuntu: rock-master-slam-octomap
+drivers/freenect:
+  debian,ubuntu: rock-master-drivers-freenect
+control/sdformat:
+  debian,ubuntu: rock-master-control-sdformat
+control/urdfdom_headers:
+  debian,ubuntu: rock-master-control-urdfdom-headers
+drivers/phidgets:
+  debian,ubuntu: rock-master-drivers-phidgets
+bundles/rock_ugv_nav:
+  debian,ubuntu: rock-master-ruby-bundles-rock-ugv-nav
+external/yaml-cpp:
+  debian,ubuntu: rock-master-external-yaml-cpp
+drivers/parport:
+  debian,ubuntu: rock-master-drivers-parport
+external/cminpack:
+  debian,ubuntu: rock-master-external-cminpack
+slam/flann:
+  debian,ubuntu: rock-master-slam-flann
+slam/g2o:
+  debian,ubuntu: rock-master-slam-g2o
