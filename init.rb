@@ -1,4 +1,4 @@
-#Add rock-debs 
+#Add rock-debs
 Autoproj.configuration_option 'DEB_USE', 'boolean',
 	:default => 'yes',
 	:doc => ["Add Rock-Debian-Repo?",
@@ -25,7 +25,7 @@ Autoproj.configuration_option 'distribution', 'string',
 Autoproj.user_config('DEB_USE') # To have a reasonable order of questions
 
 Autoproj.configuration_option 'DEB_AUTOMATIC', 'boolean',
-    :default => 'yes',
+    :default => 'no',
     :doc => ["Do you want the installation be done automatically?",
     "This installation uses sudo and may ask for your password",
     "You can do the installation yourself with:",
@@ -41,33 +41,44 @@ Autoproj.configuration_option 'DEB_AUTOMATIC', 'boolean',
 
 
 #the actural settings if enabled
-if (Autoproj.user_config('DEB_USE') && Autoproj.user_config('DEB_AUTOMATIC')) then
-    architecture = "#{`gcc -dumpmachine`}".strip
+if Autoproj.user_config('DEB_USE')
+    architecture = "#{`gcc -print-multiarch`}".strip
     #release = Autoproj.user_config('release')
     release = Autoproj.user_config('ROCK_SELECTED_FLAVOR')
-	Autobuild.env_add_path('PATH',"/opt/rock/#{release}/include")
-	Autobuild.env_add_path('PATH',"/opt/rock/#{release}/share")
-	Autobuild.env_add_path('PATH',"/opt/rock/#{release}/lib/#{architecture}/ruby/#{RUBY_VERSION}")
-	Autobuild.env_add_path('CMAKE_PREFIX_PATH',"/opt/rock/#{release}")
-	Autobuild.env_add_path('PKG_CONFIG_PATH',"/opt/rock/#{release}/lib/pkgconfig")
-	Autobuild.env_add_path('RUBYLIB',"/opt/rock/#{release}/lib/ruby/#{RUBY_VERSION}")
-	Autobuild.env_add_path('RUBYLIB',"/opt/rock/#{release}/lib/#{architecture}/ruby/#{RUBY_VERSION}")
-	Autobuild.env_add_path('RUBYLIB',"/opt/rock/#{release}/lib/#{architecture}/ruby")
-	Autobuild.env_add_path('RUBYLIB',"/opt/rock/#{release}/lib/ruby/vendor_ruby")
-	Autobuild.env_add_path('RUBYLIB',"/opt/rock/#{release}/lib/ruby")
-	Autobuild.env_add_path('LD_LIBRARY_PATH',"/opt/rock/#{release}/lib")
-	Autobuild.env_add_path('OROGEN_PLUGIN_PATH',"/opt/rock/#{release}/share/orogen/plugins")
-		if !File.exist?("/etc/apt/sources.list.d/rock.list")
-		system("sudo sh -c \"echo 'deb http://rimres-gcs2-u/release/#{Autoproj.user_config('release')} #{Autoproj.user_config('distribution')} main' > /etc/apt/sources.list.d/rock.list\"")
-		system("wget http://rimres-gcs2-u/conf/Rock-debian.gpg.key > /dev/null")
-		system("sudo apt-key add Rock-debian.gpg.key < Rock-debian.gpg.key > /dev/null") 
+
+    require 'rbconfig'
+    release_install_dir = "/opt/rock/#{release}"
+    rock_archdir = RbConfig::CONFIG['archdir'].gsub("/usr", release_install_dir)
+    rock_rubylibdir = RbConfig::CONFIG['rubylibdir'].gsub("/usr", release_install_dir)
+
+    Autobuild.env_add_path('PATH',File.join(release_install_dir,"bin"))
+    Autobuild.env_add_path('CMAKE_PREFIX_PATH',release_install_dir)
+    Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(release_install_dir,"lib/pkgconfig"))
+    Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(release_install_dir,"lib",architecture, "pkgconfig"))
+    Autobuild.env_add_path('RUBYLIB',rock_archdir)
+    # Needed for qt
+    Autobuild.env_add_path('RUBYLIB',File.join(rock_archdir.gsub(RbConfig::CONFIG['RUBY_PROGRAM_VERSION'],'')) )
+    Autobuild.env_add_path('RUBYLIB',rock_rubylibdir)
+    Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"/lib/ruby/vendor_ruby/standard"))
+    Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"/lib/ruby/vendor_ruby/core"))
+    Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"/lib/ruby/vendor_ruby"))
+    Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"/lib/ruby"))
+    Autobuild.env_add_path('LD_LIBRARY_PATH',File.join(release_install_dir,"lib"))
+    Autobuild.env_add_path('OROGEN_PLUGIN_PATH', File.join(release_install_dir,"/share/orogen/plugins"))
+    Autoproj.message "You need to run source env.sh before changes take effect"
+end
+
+if Autoproj.user_config('DEB_AUTOMATIC')
+    if !File.exist?("/etc/apt/sources.list.d/rock.list")
+        system("sudo sh -c \"echo 'deb http://rimres-gcs2-u/release/#{Autoproj.user_config('release')} #{Autoproj.user_config('distribution')} main' > /etc/apt/sources.list.d/rock.list\"")
+        system("wget http://rimres-gcs2-u/conf/Rock-debian.gpg.key > /dev/null")
+        system("sudo apt-key add Rock-debian.gpg.key < Rock-debian.gpg.key > /dev/null")
         system("rm Rock-debian.gpg.key")
-		system("sudo apt-get update > /dev/null")
-		Autoproj.message "You need to run source env.sh before changes take effect"
-	end
+        system("sudo apt-get update > /tmp/autoproj-update.log")
+    end
 end
 
 if (!Autoproj.user_config('DEB_USE')) then
-  Autoproj.message "You need to delete the rock-osdeps-Package from your autoproj/manifest"
+  Autoproj.message "Please remove the rock-osdeps-Package from your autoproj/manifest"
 end
 
