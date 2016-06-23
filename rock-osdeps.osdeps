@@ -1,8 +1,8 @@
 ---
 hoe:
-  debian,ubuntu: rock-master-ruby-hoe
+  debian,ubuntu: ruby-hoe
 hoe-yard:
-  debian,ubuntu: ruby-hoe-yard
+  debian,ubuntu: rock-master-ruby-hoe-yard
 thin:
   debian,ubuntu: ruby-thin
 grape:
@@ -22,19 +22,19 @@ cucumber:
 rice:
   debian,ubuntu: rock-master-ruby-rice
 kramdown:
-  debian,ubuntu: rock-master-ruby-kramdown
+  debian,ubuntu: ruby-kramdown
 facets:
-  debian,ubuntu: rock-master-ruby-facets
+  debian,ubuntu: ruby-facets
 state_machine:
   debian,ubuntu: rock-master-ruby-state-machine
 binding_of_caller:
-  debian,ubuntu: ruby-binding-of-caller
+  debian,ubuntu: rock-master-ruby-binding-of-caller
 rb-readline:
-  debian,ubuntu: ruby-rb-readline
+  debian,ubuntu: rock-master-ruby-rb-readline
 concurrent-ruby:
-  debian,ubuntu: ruby-concurrent-ruby
+  debian,ubuntu: rock-master-ruby-concurrent-ruby
 rake-compiler:
-  debian,ubuntu: ruby-rake-compiler
+  debian,ubuntu: rake-compiler
 tools/rubigen:
   debian,ubuntu: rock-master-ruby-tools-rubigen
 base/cmake:
@@ -122,9 +122,9 @@ gui/vizkit:
 bundles/rock:
   debian,ubuntu: rock-master-ruby-bundles-rock
 pastel:
-  debian,ubuntu: ruby-pastel
+  debian,ubuntu: rock-master-ruby-pastel
 hooks:
-  debian,ubuntu: ruby-hooks
+  debian,ubuntu: rock-master-ruby-hooks
 flexmock:
   debian,ubuntu: ruby-flexmock
 base/numeric:
@@ -157,8 +157,9 @@ planning/sbpl:
   debian,ubuntu: rock-master-planning-sbpl
 external/lemon:
   debian,ubuntu: rock-master-external-lemon
-slam/octomap:
-  debian,ubuntu: rock-master-slam-octomap
+# version is not quite ok
+#slam/octomap:
+#  debian,ubuntu: rock-master-slam-octomap
 drivers/freenect:
   debian,ubuntu: rock-master-drivers-freenect
 control/sdformat:
