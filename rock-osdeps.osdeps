@@ -18,7 +18,7 @@ activesupport:
 bundler:
   debian,ubuntu: ruby-bundler
 cucumber:
-  debian,ubuntu: ruby-cucumber
+  debian,ubuntu: cucumber
 rice:
   debian,ubuntu: rock-master-ruby-rice
 kramdown:
@@ -35,6 +35,20 @@ concurrent-ruby:
   debian,ubuntu: rock-master-ruby-concurrent-ruby
 rake-compiler:
   debian,ubuntu: rake-compiler
+pastel:
+  debian,ubuntu: rock-master-ruby-pastel
+hooks:
+  debian,ubuntu: rock-master-ruby-hooks
+flexmock:
+  debian,ubuntu: ruby-flexmock
+qtbindings:
+  debian,ubtuntu: rock-master-ruby-qtbindings
+minitest:
+  debian,ubuntu: ruby-minitest
+yard:
+  debian,ubuntu: ruby-yard
+tty-screen:
+  debian,ubuntu: ruby-tty-screen
 tools/rubigen:
   debian,ubuntu: rock-master-ruby-tools-rubigen
 base/cmake:
@@ -119,18 +133,10 @@ drivers/orogen/transformer:
   debian,ubuntu: rock-master-drivers-orogen-transformer
 gui/vizkit:
   debian,ubuntu: rock-master-ruby-gui-vizkit
-bundles/rock:
-  debian,ubuntu: rock-master-ruby-bundles-rock
-pastel:
-  debian,ubuntu: rock-master-ruby-pastel
-hooks:
-  debian,ubuntu: rock-master-ruby-hooks
-flexmock:
-  debian,ubuntu: ruby-flexmock
+#bundles/rock:
+#  debian,ubuntu: rock-master-ruby-bundles-rock
 base/numeric:
   debian,ubuntu: rock-master-base-numeric
-utilrb-ext:
-  debian,ubuntu: ruby-utilrb-ext
 drivers/camera_interface:
   debian,ubuntu: rock-master-drivers-camera-interface
 drivers/camera_usb:
@@ -139,44 +145,42 @@ drivers/orogen/camera_base:
   debian,ubuntu: rock-master-drivers-orogen-camera-base
 drivers/orogen/camera_usb:
   debian,ubuntu: rock-master-drivers-orogen-camera-usb
-minitest:
-  debian,ubuntu: ruby-minitest
-yard:
-  debian,ubuntu: ruby-yard
-tty-screen:
-  debian,ubuntu: ruby-tty-screen
-drivers/libusb:
-  debian,ubuntu: rock-master-drivers-libusb
-slam/mtk:
-  debian,ubuntu: rock-master-slam-mtk
-external/sbpl:
-  debian,ubuntu: rock-master-external-sbpl
+#drivers/libusb:
+#  debian,ubuntu: rock-master-drivers-libusb
+#slam/mtk:
+#  debian,ubuntu: rock-master-slam-mtk
 planning/ompl:
   debian,ubuntu: rock-master-planning-ompl
 planning/sbpl:
   debian,ubuntu: rock-master-planning-sbpl
 external/lemon:
   debian,ubuntu: rock-master-external-lemon
-# version is not quite ok
-#slam/octomap:
-#  debian,ubuntu: rock-master-slam-octomap
-drivers/freenect:
-  debian,ubuntu: rock-master-drivers-freenect
-control/sdformat:
-  debian,ubuntu: rock-master-control-sdformat
-control/urdfdom_headers:
-  debian,ubuntu: rock-master-control-urdfdom-headers
-drivers/phidgets:
-  debian,ubuntu: rock-master-drivers-phidgets
-bundles/rock_ugv_nav:
-  debian,ubuntu: rock-master-ruby-bundles-rock-ugv-nav
-external/yaml-cpp:
-  debian,ubuntu: rock-master-external-yaml-cpp
-drivers/parport:
-  debian,ubuntu: rock-master-drivers-parport
-external/cminpack:
-  debian,ubuntu: rock-master-external-cminpack
-slam/flann:
-  debian,ubuntu: rock-master-slam-flann
-slam/g2o:
-  debian,ubuntu: rock-master-slam-g2o
+## version is not quite ok
+##slam/octomap:
+##  debian,ubuntu: rock-master-slam-octomap
+#drivers/freenect:
+#  debian,ubuntu: rock-master-drivers-freenect
+#control/sdformat:
+#  debian,ubuntu: rock-master-control-sdformat
+#control/urdfdom_headers:
+#  debian,ubuntu: rock-master-control-urdfdom-headers
+#drivers/phidgets:
+#  debian,ubuntu: rock-master-drivers-phidgets
+#bundles/rock_ugv_nav:
+#  debian,ubuntu: rock-master-ruby-bundles-rock-ugv-nav
+#external/yaml-cpp:
+#  debian,ubuntu: rock-master-external-yaml-cpp
+#drivers/parport:
+#  debian,ubuntu: rock-master-drivers-parport
+#external/cminpack:
+#  debian,ubuntu: rock-master-external-cminpack
+#slam/flann:
+#  debian,ubuntu: rock-master-slam-flann
+#slam/g2o:
+#  debian,ubuntu: rock-master-slam-g2o
+multiagent/fipa_acl:
+  debian,ubuntu: rock-master-multiagent-fipa-acl
+#multiagent/fipa_services:
+#  debian,ubuntu: rock-master-multiagent-fipa-services
+#multiagent/orogen/fipa_services:
+#  debian,ubuntu: rock-master-multiagent-orogen-fipa-services
