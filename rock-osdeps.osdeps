@@ -145,42 +145,64 @@ drivers/orogen/camera_base:
   debian,ubuntu: rock-master-drivers-orogen-camera-base
 drivers/orogen/camera_usb:
   debian,ubuntu: rock-master-drivers-orogen-camera-usb
-#drivers/libusb:
-#  debian,ubuntu: rock-master-drivers-libusb
-#slam/mtk:
-#  debian,ubuntu: rock-master-slam-mtk
+external/snap:
+  debian,ubuntu: rock-master-external-snap
+external/gexf:
+  debian,ubuntu: rock-master-external-gexf
+drivers/iodrivers_base:
+  debian,ubuntu: rock-master-drivers-iodrivers-base
+external/libply:
+  debian,ubuntu: rock-master-external-libply
+slam/pcl:
+  debian,ubuntu: rock-master-slam-pcl
+slam/hogman:
+  debian,ubuntu: rock-master-slam-hogman
+slam/envire:
+  debian,ubuntu: rock-master-slam-envire
+perception/projection:
+  debian,ubuntu: rock-master-perception-projection
+planning/randward:
+  debian,ubuntu: rock-master-planning-randward
+planning/arvand_herd:
+  debian,ubuntu: rock-master-planning-arvand-herd
+planning/fd_cedalion:
+  debian,ubuntu: rock-master-planning-fd-cedalion
 planning/ompl:
   debian,ubuntu: rock-master-planning-ompl
 planning/sbpl:
   debian,ubuntu: rock-master-planning-sbpl
 external/lemon:
   debian,ubuntu: rock-master-external-lemon
+drivers/libusb:
+  debian,ubuntu: rock-master-drivers-libusb
+#slam/mtk:
+#  debian,ubuntu: rock-master-slam-mtk
 ## version is not quite ok
-##slam/octomap:
-##  debian,ubuntu: rock-master-slam-octomap
-#drivers/freenect:
-#  debian,ubuntu: rock-master-drivers-freenect
-#control/sdformat:
-#  debian,ubuntu: rock-master-control-sdformat
-#control/urdfdom_headers:
-#  debian,ubuntu: rock-master-control-urdfdom-headers
-#drivers/phidgets:
-#  debian,ubuntu: rock-master-drivers-phidgets
+slam/octomap:
+  debian,ubuntu: rock-master-slam-octomap
+drivers/freenect:
+  debian,ubuntu: rock-master-drivers-freenect
+control/sdformat:
+  debian,ubuntu: rock-master-control-sdformat
+control/urdfdom_headers:
+  debian,ubuntu: rock-master-control-urdfdom-headers
+drivers/phidgets:
+  debian,ubuntu: rock-master-drivers-phidgets
 #bundles/rock_ugv_nav:
 #  debian,ubuntu: rock-master-ruby-bundles-rock-ugv-nav
-#external/yaml-cpp:
-#  debian,ubuntu: rock-master-external-yaml-cpp
-#drivers/parport:
-#  debian,ubuntu: rock-master-drivers-parport
-#external/cminpack:
-#  debian,ubuntu: rock-master-external-cminpack
-#slam/flann:
-#  debian,ubuntu: rock-master-slam-flann
-#slam/g2o:
-#  debian,ubuntu: rock-master-slam-g2o
+external/yaml-cpp:
+  debian,ubuntu: rock-master-external-yaml-cpp
+drivers/parport:
+  debian,ubuntu: rock-master-drivers-parport
+external/cminpack:
+  debian,ubuntu: rock-master-external-cminpack
+slam/flann:
+  debian,ubuntu: rock-master-slam-flann
+slam/g2o:
+  debian,ubuntu: rock-master-slam-g2o
 multiagent/fipa_acl:
   debian,ubuntu: rock-master-multiagent-fipa-acl
-#multiagent/fipa_services:
-#  debian,ubuntu: rock-master-multiagent-fipa-services
+multiagent/fipa_services:
+  debian,ubuntu: rock-master-multiagent-fipa-services
 #multiagent/orogen/fipa_services:
 #  debian,ubuntu: rock-master-multiagent-orogen-fipa-services
