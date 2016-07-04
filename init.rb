@@ -65,6 +65,7 @@ if Autoproj.user_config('DEB_USE')
     Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"/lib/ruby"))
     Autobuild.env_add_path('LD_LIBRARY_PATH',File.join(release_install_dir,"lib"))
     Autobuild.env_add_path('OROGEN_PLUGIN_PATH', File.join(release_install_dir,"/share/orogen/plugins"))
+    Autobuild.env_add_path('TYPELIB_RUBY_PLUGIN_PATH', File.join(release_install_dir,"/share/typelib/ruby"))
     Autoproj.message "You need to run source env.sh before changes take effect"
 end
 
