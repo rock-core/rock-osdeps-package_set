@@ -67,8 +67,6 @@ base/templates/ruby_lib:
   debian,ubuntu: rock-master-base-templates-ruby-lib
 base/templates/cmake_vizkit_widget:
   debian,ubuntu: rock-master-base-templates-cmake-vizkit-widget
-external/sisl:
-  debian,ubuntu: rock-master-external-sisl
 utilrb:
   debian,ubuntu: rock-master-ruby-utilrb
 tools/rest_api:
@@ -91,8 +89,6 @@ tools/pocolog_cpp:
   debian,ubuntu: rock-master-tools-pocolog-cpp
 tools/roby:
   debian,ubuntu: rock-master-ruby-tools-roby
-drivers/aggregator:
-  debian,ubuntu: rock-master-drivers-aggregator
 perception/jpeg_conversion:
   debian,ubuntu: rock-master-perception-jpeg-conversion
 rtt_typelib:
@@ -101,8 +97,6 @@ tools/class_loader:
   debian,ubuntu: rock-master-tools-class-loader
 tools/service_discovery:
   debian,ubuntu: rock-master-tools-service-discovery
-drivers/transformer:
-  debian,ubuntu: rock-master-drivers-transformer
 perception/frame_helper:
   debian,ubuntu: rock-master-perception-frame-helper
 orogen:
@@ -127,16 +121,20 @@ tools/syskit:
   debian,ubuntu: rock-master-ruby-tools-syskit
 tools/logger:
   debian,ubuntu: rock-master-tools-logger
-drivers/orogen/aggregator:
-  debian,ubuntu: rock-master-drivers-orogen-aggregator
-drivers/orogen/transformer:
-  debian,ubuntu: rock-master-drivers-orogen-transformer
 gui/vizkit:
   debian,ubuntu: rock-master-ruby-gui-vizkit
 #bundles/rock:
 #  debian,ubuntu: rock-master-ruby-bundles-rock
 base/numeric:
   debian,ubuntu: rock-master-base-numeric
+drivers/aggregator:
+  debian,ubuntu: rock-master-drivers-aggregator
+drivers/orogen/aggregator:
+  debian,ubuntu: rock-master-drivers-orogen-aggregator
+drivers/transformer:
+  debian,ubuntu: rock-master-drivers-transformer
+drivers/orogen/transformer:
+  debian,ubuntu: rock-master-drivers-orogen-transformer
 drivers/camera_interface:
   debian,ubuntu: rock-master-drivers-camera-interface
 drivers/camera_usb:
@@ -145,43 +143,67 @@ drivers/orogen/camera_base:
   debian,ubuntu: rock-master-drivers-orogen-camera-base
 drivers/orogen/camera_usb:
   debian,ubuntu: rock-master-drivers-orogen-camera-usb
-external/snap:
-  debian,ubuntu: rock-master-external-snap
-external/gexf:
-  debian,ubuntu: rock-master-external-gexf
 drivers/iodrivers_base:
   debian,ubuntu: rock-master-drivers-iodrivers-base
+drivers/orogen/iodrivers_base:
+  debian,ubuntu: rock-master-drivers-orogen-iodrivers-base
+external/cminpack:
+  debian,ubuntu: rock-master-external-cminpack
+external/gexf:
+  debian,ubuntu: rock-master-external-gexf
+external/lemon:
+  debian,ubuntu: rock-master-external-lemon
 external/libply:
   debian,ubuntu: rock-master-external-libply
+external/sisl:
+  debian,ubuntu: rock-master-external-sisl
+external/snap:
+  debian,ubuntu: rock-master-external-snap
+external/yaml-cpp:
+  debian,ubuntu: rock-master-external-yaml-cpp
+slam/flann:
+  debian,ubuntu: rock-master-slam-flann
+slam/g2o:
+  debian,ubuntu: rock-master-slam-g2o
 slam/pcl:
   debian,ubuntu: rock-master-slam-pcl
 slam/hogman:
   debian,ubuntu: rock-master-slam-hogman
 slam/envire:
   debian,ubuntu: rock-master-slam-envire
+slam/orogen/envire:
+  debian,ubuntu: rock-master-slam-orogen-envire
+slam/octomap:
+  debian,ubuntu: rock-master-slam-octomap
 perception/projection:
   debian,ubuntu: rock-master-perception-projection
-planning/randward:
-  debian,ubuntu: rock-master-planning-randward
 planning/arvand_herd:
   debian,ubuntu: rock-master-planning-arvand-herd
+planning/bfsf:
+  debian,ubuntu: rock-master-planning-bfsf
+planning/fast_downward:
+  debian,ubuntu: rock-master-planning-fast-downward
 planning/fd_cedalion:
   debian,ubuntu: rock-master-planning-fd-cedalion
 planning/ompl:
   debian,ubuntu: rock-master-planning-ompl
+planning/pddl_planner:
+  debian,ubuntu: rock-master-planning-pddl-planner
+planning/randward:
+  debian,ubuntu: rock-master-planning-randward
 planning/sbpl:
   debian,ubuntu: rock-master-planning-sbpl
-external/lemon:
-  debian,ubuntu: rock-master-external-lemon
+planning/fd_uniform:
+  debian,ubuntu: rock-master-planning-fd-uniform
 drivers/libusb:
   debian,ubuntu: rock-master-drivers-libusb
 #slam/mtk:
 #  debian,ubuntu: rock-master-slam-mtk
 ## version is not quite ok
-slam/octomap:
-  debian,ubuntu: rock-master-slam-octomap
 drivers/freenect:
   debian,ubuntu: rock-master-drivers-freenect
+control/reflexxes:
+  debian,ubuntu: rock-master-control-reflexxes
 control/sdformat:
   debian,ubuntu: rock-master-control-sdformat
 control/urdfdom_headers:
@@ -190,16 +212,8 @@ drivers/phidgets:
   debian,ubuntu: rock-master-drivers-phidgets
 #bundles/rock_ugv_nav:
 #  debian,ubuntu: rock-master-ruby-bundles-rock-ugv-nav
-external/yaml-cpp:
-  debian,ubuntu: rock-master-external-yaml-cpp
 drivers/parport:
   debian,ubuntu: rock-master-drivers-parport
-external/cminpack:
-  debian,ubuntu: rock-master-external-cminpack
-slam/flann:
-  debian,ubuntu: rock-master-slam-flann
-slam/g2o:
-  debian,ubuntu: rock-master-slam-g2o
 multiagent/fipa_acl:
   debian,ubuntu: rock-master-multiagent-fipa-acl
 multiagent/fipa_services:
