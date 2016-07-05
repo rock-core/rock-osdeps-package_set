@@ -66,6 +66,11 @@ if Autoproj.user_config('DEB_USE')
     Autobuild.env_add_path('LD_LIBRARY_PATH',File.join(release_install_dir,"lib"))
     Autobuild.env_add_path('OROGEN_PLUGIN_PATH', File.join(release_install_dir,"/share/orogen/plugins"))
     Autobuild.env_add_path('TYPELIB_RUBY_PLUGIN_PATH', File.join(release_install_dir,"/share/typelib/ruby"))
+    # gui/vizkit3d specific settings
+    Autobuild.env_add_path('QT_PLUGIN_PATH', File.join(release_install_dir, "/lib/qt"))
+    Autobuild.env_add_path('VIZKIT_PLUGIN_RUBY_PATH', File.join(release_install_dir, "/lib/vizkit"))
+    Autobuild.env_add_path('VIZKIT_PLUGIN_RUBY_PATH', File.join(release_install_dir, "/lib"))
+    Autobuild.env_add_path('OSG_FILE_PATH', File.join(release_install_dir, "/share/vizkit"))
     Autoproj.message "You need to run source env.sh before changes take effect"
 end
 
