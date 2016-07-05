@@ -42,15 +42,13 @@ hooks:
 flexmock:
   debian,ubuntu: ruby-flexmock
 qtbindings:
-  debian,ubtuntu: rock-master-ruby-qtbindings
+  debian,ubuntu: rock-master-ruby-qtbindings
 minitest:
   debian,ubuntu: ruby-minitest
 yard:
   debian,ubuntu: ruby-yard
 tty-screen:
   debian,ubuntu: ruby-tty-screen
-tools/rubigen:
-  debian,ubuntu: rock-master-ruby-tools-rubigen
 base/cmake:
   debian,ubuntu: rock-master-base-cmake
 base/templates/cmake_lib:
@@ -59,76 +57,39 @@ base/templates/vizkit3d_plugin:
   debian,ubuntu: rock-master-base-templates-vizkit3d-plugin
 base/templates/doc:
   debian,ubuntu: rock-master-base-templates-doc
-rtt:
-  debian,ubuntu: rock-master-rtt
-gui/vizkit3d:
-  debian,ubuntu: rock-master-gui-vizkit3d
 base/templates/ruby_lib:
   debian,ubuntu: rock-master-base-templates-ruby-lib
 base/templates/cmake_vizkit_widget:
   debian,ubuntu: rock-master-base-templates-cmake-vizkit-widget
-utilrb:
-  debian,ubuntu: rock-master-ruby-utilrb
-tools/rest_api:
-  debian,ubuntu: rock-master-ruby-tools-rest-api
 base/types:
   debian,ubuntu: rock-master-base-types
 base/templates/bundle:
   debian,ubuntu: rock-master-base-templates-bundle
-typelib:
-  debian,ubuntu: rock-master-typelib
-tools/metaruby:
-  debian,ubuntu: rock-master-ruby-tools-metaruby
-gui/rock_webapp:
-  debian,ubuntu: rock-master-gui-rock-webapp
-tools/orogen_metadata:
-  debian,ubuntu: rock-master-tools-orogen-metadata
 base/console_bridge:
   debian,ubuntu: rock-master-base-console-bridge
-tools/pocolog_cpp:
-  debian,ubuntu: rock-master-tools-pocolog-cpp
-tools/roby:
-  debian,ubuntu: rock-master-ruby-tools-roby
-perception/jpeg_conversion:
-  debian,ubuntu: rock-master-perception-jpeg-conversion
-rtt_typelib:
-  debian,ubuntu: rock-master-rtt-typelib
-tools/class_loader:
-  debian,ubuntu: rock-master-tools-class-loader
-tools/service_discovery:
-  debian,ubuntu: rock-master-tools-service-discovery
-perception/frame_helper:
-  debian,ubuntu: rock-master-perception-frame-helper
-orogen:
-  debian,ubuntu: rock-master-ruby-orogen
 base/scripts:
   debian,ubuntu: rock-master-ruby-base-scripts
-tools/pocolog:
-  debian,ubuntu: rock-master-ruby-tools-pocolog
-tools/log_tools:
-  debian,ubuntu: rock-master-ruby-tools-log-tools
-gui/rock_widget_collection:
-  debian,ubuntu: rock-master-gui-rock-widget-collection
 base/orogen/std:
   debian,ubuntu: rock-master-base-orogen-std
-tools/orocos.rb:
-  debian,ubuntu: rock-master-ruby-tools-orocos.rb
-base/orogen/types:
-  debian,ubuntu: rock-master-base-orogen-types
-tools/telemetry:
-  debian,ubuntu: rock-master-ruby-tools-telemetry
-tools/syskit:
-  debian,ubuntu: rock-master-ruby-tools-syskit
-tools/logger:
-  debian,ubuntu: rock-master-tools-logger
-gui/vizkit:
-  debian,ubuntu: rock-master-ruby-gui-vizkit
-#bundles/rock:
-#  debian,ubuntu: rock-master-ruby-bundles-rock
 base/numeric:
   debian,ubuntu: rock-master-base-numeric
+base/orogen/types:
+  debian,ubuntu: rock-master-base-orogen-types
+#bundles/rock:
+#  debian,ubuntu: rock-master-ruby-bundles-rock
+#bundles/rock_ugv_nav:
+#  debian,ubuntu: rock-master-ruby-bundles-rock-ugv-nav
+control/reflexxes:
+  debian,ubuntu: rock-master-control-reflexxes
+control/sdformat:
+  debian,ubuntu: rock-master-control-sdformat
+control/urdfdom_headers:
+  debian,ubuntu: rock-master-control-urdfdom-headers
 drivers/aggregator:
   debian,ubuntu: rock-master-drivers-aggregator
+## version is not quite ok
+drivers/freenect:
+  debian,ubuntu: rock-master-drivers-freenect
 drivers/orogen/aggregator:
   debian,ubuntu: rock-master-drivers-orogen-aggregator
 drivers/transformer:
@@ -139,6 +100,8 @@ drivers/camera_interface:
   debian,ubuntu: rock-master-drivers-camera-interface
 drivers/camera_usb:
   debian,ubuntu: rock-master-drivers-camera-usb
+drivers/libusb:
+  debian,ubuntu: rock-master-drivers-libusb
 drivers/orogen/camera_base:
   debian,ubuntu: rock-master-drivers-orogen-camera-base
 drivers/orogen/camera_usb:
@@ -147,6 +110,10 @@ drivers/iodrivers_base:
   debian,ubuntu: rock-master-drivers-iodrivers-base
 drivers/orogen/iodrivers_base:
   debian,ubuntu: rock-master-drivers-orogen-iodrivers-base
+drivers/parport:
+  debian,ubuntu: rock-master-drivers-parport
+drivers/phidgets:
+  debian,ubuntu: rock-master-drivers-phidgets
 external/cminpack:
   debian,ubuntu: rock-master-external-cminpack
 external/gexf:
@@ -161,26 +128,36 @@ external/snap:
   debian,ubuntu: rock-master-external-snap
 external/yaml-cpp:
   debian,ubuntu: rock-master-external-yaml-cpp
-slam/flann:
-  debian,ubuntu: rock-master-slam-flann
-slam/g2o:
-  debian,ubuntu: rock-master-slam-g2o
-slam/pcl:
-  debian,ubuntu: rock-master-slam-pcl
-slam/hogman:
-  debian,ubuntu: rock-master-slam-hogman
-slam/envire:
-  debian,ubuntu: rock-master-slam-envire
-slam/orogen/envire:
-  debian,ubuntu: rock-master-slam-orogen-envire
-slam/octomap:
-  debian,ubuntu: rock-master-slam-octomap
+gui/rock_webapp:
+  debian,ubuntu: rock-master-gui-rock-webapp
+gui/rock_widget_collection:
+  debian,ubuntu: rock-master-gui-rock-widget-collection
+gui/vizkit:
+  debian,ubuntu: rock-master-ruby-gui-vizkit
+gui/vizkit3d:
+  debian,ubuntu: rock-master-gui-vizkit3d
+multiagent/fipa_acl:
+  debian,ubuntu: rock-master-multiagent-fipa-acl
+multiagent/fipa_services:
+  debian,ubuntu: rock-master-multiagent-fipa-services
+#multiagent/orogen/fipa_services:
+#  debian,ubuntu: rock-master-multiagent-orogen-fipa-services
+orogen:
+  debian,ubuntu: rock-master-ruby-orogen
+perception/frame_helper:
+  debian,ubuntu: rock-master-perception-frame-helper
+perception/jpeg_conversion:
+  debian,ubuntu: rock-master-perception-jpeg-conversion
 perception/projection:
   debian,ubuntu: rock-master-perception-projection
 planning/arvand_herd:
   debian,ubuntu: rock-master-planning-arvand-herd
 planning/bfsf:
   debian,ubuntu: rock-master-planning-bfsf
+planning/exploration:
+  debian,ubuntu: rock-master-planning-exploration
+planning/orogen/exploration:
+  debian,ubuntu: rock-master-planning-orogen-exploration
 planning/fast_downward:
   debian,ubuntu: rock-master-planning-fast-downward
 planning/fd_cedalion:
@@ -195,28 +172,61 @@ planning/sbpl:
   debian,ubuntu: rock-master-planning-sbpl
 planning/fd_uniform:
   debian,ubuntu: rock-master-planning-fd-uniform
-drivers/libusb:
-  debian,ubuntu: rock-master-drivers-libusb
+rtt:
+  debian,ubuntu: rock-master-rtt
+rtt_typelib:
+  debian,ubuntu: rock-master-rtt-typelib
+slam/flann:
+  debian,ubuntu: rock-master-slam-flann
+slam/g2o:
+  debian,ubuntu: rock-master-slam-g2o
+slam/pcl:
+  debian,ubuntu: rock-master-slam-pcl
+slam/hogman:
+  debian,ubuntu: rock-master-slam-hogman
+slam/envire:
+  debian,ubuntu: rock-master-slam-envire
+slam/gmapping:
+  debian,ubuntu: rock-master-slam-gmapping
+slam/octomap:
+  debian,ubuntu: rock-master-slam-octomap
+slam/odometry:
+  debian,ubuntu: rock-master-slam-odometry
+slam/orogen/envire:
+  debian,ubuntu: rock-master-slam-orogen-envire
 #slam/mtk:
 #  debian,ubuntu: rock-master-slam-mtk
-## version is not quite ok
-drivers/freenect:
-  debian,ubuntu: rock-master-drivers-freenect
-control/reflexxes:
-  debian,ubuntu: rock-master-control-reflexxes
-control/sdformat:
-  debian,ubuntu: rock-master-control-sdformat
-control/urdfdom_headers:
-  debian,ubuntu: rock-master-control-urdfdom-headers
-drivers/phidgets:
-  debian,ubuntu: rock-master-drivers-phidgets
-#bundles/rock_ugv_nav:
-#  debian,ubuntu: rock-master-ruby-bundles-rock-ugv-nav
-drivers/parport:
-  debian,ubuntu: rock-master-drivers-parport
-multiagent/fipa_acl:
-  debian,ubuntu: rock-master-multiagent-fipa-acl
-multiagent/fipa_services:
-  debian,ubuntu: rock-master-multiagent-fipa-services
-#multiagent/orogen/fipa_services:
-#  debian,ubuntu: rock-master-multiagent-orogen-fipa-services
+tools/class_loader:
+  debian,ubuntu: rock-master-tools-class-loader
+tools/logger:
+  debian,ubuntu: rock-master-tools-logger
+tools/log_tools:
+  debian,ubuntu: rock-master-ruby-tools-log-tools
+tools/metaruby:
+  debian,ubuntu: rock-master-ruby-tools-metaruby
+tools/orocos.rb:
+  debian,ubuntu: rock-master-ruby-tools-orocos.rb
+tools/orogen_metadata:
+  debian,ubuntu: rock-master-tools-orogen-metadata
+tools/pocolog:
+  debian,ubuntu: rock-master-ruby-tools-pocolog
+tools/pocolog_cpp:
+  debian,ubuntu: rock-master-tools-pocolog-cpp
+tools/rest_api:
+  debian,ubuntu: rock-master-ruby-tools-rest-api
+tools/roby:
+  debian,ubuntu: rock-master-ruby-tools-roby
+tools/rubigen:
+  debian,ubuntu: rock-master-ruby-tools-rubigen
+tools/service_discovery:
+  debian,ubuntu: rock-master-tools-service-discovery
+tools/syskit:
+  debian,ubuntu: rock-master-ruby-tools-syskit
+tools/telemetry:
+  debian,ubuntu: rock-master-ruby-tools-telemetry
+typelib:
+  debian,ubuntu: rock-master-typelib
+utilmm:
+  debian,ubuntu: rock-master-utilmm
+utilrb:
+  debian,ubuntu: rock-master-ruby-utilrb
