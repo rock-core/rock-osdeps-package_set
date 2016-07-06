@@ -71,6 +71,8 @@ if Autoproj.user_config('DEB_USE')
     Autobuild.env_add_path('VIZKIT_PLUGIN_RUBY_PATH', File.join(release_install_dir, "/lib/vizkit"))
     Autobuild.env_add_path('VIZKIT_PLUGIN_RUBY_PATH', File.join(release_install_dir, "/lib"))
     Autobuild.env_add_path('OSG_FILE_PATH', File.join(release_install_dir, "/share/vizkit"))
+    # Syskit/Roby through base/scripts
+    Autobuild.env_add_path('ROBY_PLUGIN_PATH', File.join(release_install_dir, "lib/ruby/vendor_ruby/rock/roby_plugin.rb"))
     Autoproj.message "You need to run source env.sh before changes take effect"
 end
 
