@@ -185,12 +185,12 @@ base/orogen/types:
     '16.04,lts,xenial,xerus': rock-master-base-orogen-types
 #bundles/rock:
 #  debian,ubuntu:
-    '14.04,14.04.2,lts,trusty,tahr': rock-master-ruby-bundles-rock
-    '16.04,lts,xenial,xerus': rock-master-ruby-bundles-rock
+#    '14.04,14.04.2,lts,trusty,tahr': rock-master-ruby-bundles-rock
+#    '16.04,lts,xenial,xerus': rock-master-ruby-bundles-rock
 #bundles/rock_ugv_nav:
 #  debian,ubuntu:
-    '14.04,14.04.2,lts,trusty,tahr': rock-master-ruby-bundles-rock-ugv-nav
-    '16.04,lts,xenial,xerus': rock-master-ruby-bundles-rock-ugv-nav
+#    '14.04,14.04.2,lts,trusty,tahr': rock-master-ruby-bundles-rock-ugv-nav
+#    '16.04,lts,xenial,xerus': rock-master-ruby-bundles-rock-ugv-nav
 control/reflexxes:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-control-reflexxes
