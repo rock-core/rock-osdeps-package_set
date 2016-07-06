@@ -67,8 +67,8 @@ flexmock:
     '16.04,lts,xenial,xerus,default': ruby-flexmock
 grape:
   debian,ubuntu:
-    '14.04,14.04.2,lts,trusty,tahr': ruby-grape
-    '16.04,lts,xenial,xerus,default': ruby-grape
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-ruby-grape
+    '16.04,lts,xenial,xerus,default': grape
 hoe-yard:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-ruby-hoe-yard
@@ -113,8 +113,8 @@ sprockets:
     '16.04,lts,xenial,xerus,default': ruby-sprockets
 thin:
   debian,ubuntu:
-    '14.04,14.04.2,lts,trusty,tahr': ruby-thin
-    '16.04,lts,xenial,xerus,default': ruby-thin
+    '14.04,14.04.2,lts,trusty,tahr': thin
+    '16.04,lts,xenial,xerus,default': thin
 tty-screen:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': ruby-tty-screen
