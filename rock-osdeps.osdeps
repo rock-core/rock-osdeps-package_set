@@ -315,7 +315,7 @@ multiagent/fipa_services:
 #multiagent/orogen/fipa_services:
 #  debian,ubuntu:
 #    '14.04,14.04.2,lts,trusty,tahr': rock-master-multiagent-orogen-fipa-services
-    '16.04,lts,xenial,xerus': rock-master-multiagent-orogen-fipa-services
+#    '16.04,lts,xenial,xerus': rock-master-multiagent-orogen-fipa-services
 orogen:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-ruby-orogen
@@ -395,7 +395,7 @@ slam/g2o:
 slam/pcl:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-slam-pcl
-    '16.04,lts,xenial,xerus': rock-master-slam-pcl
+    '16.04,lts,xenial,xerus': [libpcl-dev,libpcl1.7]
 slam/hogman:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-slam-hogman
@@ -423,7 +423,7 @@ slam/orogen/envire:
 #slam/mtk:
 #  debian,ubuntu:
 #    '14.04,14.04.2,lts,trusty,tahr': rock-master-slam-mtk
-    '16.04,lts,xenial,xerus': rock-master-slam-mtk
+#    '16.04,lts,xenial,xerus': rock-master-slam-mtk
 tools/class_loader:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-tools-class-loader
