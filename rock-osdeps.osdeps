@@ -1,54 +1,70 @@
 ---
-hoe:
-  debian,ubuntu: ruby-hoe
-hoe-yard:
-  debian,ubuntu: rock-master-ruby-hoe-yard
-thin:
-  debian,ubuntu: ruby-thin
-grape:
-  debian,ubuntu: ruby-grape
-rack-cors:
-  debian,ubuntu: rock-master-ruby-rack-cors
-faye-websocket:
-  debian,ubuntu: ruby-faye-websocket
-sprockets:
-  debian,ubuntu: ruby-sprockets
 activesupport:
   debian,ubuntu: ruby-activesupport
-bundler:
-  debian,ubuntu: ruby-bundler
-cucumber:
-  debian,ubuntu: cucumber
-rice:
-  debian,ubuntu: rock-master-ruby-rice
-kramdown:
-  debian,ubuntu: ruby-kramdown
-facets:
-  debian,ubuntu: ruby-facets
-state_machine:
-  debian,ubuntu: rock-master-ruby-state-machine
+axiom-types:
+  debian,ubuntu: rock-master-ruby-axiom-types
 binding_of_caller:
   debian,ubuntu: rock-master-ruby-binding-of-caller
-rb-readline:
-  debian,ubuntu: rock-master-ruby-rb-readline
+bundler:
+  debian,ubuntu: ruby-bundler
+coercible:
+  debian,ubuntu: rock-master-ruby-coercible
 concurrent-ruby:
   debian,ubuntu: rock-master-ruby-concurrent-ruby
-rake-compiler:
-  debian,ubuntu: rake-compiler
-pastel:
-  debian,ubuntu: rock-master-ruby-pastel
-hooks:
-  debian,ubuntu: rock-master-ruby-hooks
+concurrent-ruby-ext:
+  debian,ubuntu: rock-master-ruby-concurrent-ruby-ext
+cucumber:
+  debian,ubuntu: cucumber
+cucumber-core:
+  debian,ubuntu: rock-master-ruby-cucumber-core
+cucumber-wire:
+  debian,ubuntu: rock-master-ruby-cucumber-wire
+debug-inspector:
+  debian,ubuntu: rock-master-ruby-debug-inspector
+decendants-tracker:
+  debian,ubuntu: rock-master-ruby-decendants-tracker
+enumerable-lazy:
+  debian,ubuntu: rock-master-ruby-enumerable-lazy
+equatable:
+  debian,ubuntu: rock-master-ruby-equatable
+facets:
+  debian,ubuntu: ruby-facets
+faye-websocket:
+  debian,ubuntu: rock-master-ruby-faye-websocket
 flexmock:
   debian,ubuntu: ruby-flexmock
-qtbindings:
-  debian,ubuntu: rock-master-ruby-qtbindings
+grape:
+  debian,ubuntu: ruby-grape
+hoe-yard:
+  debian,ubuntu: rock-master-ruby-hoe-yard
+hooks:
+  debian,ubuntu: rock-master-ruby-hooks
+kramdown:
+  debian,ubuntu: ruby-kramdown
 minitest:
   debian,ubuntu: ruby-minitest
-yard:
-  debian,ubuntu: ruby-yard
+pastel:
+  debian,ubuntu: rock-master-ruby-pastel
+rake-compiler:
+  debian,ubuntu: rake-compiler
+rack-cors:
+  debian,ubuntu: ruby-rack-cors
+rb-readline:
+  debian,ubuntu: rock-master-ruby-rb-readline
+rice:
+  debian,ubuntu: rock-master-ruby-rice
+sprockets:
+  debian,ubuntu: ruby-sprockets
+thin:
+  debian,ubuntu: ruby-thin
 tty-screen:
   debian,ubuntu: ruby-tty-screen
+state_machine:
+  debian,ubuntu: rock-master-ruby-state-machine
+qtbindings:
+  debian,ubtuntu: rock-master-ruby-qtbindings
+yard:
+  debian,ubuntu: ruby-yard
 base/cmake:
   debian,ubuntu: rock-master-base-cmake
 base/templates/cmake_lib:
