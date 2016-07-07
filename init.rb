@@ -100,13 +100,36 @@ end
 
 if Autoproj.user_config('DEB_AUTOMATIC')
     apt_rock_list_file = "/etc/apt/sources.list.d/rock.list"
-    update_key = !File.exist?(apt_rock_list_file)
-    system("echo 'deb http://rimres-gcs2-u/rock-releases/#{Autoproj.user_config('debian_release')} #{Autoproj.user_config('distribution')} main' | sudo tee #{apt_rock_list_file}")
-    if update_key
-        system("wget http://rimres-gcs2-u/rock-devel/conf/Rock-debian.gpg.key > /dev/null")
-        system("sudo apt-key add Rock-debian.gpg.key < Rock-debian.gpg.key > /dev/null")
-        system("rm Rock-debian.gpg.key")
-        system("sudo apt-get update > /tmp/autoproj-update.log")
+    apt_source = "deb http://rimres-gcs2-u/rock-releases/#{Autoproj.user_config('debian_release')} #{Autoproj.user_config('distribution')} main"
+    update = false
+    if !File.exist?(apt_rock_list_file)
+        update = true
+    else
+        File.open(apt_rock_list_file,"r") do |f|
+            apt_source_existing = f.gets
+            regexp = Regexp.new(apt_source)
+            if !regexp.match(apt_source_existing)
+                Autoproj.message "  Existing apt source needs update: #{apt_source_existing}"
+                Autoproj.message "  Changing to: #{apt_source}"
+                update = true
+            end
+        end
+    end
+    if update
+        if !system("echo #{apt_source} | sudo tee #{apt_rock_list_file}")
+            Autoproj.warn "Failed to install apt source: #{apt_source}"
+        else
+            Autoproj.message " Installing Rock key"
+            key_url = "http://rimres-gcs2-u/rock-devel/conf/Rock-debian.gpg.key"
+            if !system("wget -q #{key_url}")
+                Autoproj.warn "Retrieving key from: #{key_url} failed"
+            else
+                system("sudo apt-key add Rock-debian.gpg.key < Rock-debian.gpg.key > /dev/null")
+                system("rm Rock-debian.gpg.key")
+            end
+            Autoproj.message " Updating package source -- this can take some time"
+            system("sudo apt-get update > /tmp/autoproj-update.log")
+        end
     end
 end
 
