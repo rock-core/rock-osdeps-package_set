@@ -95,6 +95,20 @@ if Autoproj.user_config('DEB_USE')
     Autobuild.env_add_path('OSG_FILE_PATH', File.join(release_install_dir, "/share/vizkit"))
     # Syskit/Roby through base/scripts
     Autobuild.env_add_path('ROBY_PLUGIN_PATH', File.join(release_install_dir, "lib/ruby/vendor_ruby/rock/roby_plugin.rb"))
+
+    shell_extension = nil
+    if ENV['SHELL'].include?('/zsh')
+        shell_extension = File.join(release_install_dir,"share/scripts/shell/zsh")
+    elsif ENV['SHELL'].include?('/bash')
+        shell_extension = File.join(release_install_dir,"share/scripts/shell/bash")
+    elsif ENV['SHELL'].include?('/sh')
+        shell_extension = File.join(release_install_dir,"share/scripts/shell/sh")
+    end
+
+    if shell_extension and File.exist?(shell_extension)
+        Autobuild.env_source_file(shell_extension)
+    end
+
     Autoproj.message "You need to run source env.sh before changes take effect"
 end
 
