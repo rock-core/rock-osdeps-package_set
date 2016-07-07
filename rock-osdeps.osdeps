@@ -228,10 +228,22 @@ drivers/camera_interface:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-drivers-camera-interface
     '16.04,lts,xenial,xerus': rock-master-drivers-camera-interface
+drivers/camera_prosilica:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-drivers-camera-prosilica
+    '16.04,lts,xenial,xerus': rock-master-drivers-camera-prosilica
 drivers/camera_usb:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-drivers-camera-usb
     '16.04,lts,xenial,xerus': rock-master-drivers-camera-usb
+drivers/dynamixel:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-drivers-dynamixel
+    '16.04,lts,xenial,xerus': rock-master-drivers-dynamixel
+drivers/hokuyo:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-drivers-hokuyo
+    '16.04,lts,xenial,xerus': rock-master-drivers-hokuyo
 drivers/libusb:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-drivers-libusb
@@ -260,10 +272,26 @@ drivers/phidgets:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-drivers-phidgets
     '16.04,lts,xenial,xerus': rock-master-drivers-phidgets
+drivers/velodyne_lidar:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-drivers-velodyne-lidar
+    '16.04,lts,xenial,xerus': rock-master-drivers-velodyne-lidar
+drivers/orogen/velodyne_lidar:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-drivers-orogen-velodyne-lidar
+    '16.04,lts,xenial,xerus': rock-master-drivers-orogen-velodyne-lidar
+external/ccd:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-external-ccd
+    '16.04,lts,xenial,xerus': rock-master-external-ccd
 external/cminpack:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-external-cminpack
     '16.04,lts,xenial,xerus': rock-master-external-cminpack
+external/fcl:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-external-fcl
+    '16.04,lts,xenial,xerus': rock-master-external-fcl
 external/gexf:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-external-gexf
@@ -288,6 +316,10 @@ external/yaml-cpp:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-external-yaml-cpp
     '16.04,lts,xenial,xerus': rock-master-external-yaml-cpp
+gui/pointcloud:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-gui-pointcloud
+    '16.04,lts,xenial,xerus': rock-master-gui-pointcloud
 gui/rock_webapp:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-gui-rock-webapp
@@ -420,6 +452,18 @@ slam/orogen/envire:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-slam-orogen-envire
     '16.04,lts,xenial,xerus': rock-master-slam-orogen-envire
+slam/orogen/odometry:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-slam-orogen-odometry
+    '16.04,lts,xenial,xerus': rock-master-slam-orogen-odometry
+slam/orogen/pcl:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-slam-orogen-pcl
+    '16.04,lts,xenial,xerus': rock-master-slam-orogen-pcl
+slam/orogen/tilt_scan:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-slam-orogen-tilt-scan
+    '16.04,lts,xenial,xerus': rock-master-slam-orogen-tilt-scan
 #slam/mtk:
 #  debian,ubuntu:
 #    '14.04,14.04.2,lts,trusty,tahr': rock-master-slam-mtk
