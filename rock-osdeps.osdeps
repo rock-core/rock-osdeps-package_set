@@ -127,6 +127,22 @@ qtbindings:
   debian,ubtuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-ruby-qtbindings
     '16.04,lts,xenial,xerus,default': rock-master-ruby-qtbindings
+virtus:
+  debian,ubtuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-ruby-virtus
+    '16.04,lts,xenial,xerus,default': ruby-virtus
+websocket:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-ruby-websocket
+    '16.04,lts,xenial,xerus,default': rock-master-ruby-websocket
+websocket-driver:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-ruby-websocket-driver
+    '16.04,lts,xenial,xerus,default': ruby-websocket-driver
+websocket-extensions:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-ruby-websocket-extensions
+    '16.04,lts,xenial,xerus,default': ruby-websocket-extensions
 yard:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': ruby-yard
