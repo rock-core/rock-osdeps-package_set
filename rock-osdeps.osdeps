@@ -135,6 +135,10 @@ base/cmake:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-base-cmake
     '16.04,lts,xenial,xerus': rock-master-base-cmake
+base/logging:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-base-logging
+    '16.04,lts,xenial,xerus': rock-master-base-logging
 base/templates/cmake_lib:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-base-templates-cmake-lib
@@ -280,6 +284,10 @@ drivers/orogen/velodyne_lidar:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-drivers-orogen-velodyne-lidar
     '16.04,lts,xenial,xerus': rock-master-drivers-orogen-velodyne-lidar
+external/aruco:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-external-aruco
+    '16.04,lts,xenial,xerus': rock-master-external-aruco
 external/ccd:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-external-ccd
