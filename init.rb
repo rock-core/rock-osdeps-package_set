@@ -28,6 +28,10 @@ if Autoproj.user_config('DEB_USE')
         end
     end
 
+    if ["xenial"].include?(current_release_name)
+        Autoproj.env_set "TYPELIB_CXX_LOADER","castxml"
+    end
+
     Autoproj.configuration_option 'distribution', 'string',
         :default => current_release_name,
         :possible_answers => ['trusty','xenial'],
