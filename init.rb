@@ -9,45 +9,63 @@ Autoproj.configuration_option 'DEB_USE', 'boolean',
     "The installed packages will be stored in /opt/rock/<flavour>/",
     "Use precompiles Packages?"]
 
-Autoproj.configuration_option 'release', 'string',
-    :default => 'master',
-    :possible_answers => ['master'],
-    :doc => ["Which Rock-Release do you want to use?",
-    "Possibilities are currently 'master'"]
-
-Autoproj.configuration_option 'distribution', 'string',
-    :default => 'vivid',
-    :possible_answers => ['jessie','wheezy','trusty','vivid'],
-    :doc => ["Which distribution do you use?",
-    "There are builds for 'jessie' (Debian), 'wheezy' (Debian), 'trusty' (Ubuntu), 'vivid' (Ubuntu)",
-    "Which distribuion do you use?"]
+#Autoproj.configuration_option 'release', 'string',
+#    :default => 'master',
+#    :possible_answers => ['master'],
+#    :doc => ["Which Rock-Release do you want to use?",
+#    "Possibilities are currently 'master'"]
 
 Autoproj.user_config('DEB_USE') # To have a reasonable order of questions
 
-Autoproj.configuration_option 'DEB_AUTOMATIC', 'boolean',
-    :default => 'no',
-    :doc => ["Do you want the installation be done automatically?",
-    "This installation uses sudo and may ask for your password",
-    "You can do the installation yourself with:",
-    #"sudo sh -c \"echo 'deb http://rimres-gcs2-u/release/#{Autoproj.user_config('release')} #{Autoproj.user_config('distribution'    )} main' > /etc/apt/sources.list.d/rock.list\"",
-    "sudo sh -c \"echo 'deb http://rimres-gcs2-u/release/#{Autoproj.user_config('ROCK_SELECTED_FLAVOR')} #{Autoproj.user_config('distribution'    )} main' > /etc/apt/sources.list.d/rock.list\"",
-    "wget http://rimres-gcs2-u/conf/Rock-debian.gpg.key",
-    "sudo apt-key add Rock-debian.gpg.key < Rock-debian.gpg.key",
-    "rm Rock-debian.gpg.key",
-    "sudo apt-get update > /dev/null",
-    "##########################################################",
-    "This installation uses sudo and may ask for your password",
-    "Install automatically?"]
-
-
 #the actural settings if enabled
 if Autoproj.user_config('DEB_USE')
+    distribution,release = Autoproj::OSDependencies.operating_system
+    current_release_name = nil
+    ['jessie','trusty','vivid','xenial'].each do |release_name|
+        if release.include?(release_name)
+            current_release_name = release_name
+            break
+        end
+    end
+
+    Autoproj.configuration_option 'distribution', 'string',
+        :default => current_release_name,
+        :possible_answers => ['trusty','xenial'],
+        :doc => ["Which distribution do you use?",
+        "There are builds for 'jessie' (Debian), 'trusty' (Ubuntu), 'xenial' (Ubuntu)",
+        "Which distribution do you use?"]
+
+    Autoproj.configuration_option 'debian_release', 'string',
+        :default => 'master-16.06',
+        :possible_answers => ['master-16.06'],
+        :doc => ["Select the master debian release",
+        "Remain with the default if you do not know better (currently there is only one anyway)"]
+
+    Autoproj.configuration_option 'DEB_AUTOMATIC', 'boolean',
+        :default => 'no',
+        :doc => ["Do you want the installation be done automatically?",
+        "This installation uses sudo and may ask for your password",
+        "You can do the installation yourself with:",
+        "echo 'deb http://rimres-gcs2-u/rock-releases/#{Autoproj.user_config('debian_release')} #{Autoproj.user_config('distribution')} main' | sudo tee /etc/apt/sources.list.d/rock.list",
+        "wget http://rimres-gcs2-u/rock-devel/conf/Rock-debian.gpg.key",
+        "sudo apt-key add Rock-debian.gpg.key < Rock-debian.gpg.key",
+        "rm Rock-debian.gpg.key",
+        "sudo apt-get update > /dev/null",
+        "##########################################################",
+        "This installation uses sudo and may ask for your password",
+        "Install automatically?"]
+
+
     architecture = "#{`gcc -print-multiarch`}".strip
-    #release = Autoproj.user_config('release')
-    release = Autoproj.user_config('ROCK_SELECTED_FLAVOR')
+    flavor = Autoproj.user_config('ROCK_SELECTED_FLAVOR')
+    if flavor != "master"
+        Autoproj.warn "Debian packages are currently only available for the 'master' release, but you are using 'stable' release"
+        Autoproj.warn "So either choose to not using debian packages, or switch to release 'master', e.g., with 'autoproj reconfigure'"
+        exit 0
+    end
 
     require 'rbconfig'
-    release_install_dir = "/opt/rock/#{release}"
+    release_install_dir = "/opt/rock/master"
     rock_archdir = RbConfig::CONFIG['archdir'].gsub("/usr", release_install_dir)
     rock_rubylibdir = RbConfig::CONFIG['rubylibdir'].gsub("/usr", release_install_dir)
 
@@ -77,9 +95,11 @@ if Autoproj.user_config('DEB_USE')
 end
 
 if Autoproj.user_config('DEB_AUTOMATIC')
-    if !File.exist?("/etc/apt/sources.list.d/rock.list")
-        system("sudo sh -c \"echo 'deb http://rimres-gcs2-u/release/#{Autoproj.user_config('release')} #{Autoproj.user_config('distribution')} main' > /etc/apt/sources.list.d/rock.list\"")
-        system("wget http://rimres-gcs2-u/conf/Rock-debian.gpg.key > /dev/null")
+    apt_rock_list_file = "/etc/apt/sources.list.d/rock.list"
+    update_key = !File.exist?(apt_rock_list_file)
+    system("echo 'deb http://rimres-gcs2-u/rock-releases/#{Autoproj.user_config('debian_release')} #{Autoproj.user_config('distribution')} main' | sudo tee #{apt_rock_list_file}")
+    if update_key
+        system("wget http://rimres-gcs2-u/rock-devel/conf/Rock-debian.gpg.key > /dev/null")
         system("sudo apt-key add Rock-debian.gpg.key < Rock-debian.gpg.key > /dev/null")
         system("rm Rock-debian.gpg.key")
         system("sudo apt-get update > /tmp/autoproj-update.log")
