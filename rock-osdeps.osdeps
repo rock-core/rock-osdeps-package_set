@@ -211,6 +211,14 @@ base/orogen/types:
 #  debian,ubuntu:
 #    '14.04,14.04.2,lts,trusty,tahr': rock-master-ruby-bundles-rock-ugv-nav
 #    '16.04,lts,xenial,xerus': rock-master-ruby-bundles-rock-ugv-nav
+control/joint_dispatcher:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-control-joint-dispatcher
+    '16.04,lts,xenial,xerus': rock-master-control-joint-dispatcher
+control/orogen/joint_dispatcher:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-control-orogen-joint-dispatcher
+    '16.04,lts,xenial,xerus': rock-master-control-orogen-joint-dispatcher
 control/reflexxes:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-control-reflexxes
