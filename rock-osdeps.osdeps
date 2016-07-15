@@ -10,7 +10,7 @@ axiom-types:
 binding_of_caller:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-ruby-binding-of-caller
-    '16.04,lts,xenial,xerus,default': rock-master-ruby-binding-of-caller
+    '16.04,lts,xenial,xerus,default': ruby-binding-of-caller
 bundler:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': ruby-bundler
@@ -122,7 +122,7 @@ tty-screen:
 state_machine:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-ruby-state-machine
-    '16.04,lts,xenial,xerus,default': rock-master-ruby-state-machine
+    '16.04,lts,xenial,xerus,default': ruby-state-machine
 qtbindings:
   debian,ubtuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-ruby-qtbindings
