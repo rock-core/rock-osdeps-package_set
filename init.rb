@@ -36,8 +36,8 @@ if Autoproj.user_config('DEB_USE')
             "Which distribution do you use?"]
 
         Autoproj.configuration_option 'debian_release', 'string',
-            :default => 'master-16.06',
-            :possible_answers => ['master-16.06'],
+            :default => 'master-16.07',
+            :possible_answers => ['master-16.07'],
             :doc => ["Select the rock debian release",
             "Use the default if you do not know better (currently there is only one anyway)"]
 
@@ -65,7 +65,7 @@ if Autoproj.user_config('DEB_USE')
         end
 
         require 'rbconfig'
-        release_install_dir = "/opt/rock/master"
+        release_install_dir = "/opt/rock/#{Autoproj.user_config('debian_release')}"
         rock_archdir = RbConfig::CONFIG['archdir'].gsub("/usr", release_install_dir)
         rock_rubylibdir = RbConfig::CONFIG['rubylibdir'].gsub("/usr", release_install_dir)
 
