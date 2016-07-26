@@ -1,0 +1,728 @@
+---
+activesupport:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': ruby-activesupport
+    '16.04,lts,xenial,xerus,default': ruby-activesupport
+    '8,debian': ruby-activesupport
+axiom-types:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-axiom-types
+    '16.04,lts,xenial,xerus,default': ruby-axiom-types
+    '8,debian': ruby-axiom-types
+binding_of_caller:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-binding-of-caller
+    '16.04,lts,xenial,xerus,default': ruby-binding-of-caller
+    '8,debian': ruby-binding-of-caller
+bundler:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': ruby-bundler
+    '16.04,lts,xenial,xerus,default': ruby-bundler
+    '8,debian': ruby-bundler
+coercible:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-coercible
+    '16.04,lts,xenial,xerus,default': ruby-coercible
+    '8,debian': ruby-coercible
+concurrent-ruby:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-concurrent-ruby
+    '16.04,lts,xenial,xerus,default': rock-master-16.07-ruby-concurrent-ruby
+    '8,debian': rock-master-16.07-ruby-concurrent-ruby
+concurrent-ruby-ext:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-concurrent-ruby-ext
+    '16.04,lts,xenial,xerus,default': rock-master-16.07-ruby-concurrent-ruby-ext
+    '8,debian': rock-master-16.07-ruby-concurrent-ruby-ext
+cucumber:
+  debian,ubuntu: cucumber
+cucumber-core:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-cucumber-core
+    '16.04,lts,xenial,xerus,default': rock-master-16.07-ruby-cucumber-core
+    '8,debian': rock-master-16.07-ruby-cucumber-core
+cucumber-wire:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-cucumber-wire
+    '16.04,lts,xenial,xerus,default': rock-master-16.07-ruby-cucumber-wire
+    '8,debian': rock-master-16.07-ruby-cucumber-wire
+debug-inspector:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-debug-inspector
+    '16.04,lts,xenial,xerus,default': ruby-debug-inspector
+    '8,debian': ruby-debug-inspector
+decendants-tracker:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-decendants-tracker
+    '16.04,lts,xenial,xerus,default': ruby-decendants-tracker
+    '8,debian': ruby-decendants-tracker
+enumerable-lazy:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-enumerable-lazy
+    '16.04,lts,xenial,xerus,default': ruby-enumerable-lazy
+    '8,debian': ruby-enumerable-lazy
+equatable:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-equatable
+    '16.04,lts,xenial,xerus,default': rock-master-16.07-ruby-equatable
+    '8,debian': rock-master-16.07-ruby-equatable
+facets:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': ruby-facets
+    '16.04,lts,xenial,xerus,default': ruby-facets
+    '8,debian': ruby-facets
+faye-websocket:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-faye-websocket
+    '16.04,lts,xenial,xerus,default': rock-master-16.07-ruby-faye-websocket
+    '8,debian': rock-master-16.07-ruby-faye-websocket
+ffi:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-ffi
+    '16.04,lts,xenial,xerus,default': ruby-ffi
+    '8,debian': ruby-ffi
+flexmock:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': ruby-flexmock
+    '16.04,lts,xenial,xerus,default': ruby-flexmock
+    '8,debian': ruby-flexmock
+grape:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-grape
+    '16.04,lts,xenial,xerus,default': grape
+    '8,debian': grape
+hoe-yard:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-hoe-yard
+    '16.04,lts,xenial,xerus,default': rock-master-16.07-ruby-graph
+    '8,debian': rock-master-16.07-ruby-graph
+hooks:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-hooks
+    '16.04,lts,xenial,xerus,default': rock-master-16.07-ruby-hooks
+    '8,debian': rock-master-16.07-ruby-hooks
+kramdown:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': ruby-kramdown
+    '16.04,lts,xenial,xerus,default': ruby-kramdown
+    '8,debian': ruby-kramdown
+minitest:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': ruby-minitest
+    '16.04,lts,xenial,xerus,default': ruby-minitest
+    '8,debian': ruby-minitest
+nokogiri:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': ruby-nokogiri
+    '16.04,lts,xenial,xerus,default': ruby-nokogiri
+    '8,debian': ruby-nokogiri
+pastel:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-pastel
+    '16.04,lts,xenial,xerus,default': rock-master-16.07-ruby-pastel
+    '8,debian': rock-master-16.07-ruby-pastel
+rake-compiler:
+  debian,ubuntu: rake-compiler
+rack-cors:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': ruby-rack-cors
+    '16.04,lts,xenial,xerus,default': ruby-rack-cors
+    '8,debian': ruby-rack-cors
+rb-readline:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-rb-readline
+    '16.04,lts,xenial,xerus,default': rock-master-16.07-ruby-rb-readline
+    '8,debian': rock-master-16.07-ruby-rb-readline
+rice:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-rice
+    '16.04,lts,xenial,xerus,default': rock-master-16.07-ruby-rice
+    '8,debian': rock-master-16.07-ruby-rice
+rgl:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-rgl
+    '16.04,lts,xenial,xerus,default': rock-master-16.07-ruby-rgl
+    '8,debian': rock-master-16.07-ruby-rgl
+sprockets:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': ruby-sprockets
+    '16.04,lts,xenial,xerus,default': ruby-sprockets
+    '8,debian': ruby-sprockets
+thin:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': thin
+    '16.04,lts,xenial,xerus,default': thin
+    '8,debian': thin
+tty-screen:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': ruby-tty-screen
+    '16.04,lts,xenial,xerus,default': ruby-tty-screen
+    '8,debian': ruby-tty-screen
+state_machine:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-state-machine
+    '16.04,lts,xenial,xerus,default': ruby-state-machine
+    '8,debian': ruby-state-machine
+qtbindings:
+  debian,ubtuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-qtbindings
+    '16.04,lts,xenial,xerus,default': rock-master-16.07-ruby-qtbindings
+    '8,debian': rock-master-16.07-ruby-qtbindings
+virtus:
+  debian,ubtuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-virtus
+    '16.04,lts,xenial,xerus,default': ruby-virtus
+    '8,debian': ruby-virtus
+websocket:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-websocket
+    '16.04,lts,xenial,xerus,default': rock-master-16.07-ruby-websocket
+    '8,debian': rock-master-16.07-ruby-websocket
+websocket-driver:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-websocket-driver
+    '16.04,lts,xenial,xerus,default': ruby-websocket-driver
+    '8,debian': ruby-websocket-driver
+websocket-extensions:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-websocket-extensions
+    '16.04,lts,xenial,xerus,default': ruby-websocket-extensions
+    '8,debian': ruby-websocket-extensions
+yard:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': ruby-yard
+    '16.04,lts,xenial,xerus,default': ruby-yard
+    '8,debian': ruby-yard
+base/cmake:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-base-cmake
+    '16.04,lts,xenial,xerus': rock-master-16.07-base-cmake
+    '8,debian': rock-master-16.07-base-cmake
+base/logging:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-base-logging
+    '16.04,lts,xenial,xerus': rock-master-16.07-base-logging
+    '8,debian': rock-master-16.07-base-logging
+base/templates/cmake_lib:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-base-templates-cmake-lib
+    '16.04,lts,xenial,xerus': rock-master-16.07-base-templates-cmake-lib
+    '8,debian': rock-master-16.07-base-templates-cmake-lib
+base/templates/vizkit3d_plugin:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-base-templates-vizkit3d-plugin
+    '16.04,lts,xenial,xerus': rock-master-16.07-base-templates-vizkit3d-plugin
+    '8,debian': rock-master-16.07-base-templates-vizkit3d-plugin
+base/templates/doc:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-base-templates-doc
+    '16.04,lts,xenial,xerus': rock-master-16.07-base-templates-doc
+    '8,debian': rock-master-16.07-base-templates-doc
+base/templates/ruby_lib:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-base-templates-ruby-lib
+    '16.04,lts,xenial,xerus': rock-master-16.07-base-templates-ruby-lib
+    '8,debian': rock-master-16.07-base-templates-ruby-lib
+base/templates/cmake_vizkit_widget:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-base-templates-cmake-vizkit-widget
+    '16.04,lts,xenial,xerus': rock-master-16.07-base-templates-cmake-vizkit-widget
+    '8,debian': rock-master-16.07-base-templates-cmake-vizkit-widget
+base/types:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-base-types
+    '16.04,lts,xenial,xerus': rock-master-16.07-base-types
+    '8,debian': rock-master-16.07-base-types
+base/templates/bundle:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-base-templates-bundle
+    '16.04,lts,xenial,xerus': rock-master-16.07-base-templates-bundle
+    '8,debian': rock-master-16.07-base-templates-bundle
+base/console_bridge:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-base-console-bridge
+    '16.04,lts,xenial,xerus': rock-master-16.07-base-console-bridge
+    '8,debian': rock-master-16.07-base-console-bridge
+base/scripts:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-base-scripts
+    '16.04,lts,xenial,xerus': rock-master-16.07-ruby-base-scripts
+    '8,debian': rock-master-16.07-ruby-base-scripts
+base/orogen/std:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-base-orogen-std
+    '16.04,lts,xenial,xerus': rock-master-16.07-base-orogen-std
+    '8,debian': rock-master-16.07-base-orogen-std
+base/numeric:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-base-numeric
+    '16.04,lts,xenial,xerus': rock-master-16.07-base-numeric
+    '8,debian': rock-master-16.07-base-numeric
+base/orogen/types:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-base-orogen-types
+    '16.04,lts,xenial,xerus': rock-master-16.07-base-orogen-types
+    '8,debian': rock-master-16.07-base-orogen-types
+#bundles/rock:
+#  debian,ubuntu:
+#    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-bundles-rock
+#    '16.04,lts,xenial,xerus': rock-master-16.07-ruby-bundles-rock
+    '8,debian': rock-master-16.07-ruby-bundles-rock
+#bundles/rock_ugv_nav:
+#  debian,ubuntu:
+#    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-bundles-rock-ugv-nav
+#    '16.04,lts,xenial,xerus': rock-master-16.07-ruby-bundles-rock-ugv-nav
+    '8,debian': rock-master-16.07-ruby-bundles-rock-ugv-nav
+control/joint_dispatcher:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-control-joint-dispatcher
+    '16.04,lts,xenial,xerus': rock-master-16.07-control-joint-dispatcher
+    '8,debian': rock-master-16.07-control-joint-dispatcher
+control/orogen/joint_dispatcher:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-control-orogen-joint-dispatcher
+    '16.04,lts,xenial,xerus': rock-master-16.07-control-orogen-joint-dispatcher
+    '8,debian': rock-master-16.07-control-orogen-joint-dispatcher
+control/reflexxes:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-control-reflexxes
+    '16.04,lts,xenial,xerus': rock-master-16.07-control-reflexxes
+    '8,debian': rock-master-16.07-control-reflexxes
+control/sdformat:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-control-sdformat
+    '16.04,lts,xenial,xerus': rock-master-16.07-control-sdformat
+    '8,debian': rock-master-16.07-control-sdformat
+control/urdfdom_headers:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-control-urdfdom-headers
+    '16.04,lts,xenial,xerus': rock-master-16.07-control-urdfdom-headers
+    '8,debian': rock-master-16.07-control-urdfdom-headers
+drivers/aggregator:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-aggregator
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-aggregator
+    '8,debian': rock-master-16.07-drivers-aggregator
+## version is not quite ok
+drivers/freenect:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-freenect
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-freenect
+    '8,debian': rock-master-16.07-drivers-freenect
+drivers/orogen/aggregator:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-orogen-aggregator
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-orogen-aggregator
+    '8,debian': rock-master-16.07-drivers-orogen-aggregator
+drivers/transformer:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-transformer
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-transformer
+    '8,debian': rock-master-16.07-drivers-transformer
+drivers/orogen/transformer:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-orogen-transformer
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-orogen-transformer
+    '8,debian': rock-master-16.07-drivers-orogen-transformer
+drivers/camera_interface:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-camera-interface
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-camera-interface
+    '8,debian': rock-master-16.07-drivers-camera-interface
+drivers/camera_prosilica:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-camera-prosilica
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-camera-prosilica
+    '8,debian': rock-master-16.07-drivers-camera-prosilica
+drivers/camera_usb:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-camera-usb
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-camera-usb
+    '8,debian': rock-master-16.07-drivers-camera-usb
+drivers/dynamixel:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-dynamixel
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-dynamixel
+    '8,debian': rock-master-16.07-drivers-dynamixel
+drivers/hokuyo:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-hokuyo
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-hokuyo
+    '8,debian': rock-master-16.07-drivers-hokuyo
+drivers/libusb:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-libusb
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-libusb
+    '8,debian': rock-master-16.07-drivers-libusb
+drivers/orogen/camera_base:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-orogen-camera-base
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-orogen-camera-base
+    '8,debian': rock-master-16.07-drivers-orogen-camera-base
+drivers/orogen/camera_usb:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-orogen-camera-usb
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-orogen-camera-usb
+    '8,debian': rock-master-16.07-drivers-orogen-camera-usb
+drivers/iodrivers_base:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-iodrivers-base
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-iodrivers-base
+    '8,debian': rock-master-16.07-drivers-iodrivers-base
+drivers/orogen/iodrivers_base:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-orogen-iodrivers-base
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-orogen-iodrivers-base
+    '8,debian': rock-master-16.07-drivers-orogen-iodrivers-base
+drivers/parport:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-parport
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-parport
+    '8,debian': rock-master-16.07-drivers-parport
+drivers/phidgets:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-phidgets
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-phidgets
+    '8,debian': rock-master-16.07-drivers-phidgets
+drivers/velodyne_lidar:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-velodyne-lidar
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-velodyne-lidar
+    '8,debian': rock-master-16.07-drivers-velodyne-lidar
+drivers/orogen/velodyne_lidar:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-drivers-orogen-velodyne-lidar
+    '16.04,lts,xenial,xerus': rock-master-16.07-drivers-orogen-velodyne-lidar
+    '8,debian': rock-master-16.07-drivers-orogen-velodyne-lidar
+external/aruco:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-external-aruco
+    '16.04,lts,xenial,xerus': rock-master-16.07-external-aruco
+    '8,debian': rock-master-16.07-external-aruco
+external/ccd:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-external-ccd
+    '16.04,lts,xenial,xerus': rock-master-16.07-external-ccd
+    '8,debian': rock-master-16.07-external-ccd
+external/cminpack:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-external-cminpack
+    '16.04,lts,xenial,xerus': rock-master-16.07-external-cminpack
+    '8,debian': rock-master-16.07-external-cminpack
+external/fcl:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-external-fcl
+    '16.04,lts,xenial,xerus': rock-master-16.07-external-fcl
+    '8,debian': rock-master-16.07-external-fcl
+external/gexf:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-external-gexf
+    '16.04,lts,xenial,xerus': rock-master-16.07-external-gexf
+    '8,debian': rock-master-16.07-external-gexf
+external/lemon:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-external-lemon
+    '16.04,lts,xenial,xerus': rock-master-16.07-external-lemon
+    '8,debian': rock-master-16.07-external-lemon
+external/libply:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-external-libply
+    '16.04,lts,xenial,xerus': rock-master-16.07-external-libply
+    '8,debian': rock-master-16.07-external-libply
+external/sisl:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-external-sisl
+    '16.04,lts,xenial,xerus': rock-master-16.07-external-sisl
+    '8,debian': rock-master-16.07-external-sisl
+external/snap:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-external-snap
+    '16.04,lts,xenial,xerus': rock-master-16.07-external-snap
+    '8,debian': rock-master-16.07-external-snap
+external/yaml-cpp:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-external-yaml-cpp
+    '16.04,lts,xenial,xerus': rock-master-16.07-external-yaml-cpp
+    '8,debian': rock-master-16.07-external-yaml-cpp
+gui/pointcloud:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-gui-pointcloud
+    '16.04,lts,xenial,xerus': rock-master-16.07-gui-pointcloud
+    '8,debian': rock-master-16.07-gui-pointcloud
+gui/rock_webapp:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-gui-rock-webapp
+    '16.04,lts,xenial,xerus': rock-master-16.07-gui-rock-webapp
+    '8,debian': rock-master-16.07-gui-rock-webapp
+gui/rock_widget_collection:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-gui-rock-widget-collection
+    '16.04,lts,xenial,xerus': rock-master-16.07-gui-rock-widget-collection
+    '8,debian': rock-master-16.07-gui-rock-widget-collection
+gui/vizkit:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-gui-vizkit
+    '16.04,lts,xenial,xerus': rock-master-16.07-ruby-gui-vizkit
+    '8,debian': rock-master-16.07-ruby-gui-vizkit
+gui/vizkit3d:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-gui-vizkit3d
+    '16.04,lts,xenial,xerus': rock-master-16.07-gui-vizkit3d
+    '8,debian': rock-master-16.07-gui-vizkit3d
+multiagent/fipa_acl:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-multiagent-fipa-acl
+    '16.04,lts,xenial,xerus': rock-master-16.07-multiagent-fipa-acl
+    '8,debian': rock-master-16.07-multiagent-fipa-acl
+multiagent/fipa_services:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-multiagent-fipa-services
+    '16.04,lts,xenial,xerus': rock-master-16.07-multiagent-fipa-services
+    '8,debian': rock-master-16.07-multiagent-fipa-services
+#multiagent/orogen/fipa_services:
+#  debian,ubuntu:
+#    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-multiagent-orogen-fipa-services
+#    '16.04,lts,xenial,xerus': rock-master-16.07-multiagent-orogen-fipa-services
+    '8,debian': rock-master-16.07-multiagent-orogen-fipa-services
+orogen:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-orogen
+    '16.04,lts,xenial,xerus': rock-master-16.07-ruby-orogen
+    '8,debian': rock-master-16.07-ruby-orogen
+perception/frame_helper:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-perception-frame-helper
+    '16.04,lts,xenial,xerus': rock-master-16.07-perception-frame-helper
+    '8,debian': rock-master-16.07-perception-frame-helper
+perception/jpeg_conversion:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-perception-jpeg-conversion
+    '16.04,lts,xenial,xerus': rock-master-16.07-perception-jpeg-conversion
+    '8,debian': rock-master-16.07-perception-jpeg-conversion
+perception/projection:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-perception-projection
+    '16.04,lts,xenial,xerus': rock-master-16.07-perception-projection
+    '8,debian': rock-master-16.07-perception-projection
+planning/arvand_herd:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-planning-arvand-herd
+    '16.04,lts,xenial,xerus': rock-master-16.07-planning-arvand-herd
+    '8,debian': rock-master-16.07-planning-arvand-herd
+planning/bfsf:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-planning-bfsf
+    '16.04,lts,xenial,xerus': rock-master-16.07-planning-bfsf
+    '8,debian': rock-master-16.07-planning-bfsf
+planning/exploration:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-planning-exploration
+    '16.04,lts,xenial,xerus': rock-master-16.07-planning-exploration
+    '8,debian': rock-master-16.07-planning-exploration
+planning/orogen/exploration:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-planning-orogen-exploration
+    '16.04,lts,xenial,xerus': rock-master-16.07-planning-orogen-exploration
+    '8,debian': rock-master-16.07-planning-orogen-exploration
+planning/fast_downward:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-planning-fast-downward
+    '16.04,lts,xenial,xerus': rock-master-16.07-planning-fast-downward
+    '8,debian': rock-master-16.07-planning-fast-downward
+planning/fd_cedalion:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-planning-fd-cedalion
+    '16.04,lts,xenial,xerus': rock-master-16.07-planning-fd-cedalion
+    '8,debian': rock-master-16.07-planning-fd-cedalion
+planning/ompl:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-planning-ompl
+    '16.04,lts,xenial,xerus': rock-master-16.07-planning-ompl
+    '8,debian': rock-master-16.07-planning-ompl
+planning/pddl_planner:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-planning-pddl-planner
+    '16.04,lts,xenial,xerus': rock-master-16.07-planning-pddl-planner
+    '8,debian': rock-master-16.07-planning-pddl-planner
+planning/randward:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-planning-randward
+    '16.04,lts,xenial,xerus': rock-master-16.07-planning-randward
+    '8,debian': rock-master-16.07-planning-randward
+planning/sbpl:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-planning-sbpl
+    '16.04,lts,xenial,xerus': rock-master-16.07-planning-sbpl
+    '8,debian': rock-master-16.07-planning-sbpl
+planning/fd_uniform:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-planning-fd-uniform
+    '16.04,lts,xenial,xerus': rock-master-16.07-planning-fd-uniform
+    '8,debian': rock-master-16.07-planning-fd-uniform
+rtt:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-rtt
+    '16.04,lts,xenial,xerus': rock-master-16.07-rtt
+    '8,debian': rock-master-16.07-rtt
+rtt_typelib:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-rtt-typelib
+    '16.04,lts,xenial,xerus': rock-master-16.07-rtt-typelib
+    '8,debian': rock-master-16.07-rtt-typelib
+slam/flann:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-slam-flann
+    '16.04,lts,xenial,xerus': rock-master-16.07-slam-flann
+    '8,debian': rock-master-16.07-slam-flann
+slam/g2o:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-slam-g2o
+    '16.04,lts,xenial,xerus': rock-master-16.07-slam-g2o
+    '8,debian': rock-master-16.07-slam-g2o
+slam/pcl:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-slam-pcl
+    '16.04,lts,xenial,xerus': [libpcl-dev,libpcl1.7]
+    '8,debian': [libpcl-dev,libpcl1.7]
+slam/hogman:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-slam-hogman
+    '16.04,lts,xenial,xerus': rock-master-16.07-slam-hogman
+    '8,debian': rock-master-16.07-slam-hogman
+slam/envire:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-slam-envire
+    '16.04,lts,xenial,xerus': rock-master-16.07-slam-envire
+    '8,debian': rock-master-16.07-slam-envire
+slam/gmapping:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-slam-gmapping
+    '16.04,lts,xenial,xerus': rock-master-16.07-slam-gmapping
+    '8,debian': rock-master-16.07-slam-gmapping
+slam/octomap:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-slam-octomap
+    '16.04,lts,xenial,xerus': rock-master-16.07-slam-octomap
+    '8,debian': rock-master-16.07-slam-octomap
+slam/odometry:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-slam-odometry
+    '16.04,lts,xenial,xerus': rock-master-16.07-slam-odometry
+    '8,debian': rock-master-16.07-slam-odometry
+slam/orogen/envire:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-slam-orogen-envire
+    '16.04,lts,xenial,xerus': rock-master-16.07-slam-orogen-envire
+    '8,debian': rock-master-16.07-slam-orogen-envire
+slam/orogen/odometry:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-slam-orogen-odometry
+    '16.04,lts,xenial,xerus': rock-master-16.07-slam-orogen-odometry
+    '8,debian': rock-master-16.07-slam-orogen-odometry
+slam/orogen/pcl:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-slam-orogen-pcl
+    '16.04,lts,xenial,xerus': rock-master-16.07-slam-orogen-pcl
+    '8,debian': rock-master-16.07-slam-orogen-pcl
+slam/orogen/tilt_scan:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-slam-orogen-tilt-scan
+    '16.04,lts,xenial,xerus': rock-master-16.07-slam-orogen-tilt-scan
+    '8,debian': rock-master-16.07-slam-orogen-tilt-scan
+#slam/mtk:
+#  debian,ubuntu:
+#    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-slam-mtk
+#    '16.04,lts,xenial,xerus': rock-master-16.07-slam-mtk
+    '8,debian': rock-master-16.07-slam-mtk
+tools/class_loader:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-tools-class-loader
+    '16.04,lts,xenial,xerus': rock-master-16.07-tools-class-loader
+    '8,debian': rock-master-16.07-tools-class-loader
+tools/logger:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-tools-logger
+    '16.04,lts,xenial,xerus': rock-master-16.07-tools-logger
+    '8,debian': rock-master-16.07-tools-logger
+tools/log_tools:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-tools-log-tools
+    '16.04,lts,xenial,xerus': rock-master-16.07-ruby-tools-log-tools
+    '8,debian': rock-master-16.07-ruby-tools-log-tools
+tools/metaruby:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-tools-metaruby
+    '16.04,lts,xenial,xerus': rock-master-16.07-ruby-tools-metaruby
+    '8,debian': rock-master-16.07-ruby-tools-metaruby
+tools/orocos.rb:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-tools-orocos.rb
+    '16.04,lts,xenial,xerus': rock-master-16.07-ruby-tools-orocos.rb
+    '8,debian': rock-master-16.07-ruby-tools-orocos.rb
+tools/orogen_metadata:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-tools-orogen-metadata
+    '16.04,lts,xenial,xerus': rock-master-16.07-tools-orogen-metadata
+    '8,debian': rock-master-16.07-tools-orogen-metadata
+tools/pocolog:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-tools-pocolog
+    '16.04,lts,xenial,xerus': rock-master-16.07-ruby-tools-pocolog
+    '8,debian': rock-master-16.07-ruby-tools-pocolog
+tools/pocolog_cpp:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-tools-pocolog-cpp
+    '16.04,lts,xenial,xerus': rock-master-16.07-tools-pocolog-cpp
+    '8,debian': rock-master-16.07-tools-pocolog-cpp
+tools/rest_api:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-tools-rest-api
+    '16.04,lts,xenial,xerus': rock-master-16.07-ruby-tools-rest-api
+    '8,debian': rock-master-16.07-ruby-tools-rest-api
+tools/roby:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-tools-roby
+    '16.04,lts,xenial,xerus': rock-master-16.07-ruby-tools-roby
+    '8,debian': rock-master-16.07-ruby-tools-roby
+tools/rubigen:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-tools-rubigen
+    '16.04,lts,xenial,xerus': rock-master-16.07-ruby-tools-rubigen
+    '8,debian': rock-master-16.07-ruby-tools-rubigen
+tools/service_discovery:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-tools-service-discovery
+    '16.04,lts,xenial,xerus': rock-master-16.07-tools-service-discovery
+    '8,debian': rock-master-16.07-tools-service-discovery
+tools/syskit:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-tools-syskit
+    '16.04,lts,xenial,xerus': rock-master-16.07-ruby-tools-syskit
+    '8,debian': rock-master-16.07-ruby-tools-syskit
+tools/telemetry:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-tools-telemetry
+    '16.04,lts,xenial,xerus': rock-master-16.07-ruby-tools-telemetry
+    '8,debian': rock-master-16.07-ruby-tools-telemetry
+typelib:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-typelib
+    '16.04,lts,xenial,xerus': rock-master-16.07-typelib
+    '8,debian': rock-master-16.07-typelib
+utilmm:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-utilmm
+    '16.04,lts,xenial,xerus': rock-master-16.07-utilmm
+    '8,debian': rock-master-16.07-utilmm
+utilrb:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-utilrb
+    '16.04,lts,xenial,xerus': rock-master-16.07-ruby-utilrb
+    '8,debian': rock-master-16.07-ruby-utilrb
+qtruby:
+    gentoo:
+        kde-base/kdebindings-ruby
+    arch: kdebindings-qtruby
+    default,ubuntu:
+       rock-master-16.07-ruby-qtbindings
+

@@ -65,6 +65,7 @@ if Autoproj.user_config('DEB_USE')
         end
 
         require 'rbconfig'
+        Autoproj::OSDependencies.suffixes << Autoproj.user_config('debian_release')
         release_install_dir = "/opt/rock/#{Autoproj.user_config('debian_release')}"
         rock_archdir = RbConfig::CONFIG['archdir'].gsub("/usr", release_install_dir)
         rock_rubylibdir = RbConfig::CONFIG['rubylibdir'].gsub("/usr", release_install_dir)
