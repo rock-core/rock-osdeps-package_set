@@ -1,0 +1,6 @@
+---
+hoe:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': ruby-hoe
+    '16.04,lts,xenial,xerus,default': rock-hoe
+    '8,debian': ruby-hoe
