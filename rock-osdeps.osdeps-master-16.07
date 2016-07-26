@@ -76,11 +76,6 @@ faye-websocket:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-faye-websocket
     '16.04,lts,xenial,xerus,default': rock-master-16.07-ruby-faye-websocket
     '8,debian': rock-master-16.07-ruby-faye-websocket
-ffi:
-  debian,ubuntu:
-    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-ffi
-    '16.04,lts,xenial,xerus,default': ruby-ffi
-    '8,debian': ruby-ffi
 flexmock:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': ruby-flexmock
