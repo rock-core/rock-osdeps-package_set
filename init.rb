@@ -68,6 +68,8 @@ if Autoproj.user_config('DEB_USE')
         Autoproj::OSDependencies.suffixes << Autoproj.user_config('debian_release')
         release_install_dir = "/opt/rock/#{Autoproj.user_config('debian_release')}"
         rock_archdir = RbConfig::CONFIG['archdir'].gsub("/usr", release_install_dir)
+        rock_vendorarchdir = RbConfig::CONFIG['vendorarchdir'].gsub("/usr", release_install_dir)
+        rock_sitearchdir = RbConfig::CONFIG['sitearchdir'].gsub("/usr", release_install_dir)
         rock_rubylibdir = RbConfig::CONFIG['rubylibdir'].gsub("/usr", release_install_dir)
 
         Autobuild.env_add_path('PATH',File.join(release_install_dir,"bin"))
@@ -75,6 +77,8 @@ if Autoproj.user_config('DEB_USE')
         Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(release_install_dir,"lib/pkgconfig"))
         Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(release_install_dir,"lib",architecture, "pkgconfig"))
         Autobuild.env_add_path('RUBYLIB',rock_archdir)
+        Autobuild.env_add_path('RUBYLIB',rock_vendorarchdir)
+        Autobuild.env_add_path('RUBYLIB',rock_sitearchdir)
         # Needed for qt
         Autobuild.env_add_path('RUBYLIB',File.join(rock_archdir.gsub(RbConfig::CONFIG['RUBY_PROGRAM_VERSION'],'')) )
         Autobuild.env_add_path('RUBYLIB',rock_rubylibdir)
