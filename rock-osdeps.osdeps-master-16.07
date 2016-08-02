@@ -278,11 +278,11 @@ control/orogen/joint_dispatcher:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-control-orogen-joint-dispatcher
     '16.04,lts,xenial,xerus': rock-master-16.07-control-orogen-joint-dispatcher
     '8,debian': rock-master-16.07-control-orogen-joint-dispatcher
-control/reflexxes:
-  debian,ubuntu:
-    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-control-reflexxes
-    '16.04,lts,xenial,xerus': rock-master-16.07-control-reflexxes
-    '8,debian': rock-master-16.07-control-reflexxes
+#control/reflexxes:
+#  debian,ubuntu:
+#    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-control-reflexxes
+#    '16.04,lts,xenial,xerus': rock-master-16.07-control-reflexxes
+#    '8,debian': rock-master-16.07-control-reflexxes
 control/sdformat:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-control-sdformat
