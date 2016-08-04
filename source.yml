@@ -1,1 +1,4 @@
 name: rock-osdeps
+
+imports:
+    - github: rock-core/package_set
