@@ -86,6 +86,11 @@ grape:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-grape
     '16.04,lts,xenial,xerus,default': grape
     '8,debian': grape
+hoe:
+  debian,ubuntu:
+    '14.04,14.04.2,lts,trusty,tahr': ruby-hoe
+    '16.04,lts,xenial,xerus,default': ruby-hoe
+    '8,debian': ruby-hoe
 hoe-yard:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-hoe-yard
