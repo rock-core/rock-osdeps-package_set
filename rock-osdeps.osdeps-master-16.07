@@ -614,11 +614,11 @@ slam/orogen/envire:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-slam-orogen-envire
     '16.04,lts,xenial,xerus': rock-master-16.07-slam-orogen-envire
     '8,debian': rock-master-16.07-slam-orogen-envire
-slam/orogen/odometry:
-  debian,ubuntu:
-    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-slam-orogen-odometry
-    '16.04,lts,xenial,xerus': rock-master-16.07-slam-orogen-odometry
-    '8,debian': rock-master-16.07-slam-orogen-odometry
+#slam/orogen/odometry:
+#  debian,ubuntu:
+#    '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-slam-orogen-odometry
+#    '16.04,lts,xenial,xerus': rock-master-16.07-slam-orogen-odometry
+#    '8,debian': rock-master-16.07-slam-orogen-odometry
 slam/orogen/pcl:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-slam-orogen-pcl
