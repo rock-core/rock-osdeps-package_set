@@ -1,9 +1,9 @@
 ---
 activesupport:
   debian,ubuntu:
-    '14.04,14.04.2,lts,trusty,tahr': ruby-activesupport
-    '16.04,lts,xenial,xerus,default': ruby-activesupport
-    '8,debian': ruby-activesupport
+    14.04,14.04.2,lts,trusty,tahr: ruby-activesupport
+    16.04,lts,xenial,xerus,default: ruby-activesupport
+    8,debian: ruby-activesupport
 axiom-types:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-axiom-types
@@ -94,8 +94,8 @@ hoe:
 hoe-yard:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-hoe-yard
-    '16.04,lts,xenial,xerus,default': rock-master-16.07-ruby-graph
-    '8,debian': rock-master-16.07-ruby-graph
+    '16.04,lts,xenial,xerus,default': rock-master-16.07-ruby-hoe-yard
+    '8,debian': rock-master-16.07-ruby-hoe-yard
 hooks:
   debian,ubuntu:
     '14.04,14.04.2,lts,trusty,tahr': rock-master-16.07-ruby-hooks

@@ -57,6 +57,7 @@ if Autoproj.user_config('DEB_USE')
 
 
         architecture = "#{`gcc -print-multiarch`}".strip
+        debian_architecture = "#{`dpkg --print-architecture`}".strip
         flavor = Autoproj.user_config('ROCK_SELECTED_FLAVOR')
         if flavor != "master"
             Autoproj.warn "Debian packages are currently only available for the 'master' release, but you are using 'stable' release"
@@ -65,7 +66,7 @@ if Autoproj.user_config('DEB_USE')
         end
 
         require 'rbconfig'
-        Autoproj::OSDependencies.suffixes << Autoproj.user_config('debian_release')
+        Autoproj::OSDependencies.suffixes << "#{Autoproj.user_config('debian_release')}-#{debian_architecture}"
         release_install_dir = "/opt/rock/#{Autoproj.user_config('debian_release')}"
         rock_ruby_archdir = RbConfig::CONFIG['archdir'].gsub("/usr", release_install_dir)
         rock_ruby_vendordir =File.join(release_install_dir,"/lib/ruby/vendor_ruby")
