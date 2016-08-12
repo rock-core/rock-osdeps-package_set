@@ -631,10 +631,6 @@ slam/octomap:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-16.08-slam-octomap
     16.04,xenial,xerus,default: rock-master-16.08-slam-octomap
-slam/orogen/odometry:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-16.08-slam-orogen-odometry
-    16.04,xenial,xerus,default: rock-master-16.08-slam-orogen-odometry
 drivers/velodyne_lidar:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-16.08-drivers-velodyne-lidar
