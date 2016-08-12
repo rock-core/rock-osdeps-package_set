@@ -467,10 +467,6 @@ tools/rubigen:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-16.08-ruby-tools-rubigen
     16.04,xenial,xerus,default: rock-master-16.08-ruby-tools-rubigen
-bundles/rock:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-16.08-ruby-bundles-rock
-    16.04,xenial,xerus,default: rock-master-16.08-ruby-bundles-rock
 tools/pocolog_cpp:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-16.08-tools-pocolog-cpp
