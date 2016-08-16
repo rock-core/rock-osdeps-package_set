@@ -77,7 +77,7 @@ if Autoproj.user_config('DEB_USE')
 
         Autobuild.env_add_path('PATH',File.join(release_install_dir,"bin"))
         Autobuild.env_add_path('CMAKE_PREFIX_PATH',release_install_dir)
-        Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT]',"install","lib","pkgconfig"))
+        Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib","pkgconfig"))
         Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(release_install_dir,"lib","pkgconfig"))
         Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(release_install_dir,"lib",architecture, "pkgconfig"))
 
