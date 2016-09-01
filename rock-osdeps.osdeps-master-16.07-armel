@@ -1,0 +1,282 @@
+---
+activesupport:
+  debian,ubuntu:
+    8,debian: ruby-activesupport
+axiom-types:
+  debian,ubuntu:
+    '8,debian': ruby-axiom-types
+binding_of_caller:
+  debian,ubuntu:
+    '8,debian': ruby-binding-of-caller
+bundler:
+  debian,ubuntu:
+    '8,debian': ruby-bundler
+coercible:
+  debian,ubuntu:
+    '8,debian': ruby-coercible
+concurrent-ruby:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-concurrent-ruby
+concurrent-ruby-ext:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-concurrent-ruby-ext
+cucumber:
+  debian,ubuntu: cucumber
+cucumber-core:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-cucumber-core
+cucumber-wire:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-cucumber-wire
+debug-inspector:
+  debian,ubuntu:
+    '8,debian': ruby-debug-inspector
+decendants-tracker:
+  debian,ubuntu:
+    '8,debian': ruby-decendants-tracker
+enumerable-lazy:
+  debian,ubuntu:
+    '8,debian': ruby-enumerable-lazy
+equatable:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-equatable
+facets:
+  debian,ubuntu:
+    '8,debian': ruby-facets
+faye-websocket:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-faye-websocket
+flexmock:
+  debian,ubuntu:
+    '8,debian': ruby-flexmock
+grape:
+  debian,ubuntu:
+    '8,debian': grape
+hoe:
+  debian,ubuntu:
+    '8,debian': ruby-hoe
+hoe-yard:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-hoe-yard
+hooks:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-hooks
+kramdown:
+  debian,ubuntu:
+    '8,debian': ruby-kramdown
+minitest:
+  debian,ubuntu:
+    '8,debian': ruby-minitest
+nokogiri:
+  debian,ubuntu:
+    '8,debian': ruby-nokogiri
+pastel:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-pastel
+rake-compiler:
+  debian,ubuntu: rake-compiler
+rack-cors:
+  debian,ubuntu:
+    '8,debian': ruby-rack-cors
+rb-readline:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-rb-readline
+rice:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-rice
+rgl:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-rgl
+sprockets:
+  debian,ubuntu:
+    '8,debian': ruby-sprockets
+thin:
+  debian,ubuntu:
+    '8,debian': thin
+tty-screen:
+  debian,ubuntu:
+    '8,debian': ruby-tty-screen
+state_machine:
+  debian,ubuntu:
+    '8,debian': ruby-state-machine
+qtbindings:
+  debian,ubtuntu:
+    '8,debian': rock-master-16.07-ruby-qtbindings
+virtus:
+  debian,ubtuntu:
+    '8,debian': ruby-virtus
+websocket:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-websocket
+websocket-driver:
+  debian,ubuntu:
+    '8,debian': ruby-websocket-driver
+websocket-extensions:
+  debian,ubuntu:
+    '8,debian': ruby-websocket-extensions
+yard:
+  debian,ubuntu:
+    '8,debian': ruby-yard
+base/cmake:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-base-cmake
+base/logging:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-base-logging
+base/templates/cmake_lib:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-base-templates-cmake-lib
+base/templates/vizkit3d_plugin:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-base-templates-vizkit3d-plugin
+base/templates/doc:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-base-templates-doc
+base/templates/ruby_lib:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-base-templates-ruby-lib
+base/templates/cmake_vizkit_widget:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-base-templates-cmake-vizkit-widget
+base/types:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-base-types
+base/templates/bundle:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-base-templates-bundle
+base/console_bridge:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-base-console-bridge
+base/scripts:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-base-scripts
+base/orogen/std:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-base-orogen-std
+base/numeric:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-base-numeric
+base/orogen/types:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-base-orogen-types
+control/sdformat:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-control-sdformat
+control/urdfdom_headers:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-control-urdfdom-headers
+drivers/aggregator:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-drivers-aggregator
+drivers/orogen/aggregator:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-drivers-orogen-aggregator
+drivers/transformer:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-drivers-transformer
+drivers/orogen/transformer:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-drivers-orogen-transformer
+drivers/camera_interface:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-drivers-camera-interface
+drivers/camera_usb:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-drivers-camera-usb
+drivers/orogen/camera_base:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-drivers-orogen-camera-base
+drivers/orogen/camera_usb:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-drivers-orogen-camera-usb
+drivers/iodrivers_base:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-drivers-iodrivers-base
+gui/rock_widget_collection:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-gui-rock-widget-collection
+gui/vizkit:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-gui-vizkit
+gui/vizkit3d:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-gui-vizkit3d
+multiagent/fipa_acl:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-multiagent-fipa-acl
+multiagent/fipa_services:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-multiagent-fipa-services
+orogen:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-orogen
+perception/frame_helper:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-perception-frame-helper
+perception/jpeg_conversion:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-perception-jpeg-conversion
+rtt:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-rtt
+rtt_typelib:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-rtt-typelib
+tools/class_loader:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-tools-class-loader
+tools/logger:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-tools-logger
+tools/log_tools:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-tools-log-tools
+tools/metaruby:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-tools-metaruby
+tools/orocos.rb:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-tools-orocos.rb
+tools/orogen_metadata:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-tools-orogen-metadata
+tools/pocolog:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-tools-pocolog
+tools/pocolog_cpp:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-tools-pocolog-cpp
+tools/rest_api:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-tools-rest-api
+tools/roby:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-tools-roby
+tools/rubigen:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-tools-rubigen
+tools/service_discovery:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-tools-service-discovery
+tools/syskit:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-tools-syskit
+tools/telemetry:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-tools-telemetry
+typelib:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-typelib
+utilmm:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-utilmm
+utilrb:
+  debian,ubuntu:
+    '8,debian': rock-master-16.07-ruby-utilrb
+qtruby:
+    gentoo:
+        kde-base/kdebindings-ruby
+    arch: kdebindings-qtruby
+    default,ubuntu:
+       rock-master-16.07-ruby-qtbindings
+
