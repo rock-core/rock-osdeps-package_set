@@ -102,6 +102,8 @@ if Autoproj.user_config('DEB_USE')
 
         # Runtime setup
         Autobuild.env_add_path('LD_LIBRARY_PATH',File.join(release_install_dir,"lib"))
+        Autobuild.env_add_path('LD_LIBRARY_PATH',File.join(release_install_dir,"lib",architecture))
+
         # Compile time setup -- prefer locally installed packages over debian packages
         Autobuild.env_add_path('LIBRARY_PATH',File.join(release_install_dir,"lib"))
         Autobuild.env_add_path('LIBRARY_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib"))
