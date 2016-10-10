@@ -84,6 +84,14 @@ if Autoproj.user_config('DEB_USE')
         Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(release_install_dir,"lib",architecture, "pkgconfig"))
         Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib","pkgconfig"))
 
+        cxx_flags = ""
+        cxx_flags+=" -I#{ENV['AUTOPROJ_CURRENT_ROOT']}/install/include"
+        cxx_flags+=" -L#{ENV['AUTOPROJ_CURRENT_ROOT']}/install/lib/#{architecture}"
+        cxx_flags+=" -L#{ENV['AUTOPROJ_CURRENT_ROOT']}/install/lib"
+        cxx_flags = cxx_flags.strip
+
+        Autobuild.env_set('EXTRA_CXX_FLAGS',cxx_flags)
+
         # RUBY SETUP
         Autobuild.env_add_path('RUBYLIB',rock_ruby_archdir)
         Autobuild.env_add_path('RUBYLIB',rock_ruby_vendordir)
