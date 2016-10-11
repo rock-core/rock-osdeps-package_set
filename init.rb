@@ -36,8 +36,8 @@ if Autoproj.user_config('DEB_USE')
             "Which distribution do you use?"]
 
         Autoproj.configuration_option 'debian_release', 'string',
-            :default => 'master-16.08',
-            :possible_answers => ['master-16.07','master-16.08'],
+            :default => 'master-16.09',
+            :possible_answers => ['master-16.07','master-16.08','master-16.09'],
             :doc => ["Select the rock debian release",
             "Use the default if you do not know better (currently there is only one anyway)"]
 
