@@ -46,7 +46,7 @@ if Autoproj.user_config('DEB_USE')
             :doc => ["Do you want the installation be done automatically?",
             "This installation uses sudo and may ask for your password",
             "You can do the installation yourself with:",
-            "echo 'deb http://rimres-gcs2-u/rock-releases/#{Autoproj.user_config('debian_release')} #{Autoproj.user_config('distribution')} main' | sudo tee /etc/apt/sources.list.d/rock.list",
+            "echo 'deb http://rimres-gcs2-u/rock-releases/#{Autoproj.user_config('debian_release')} #{Autoproj.user_config('distribution')} main' | sudo tee /etc/apt/sources.list.d/rock-#{Autoproj.user_config('debian_release')}.list",
             "wget http://rimres-gcs2-u/rock-devel/conf/Rock-debian.gpg.key",
             "sudo apt-key add Rock-debian.gpg.key < Rock-debian.gpg.key",
             "rm Rock-debian.gpg.key",
@@ -148,7 +148,7 @@ if Autoproj.user_config('DEB_USE')
     end
 
     if Autoproj.user_config('DEB_AUTOMATIC')
-        apt_rock_list_file = "/etc/apt/sources.list.d/rock.list"
+        apt_rock_list_file = "/etc/apt/sources.list.d/rock-#{Autoproj.user_config('debian_release')}.list"
         apt_source = "deb http://rimres-gcs2-u/rock-releases/#{Autoproj.user_config('debian_release')} #{Autoproj.user_config('distribution')} main"
         update = false
         if !File.exist?(apt_rock_list_file)
