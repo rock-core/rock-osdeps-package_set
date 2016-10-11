@@ -187,30 +187,6 @@ base/cmake:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-16.09-base-cmake
     16.04,xenial,xerus,default: rock-master-16.09-base-cmake
-base/templates/ruby_lib:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-16.09-base-templates-ruby-lib
-    16.04,xenial,xerus,default: rock-master-16.09-base-templates-ruby-lib
-base/templates/cmake_lib:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-16.09-base-templates-cmake-lib
-    16.04,xenial,xerus,default: rock-master-16.09-base-templates-cmake-lib
-base/templates/cmake_vizkit_widget:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-16.09-base-templates-cmake-vizkit-widget
-    16.04,xenial,xerus,default: rock-master-16.09-base-templates-cmake-vizkit-widget
-base/templates/vizkit3d_plugin:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-16.09-base-templates-vizkit3d-plugin
-    16.04,xenial,xerus,default: rock-master-16.09-base-templates-vizkit3d-plugin
-base/templates/bundle:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-16.09-base-templates-bundle
-    16.04,xenial,xerus,default: rock-master-16.09-base-templates-bundle
-base/templates/doc:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-16.09-base-templates-doc
-    16.04,xenial,xerus,default: rock-master-16.09-base-templates-doc
 external/sisl:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-16.09-external-sisl
@@ -255,10 +231,6 @@ drivers/phidgets:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-16.09-drivers-phidgets
     16.04,xenial,xerus,default: rock-master-16.09-drivers-phidgets
-bundles/rock_ugv_nav:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-16.09-ruby-bundles-rock-ugv-nav
-    16.04,xenial,xerus,default: rock-master-16.09-ruby-bundles-rock-ugv-nav
 external/yaml-cpp:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-16.09-external-yaml-cpp
@@ -875,10 +847,6 @@ gui/vizkit:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-16.09-ruby-gui-vizkit
     16.04,xenial,xerus,default: rock-master-16.09-ruby-gui-vizkit
-bundles/rock:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-16.09-ruby-bundles-rock
-    16.04,xenial,xerus,default: rock-master-16.09-ruby-bundles-rock
 control/orogen/visp:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-16.09-control-orogen-visp
@@ -935,10 +903,6 @@ perception/orogen/image_preprocessing:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-16.09-perception-orogen-image-preprocessing
     16.04,xenial,xerus,default: rock-master-16.09-perception-orogen-image-preprocessing
-bundles/rock_auv:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-16.09-ruby-bundles-rock-auv
-    16.04,xenial,xerus,default: rock-master-16.09-ruby-bundles-rock-auv
 gui/control_ui:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-16.09-gui-control-ui
