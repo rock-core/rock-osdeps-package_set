@@ -483,10 +483,6 @@ base/cmake:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-16.08-base-cmake
     16.04,xenial,xerus,default: rock-master-16.08-base-cmake
-base/templates/ruby_lib:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-16.08-base-templates-ruby-lib
-    16.04,xenial,xerus,default: rock-master-16.08-base-templates-ruby-lib
 base/numeric:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-16.08-base-numeric
@@ -495,26 +491,30 @@ base/scripts:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-16.08-ruby-base-scripts
     16.04,xenial,xerus,default: rock-master-16.08-ruby-base-scripts
-base/templates/cmake_lib:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-16.08-base-templates-cmake-lib
-    16.04,xenial,xerus,default: rock-master-16.08-base-templates-cmake-lib
-base/templates/cmake_vizkit_widget:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-16.08-base-templates-cmake-vizkit-widget
-    16.04,xenial,xerus,default: rock-master-16.08-base-templates-cmake-vizkit-widget
-base/templates/vizkit3d_plugin:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-16.08-base-templates-vizkit3d-plugin
-    16.04,xenial,xerus,default: rock-master-16.08-base-templates-vizkit3d-plugin
-base/templates/bundle:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-16.08-base-templates-bundle
-    16.04,xenial,xerus,default: rock-master-16.08-base-templates-bundle
-base/templates/doc:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-16.08-base-templates-doc
-    16.04,xenial,xerus,default: rock-master-16.08-base-templates-doc
+#base/templates/ruby_lib:
+#  ubuntu,debian:
+#    14.04,14.04.2,trusty,tahr,default: rock-master-16.08-base-templates-ruby-lib
+#    16.04,xenial,xerus,default: rock-master-16.08-base-templates-ruby-lib
+#base/templates/cmake_lib:
+#  ubuntu,debian:
+#    14.04,14.04.2,trusty,tahr,default: rock-master-16.08-base-templates-cmake-lib
+#    16.04,xenial,xerus,default: rock-master-16.08-base-templates-cmake-lib
+#base/templates/cmake_vizkit_widget:
+#  ubuntu,debian:
+#    14.04,14.04.2,trusty,tahr,default: rock-master-16.08-base-templates-cmake-vizkit-widget
+#    16.04,xenial,xerus,default: rock-master-16.08-base-templates-cmake-vizkit-widget
+#base/templates/vizkit3d_plugin:
+#  ubuntu,debian:
+#    14.04,14.04.2,trusty,tahr,default: rock-master-16.08-base-templates-vizkit3d-plugin
+#    16.04,xenial,xerus,default: rock-master-16.08-base-templates-vizkit3d-plugin
+#base/templates/bundle:
+#  ubuntu,debian:
+#    14.04,14.04.2,trusty,tahr,default: rock-master-16.08-base-templates-bundle
+#    16.04,xenial,xerus,default: rock-master-16.08-base-templates-bundle
+#base/templates/doc:
+#  ubuntu,debian:
+#    14.04,14.04.2,trusty,tahr,default: rock-master-16.08-base-templates-doc
+#    16.04,xenial,xerus,default: rock-master-16.08-base-templates-doc
 external/sisl:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-16.08-external-sisl
