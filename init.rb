@@ -94,7 +94,7 @@ if Autoproj.user_config('DEB_USE')
         cxx_flags+=" -L#{ENV['AUTOPROJ_CURRENT_ROOT']}/install/lib"
         cxx_flags = cxx_flags.strip
 
-        Autobuild.env_set('EXTRA_CXX_FLAGS',cxx_flags)
+        #Autobuild.env_set('EXTRA_CXX_FLAGS',cxx_flags)
 
         # RUBY SETUP
         Autobuild.env_add_path('RUBYLIB',rock_ruby_archdir)
