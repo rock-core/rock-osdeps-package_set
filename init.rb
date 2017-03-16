@@ -46,7 +46,7 @@ if Autoproj.user_config('DEB_USE')
             :doc => ["Do you want the installation be done automatically?",
             "This installation uses sudo and may ask for your password",
             "You can do the installation yourself with:",
-            "echo 'deb http://rimres-gcs2-u/rock-releases/#{Autoproj.user_config('debian_release')} #{Autoproj.user_config('distribution')} main' | sudo tee /etc/apt/sources.list.d/rock-#{Autoproj.user_config('debian_release')}.list",
+            "echo 'deb [trusted=yes] http://rimres-gcs2-u/rock-releases/#{Autoproj.user_config('debian_release')} #{Autoproj.user_config('distribution')} main' | sudo tee /etc/apt/sources.list.d/rock-#{Autoproj.user_config('debian_release')}.list",
             "wget http://rimres-gcs2-u/rock-devel/conf/Rock-debian.gpg.key",
             "sudo apt-key add Rock-debian.gpg.key < Rock-debian.gpg.key",
             "rm Rock-debian.gpg.key",
