@@ -1,20 +1,30 @@
+distribution = nil
+release = nil
+if defined?(Autoproj::OSDependencies)
+    distribution,release = Autoproj::OSDependencies.operating_system
+elsif defined?(Autoproj::OSPackageResolver)
+    distribution,release = Autoproj::OSPackageResolver.autodetect_operating_system
+else
+    raise "Unsupported Autoproj API: please inform the developer"
+end
+
 #Add rock-debs
 Autoproj.configuration_option 'DEB_USE', 'boolean',
 	:default => 'yes',
-	:doc => ["This enables the usage of precompiled Debian-Packages.",
-    "Every package you enter into your manifest will be downloaded and compiled the 'usual' way,",
-    "so you still have all posibilities left to develop on all packages.",
-    "The installed packages will be stored in /opt/rock/<rock-debian-release>/",
-    "You will be later asked to select the rock debian release.",
-    "Use rock debian packages?"]
+	:doc => ["Use rock debian packages ?",
+          "This enables the usage of precompiled Debian-Packages.",
+          "Every package you enter into your manifest will be downloaded and ",
+          "compiled the 'usual' way, so you still have all posibilities left to ",
+          "develop on all packages. The installed packages will be stored in ",
+          "/opt/rock/<rock-debian-release>/. You will be later asked to select the rock",
+          "debian release. So, use rock debian packages? "]
 
 Autoproj.configuration_option 'DEB_USE_UNAVAILABLE', 'string',
         :default => 'ok',
-        :doc => "Debian packages are not provided for your operating system: #{Autoproj::OSDependencies.operating_system}"
+        :doc => "Debian packages are not provided for your operating system: #{distribution}, #{release}"
 
 #the actual settings if enabled
 if Autoproj.user_config('DEB_USE')
-    distribution,release = Autoproj::OSDependencies.operating_system
     current_release_name = nil
     ['jessie','trusty','xenial'].each do |release_name|
         if release.include?(release_name)
@@ -24,7 +34,9 @@ if Autoproj.user_config('DEB_USE')
     end
 
     if current_release_name
-        if ["xenial"].include?(current_release_name)
+        if ["trusty, jessie"].include?(current_release_name)
+            Autoproj.env_set "TYPELIB_CXX_LOADER","gccxml"
+        else
             Autoproj.env_set "TYPELIB_CXX_LOADER","castxml"
         end
 
@@ -33,16 +45,15 @@ if Autoproj.user_config('DEB_USE')
 
         Autoproj.configuration_option 'distribution', 'string',
             :default => current_release_name,
-            :possible_answers => ['trusty','xenial'],
+            :possible_answers => ['trusty','xenial','jessie'],
             :doc => ["Which distribution do you use?",
-            "There are builds for 'jessie' (Debian), 'trusty' (Ubuntu), 'xenial' (Ubuntu)",
-            "Which distribution do you use?"]
+            "There are builds for 'jessie' (Debian), 'trusty' (Ubuntu), 'xenial' (Ubuntu)"]
 
         Autoproj.configuration_option 'debian_release', 'string',
             :default => 'master-16.09',
-            :possible_answers => ['master-16.07','master-16.08','master-16.09'],
-            :doc => ["Select the rock debian release",
-            "Use the default if you do not know better (currently there is only one anyway)"]
+            :possible_answers => ['master-16.07','master-16.08','master-16.09','master-17.04'],
+            :doc => ["Which rock debian release should be used ?",
+            "Use the default if you do not know better"]
 
         Autoproj.configuration_option 'DEB_AUTOMATIC', 'boolean',
             :default => 'no',
@@ -67,7 +78,15 @@ if Autoproj.user_config('DEB_USE')
         end
 
         require 'rbconfig'
-        Autoproj::OSDependencies.suffixes << "#{Autoproj.user_config('debian_release')}-#{debian_architecture}"
+        suffix = "#{Autoproj.user_config('debian_release')}-#{debian_architecture}"
+        if defined?(Autoproj::OSDependencies)
+            Autoproj::OSDependencies.suffixes << "#{Autoproj.user_config('debian_release')}-#{debian_architecture}"
+        elsif defined?(Autoproj::OSPackageResolver)
+            Autoproj.workspace.osdep_suffixes << suffix
+        else
+            raise "Unsupported Autoproj API: please inform the developer"
+        end
+
         release_install_dir = "/opt/rock/#{Autoproj.user_config('debian_release')}"
         rock_ruby_archdir = RbConfig::CONFIG['archdir'].gsub("/usr", release_install_dir)
         rock_ruby_vendordir =File.join(release_install_dir,"/lib/ruby/vendor_ruby")
@@ -138,48 +157,50 @@ if Autoproj.user_config('DEB_USE')
         if shell_extension and File.exist?(shell_extension)
             Autobuild.env_source_file(shell_extension)
         end
-
-        Autoproj.message "You need to run source env.sh before changes take effect"
     else
         Autoproj.user_config('DEB_USE_UNAVAILABLE')
     end
 
     if Autoproj.user_config('DEB_AUTOMATIC')
         apt_rock_list_file = "/etc/apt/sources.list.d/rock-#{Autoproj.user_config('debian_release')}.list"
-        apt_source = "deb [arch=#{debian_architecture} trusted=yes] http://rimres-gcs2-u/rock-releases/#{Autoproj.user_config('debian_release')} #{Autoproj.user_config('distribution')} main"
+        apt_source = "[arch=#{debian_architecture} trusted=yes] http://rimres-gcs2-u/rock-releases/#{Autoproj.user_config('debian_release')} #{Autoproj.user_config('distribution')} main"
         update = false
         if !File.exist?(apt_rock_list_file)
             update = true
         else
             File.open(apt_rock_list_file,"r") do |f|
                 apt_source_existing = f.gets
-                regexp = Regexp.new(apt_source)
+                regexp = Regexp.new( Regexp.escape(apt_source) )
                 if !regexp.match(apt_source_existing)
                     Autoproj.message "  Existing apt source needs update: #{apt_source_existing}"
                     Autoproj.message "  Changing to: #{apt_source}"
                     update = true
-                    Autoproj.warn "    You switched to using a new debian release, so please trigger a rebuild after completing this configuration"
+                    Autoproj.warn "  You switched to using a new debian release, so please trigger a rebuild after completing this configuration"
                 end
             end
         end
+
         if update
-            if !system("echo #{apt_source} | sudo tee #{apt_rock_list_file}")
+            if !system("echo deb #{apt_source} | sudo tee #{apt_rock_list_file}")
                 Autoproj.warn "Failed to install apt source: #{apt_source}"
             else
-                Autoproj.message " Installing Rock key"
+                Autoproj.message "Adding deb-src entry"
+                system("echo deb-src #{apt_source} | sudo tee -a #{apt_rock_list_file}")
+
+                Autoproj.message "  Installing Rock key"
                 key_url = "http://rimres-gcs2-u/rock-devel/conf/Rock-debian.gpg.key"
                 if !system("wget -q #{key_url}")
-                    Autoproj.warn "Retrieving key from: #{key_url} failed"
+                    Autoproj.warn "  Retrieving key from: #{key_url} failed"
                 else
                     system("sudo apt-key add Rock-debian.gpg.key < Rock-debian.gpg.key > /dev/null")
                     system("rm Rock-debian.gpg.key")
                 end
-                Autoproj.message " Updating package source -- this can take some time"
+                Autoproj.message "  Updating package source -- this can take some time"
                 system("sudo apt-get update > /tmp/autoproj-update.log")
             end
         end
     end
 else
-  Autoproj.message "Use of rock debian packages is deactivated. (Remove the rock-osdeps-Package from your autoproj/manifest to deactivate this message)"
+  Autoproj.message "  Use of rock debian packages is deactivated. (Remove the rock-osdeps-Package from your autoproj/manifest to deactivate this message)"
 end
 
