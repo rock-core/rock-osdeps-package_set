@@ -167,6 +167,9 @@ multiagent/orogen/fipa_services:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-multiagent-orogen-fipa-services
     16.04,xenial,xerus,default: rock-master-17.04-multiagent-orogen-fipa-services
+bundles/rock_multiagent:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.04-ruby-bundles-rock-multiagent
 external/libply:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-external-libply
@@ -186,6 +189,7 @@ external/cminpack:
 slam/pcl:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-slam-pcl
+    16.04,xenial,xerus,default: rock-master-17.04-slam-pcl
 slam/orogen/pcl:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-17.04-slam-orogen-pcl
@@ -220,10 +224,6 @@ gui/pose3d_editor:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-gui-pose3d-editor
     16.04,xenial,xerus,default: rock-master-17.04-gui-pose3d-editor
-control/visp:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-17.04-control-visp
-    16.04,xenial,xerus,default: rock-master-17.04-control-visp
 control/uwv_dynamic_model:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-control-uwv-dynamic-model
@@ -369,6 +369,7 @@ planning/sbpl:
 planning/ompl:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-planning-ompl
+    16.04,xenial,xerus,default: rock-master-17.04-planning-ompl
 external/aruco:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-external-aruco
@@ -461,6 +462,9 @@ drivers/velodyne_lidar:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-velodyne-lidar
     16.04,xenial,xerus,default: rock-master-17.04-drivers-velodyne-lidar
+drivers/hokuyo:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-hokuyo
 drivers/xsens_imu:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-xsens-imu
@@ -477,17 +481,29 @@ drivers/parport:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-parport
     16.04,xenial,xerus,default: rock-master-17.04-drivers-parport
+drivers/camera_prosilica:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-camera-prosilica
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-camera-prosilica
 drivers/camera_usb:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-camera-usb
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-camera-usb
 drivers/dvl_teledyne:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-dvl-teledyne
     16.04,xenial,xerus,default: rock-master-17.04-drivers-dvl-teledyne
+drivers/camera_firewire:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-camera-firewire
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-camera-firewire
 drivers/fog_kvh:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-fog-kvh
     16.04,xenial,xerus,default: rock-master-17.04-drivers-fog-kvh
+drivers/vicon:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-vicon
 drivers/sonar_tritech:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-sonar-tritech
@@ -507,6 +523,7 @@ perception/stereo:
 planning/motion_planning_libraries:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-planning-motion-planning-libraries
+    16.04,xenial,xerus,default: rock-master-17.04-planning-motion-planning-libraries
 slam/pose_ekf:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-slam-pose-ekf
@@ -519,10 +536,6 @@ slam/flann:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-slam-flann
     16.04,xenial,xerus,default: rock-master-17.04-slam-flann
-slam/hogman:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-17.04-slam-hogman
-    16.04,xenial,xerus,default: rock-master-17.04-slam-hogman
 slam/quater_ukf:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-slam-quater-ukf
@@ -547,10 +560,6 @@ control/orogen/auv_control:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-control-orogen-auv-control
     16.04,xenial,xerus,default: rock-master-17.04-control-orogen-auv-control
-control/orogen/visp:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-17.04-control-orogen-visp
-    16.04,xenial,xerus,default: rock-master-17.04-control-orogen-visp
 control/orogen/uwv_dynamic_model:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-control-orogen-uwv-dynamic-model
@@ -607,9 +616,6 @@ slam/orogen/odometry:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-slam-orogen-odometry
     16.04,xenial,xerus,default: rock-master-17.04-slam-orogen-odometry
-perception/orogen/stereo:
-  ubuntu,debian:
-    16.04,xenial,xerus,default: rock-master-17.04-perception-orogen-stereo
 drivers/orogen/velodyne_lidar:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-velodyne-lidar
@@ -648,7 +654,6 @@ drivers/orogen/iodrivers_base:
 drivers/orogen/mbeam_imagenex:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-mbeam-imagenex
-    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-mbeam-imagenex
 drivers/orogen/camera_base:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-camera-base
@@ -660,15 +665,12 @@ drivers/orogen/camera_aravis:
 drivers/orogen/dps_desertstar_ssp1:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-dps-desertstar-ssp1
-    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-dps-desertstar-ssp1
 drivers/orogen/video_streamer_vlc:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-video-streamer-vlc
-    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-video-streamer-vlc
 simulation/orogen/imumodel:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-simulation-orogen-imumodel
-    16.04,xenial,xerus,default: rock-master-17.04-simulation-orogen-imumodel
 drivers/orogen/servo_dynamixel:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-servo-dynamixel
@@ -696,18 +698,20 @@ drivers/orogen/xsens_imu:
 drivers/orogen/parport:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-parport
-    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-parport
+drivers/orogen/camera_prosilica:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-camera-prosilica
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-camera-prosilica
 drivers/orogen/fog_kvh:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-fog-kvh
-    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-fog-kvh
 drivers/orogen/dvl_teledyne:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-dvl-teledyne
-    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-dvl-teledyne
 drivers/orogen/camera_usb:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-camera-usb
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-camera-usb
 drivers/orogen/sonar_tritech:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-sonar-tritech
@@ -719,7 +723,6 @@ drivers/orogen/laser_filter:
 drivers/orogen/taskmon:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-taskmon
-    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-taskmon
 slam/orogen/tilt_scan:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-slam-orogen-tilt-scan
@@ -727,6 +730,7 @@ slam/orogen/tilt_scan:
 planning/orogen/motion_planning_libraries:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-planning-orogen-motion-planning-libraries
+    16.04,xenial,xerus,default: rock-master-17.04-planning-orogen-motion-planning-libraries
 rice:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-ruby-rice
@@ -945,3 +949,6 @@ grape_logging:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-ruby-grape-logging
     16.04,xenial,xerus,default: ruby-grape-logging
+perception/orogen/stereo:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.04-perception-orogen-stereo
