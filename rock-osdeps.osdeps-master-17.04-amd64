@@ -654,6 +654,7 @@ drivers/orogen/iodrivers_base:
 drivers/orogen/mbeam_imagenex:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-mbeam-imagenex
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-mbeam-imagenex
 drivers/orogen/camera_base:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-camera-base
@@ -665,12 +666,15 @@ drivers/orogen/camera_aravis:
 drivers/orogen/dps_desertstar_ssp1:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-dps-desertstar-ssp1
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-dps-desertstar-ssp1
 drivers/orogen/video_streamer_vlc:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-video-streamer-vlc
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-video-streamer-vlc
 simulation/orogen/imumodel:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-simulation-orogen-imumodel
+    16.04,xenial,xerus,default: rock-master-17.04-simulation-orogen-imumodel
 drivers/orogen/servo_dynamixel:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-servo-dynamixel
@@ -698,6 +702,7 @@ drivers/orogen/xsens_imu:
 drivers/orogen/parport:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-parport
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-parport
 drivers/orogen/camera_prosilica:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-camera-prosilica
@@ -705,9 +710,11 @@ drivers/orogen/camera_prosilica:
 drivers/orogen/fog_kvh:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-fog-kvh
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-fog-kvh
 drivers/orogen/dvl_teledyne:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-dvl-teledyne
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-dvl-teledyne
 drivers/orogen/camera_usb:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-camera-usb
@@ -723,6 +730,7 @@ drivers/orogen/laser_filter:
 drivers/orogen/taskmon:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-drivers-orogen-taskmon
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-taskmon
 slam/orogen/tilt_scan:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-slam-orogen-tilt-scan
@@ -952,3 +960,21 @@ grape_logging:
 perception/orogen/stereo:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-17.04-perception-orogen-stereo
+drivers/canbus:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-canbus
+drivers/orogen/canbus:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-canbus
+drivers/orogen/controldev:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-controldev
+drivers/orogen/hokuyo:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-hokuyo
+drivers/orogen/camera_firewire:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-camera-firewire
+drivers/orogen/vicon:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.04-drivers-orogen-vicon
