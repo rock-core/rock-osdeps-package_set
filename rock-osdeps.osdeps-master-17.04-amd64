@@ -135,10 +135,6 @@ gui/vizkit:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-ruby-gui-vizkit
     16.04,xenial,xerus,default: rock-master-17.04-ruby-gui-vizkit
-bundles/rock:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-17.04-ruby-bundles-rock
-    16.04,xenial,xerus,default: rock-master-17.04-ruby-bundles-rock
 tools/pocolog_cpp:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-tools-pocolog-cpp
@@ -167,9 +163,6 @@ multiagent/orogen/fipa_services:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-multiagent-orogen-fipa-services
     16.04,xenial,xerus,default: rock-master-17.04-multiagent-orogen-fipa-services
-bundles/rock_multiagent:
-  ubuntu,debian:
-    16.04,xenial,xerus,default: rock-master-17.04-ruby-bundles-rock-multiagent
 external/libply:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-external-libply
@@ -256,10 +249,6 @@ gui/collada_osg:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-gui-collada-osg
     16.04,xenial,xerus,default: rock-master-17.04-gui-collada-osg
-bundles/rock_auv:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-17.04-ruby-bundles-rock-auv
-    16.04,xenial,xerus,default: rock-master-17.04-ruby-bundles-rock-auv
 perception/projection:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-perception-projection
@@ -442,10 +431,6 @@ control/reflexxes:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-control-reflexxes
     16.04,xenial,xerus,default: rock-master-17.04-control-reflexxes
-bundles/rock_ugv_nav:
-  ubuntu,debian:
-    14.04,14.04.2,trusty,tahr,default: rock-master-17.04-ruby-bundles-rock-ugv-nav
-    16.04,xenial,xerus,default: rock-master-17.04-ruby-bundles-rock-ugv-nav
 external/yaml-cpp:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: rock-master-17.04-external-yaml-cpp
