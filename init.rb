@@ -34,7 +34,7 @@ if Autoproj.user_config('DEB_USE')
     end
 
     if current_release_name
-        if ["trusty, jessie"].include?(current_release_name)
+        if ["trusty", "jessie"].include?(current_release_name)
             Autoproj.env_set "TYPELIB_CXX_LOADER","gccxml"
         else
             Autoproj.env_set "TYPELIB_CXX_LOADER","castxml"
