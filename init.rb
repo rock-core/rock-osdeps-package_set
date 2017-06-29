@@ -144,6 +144,7 @@ if Autoproj.user_config('DEB_USE')
         ["rock/roby_plugin.rb", "syskit/roby_app/register_plugin.rb"].each do |roby_plugins|
             Autobuild.env_add_path('ROBY_PLUGIN_PATH', File.join(rock_ruby_vendordir, roby_plugins))
         end
+        Autobuild.env_add_path('ROCK_BUNDLE_PATH', File.join(release_install_dir, "share/rock/bundles"))
 
         shell_extension = nil
         if ENV['SHELL'].include?('/zsh')
