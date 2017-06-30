@@ -201,6 +201,9 @@ if Autoproj.user_config('DEB_USE')
             end
         end
     end
+
+    require_relative 'lib/package_selector'
+    Rock::DebianPackaging::PackageSelector::activate(Autoproj.user_config('debian_release'))
 else
   Autoproj.message "  Use of rock debian packages is deactivated. (Remove the rock-osdeps-Package from your autoproj/manifest to deactivate this message)"
 end
