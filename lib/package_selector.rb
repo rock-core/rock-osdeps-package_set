@@ -124,7 +124,14 @@ class PackageSelector
     # This allows to infer all reverse dependencies that base/types has and
     # so that they are also accounted for in the blacklisting process
     def load_blacklist
-        blacklist_file = File.join(Autoproj.config_dir, "deb_blacklist.yml")
+        config_dir = nil
+        if Autoproj.workspace
+            config_dir = Autoproj.workspace.config_dir
+        else
+            config_dir = Autoproj.config_dir
+        end
+
+        blacklist_file = File.join(config_dir, "deb_blacklist.yml")
         if File.exists?(blacklist_file)
             @blacklist = YAML.load_file(blacklist_file)
         end
