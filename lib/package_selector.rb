@@ -49,24 +49,8 @@ class PackageSelector
         end
     end
 
-    def all_reverse_dependencies(pkg_name)
-        # Collect reverse dependencies of this package
-        all_deps = reverse_dependencies(pkg_name)
-        handled_deps = []
-        while all_deps.sort != handled_deps.sort
-            all_deps.each do |pkg|
-                if !handled_deps.include?(pkg)
-                    handled_deps << pkg
-                    all_deps += reverse_dependencies(pkg)
-                    all_deps.uniq!
-                end
-            end
-        end
-        all_deps
-    end
-
     def disable_pkg(pkg_name)
-        all_reverse_dependencies(pkg_name)
+        reverse_dependencies(pkg_name)
     end
 
     def reverse_dependencies(pkg_name)
@@ -78,7 +62,7 @@ class PackageSelector
         reverse_deps.map { |debian_pkg| @deb_to_pkg[debian_pkg] }.flatten.compact
     end
 
-    # Get all reverse dependencies of the debian package
+    # Get reverse dependencies of the debian package
     def reverse_deb_dependencies(debian_pkg_name)
         if !debian_pkg_name
             raise ArgumentError, "reverse_dependencies requires an argument"
