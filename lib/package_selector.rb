@@ -109,7 +109,7 @@ class PackageSelector
     # so that they are also accounted for in the blacklisting process
     def load_blacklist
         config_dir = nil
-        if Autoproj.workspace
+        if Autoproj.respond_to?(:workspace)
             config_dir = Autoproj.workspace.config_dir
         else
             config_dir = Autoproj.config_dir
