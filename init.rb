@@ -50,8 +50,8 @@ if Autoproj.user_config('DEB_USE')
             "There are builds for 'jessie' (Debian), 'trusty' (Ubuntu), 'xenial' (Ubuntu)"]
 
         Autoproj.configuration_option 'debian_release', 'string',
-            :default => 'master-16.09',
-            :possible_answers => ['master-16.07','master-16.08','master-16.09','master-17.04'],
+            :default => 'master-17.06',
+            :possible_answers => ['master-16.09','master-17.06'],
             :doc => ["Which rock debian release should be used ?",
             "Use the default if you do not know better"]
 
