@@ -56,7 +56,7 @@ if Autoproj.user_config('DEB_USE')
             "Use the default if you do not know better"]
 
         Autoproj.configuration_option 'DEB_AUTOMATIC', 'boolean',
-            :default => 'no',
+            :default => 'yes',
             :doc => ["Do you want the installation be done automatically?",
             "This installation uses sudo and may ask for your password",
             "You can do the installation yourself with:",
