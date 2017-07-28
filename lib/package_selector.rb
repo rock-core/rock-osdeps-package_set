@@ -68,7 +68,15 @@ class PackageSelector
             raise ArgumentError, "reverse_dependencies requires an argument"
         end
         output = `apt-cache rdepends #{debian_pkg_name}`
-        output.split(":")[1].split(' ')
+        if !output.empty?
+            package_list = output.split(":")[1]
+            if package_list
+                return package_list.split(' ')
+            end
+        else
+            raise ArgumentError, "The package #{debian_pkg_name} is not known. Did you forget to call 'apt update'?"
+        end
+        []
     end
 
     # Write the rock-osdeps.osdeps file which allows to overload the existing
