@@ -60,10 +60,7 @@ if Autoproj.user_config('DEB_USE')
             :doc => ["Do you want the installation be done automatically?",
             "This installation uses sudo and may ask for your password",
             "You can do the installation yourself with:",
-            "echo 'deb [arch=#{debian_architecture} trusted=yes] http://rimres-gcs2-u/rock-releases/#{Autoproj.user_config('debian_release')} #{Autoproj.user_config('distribution')} main' | sudo tee /etc/apt/sources.list.d/rock-#{Autoproj.user_config('debian_release')}.list",
-            "wget http://rimres-gcs2-u/rock-devel/conf/Rock-debian.gpg.key",
-            "sudo apt-key add Rock-debian.gpg.key < Rock-debian.gpg.key",
-            "rm Rock-debian.gpg.key",
+            "echo 'deb [arch=#{debian_architecture} trusted=yes] http://rock.dfki.uni-bremen.de/rock-releases/#{Autoproj.user_config('debian_release')} #{Autoproj.user_config('distribution')} main' | sudo tee /etc/apt/sources.list.d/rock-#{Autoproj.user_config('debian_release')}.list",
             "sudo apt-get update > /dev/null",
             "##########################################################",
             "This installation uses sudo and may ask for your password",
@@ -164,7 +161,7 @@ if Autoproj.user_config('DEB_USE')
 
     if Autoproj.user_config('DEB_AUTOMATIC')
         apt_rock_list_file = "/etc/apt/sources.list.d/rock-#{Autoproj.user_config('debian_release')}.list"
-        apt_source = "[arch=#{debian_architecture} trusted=yes] http://rimres-gcs2-u/rock-releases/#{Autoproj.user_config('debian_release')} #{Autoproj.user_config('distribution')} main"
+        apt_source = "[arch=#{debian_architecture} trusted=yes] http://rock.dfki.uni-bremen.de/rock-releases/#{Autoproj.user_config('debian_release')} #{Autoproj.user_config('distribution')} main"
         update = false
         if !File.exist?(apt_rock_list_file)
             update = true
@@ -188,14 +185,6 @@ if Autoproj.user_config('DEB_USE')
                 Autoproj.message "Adding deb-src entry"
                 system("echo deb-src #{apt_source} | sudo tee -a #{apt_rock_list_file}")
 
-                Autoproj.message "  Installing Rock key"
-                key_url = "http://rimres-gcs2-u/rock-devel/conf/Rock-debian.gpg.key"
-                if !system("wget -q #{key_url}")
-                    Autoproj.warn "  Retrieving key from: #{key_url} failed"
-                else
-                    system("sudo apt-key add Rock-debian.gpg.key < Rock-debian.gpg.key > /dev/null")
-                    system("rm Rock-debian.gpg.key")
-                end
                 Autoproj.message "  Updating package source -- this can take some time"
                 system("sudo apt-get update > /tmp/autoproj-update.log")
             end
