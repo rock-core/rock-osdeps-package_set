@@ -463,3 +463,546 @@ grape:
 grape_logging:
   ubuntu,debian:
     16.04,xenial,xerus,default: ruby-grape-logging
+multiagent/fipa_acl:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-multiagent-fipa-acl
+multiagent/fipa_services:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-multiagent-fipa-services
+multiagent/orogen/fipa_services:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-multiagent-orogen-fipa-services
+bundles/rock_multiagent:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-ruby-bundles-rock-multiagent
+external/libply:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-external-libply
+slam/envire:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-envire
+planning/exploration:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-exploration
+drivers/imu_an_spatial:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-imu-an-spatial
+drivers/gps_base:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-gps-base
+gui/vizkit3d_pcl:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-gui-vizkit3d-pcl
+perception/apriltags:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-perception-apriltags
+control/kdl:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-kdl
+control/urdfdom_headers:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-urdfdom-headers
+control/urdfdom:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-urdfdom
+control/kdl_parser:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-kdl-parser
+slam/threed_odometry:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-threed-odometry
+control/visp:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-visp
+control/uwv_dynamic_model:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-uwv-dynamic-model
+slam/mtk:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-mtk
+slam/pose_estimation:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-pose-estimation
+slam/uwv_kalman_filters:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-uwv-kalman-filters
+perception/depth_map_preprocessing:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-perception-depth-map-preprocessing
+slam/gtsam:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-gtsam
+drivers/libusb:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-libusb
+bundles/rock_auv:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-ruby-bundles-rock-auv
+perception/projection:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-perception-projection
+gui/point_cloud:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-gui-point-cloud
+gui/qcam_calib:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-gui-qcam-calib
+perception/viso2:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-perception-viso2
+planning/randward:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-randward
+planning/arvand_herd:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-arvand-herd
+planning/fd_cedalion:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-fd-cedalion
+planning/fd_uniform:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-fd-uniform
+planning/bfsf:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-bfsf
+planning/fast_downward:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-fast-downward
+planning/lama:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-lama
+planning/pddl_planner:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-pddl-planner
+planning/nav_graph_search:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-nav-graph-search
+planning/simple_path_planner:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-simple-path-planner
+control/motor_controller:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-motor-controller
+control/hysteresis_model:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-hysteresis-model
+slam/terrain_estimator:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-terrain-estimator
+slam/odometry:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-odometry
+slam/gmapping:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-gmapping
+gui/map2d:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-gui-map2d
+drivers/imu_stim300:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-imu-stim300
+drivers/imu_imar:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-imu-imar
+drivers/alt_imagenex:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-alt-imagenex
+drivers/ctd_seabird:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-ctd-seabird
+drivers/mbeam_imagenex:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-mbeam-imagenex
+drivers/pressure_paroscientific:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-pressure-paroscientific
+drivers/base_schilling:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-base-schilling
+drivers/ucm_schilling:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-ucm-schilling
+drivers/act_schilling:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-act-schilling
+drivers/phins_ixsea:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-phins-ixsea
+drivers/aravis:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-aravis
+drivers/camera_interface:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-camera-interface
+drivers/camera_aravis:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-camera-aravis
+gui/vizkit_3d_plugins:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-gui-vizkit-3d-plugins
+drivers/dps_desertstar_ssp1:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-dps-desertstar-ssp1
+planning/sbpl:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-sbpl
+planning/ompl:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-ompl
+external/aruco:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-external-aruco
+external/lemon:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-external-lemon
+external/snap:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-external-snap
+external/gexf:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-external-gexf
+simulation/imumodel:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-simulation-imumodel
+slam/octomap:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-octomap
+drivers/freenect:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-freenect
+control/robot_frames:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-robot-frames
+gui/control_ui:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-gui-control-ui
+gui/robot_model:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-gui-robot-model
+control/joint_dispatcher:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-joint-dispatcher
+control/kdl_conversions:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-kdl-conversions
+utilmm:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-utilmm
+data_processing/type_to_vector:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-data-processing-type-to-vector
+drivers/video_capture_vlc:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-video-capture-vlc
+drivers/video_streamer_vlc:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-video-streamer-vlc
+control/reflexxes:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-reflexxes
+bundles/rock_ugv_nav:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-ruby-bundles-rock-ugv-nav
+drivers/ptu_directedperception:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-ptu-directedperception
+external/yaml-cpp:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-external-yaml-cpp
+external/yaml-cpp03:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-external-yaml-cpp03
+control/trajectory_follower:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-trajectory-follower
+drivers/velodyne_lidar:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-velodyne-lidar
+drivers/canbus:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-canbus
+drivers/mb500:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-mb500
+drivers/hokuyo:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-hokuyo
+drivers/xsens_imu:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-xsens-imu
+drivers/dynamixel:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-dynamixel
+drivers/controldev:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-controldev
+drivers/parport:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-parport
+drivers/dvl_teledyne:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-dvl-teledyne
+drivers/camera_firewire:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-camera-firewire
+drivers/fog_kvh:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-fog-kvh
+drivers/iCharger:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-icharger
+drivers/vicon:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-vicon
+drivers/qualisys:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-qualisys
+drivers/sonar_tritech:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-sonar-tritech
+drivers/laser_filter:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-laser-filter
+perception/libelas:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-perception-libelas
+perception/stereo:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-perception-stereo
+planning/motion_planning_libraries:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-motion-planning-libraries
+slam/pose_ekf:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-pose-ekf
+slam/quater_ikf:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-quater-ikf
+external/cminpack:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-external-cminpack
+slam/flann:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-flann
+slam/hogman:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-hogman
+slam/quater_ukf:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-quater-ukf
+slam/g2o:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-g2o
+slam/orogen/envire:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-orogen-envire
+planning/orogen/exploration:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-orogen-exploration
+drivers/orogen/imu_an_spatial:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-imu-an-spatial
+drivers/orogen/gps_base:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-gps-base
+slam/orogen/pcl:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-orogen-pcl
+perception/orogen/apriltags:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-perception-orogen-apriltags
+control/orogen/auv_control:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-orogen-auv-control
+control/orogen/visp:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-orogen-visp
+control/orogen/uwv_dynamic_model:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-orogen-uwv-dynamic-model
+slam/orogen/uwv_kalman_filters:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-orogen-uwv-kalman-filters
+perception/orogen/depth_map_preprocessing:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-perception-orogen-depth-map-preprocessing
+slam/orogen/simple_pose_integrator:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-orogen-simple-pose-integrator
+control/orogen/robot_frames:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-orogen-robot-frames
+perception/orogen/image_preprocessing:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-perception-orogen-image-preprocessing
+slam/orogen/gmapping:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-orogen-gmapping
+perception/orogen/projection:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-perception-orogen-projection
+perception/orogen/virtual_view:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-perception-orogen-virtual-view
+control/orogen/trajectory_generation:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-orogen-trajectory-generation
+control/orogen/kdl:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-orogen-kdl
+drivers/orogen/canbus:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-canbus
+drivers/orogen/controldev:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-controldev
+perception/orogen/video_streamer:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-perception-orogen-video-streamer
+perception/orogen/viso2:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-perception-orogen-viso2
+slam/orogen/north_seeker:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-orogen-north-seeker
+slam/orogen/odometry:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-orogen-odometry
+perception/orogen/stereo:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-perception-orogen-stereo
+drivers/orogen/velodyne_lidar:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-velodyne-lidar
+slam/orogen/local_mapper:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-orogen-local-mapper
+slam/orogen/pose_estimation:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-orogen-pose-estimation
+planning/orogen/pddl_planner:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-orogen-pddl-planner
+planning/orogen/simple_path_planner:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-orogen-simple-path-planner
+planning/orogen/heading_calculator:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-orogen-heading-calculator
+planning/orogen/traversability:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-orogen-traversability
+drivers/orogen/imu_stim300:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-imu-stim300
+drivers/orogen/alt_imagenex:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-alt-imagenex
+drivers/orogen/ctd_seabird:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-ctd-seabird
+drivers/orogen/mbeam_imagenex:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-mbeam-imagenex
+drivers/orogen/pressure_paroscientific:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-pressure-paroscientific
+drivers/orogen/ucm_schilling:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-ucm-schilling
+drivers/orogen/act_schilling:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-act-schilling
+drivers/orogen/phins_ixsea:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-phins-ixsea
+drivers/orogen/camera_base:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-camera-base
+drivers/orogen/camera_aravis:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-camera-aravis
+drivers/orogen/kinect:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-kinect
+drivers/orogen/dps_desertstar_ssp1:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-dps-desertstar-ssp1
+drivers/orogen/video_streamer_vlc:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-video-streamer-vlc
+simulation/orogen/imumodel:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-simulation-orogen-imumodel
+drivers/orogen/servo_dynamixel:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-servo-dynamixel
+control/orogen/motor_controller:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-orogen-motor-controller
+control/orogen/joint_dispatcher:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-orogen-joint-dispatcher
+data_processing/orogen/type_to_vector:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-data-processing-orogen-type-to-vector
+data_processing/orogen/statistics:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-data-processing-orogen-statistics
+drivers/orogen/ptu_directedperception:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-ptu-directedperception
+control/orogen/trajectory_follower:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-orogen-trajectory-follower
+control/orogen/skid4_control:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-control-orogen-skid4-control
+drivers/orogen/gps:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-gps
+drivers/orogen/hokuyo:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-hokuyo
+drivers/orogen/xsens_imu:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-xsens-imu
+drivers/orogen/parport:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-parport
+drivers/orogen/wifimon:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-wifimon
+drivers/orogen/fog_kvh:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-fog-kvh
+drivers/orogen/dvl_teledyne:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-dvl-teledyne
+drivers/orogen/camera_firewire:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-camera-firewire
+drivers/orogen/vicon:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-vicon
+drivers/orogen/sonar_tritech:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-sonar-tritech
+drivers/orogen/qualisys:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-qualisys
+drivers/orogen/laser_filter:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-laser-filter
+drivers/orogen/taskmon:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-drivers-orogen-taskmon
+slam/orogen/tilt_scan:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-slam-orogen-tilt-scan
+planning/orogen/motion_planning_libraries:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-planning-orogen-motion-planning-libraries
+geoutm:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-17.11-ruby-geoutm
