@@ -113,9 +113,6 @@ drivers/orogen/transformer:
 gui/vizkit:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-17.11-ruby-gui-vizkit
-bundles/rock:
-  ubuntu,debian:
-    16.04,xenial,xerus,default: rock-master-17.11-ruby-bundles-rock
 tools/pocolog_cpp:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-17.11-tools-pocolog-cpp
@@ -125,21 +122,6 @@ base/templates/ruby_lib:
 base/numeric:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-17.11-base-numeric
-base/templates/cmake_lib:
-  ubuntu,debian:
-    16.04,xenial,xerus,default: rock-master-17.11-base-templates-cmake-lib
-base/templates/cmake_vizkit_widget:
-  ubuntu,debian:
-    16.04,xenial,xerus,default: rock-master-17.11-base-templates-cmake-vizkit-widget
-base/templates/vizkit3d_plugin:
-  ubuntu,debian:
-    16.04,xenial,xerus,default: rock-master-17.11-base-templates-vizkit3d-plugin
-base/templates/bundle:
-  ubuntu,debian:
-    16.04,xenial,xerus,default: rock-master-17.11-base-templates-bundle
-base/templates/doc:
-  ubuntu,debian:
-    16.04,xenial,xerus,default: rock-master-17.11-base-templates-doc
 tools/syskit:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-17.11-ruby-tools-syskit
@@ -472,9 +454,6 @@ multiagent/fipa_services:
 multiagent/orogen/fipa_services:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-17.11-multiagent-orogen-fipa-services
-bundles/rock_multiagent:
-  ubuntu,debian:
-    16.04,xenial,xerus,default: rock-master-17.11-ruby-bundles-rock-multiagent
 external/libply:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-17.11-external-libply
@@ -535,9 +514,6 @@ slam/gtsam:
 drivers/libusb:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-17.11-drivers-libusb
-bundles/rock_auv:
-  ubuntu,debian:
-    16.04,xenial,xerus,default: rock-master-17.11-ruby-bundles-rock-auv
 perception/projection:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-17.11-perception-projection
@@ -700,9 +676,6 @@ drivers/video_streamer_vlc:
 control/reflexxes:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-17.11-control-reflexxes
-bundles/rock_ugv_nav:
-  ubuntu,debian:
-    16.04,xenial,xerus,default: rock-master-17.11-ruby-bundles-rock-ugv-nav
 drivers/ptu_directedperception:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-17.11-drivers-ptu-directedperception
