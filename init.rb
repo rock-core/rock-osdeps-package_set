@@ -43,15 +43,9 @@ if Autoproj.user_config('DEB_USE')
         architecture = "#{`gcc -print-multiarch`}".strip
         debian_architecture = "#{`dpkg --print-architecture`}".strip
 
-        Autoproj.configuration_option 'distribution', 'string',
-            :default => current_release_name,
-            :possible_answers => ['trusty','xenial','jessie'],
-            :doc => ["Which distribution do you use?",
-            "There are builds for 'jessie' (Debian), 'trusty' (Ubuntu), 'xenial' (Ubuntu)"]
-
         Autoproj.configuration_option 'debian_release', 'string',
             :default => 'master-17.11',
-            :possible_answers => ['master-17.11']
+            :possible_answers => ['master-17.11'],
             :doc => ["Which rock debian release should be used ?",
             "Use the default if you do not know better"]
 
@@ -60,7 +54,7 @@ if Autoproj.user_config('DEB_USE')
             :doc => ["Do you want the installation be done automatically?",
             "This installation uses sudo and may ask for your password",
             "You can do the installation yourself with:",
-            "echo 'deb [arch=#{debian_architecture} trusted=yes] http://rock.dfki.uni-bremen.de/rock-releases/#{Autoproj.user_config('debian_release')} #{Autoproj.user_config('distribution')} main' | sudo tee /etc/apt/sources.list.d/rock-#{Autoproj.user_config('debian_release')}.list",
+            "echo 'deb [arch=#{debian_architecture} trusted=yes] http://rock.dfki.uni-bremen.de/rock-releases/#{Autoproj.user_config('debian_release')} #{current_release_name} main' | sudo tee /etc/apt/sources.list.d/rock-#{Autoproj.user_config('debian_release')}.list",
             "sudo apt-get update > /dev/null",
             "##########################################################",
             "This installation uses sudo and may ask for your password",
@@ -161,7 +155,7 @@ if Autoproj.user_config('DEB_USE')
 
     if Autoproj.user_config('DEB_AUTOMATIC')
         apt_rock_list_file = "/etc/apt/sources.list.d/rock-#{Autoproj.user_config('debian_release')}.list"
-        apt_source = "[arch=#{debian_architecture} trusted=yes] http://rock.dfki.uni-bremen.de/rock-releases/#{Autoproj.user_config('debian_release')} #{Autoproj.user_config('distribution')} main"
+        apt_source = "[arch=#{debian_architecture} trusted=yes] http://rock.dfki.uni-bremen.de/rock-releases/#{Autoproj.user_config('debian_release')} #{current_release_name} main"
         update = false
         if !File.exist?(apt_rock_list_file)
             update = true
