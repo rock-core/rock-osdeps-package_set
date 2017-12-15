@@ -1,0 +1,700 @@
+---
+base/cmake:
+  debian:
+    8.1,jessie,default: rock-master-17.11-base-cmake
+base/logging:
+  debian:
+    8.1,jessie,default: rock-master-17.11-base-logging
+base/console_bridge:
+  debian:
+    8.1,jessie,default: rock-master-17.11-base-console-bridge
+tools/class_loader:
+  debian:
+    8.1,jessie,default: rock-master-17.11-tools-class-loader
+utilrb:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-utilrb
+rtt:
+  debian:
+    8.1,jessie,default: rock-master-17.11-rtt
+typelib:
+  debian:
+    8.1,jessie,default: rock-master-17.11-typelib
+tools/metaruby:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-tools-metaruby
+tools/pocolog:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-tools-pocolog
+tools/orogen_metadata:
+  debian:
+    8.1,jessie,default: rock-master-17.11-tools-orogen-metadata
+rtt_typelib:
+  debian:
+    8.1,jessie,default: rock-master-17.11-rtt-typelib
+orogen:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-orogen
+external/sisl:
+  debian:
+    8.1,jessie,default: rock-master-17.11-external-sisl
+gui/vizkit3d:
+  debian:
+    8.1,jessie,default: rock-master-17.11-gui-vizkit3d
+base/types:
+  debian:
+    8.1,jessie,default: rock-master-17.11-base-types
+tools/service_discovery:
+  debian:
+    8.1,jessie,default: rock-master-17.11-tools-service-discovery
+tools/orocos_cpp_base:
+  debian:
+    8.1,jessie,default: rock-master-17.11-tools-orocos-cpp-base
+tools/lib_config:
+  debian:
+    8.1,jessie,default: rock-master-17.11-tools-lib-config
+tools/orogen_cpp_proxies:
+  debian:
+    8.1,jessie,default: rock-master-17.11-tools-orogen-cpp-proxies
+tools/orogen_model_exporter:
+  debian:
+    8.1,jessie,default: rock-master-17.11-tools-orogen-model-exporter
+base/orogen/std:
+  debian:
+    8.1,jessie,default: rock-master-17.11-base-orogen-std
+tools/orocos.rb:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-tools-orocos.rb
+tools/rest_api:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-tools-rest-api
+tools/telemetry:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-tools-telemetry
+drivers/aggregator:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-aggregator
+drivers/transformer:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-transformer
+base/orogen/types:
+  debian:
+    8.1,jessie,default: rock-master-17.11-base-orogen-types
+perception/jpeg_conversion:
+  debian:
+    8.1,jessie,default: rock-master-17.11-perception-jpeg-conversion
+tools/rubigen:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-tools-rubigen
+tools/logger:
+  debian:
+    8.1,jessie,default: rock-master-17.11-tools-logger
+perception/frame_helper:
+  debian:
+    8.1,jessie,default: rock-master-17.11-perception-frame-helper
+tools/roby:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-tools-roby
+gui/rock_widget_collection:
+  debian:
+    8.1,jessie,default: rock-master-17.11-gui-rock-widget-collection
+base/scripts:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-base-scripts
+drivers/orogen/aggregator:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-aggregator
+drivers/orogen/transformer:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-transformer
+gui/vizkit:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-gui-vizkit
+base/numeric:
+  debian:
+    8.1,jessie,default: rock-master-17.11-base-numeric
+tools/syskit:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-tools-syskit
+drivers/iodrivers_base:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-iodrivers-base
+drivers/orogen/iodrivers_base:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-iodrivers-base
+multiagent/fipa_acl:
+  debian:
+    8.1,jessie,default: rock-master-17.11-multiagent-fipa-acl
+external/libply:
+  debian:
+    8.1,jessie,default: rock-master-17.11-external-libply
+drivers/imu_an_spatial:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-imu-an-spatial
+gui/vizkit3d_pcl:
+  debian:
+    8.1,jessie,default: rock-master-17.11-gui-vizkit3d-pcl
+perception/apriltags:
+  debian:
+    8.1,jessie,default: rock-master-17.11-perception-apriltags
+control/kdl:
+  debian:
+    8.1,jessie,default: rock-master-17.11-control-kdl
+control/urdfdom_headers:
+  debian:
+    8.1,jessie,default: rock-master-17.11-control-urdfdom-headers
+control/urdfdom:
+  debian:
+    8.1,jessie,default: rock-master-17.11-control-urdfdom
+control/visp:
+  debian:
+    8.1,jessie,default: rock-master-17.11-control-visp
+control/uwv_dynamic_model:
+  debian:
+    8.1,jessie,default: rock-master-17.11-control-uwv-dynamic-model
+slam/gtsam:
+  debian:
+    8.1,jessie,default: rock-master-17.11-slam-gtsam
+drivers/libusb:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-libusb
+perception/projection:
+  debian:
+    8.1,jessie,default: rock-master-17.11-perception-projection
+gui/point_cloud:
+  debian:
+    8.1,jessie,default: rock-master-17.11-gui-point-cloud
+gui/qcam_calib:
+  debian:
+    8.1,jessie,default: rock-master-17.11-gui-qcam-calib
+planning/randward:
+  debian:
+    8.1,jessie,default: rock-master-17.11-planning-randward
+planning/arvand_herd:
+  debian:
+    8.1,jessie,default: rock-master-17.11-planning-arvand-herd
+planning/fd_cedalion:
+  debian:
+    8.1,jessie,default: rock-master-17.11-planning-fd-cedalion
+planning/fd_uniform:
+  debian:
+    8.1,jessie,default: rock-master-17.11-planning-fd-uniform
+planning/bfsf:
+  debian:
+    8.1,jessie,default: rock-master-17.11-planning-bfsf
+planning/fast_downward:
+  debian:
+    8.1,jessie,default: rock-master-17.11-planning-fast-downward
+planning/lama:
+  debian:
+    8.1,jessie,default: rock-master-17.11-planning-lama
+control/motor_controller:
+  debian:
+    8.1,jessie,default: rock-master-17.11-control-motor-controller
+control/hysteresis_model:
+  debian:
+    8.1,jessie,default: rock-master-17.11-control-hysteresis-model
+slam/terrain_estimator:
+  debian:
+    8.1,jessie,default: rock-master-17.11-slam-terrain-estimator
+slam/odometry:
+  debian:
+    8.1,jessie,default: rock-master-17.11-slam-odometry
+slam/gmapping:
+  debian:
+    8.1,jessie,default: rock-master-17.11-slam-gmapping
+gui/map2d:
+  debian:
+    8.1,jessie,default: rock-master-17.11-gui-map2d
+drivers/imu_stim300:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-imu-stim300
+drivers/imu_imar:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-imu-imar
+drivers/alt_imagenex:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-alt-imagenex
+drivers/ctd_seabird:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-ctd-seabird
+drivers/mbeam_imagenex:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-mbeam-imagenex
+drivers/pressure_paroscientific:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-pressure-paroscientific
+drivers/base_schilling:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-base-schilling
+drivers/ucm_schilling:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-ucm-schilling
+drivers/act_schilling:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-act-schilling
+drivers/aravis:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-aravis
+drivers/camera_interface:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-camera-interface
+drivers/camera_aravis:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-camera-aravis
+gui/vizkit_3d_plugins:
+  debian:
+    8.1,jessie,default: rock-master-17.11-gui-vizkit-3d-plugins
+drivers/dps_desertstar_ssp1:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-dps-desertstar-ssp1
+planning/sbpl:
+  debian:
+    8.1,jessie,default: rock-master-17.11-planning-sbpl
+planning/ompl:
+  debian:
+    8.1,jessie,default: rock-master-17.11-planning-ompl
+external/aruco:
+  debian:
+    8.1,jessie,default: rock-master-17.11-external-aruco
+external/lemon:
+  debian:
+    8.1,jessie,default: rock-master-17.11-external-lemon
+external/snap:
+  debian:
+    8.1,jessie,default: rock-master-17.11-external-snap
+external/gexf:
+  debian:
+    8.1,jessie,default: rock-master-17.11-external-gexf
+simulation/imumodel:
+  debian:
+    8.1,jessie,default: rock-master-17.11-simulation-imumodel
+slam/octomap:
+  debian:
+    8.1,jessie,default: rock-master-17.11-slam-octomap
+drivers/freenect:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-freenect
+control/joint_dispatcher:
+  debian:
+    8.1,jessie,default: rock-master-17.11-control-joint-dispatcher
+control/kdl_conversions:
+  debian:
+    8.1,jessie,default: rock-master-17.11-control-kdl-conversions
+utilmm:
+  debian:
+    8.1,jessie,default: rock-master-17.11-utilmm
+drivers/video_capture_vlc:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-video-capture-vlc
+drivers/video_streamer_vlc:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-video-streamer-vlc
+control/reflexxes:
+  debian:
+    8.1,jessie,default: rock-master-17.11-control-reflexxes
+drivers/ptu_directedperception:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-ptu-directedperception
+external/yaml-cpp:
+  debian:
+    8.1,jessie,default: rock-master-17.11-external-yaml-cpp
+external/yaml-cpp03:
+  debian:
+    8.1,jessie,default: rock-master-17.11-external-yaml-cpp03
+control/trajectory_follower:
+  debian:
+    8.1,jessie,default: rock-master-17.11-control-trajectory-follower
+drivers/velodyne_lidar:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-velodyne-lidar
+drivers/canbus:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-canbus
+drivers/mb500:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-mb500
+drivers/hokuyo:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-hokuyo
+drivers/xsens_imu:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-xsens-imu
+drivers/dynamixel:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-dynamixel
+drivers/controldev:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-controldev
+drivers/parport:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-parport
+drivers/camera_usb:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-camera-usb
+drivers/dvl_teledyne:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-dvl-teledyne
+drivers/camera_firewire:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-camera-firewire
+drivers/fog_kvh:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-fog-kvh
+drivers/iCharger:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-icharger
+drivers/qualisys:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-qualisys
+drivers/sonar_tritech:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-sonar-tritech
+drivers/laserscanner_sick:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-laserscanner-sick
+drivers/laser_filter:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-laser-filter
+slam/pose_ekf:
+  debian:
+    8.1,jessie,default: rock-master-17.11-slam-pose-ekf
+slam/quater_ikf:
+  debian:
+    8.1,jessie,default: rock-master-17.11-slam-quater-ikf
+external/cminpack:
+  debian:
+    8.1,jessie,default: rock-master-17.11-external-cminpack
+slam/flann:
+  debian:
+    8.1,jessie,default: rock-master-17.11-slam-flann
+slam/hogman:
+  debian:
+    8.1,jessie,default: rock-master-17.11-slam-hogman
+slam/quater_ukf:
+  debian:
+    8.1,jessie,default: rock-master-17.11-slam-quater-ukf
+drivers/orogen/imu_an_spatial:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-imu-an-spatial
+slam/orogen/pcl:
+  debian:
+    8.1,jessie,default: rock-master-17.11-slam-orogen-pcl
+perception/orogen/apriltags:
+  debian:
+    8.1,jessie,default: rock-master-17.11-perception-orogen-apriltags
+control/orogen/auv_control:
+  debian:
+    8.1,jessie,default: rock-master-17.11-control-orogen-auv-control
+control/orogen/visp:
+  debian:
+    8.1,jessie,default: rock-master-17.11-control-orogen-visp
+slam/orogen/simple_pose_integrator:
+  debian:
+    8.1,jessie,default: rock-master-17.11-slam-orogen-simple-pose-integrator
+perception/orogen/image_preprocessing:
+  debian:
+    8.1,jessie,default: rock-master-17.11-perception-orogen-image-preprocessing
+slam/orogen/gmapping:
+  debian:
+    8.1,jessie,default: rock-master-17.11-slam-orogen-gmapping
+perception/orogen/projection:
+  debian:
+    8.1,jessie,default: rock-master-17.11-perception-orogen-projection
+perception/orogen/virtual_view:
+  debian:
+    8.1,jessie,default: rock-master-17.11-perception-orogen-virtual-view
+control/orogen/trajectory_generation:
+  debian:
+    8.1,jessie,default: rock-master-17.11-control-orogen-trajectory-generation
+control/orogen/kdl:
+  debian:
+    8.1,jessie,default: rock-master-17.11-control-orogen-kdl
+drivers/orogen/canbus:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-canbus
+drivers/orogen/controldev:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-controldev
+perception/orogen/video_streamer:
+  debian:
+    8.1,jessie,default: rock-master-17.11-perception-orogen-video-streamer
+slam/orogen/north_seeker:
+  debian:
+    8.1,jessie,default: rock-master-17.11-slam-orogen-north-seeker
+slam/orogen/odometry:
+  debian:
+    8.1,jessie,default: rock-master-17.11-slam-orogen-odometry
+drivers/orogen/velodyne_lidar:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-velodyne-lidar
+planning/orogen/heading_calculator:
+  debian:
+    8.1,jessie,default: rock-master-17.11-planning-orogen-heading-calculator
+drivers/orogen/imu_stim300:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-imu-stim300
+drivers/orogen/imu_imar:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-imu-imar
+drivers/orogen/alt_imagenex:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-alt-imagenex
+drivers/orogen/ctd_seabird:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-ctd-seabird
+drivers/orogen/mbeam_imagenex:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-mbeam-imagenex
+drivers/orogen/pressure_paroscientific:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-pressure-paroscientific
+drivers/orogen/ucm_schilling:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-ucm-schilling
+drivers/orogen/act_schilling:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-act-schilling
+drivers/orogen/camera_base:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-camera-base
+drivers/orogen/dps_desertstar_ssp1:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-dps-desertstar-ssp1
+drivers/orogen/video_streamer_vlc:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-video-streamer-vlc
+simulation/orogen/imumodel:
+  debian:
+    8.1,jessie,default: rock-master-17.11-simulation-orogen-imumodel
+drivers/orogen/servo_dynamixel:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-servo-dynamixel
+control/orogen/motor_controller:
+  debian:
+    8.1,jessie,default: rock-master-17.11-control-orogen-motor-controller
+control/orogen/joint_dispatcher:
+  debian:
+    8.1,jessie,default: rock-master-17.11-control-orogen-joint-dispatcher
+drivers/orogen/ptu_directedperception:
+  debian:
+    8.1,jessie,default: rock-master-17.11-drivers-orogen-ptu-directedperception
+base/admin_scripts:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-base-admin-scripts
+bundler:
+  debian:
+    8.1,jessie,default: bundler
+facets:
+  debian:
+    8.1,jessie,default: ruby-facets
+kramdown:
+  debian:
+    8.1,jessie,default: ruby-kramdown
+rice:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-rice
+yard:
+  debian:
+    8.1,jessie,default: yard
+rack-cors:
+  debian:
+    8.1,jessie,default: ruby-rack-cors
+websocket:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-websocket
+state_machine:
+  debian:
+    8.1,jessie,default: ruby-state-machine
+rb-readline:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-rb-readline
+concurrent-ruby:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-concurrent-ruby
+qtbindings:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-qtbindings
+tty-cursor:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-tty-cursor
+geoutm:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-geoutm
+rake:
+  debian:
+    8.1,jessie,default: rake
+daemons:
+  debian:
+    8.1,jessie,default: ruby-daemons
+eventmachine:
+  debian:
+    8.1,jessie,default: ruby-eventmachine
+rack:
+  debian:
+    8.1,jessie,default: ruby-rack
+builder:
+  debian:
+    8.1,jessie,default: ruby-builder
+cucumber-expressions:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-cucumber-expressions
+cucumber-wire:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-cucumber-wire
+diff-lcs:
+  debian:
+    8.1,jessie,default: ruby-diff-lcs
+gherkin:
+  debian:
+    8.1,jessie,default: ruby-gherkin
+multi_json:
+  debian:
+    8.1,jessie,default: ruby-multi-json
+multi_test:
+  debian:
+    8.1,jessie,default: ruby-multi-test
+debug_inspector:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-debug-inspector
+equatable:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-equatable
+tty-color:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-tty-color
+uber:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-uber
+lazy_priority_queue:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-lazy-priority-queue
+stream:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-stream
+necromancer:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-necromancer
+wisper:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-wisper
+tty-screen:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-tty-screen
+unicode-display_width:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-unicode-display-width
+minitest:
+  debian:
+    8.1,jessie,default: ruby-minitest
+mustermann:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-mustermann
+equalizer:
+  debian:
+    8.1,jessie,default: ruby-equalizer
+websocket-extensions:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-websocket-extensions
+backports:
+  debian:
+    8.1,jessie,default: ruby-backports
+cucumber-tag_expressions:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-cucumber-tag-expressions
+unicode_utils:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-unicode-utils
+thread_safe:
+  debian:
+    8.1,jessie,default: ruby-thread-safe
+ice_nine:
+  debian:
+    8.1,jessie,default: ruby-ice-nine
+hoe:
+  debian:
+    8.1,jessie,default: ruby-hoe
+hoe-yard:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-hoe-yard
+rake-compiler:
+  debian:
+    8.1,jessie,default: rake-compiler
+thin:
+  debian:
+    8.1,jessie,default: thin
+sprockets:
+  debian:
+    8.1,jessie,default: ruby-sprockets
+binding_of_caller:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-binding-of-caller
+concurrent-ruby-ext:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-concurrent-ruby-ext
+pastel:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-pastel
+hooks:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-hooks
+rgl:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-rgl
+mustermann-grape:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-mustermann-grape
+rack-accept:
+  debian:
+    8.1,jessie,default: ruby-rack-accept
+websocket-driver:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-websocket-driver
+cucumber-core:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-cucumber-core
+verse:
+  debian:
+    8.1,jessie,default: verse
+i18n:
+  debian:
+    8.1,jessie,default: ruby-i18n
+tzinfo:
+  debian:
+    8.1,jessie,default: ruby-tzinfo
+descendants_tracker:
+  debian:
+    8.1,jessie,default: ruby-descendants-tracker
+faye-websocket:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-faye-websocket
+cucumber:
+  debian:
+    8.1,jessie,default: cucumber
+autorespawn:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-autorespawn
+tty-prompt:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-tty-prompt
+tty-table:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-tty-table
+activesupport:
+  debian:
+    8.1,jessie,default: ruby-activesupport
+axiom-types:
+  debian:
+    8.1,jessie,default: ruby-axiom-types
+coercible:
+  debian:
+    8.1,jessie,default: ruby-coercible
+virtus:
+  debian:
+    8.1,jessie,default: ruby-virtus
+grape:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-grape
+grape_logging:
+  debian:
+    8.1,jessie,default: rock-master-17.11-ruby-grape-logging
