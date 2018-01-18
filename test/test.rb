@@ -21,8 +21,8 @@ module Rock
                 deps = @ps.reverse_dependencies("base/cmake")
                 assert deps.include?("base/types")
 
-                deps = @ps.all_reverse_dependencies("base/types")
-                assert deps.include?("base/orogen/std"), "base/orogen/std is a reverse dependency of base/types"
+                deps = @ps.reverse_dependencies("base/types")
+                assert !deps.include?("base/orogen/std"), "base/orogen/std is a reverse dependency of base/types"
                 assert deps.include?("base/orogen/types"), "base/orogen/types is a reverse dependency of base/types"
             end
         end
