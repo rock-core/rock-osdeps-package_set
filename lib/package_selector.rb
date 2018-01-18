@@ -10,11 +10,23 @@ class PackageSelector
     attr_reader :deb_to_pkg
     attr_reader :blacklist
 
-    def initialize(osdeps_file)
-        @osdeps = YAML.load_file(osdeps_file)
-        @pkg_to_deb = {}
-        @deb_to_pkg = {}
-        @reverse_dependencies_map = {}
+    def initialize(osdeps_file = nil)
+        if osdeps_file
+            load_osdeps_file(osdeps_file)
+        end
+    end
+
+    def load_osdeps_file(osdeps_file)
+        if !@osdeps
+            @osdeps = YAML.load_file(osdeps_file)
+        else
+            osdeps = YAML.load_file(osdeps_file)
+            @osdeps.merge!(osdeps)
+        end
+
+        @pkg_to_deb ||= {}
+        @deb_to_pkg ||= {}
+        @reverse_dependencies_map ||= {}
 
         distribution, release = PackageSelector::operating_system
         @osdeps.each do | pkg_name, osdeps_list|
@@ -26,15 +38,25 @@ class PackageSelector
                 end
             end
         end
+    end
 
-        load_blacklist
+    def self.activate_releases(release_names)
+        distribution, release = operating_system
+        architecture = "#{`dpkg --print-architecture`}".strip
+        ps = Rock::DebianPackaging::PackageSelector.new
+        release_names.each do |release_name|
+            ps.load_osdeps_file( File.join(File.dirname(__FILE__),"..","data","#{release_name}-#{architecture}.yml") )
+        end
+        ps.load_blacklist
+        ps.write_osdeps_file
     end
 
     # Activate the package list for a particular debian package release
-    def self.activate(release_name)
+    def self.activate_release(release_name)
         distribution, release = operating_system
         architecture = "#{`dpkg --print-architecture`}".strip
         ps = Rock::DebianPackaging::PackageSelector.new(File.join(File.dirname(__FILE__),"..","data","#{release_name}-#{architecture}.yml"))
+        ps.load_blacklist
         ps.write_osdeps_file
     end
 
@@ -81,8 +103,10 @@ class PackageSelector
 
     # Write the rock-osdeps.osdeps file which allows to overload the existing
     # osdeps definition to include the debian packages
-    def write_osdeps_file
-        filename = File.join(File.dirname(__FILE__),"..","rock-osdeps.osdeps")
+    def write_osdeps_file(filename = nil)
+        if !filename
+            filename = File.join(File.dirname(__FILE__),"..","rock-osdeps.osdeps")
+        end
         puts "  Triggered regeneration of rock-osdeps.osdeps: #{filename}, blacklisted packages: #{blacklist}"
         write_file(filename, blacklist)
     end

@@ -7,7 +7,8 @@ module Rock
     describe "setup_rock_osdeps" do
         before do
             file = File.join(File.dirname(__FILE__),"..","data","master-17.06-amd64.yml")
-            @ps = Rock::DebianPackaging::PackageSelector.new(file)
+            @ps = Rock::DebianPackaging::PackageSelector.new
+            @ps.load_osdeps_file(file)
         end
 
         describe "#initialize" do

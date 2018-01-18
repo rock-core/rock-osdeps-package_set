@@ -10,8 +10,8 @@ end
 
 #Add rock-debs
 Autoproj.configuration_option 'DEB_USE', 'boolean',
-	:default => 'yes',
-	:doc => ["Use rock debian packages ?",
+        :default => 'yes',
+        :doc => ["Use rock debian packages ?",
           "This enables the usage of precompiled Debian-Packages.",
           "Every package you enter into your manifest will be downloaded and ",
           "compiled the 'usual' way, so you still have all posibilities left to ",
@@ -78,115 +78,138 @@ if Autoproj.user_config('DEB_USE')
             raise "Unsupported Autoproj API: please inform the developer"
         end
 
-        release_install_dir = "/opt/rock/#{Autoproj.user_config('debian_release')}"
-        rock_ruby_archdir = RbConfig::CONFIG['archdir'].gsub("/usr", release_install_dir)
-        rock_ruby_vendordir =File.join(release_install_dir,"/lib/ruby/vendor_ruby")
-        rock_ruby_vendorarchdir = RbConfig::CONFIG['vendorarchdir'].gsub("/usr", release_install_dir)
-        rock_ruby_sitedir = RbConfig::CONFIG['sitedir'].gsub("/usr", release_install_dir)
-        rock_ruby_sitearchdir = RbConfig::CONFIG['sitearchdir'].gsub("/usr", release_install_dir)
-        rock_ruby_libdir = RbConfig::CONFIG['rubylibdir'].gsub("/usr", release_install_dir)
+        # identify the major.minor version of python
+        python_version=`python -c "import sys; version=sys.version_info[:3]; print('{0}.{1}'.format(*version))"`
 
-        Autobuild.env_add_path('PATH',File.join(release_install_dir,"bin"))
+        release_spec = File.join(__dir__,'data/releases.yml')
+        release_hierarchy = [ Autoproj.user_config('debian_release') ]
+        if File.exists?(release_spec)
+            require 'yaml'
+            spec = YAML::load_file(release_spec)
+            release_hierarchy << spec[release_hierarchy.first]
+        end
+        release_hierarchy = release_hierarchy.flatten.reverse
 
+        Autoproj.info "Required releases: #{release_hierarchy}"
+        release_hierarchy.each do |release_name|
+            release_install_dir = "/opt/rock/#{release_name}"
+
+            rock_ruby_archdir       = RbConfig::CONFIG['archdir'].gsub("/usr", release_install_dir)
+            rock_ruby_vendordir     = File.join(release_install_dir,"/lib/ruby/vendor_ruby")
+            rock_ruby_vendorarchdir = RbConfig::CONFIG['vendorarchdir'].gsub("/usr", release_install_dir)
+            rock_ruby_sitedir       = RbConfig::CONFIG['sitedir'].gsub("/usr", release_install_dir)
+            rock_ruby_sitearchdir   = RbConfig::CONFIG['sitearchdir'].gsub("/usr", release_install_dir)
+            rock_ruby_libdir        = RbConfig::CONFIG['rubylibdir'].gsub("/usr", release_install_dir)
+
+            Autobuild.env_add_path('PATH',File.join(release_install_dir,"bin"))
+            Autobuild.env_add_path('CMAKE_PREFIX_PATH',release_install_dir)
+            Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(release_install_dir,"lib","pkgconfig"))
+            Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(release_install_dir,"lib",architecture, "pkgconfig"))
+
+            # RUBY SETUP
+            Autobuild.env_add_path('RUBYLIB',rock_ruby_archdir)
+            Autobuild.env_add_path('RUBYLIB',rock_ruby_vendordir)
+            Autobuild.env_add_path('RUBYLIB',rock_ruby_vendorarchdir)
+            Autobuild.env_add_path('RUBYLIB',rock_ruby_sitedir)
+            Autobuild.env_add_path('RUBYLIB',rock_ruby_sitearchdir)
+            Autobuild.env_add_path('RUBYLIB',rock_ruby_libdir)
+
+            # Needed for qt
+            Autobuild.env_add_path('RUBYLIB',File.join(rock_ruby_archdir.gsub(RbConfig::CONFIG['RUBY_PROGRAM_VERSION'],'')) )
+            Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"/lib/ruby/vendor_ruby/standard"))
+            Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"/lib/ruby/vendor_ruby/core"))
+
+            Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"/lib/ruby"))
+            Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"lib",architecture, "ruby"))
+
+            # PYTHON SETUP
+            Autobuild.env_add_path('PYTHONPATH',File.join(release_install_dir,"python-#{python_version}","site-packages"))
+
+            # Runtime setup
+            Autobuild.env_add_path('LD_LIBRARY_PATH',File.join(release_install_dir,"lib"))
+            Autobuild.env_add_path('LD_LIBRARY_PATH',File.join(release_install_dir,"lib",architecture))
+
+            # Compile time setup -- prefer locally installed packages over debian packages
+            Autobuild.env_add_path('LIBRARY_PATH',File.join(release_install_dir,"lib"))
+
+            Autobuild.env_add_path('OROGEN_PLUGIN_PATH', File.join(release_install_dir,"/share/orogen/plugins"))
+            Autobuild.env_add_path('TYPELIB_RUBY_PLUGIN_PATH', File.join(release_install_dir,"/share/typelib/ruby"))
+            # gui/vizkit3d specific settings
+            Autobuild.env_add_path('QT_PLUGIN_PATH', File.join(release_install_dir, "/lib/qt"))
+            Autobuild.env_add_path('VIZKIT_PLUGIN_RUBY_PATH', File.join(release_install_dir, "/lib/vizkit"))
+            Autobuild.env_add_path('VIZKIT_PLUGIN_RUBY_PATH', File.join(release_install_dir, "/lib"))
+            Autobuild.env_add_path('OSG_FILE_PATH', File.join(release_install_dir, "/share/vizkit"))
+            # Roby plugins: base/scripts, syskit
+            ["rock/roby_plugin.rb", "syskit/roby_app/register_plugin.rb"].each do |roby_plugins|
+                Autobuild.env_add_path('ROBY_PLUGIN_PATH', File.join(rock_ruby_vendordir, roby_plugins))
+            end
+            Autobuild.env_add_path('ROCK_BUNDLE_PATH', File.join(release_install_dir, "share/rock/bundles"))
+
+            shell_extension = nil
+            if ENV['SHELL'].include?('/zsh')
+                shell_extension = File.join(release_install_dir,"share/scripts/shell/zsh")
+            elsif ENV['SHELL'].include?('/bash')
+                shell_extension = File.join(release_install_dir,"share/scripts/shell/bash")
+            elsif ENV['SHELL'].include?('/sh')
+                shell_extension = File.join(release_install_dir,"share/scripts/shell/sh")
+            end
+
+            if shell_extension and File.exist?(shell_extension)
+                Autobuild.env_source_file(shell_extension)
+            end
+        end
         Autobuild.env_remove_path('PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","bin"))
         Autobuild.env_add_path('PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","bin"))
 
-        Autobuild.env_add_path('CMAKE_PREFIX_PATH',release_install_dir)
         Autobuild.env_add_path('PKG_CONFIG_PATH',File.join("/usr/share/","pkgconfig"))
         Autobuild.env_add_path('PKG_CONFIG_PATH',File.join("/usr/lib/","pkgconfig"))
         Autobuild.env_add_path('PKG_CONFIG_PATH',File.join("/usr/lib/",architecture,"pkgconfig"))
-        Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(release_install_dir,"lib","pkgconfig"))
-        Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(release_install_dir,"lib",architecture, "pkgconfig"))
         Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib","pkgconfig"))
 
-        # RUBY SETUP
-        Autobuild.env_add_path('RUBYLIB',rock_ruby_archdir)
-        Autobuild.env_add_path('RUBYLIB',rock_ruby_vendordir)
-        Autobuild.env_add_path('RUBYLIB',rock_ruby_vendorarchdir)
-        Autobuild.env_add_path('RUBYLIB',rock_ruby_sitedir)
-        Autobuild.env_add_path('RUBYLIB',rock_ruby_sitearchdir)
-        Autobuild.env_add_path('RUBYLIB',rock_ruby_libdir)
-
-        # Needed for qt
-        Autobuild.env_add_path('RUBYLIB',File.join(rock_ruby_archdir.gsub(RbConfig::CONFIG['RUBY_PROGRAM_VERSION'],'')) )
-        Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"/lib/ruby/vendor_ruby/standard"))
-        Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"/lib/ruby/vendor_ruby/core"))
-
-        Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"/lib/ruby"))
-        Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"lib",architecture, "ruby"))
-
-        # Runtime setup
-        Autobuild.env_add_path('LD_LIBRARY_PATH',File.join(release_install_dir,"lib"))
-        Autobuild.env_add_path('LD_LIBRARY_PATH',File.join(release_install_dir,"lib",architecture))
-
-        # Compile time setup -- prefer locally installed packages over debian packages
-        Autobuild.env_add_path('LIBRARY_PATH',File.join(release_install_dir,"lib"))
         Autobuild.env_add_path('LIBRARY_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib"))
         Autobuild.env_add_path('LIBRARY_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib",architecture))
 
-        Autobuild.env_add_path('OROGEN_PLUGIN_PATH', File.join(release_install_dir,"/share/orogen/plugins"))
-        Autobuild.env_add_path('TYPELIB_RUBY_PLUGIN_PATH', File.join(release_install_dir,"/share/typelib/ruby"))
-        # gui/vizkit3d specific settings
-        Autobuild.env_add_path('QT_PLUGIN_PATH', File.join(release_install_dir, "/lib/qt"))
-        Autobuild.env_add_path('VIZKIT_PLUGIN_RUBY_PATH', File.join(release_install_dir, "/lib/vizkit"))
-        Autobuild.env_add_path('VIZKIT_PLUGIN_RUBY_PATH', File.join(release_install_dir, "/lib"))
-        Autobuild.env_add_path('OSG_FILE_PATH', File.join(release_install_dir, "/share/vizkit"))
-        # Roby plugins: base/scripts, syskit
-        ["rock/roby_plugin.rb", "syskit/roby_app/register_plugin.rb"].each do |roby_plugins|
-            Autobuild.env_add_path('ROBY_PLUGIN_PATH', File.join(rock_ruby_vendordir, roby_plugins))
-        end
-        Autobuild.env_add_path('ROCK_BUNDLE_PATH', File.join(release_install_dir, "share/rock/bundles"))
-
-        shell_extension = nil
-        if ENV['SHELL'].include?('/zsh')
-            shell_extension = File.join(release_install_dir,"share/scripts/shell/zsh")
-        elsif ENV['SHELL'].include?('/bash')
-            shell_extension = File.join(release_install_dir,"share/scripts/shell/bash")
-        elsif ENV['SHELL'].include?('/sh')
-            shell_extension = File.join(release_install_dir,"share/scripts/shell/sh")
-        end
-
-        if shell_extension and File.exist?(shell_extension)
-            Autobuild.env_source_file(shell_extension)
-        end
     else
         Autoproj.user_config('DEB_USE_UNAVAILABLE')
     end
 
     if Autoproj.user_config('DEB_AUTOMATIC')
-        apt_rock_list_file = "/etc/apt/sources.list.d/rock-#{Autoproj.user_config('debian_release')}.list"
-        apt_source = "[arch=#{debian_architecture} trusted=yes] http://rock.dfki.uni-bremen.de/rock-releases/#{Autoproj.user_config('debian_release')} #{current_release_name} main"
-        update = false
-        if !File.exist?(apt_rock_list_file)
-            update = true
-        else
-            File.open(apt_rock_list_file,"r") do |f|
-                apt_source_existing = f.gets
-                regexp = Regexp.new( Regexp.escape(apt_source) )
-                if !regexp.match(apt_source_existing)
-                    Autoproj.message "  Existing apt source needs update: #{apt_source_existing}"
-                    Autoproj.message "  Changing to: #{apt_source}"
-                    update = true
-                    Autoproj.warn "  You switched to using a new debian release, so please trigger a rebuild after completing this configuration"
+        release_hierarchy.each do |release_name|
+            Autoproj.info "Activating release: #{release_name}"
+            apt_rock_list_file = "/etc/apt/sources.list.d/rock-#{release_name}.list"
+            apt_source = "[arch=#{debian_architecture} trusted=yes] http://rock.dfki.uni-bremen.de/rock-releases/#{release_name} #{current_release_name} main"
+            update = false
+            if !File.exist?(apt_rock_list_file)
+                update = true
+            else
+                File.open(apt_rock_list_file,"r") do |f|
+                    apt_source_existing = f.gets
+                    regexp = Regexp.new( Regexp.escape(apt_source) )
+                    if !regexp.match(apt_source_existing)
+                        Autoproj.message "  Existing apt source needs update: #{apt_source_existing}"
+                        Autoproj.message "  Changing to: #{apt_source}"
+                        update = true
+                        Autoproj.warn "  You switched to using a new debian release, so please trigger a rebuild after completing this configuration"
+                    end
                 end
             end
-        end
 
-        if update
-            if !system("echo deb #{apt_source} | sudo tee #{apt_rock_list_file}")
-                Autoproj.warn "Failed to install apt source: #{apt_source}"
-            else
-                Autoproj.message "Adding deb-src entry"
-                system("echo deb-src #{apt_source} | sudo tee -a #{apt_rock_list_file}")
+            if update
+                if !system("echo deb #{apt_source} | sudo tee #{apt_rock_list_file}")
+                    Autoproj.warn "Failed to install apt source: #{apt_source}"
+                else
+                    Autoproj.message "Adding deb-src entry"
+                    system("echo deb-src #{apt_source} | sudo tee -a #{apt_rock_list_file}")
 
-                Autoproj.message "  Updating package source -- this can take some time"
-                system("sudo apt-get update > /tmp/autoproj-update.log")
+                    Autoproj.message "  Updating package source -- this can take some time"
+                    system("sudo apt-get update > /tmp/autoproj-update.log")
+                end
             end
         end
     end
 
     require_relative 'lib/package_selector'
-    Rock::DebianPackaging::PackageSelector::activate(Autoproj.user_config('debian_release'))
+    Rock::DebianPackaging::PackageSelector::activate_releases(release_hierarchy)
 else
   Autoproj.message "  Use of rock debian packages is deactivated. (Remove the rock-osdeps-Package from your autoproj/manifest to deactivate this message)"
   osdeps_file = File.join(__dir__, "rock-osdeps.osdeps")
