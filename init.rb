@@ -61,11 +61,18 @@ if Autoproj.user_config('DEB_USE')
             "Install automatically?"]
 
 
-        flavor = Autoproj.user_config('ROCK_SELECTED_FLAVOR')
-        if flavor != "master"
-            Autoproj.warn "Debian packages are currently only available for the 'master' release, but you are using 'stable' release"
-            Autoproj.warn "So either choose to not using debian packages, or switch to release 'master', e.g., with 'autoproj reconfigure'"
-            exit 0
+
+        begin
+            flavor = Autoproj.user_config('ROCK_SELECTED_FLAVOR')
+            if flavor != "master"
+                Autoproj.warn "Debian packages are currently only available for the 'master' release, but you are using 'stable' release"
+                Autoproj.warn "So either choose to not using debian packages, or switch to release 'master', e.g., with 'autoproj reconfigure'"
+                exit 0
+            end
+        rescue Autoproj::ConfigError => e
+            # rock-core has not been imported to set the flavor yet, thus define
+            # the required flavor
+            Autoproj.config.set('ROCK_SELECTED_FLAVOR','master')
         end
 
         require 'rbconfig'
