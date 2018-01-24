@@ -992,3 +992,9 @@ grape:
 grape_logging:
   ubuntu,debian:
     16.04,xenial,xerus,default: ruby-grape-logging
+base/scripts:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-18.01-ruby-base-scripts
+gui/vizkit:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-18.01-ruby-gui-vizkit
