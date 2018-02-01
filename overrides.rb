@@ -9,9 +9,17 @@ if Autoproj.user_config('DEB_USE')
 
     # Make sure the release path to typelib is used, when there is no local
     # installation
-    if !typelib_plugin_path || Dir.glob(File.join(typelib_plugin_path, "**")).empty?
-        release_dir="/opt/rock/#{Autoproj.user_config('debian_release')}"
-        Autoproj.env_set 'TYPELIB_PLUGIN_PATH', File.join(release_dir, 'lib','typelib')
+    require_relative 'lib/release_hierarchy'
+    release_spec = File.join(__dir__,'data/releases.yml')
+    main_release = Autoproj.user_config('debian_release')
+    release_hierarchy = Rock::DebianPackaging::ReleaseHierarchy.current(main_release, release_spec)
+
+    release_hierarchy.each do |release|
+        release_dir="/opt/rock/#{release}"
+        typelibdir = File.join(release_dir, 'lib','typelib')
+        if !Dir[typelibdir + "/*"].empty?
+            Autoproj.env_set_path 'TYPELIB_PLUGIN_PATH', File.join(release_dir, 'lib','typelib')
+        end
     end
 end
 

@@ -88,14 +88,10 @@ if Autoproj.user_config('DEB_USE')
         # identify the major.minor version of python
         python_version=`python -c "import sys; version=sys.version_info[:3]; print('{0}.{1}'.format(*version))"`
 
+        require_relative 'lib/release_hierarchy'
         release_spec = File.join(__dir__,'data/releases.yml')
-        release_hierarchy = [ Autoproj.user_config('debian_release') ]
-        if File.exists?(release_spec)
-            require 'yaml'
-            spec = YAML::load_file(release_spec)
-            release_hierarchy << spec[release_hierarchy.first]
-        end
-        release_hierarchy = release_hierarchy.flatten.reverse
+        main_release = Autoproj.user_config('debian_release')
+        release_hierarchy = Rock::DebianPackaging::ReleaseHierarchy.current(main_release, release_spec)
 
         Autoproj.info "Required releases: #{release_hierarchy}"
         release_hierarchy.each do |release_name|
