@@ -86,7 +86,8 @@ if Autoproj.user_config('DEB_USE')
         end
 
         # identify the major.minor version of python
-        python_version=`python -c "import sys; version=sys.version_info[:3]; print('{0}.{1}'.format(*version))"`
+        python_version=`python -c "import sys; version=sys.version_info[:3]; print('{0}.{1}'.format(*version))"`.strip
+
 
         require_relative 'lib/release_hierarchy'
         release_spec = File.join(__dir__,'data/releases.yml')
@@ -126,7 +127,7 @@ if Autoproj.user_config('DEB_USE')
             Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"lib",architecture, "ruby"))
 
             # PYTHON SETUP
-            Autobuild.env_add_path('PYTHONPATH',File.join(release_install_dir,"python-#{python_version}","site-packages"))
+            Autobuild.env_add_path('PYTHONPATH', File.join(release_install_dir,"lib","python#{python_version}","site-packages"))
 
             # Runtime setup
             Autobuild.env_add_path('LD_LIBRARY_PATH',File.join(release_install_dir,"lib"))
