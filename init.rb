@@ -210,6 +210,13 @@ if Autoproj.user_config('DEB_USE')
                 end
             end
         end
+
+        Autoproj.env_set('ROCK_DEB_RELEASE_NAME',Autoproj.config.get('debian_release'))
+        hierarchy = ""
+        release_hierarchy.each do |release_name|
+            hierarchy += "#{release_name}:http://rock.dfki.uni-bremen.de/rock-releases/#{release_name};"
+        end
+        Autoproj.env_set('ROCK_DEB_RELEASE_HIERARCHY',hierarchy)
     end
 
     require_relative 'lib/package_selector'
