@@ -107,6 +107,9 @@ drivers/orogen/aggregator:
 drivers/orogen/transformer:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-18.01-drivers-orogen-transformer
+bundles/rock:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-18.01-ruby-bundles-rock
 tools/pocolog_cpp:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-18.01-tools-pocolog-cpp
@@ -134,6 +137,9 @@ multiagent/fipa_services:
 multiagent/orogen/fipa_services:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-18.01-multiagent-orogen-fipa-services
+bundles/rock_multiagent:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-18.01-ruby-bundles-rock-multiagent
 external/libply:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-18.01-external-libply
@@ -194,6 +200,9 @@ slam/gtsam:
 drivers/libusb:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-18.01-drivers-libusb
+bundles/rock_auv:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-18.01-ruby-bundles-rock-auv
 perception/projection:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-18.01-perception-projection
@@ -350,6 +359,9 @@ drivers/video_streamer_vlc:
 control/reflexxes:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-18.01-control-reflexxes
+bundles/rock_ugv_nav:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-18.01-ruby-bundles-rock-ugv-nav
 drivers/ptu_directedperception:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-18.01-drivers-ptu-directedperception
@@ -998,3 +1010,18 @@ base/scripts:
 gui/vizkit:
   ubuntu,debian:
     16.04,xenial,xerus,default: rock-master-18.01-ruby-gui-vizkit
+tools/backward:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-18.01-tools-backward
+tools/smurf:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-18.01-tools-smurf
+tools/orocos_cpp:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-18.01-tools-orocos-cpp
+simulation/mars/entity_generation/smurf:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-18.01-simulation-mars-entity-generation-smurf
+simulation/mars/app:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: rock-master-18.01-simulation-mars-app
