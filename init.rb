@@ -8,6 +8,8 @@ else
     raise "Unsupported Autoproj API: please inform the developer"
 end
 
+require_relative 'lib/package_selector'
+
 #Add rock-debs
 Autoproj.configuration_option 'DEB_USE', 'boolean',
         :default => 'yes',
@@ -44,8 +46,8 @@ if Autoproj.user_config('DEB_USE')
         debian_architecture = "#{`dpkg --print-architecture`}".strip
 
         Autoproj.configuration_option 'debian_release', 'string',
-            :default => 'master-17.11',
-            :possible_answers => ['master-17.11'],
+            :default => 'master-18.01',
+            :possible_answers => Rock::DebianPackaging::PackageSelector::available_releases,
             :doc => ["Which rock debian release should be used ?",
             "Use the default if you do not know better"]
 
@@ -219,7 +221,6 @@ if Autoproj.user_config('DEB_USE')
         Autoproj.env_set('ROCK_DEB_RELEASE_HIERARCHY',hierarchy)
     end
 
-    require_relative 'lib/package_selector'
     Rock::DebianPackaging::PackageSelector::activate_releases(release_hierarchy)
 else
   Autoproj.message "  Use of rock debian packages is deactivated. (Remove the rock-osdeps-Package from your autoproj/manifest to deactivate this message)"

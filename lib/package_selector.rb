@@ -40,12 +40,31 @@ class PackageSelector
         end
     end
 
-    def self.activate_releases(release_names)
-        distribution, release = operating_system
+    # Retrieve the osdeps file for this release and the current architecture
+    def self.release_osdeps_file(release_name)
         architecture = "#{`dpkg --print-architecture`}".strip
+        release_file = File.join(__dir__,"..","data","#{release_name}-#{architecture}.yml")
+        if !File.exist?(release_file)
+            raise ArgumentError, "#{self} rock release '#{release_name}' has no osdeps file for the architecture '#{architecture}' -- #{File.absolute_path(release_file)} missing"
+        end
+        release_file
+    end
+
+    # Retrieve the available list of releases
+    def self.available_releases
+        architecture = "#{`dpkg --print-architecture`}".strip
+        glob_filename = File.join(__dir__,"..","data","*-#{architecture}.yml")
+        releases = []
+        Dir.glob(glob_filename).each do |filename|
+            releases << File.basename( filename ).gsub(/-#{architecture}.yml$/,'')
+        end
+        releases
+    end
+
+    def self.activate_releases(release_names)
         ps = Rock::DebianPackaging::PackageSelector.new
         release_names.each do |release_name|
-            ps.load_osdeps_file( File.join(File.dirname(__FILE__),"..","data","#{release_name}-#{architecture}.yml") )
+            ps.load_osdeps_file release_osdeps_file(release_name)
         end
         ps.load_blacklist
         ps.write_osdeps_file
@@ -53,9 +72,7 @@ class PackageSelector
 
     # Activate the package list for a particular debian package release
     def self.activate_release(release_name)
-        distribution, release = operating_system
-        architecture = "#{`dpkg --print-architecture`}".strip
-        ps = Rock::DebianPackaging::PackageSelector.new(File.join(File.dirname(__FILE__),"..","data","#{release_name}-#{architecture}.yml"))
+        ps = Rock::DebianPackaging::PackageSelector.new release_osdeps_file(release_name)
         ps.load_blacklist
         ps.write_osdeps_file
     end
@@ -105,7 +122,7 @@ class PackageSelector
     # osdeps definition to include the debian packages
     def write_osdeps_file(filename = nil)
         if !filename
-            filename = File.join(File.dirname(__FILE__),"..","rock-osdeps.osdeps")
+            filename = File.join(__dir__,"..","rock-osdeps.osdeps")
         end
         puts "  Triggered regeneration of rock-osdeps.osdeps: #{filename}, blacklisted packages: #{blacklist}"
         write_file(filename, blacklist)
