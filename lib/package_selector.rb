@@ -89,7 +89,17 @@ class PackageSelector
     end
 
     def disable_pkg(pkg_name)
-        reverse_dependencies(pkg_name)
+        return reverse_dependencies(pkg_name)
+    end
+
+    def disable_pkg_by_pattern(pkg_name_pattern)
+        all_reverse_dependencies = []
+        pkg_to_deb.each do |autoproj_name, deb_name|
+            if autoproj_name =~ /#{pkg_name_pattern}/
+                all_reverse_dependencies += reverse_dependencies(autoproj_name)
+            end
+        end
+        return all_reverse_dependencies.uniq
     end
 
     def reverse_dependencies(pkg_name)
@@ -134,7 +144,13 @@ class PackageSelector
         if pkg_blacklist && !pkg_blacklist.empty?
             disabled_pkgs = pkg_blacklist
             pkg_blacklist.each do |pkg_name|
-                disabled_pkgs += disable_pkg(pkg_name)
+                if pkg_name[-1] == "*"
+                    disabled_pkgs += disable_pkg_by_pattern(pkg_name)
+                    # remove pattern from list
+                    disabled_pkgs.delete(pkg_name)
+                else
+                    disabled_pkgs += disable_pkg(pkg_name)
+                end
             end
             puts "  Disabling osdeps: #{disabled_pkgs}"
             disabled_pkgs.flatten.each do |pkg|
