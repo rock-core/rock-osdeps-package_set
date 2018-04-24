@@ -29,8 +29,13 @@ class PackageSelector
         @reverse_dependencies_map ||= {}
 
         distribution, release = PackageSelector::operating_system
-        @osdeps.each do | pkg_name, osdeps_list|
-            osdeps_list[distribution.join(",")].each do |key, debian_pkg_name|
+        @osdeps.each do |pkg_name, osdeps_list|
+            pkgs = osdeps_list[distribution.join(",")]
+            if !pkgs || pkgs.empty?
+                raise ArgumentError, "#{self.class}::#{__method__}: #{osdeps_file} does not contain information" \
+                    " for package '#{pkg_name}' and distribution '#{distribution.join(",")}'"
+            end
+            pkgs.each do |key, debian_pkg_name|
                 supported_releases = key.split(",")
                 if supported_releases.include?(release.first)
                     @pkg_to_deb[pkg_name] = debian_pkg_name
@@ -45,7 +50,7 @@ class PackageSelector
         architecture = "#{`dpkg --print-architecture`}".strip
         release_file = File.join(__dir__,"..","data","#{release_name}-#{architecture}.yml")
         if !File.exist?(release_file)
-            raise ArgumentError, "#{self} rock release '#{release_name}' has no osdeps file for the architecture '#{architecture}' -- #{File.absolute_path(release_file)} missing"
+            raise ArgumentError, "#{self.class}::#{__method__}: rock release '#{release_name}' has no osdeps file for the architecture '#{architecture}' -- #{File.absolute_path(release_file)} missing"
         end
         release_file
     end
@@ -84,7 +89,7 @@ class PackageSelector
         elsif defined?(Autoproj::OSPackageResolver)
             Autoproj::OSPackageResolver.autodetect_operating_system
         else
-            raise "Unsupported Autoproj API: please inform the developer"
+            raise "#{self.class}::#{__method__}: unsupported Autoproj API: please inform the developer"
         end
     end
 
@@ -123,7 +128,7 @@ class PackageSelector
                 return package_list.split(' ')
             end
         else
-            raise ArgumentError, "The package #{debian_pkg_name} is not known. Did you forget to call 'apt update'?"
+            raise ArgumentError, "#{self.class}::#{__method__}: the package #{debian_pkg_name} is not known. Did you forget to call 'apt update'?"
         end
         []
     end
