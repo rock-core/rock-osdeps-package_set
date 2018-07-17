@@ -1,3 +1,5 @@
+ROCK_DEB_MIRROR_URL="http://rock.hb.dfki.de"
+
 distribution = nil
 release = nil
 if defined?(Autoproj::OSDependencies)
@@ -56,7 +58,7 @@ if Autoproj.user_config('DEB_USE')
             :doc => ["Do you want the installation be done automatically?",
             "This installation uses sudo and may ask for your password",
             "You can do the installation yourself with:",
-            "echo 'deb [arch=#{debian_architecture} trusted=yes] http://rock.dfki.uni-bremen.de/rock-releases/#{Autoproj.user_config('debian_release')} #{current_release_name} main' | sudo tee /etc/apt/sources.list.d/rock-#{Autoproj.user_config('debian_release')}.list",
+            "echo 'deb [arch=#{debian_architecture} trusted=yes] #{ROCK_DEB_MIRROR_URL}/rock-releases/#{Autoproj.user_config('debian_release')} #{current_release_name} main' | sudo tee /etc/apt/sources.list.d/rock-#{Autoproj.user_config('debian_release')}.list",
             "sudo apt-get update > /dev/null",
             "##########################################################",
             "This installation uses sudo and may ask for your password",
@@ -183,7 +185,7 @@ if Autoproj.user_config('DEB_USE')
         release_hierarchy.each do |release_name|
             Autoproj.info "Activating release: #{release_name}"
             apt_rock_list_file = "/etc/apt/sources.list.d/rock-#{release_name}.list"
-            apt_source = "[arch=#{debian_architecture} trusted=yes] http://rock.dfki.uni-bremen.de/rock-releases/#{release_name} #{current_release_name} main"
+            apt_source = "[arch=#{debian_architecture} trusted=yes] #{ROCK_DEB_MIRROR_URL}/rock-releases/#{release_name} #{current_release_name} main"
             update = false
             if !File.exist?(apt_rock_list_file)
                 update = true
@@ -216,7 +218,7 @@ if Autoproj.user_config('DEB_USE')
         Autoproj.env_set('ROCK_DEB_RELEASE_NAME',Autoproj.config.get('debian_release'))
         hierarchy = ""
         release_hierarchy.each do |release_name|
-            hierarchy += "#{release_name}:http://rock.dfki.uni-bremen.de/rock-releases/#{release_name};"
+            hierarchy += "#{release_name}:#{ROCK_DEB_MIRROR_URL}/rock-releases/#{release_name};"
         end
         Autoproj.env_set('ROCK_DEB_RELEASE_HIERARCHY',hierarchy)
     end
