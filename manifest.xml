@@ -1,0 +1,18 @@
+<package>
+  <description brief="Package set for the Rock Debian Package Releases">
+      This package represents a package set for the integration of Rock Debian Packages
+      into an existing autoproj workspace
+  </description>
+  <author>Thomas Roehr/thomas.roehr@dfki.de</author>
+  <maintainer>Thomas Roehr/thomas.roehr@dfki.de</maintainer>
+  <copyright>
+      DFKI/robotik@dfki.de
+  </copyright>
+  <depend package="autoproj" optional="1" />
+  <stage>2</stage>
+  <activity>active</activity>
+  <keywords>
+      <keyword>utilities</keyword>
+      <keyword>packaging</keyword>
+  </keywords>
+</package>

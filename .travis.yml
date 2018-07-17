@@ -1,0 +1,17 @@
+sudo: required
+services:
+  - docker
+
+matrix:
+    allow_failures:
+
+cache: bundler
+
+install:
+    - docker build -t 2maz/rock_debian .
+    - docker run -d 2maz/rock_debian tail -f /dev/null
+    - docker ps -a
+
+# overwrite the default build command
+script:
+    - docker run 2maz/rock_debian /bin/bash -c "source /home/docker/env.sh; rock-log-level"
