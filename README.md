@@ -7,7 +7,7 @@
 Allows you to activate the use of Rock Debian package releases in an autoproj
 installation
 
-## How to use an Apaka release in combination with Rock
+## How to use an Rock Debian package release
 Either start with a fresh bootstrap:
 
 ```
