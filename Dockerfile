@@ -17,6 +17,7 @@ WORKDIR /home/docker
 ENV LANG de_DE.UTF-8
 ENV LANG de_DE:de
 ENV LC_ALL de_DE.UTF-8
+ENV SHELL /bin/bash
 
 # Creating the seed configuration
 RUN touch seed-config.yml

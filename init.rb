@@ -161,12 +161,18 @@ if Autoproj.user_config('DEB_USE')
             Autobuild.env_add_path('ROCK_BUNDLE_PATH', File.join(release_install_dir, "share/rock/bundles"))
 
             shell_extension = nil
-            if ENV['SHELL'].include?('/zsh')
-                shell_extension = File.join(release_install_dir,"share/scripts/shell/zsh")
-            elsif ENV['SHELL'].include?('/bash')
-                shell_extension = File.join(release_install_dir,"share/scripts/shell/bash")
-            elsif ENV['SHELL'].include?('/sh')
-                shell_extension = File.join(release_install_dir,"share/scripts/shell/sh")
+            if ENV.has_key?('SHELL')
+                if ENV['SHELL'].include?('/zsh')
+                    shell_extension = File.join(release_install_dir,"share/scripts/shell/zsh")
+                elsif ENV['SHELL'].include?('/bash')
+                    shell_extension = File.join(release_install_dir,"share/scripts/shell/bash")
+                elsif ENV['SHELL'].include?('/sh')
+                    shell_extension = File.join(release_install_dir,"share/scripts/shell/sh")
+                end
+            else
+                Autoproj.warn "Failed to identify active shell type, "
+                    "cannot select a shell extension "
+                    " from #{File.join(release_install_dir,'share/scripts/shell')}"
             end
 
             if shell_extension and File.exist?(shell_extension)
