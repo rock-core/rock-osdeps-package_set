@@ -4,6 +4,7 @@
       into an existing autoproj workspace
   </description>
   <author>Thomas Roehr/thomas.roehr@dfki.de</author>
+  <author>Christian Clausen/cclausen@tzi.de</author>
   <maintainer>Thomas Roehr/thomas.roehr@dfki.de</maintainer>
   <copyright>
       DFKI/robotik@dfki.de
