@@ -22,8 +22,7 @@ ENV SHELL /bin/bash
 RUN git config --global user.email "rock-users@dfki.de"
 RUN git config --global user.name "Rock Osdeps"
 
-#RUN wget http://www.rock-robotics.org/autoproj_bootstrap
-RUN wget https://raw.githubusercontent.com/rock-core/autoproj/fix_bundler_setup_detection/bin/autoproj_bootstrap
+RUN wget https://raw.githubusercontent.com/rock-core/autoproj/master/bin/autoproj_bootstrap
 
 ### TEST RELEASE master-18.01
 RUN mkdir -p /home/docker/releases/master-18.01
