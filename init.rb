@@ -48,9 +48,10 @@ if Autoproj.user_config('DEB_USE')
         debian_architecture = "#{`dpkg --print-architecture`}".strip
 
         Autoproj.configuration_option 'debian_release', 'string',
-            :default => 'master-18.01',
+            :default => 'master-18.09',
             :possible_answers => Rock::DebianPackaging::PackageSelector::available_releases,
-            :doc => ["Which rock debian release should be used ?",
+            :doc => ["Which rock debian release should be used
+            (available are: #{Rock::DebianPackaging::PackageSelector::available_releases.sort.join(',')}) ?",
             "Use the default if you do not know better"]
 
         Autoproj.configuration_option 'DEB_AUTOMATIC', 'boolean',
