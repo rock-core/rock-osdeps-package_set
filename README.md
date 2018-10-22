@@ -5,7 +5,20 @@
 * https://github.com/rock-core/rock-osdeps-package_set
 
 Allows you to activate the use of Rock Debian package releases in an autoproj
-installation
+installation.
+
+## Supported Platforms:
+The following distribution and architecture combinations are currently supported.
+
+| Distribution | Architectures | Status |
+|---------|------------|-----------|
+|Ubuntu 16.04  | amd64 | supported |
+|Ubuntu 18.04  | amd64 | supported |
+
+Not all packages of rock-core and rock package sets could be built.
+The details on which packages are available for each platform can be extracted from the files in the subfolder data/***release***_***architecture***.yml,
+which can be simply read as an autoproj osdeps file.
+
 
 ## How to use an Rock Debian package release
 Either start with a fresh bootstrap:
