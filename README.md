@@ -16,7 +16,7 @@ The following distribution and architecture combinations are currently supported
 |Ubuntu 18.04  | amd64 | supported |
 
 Not all packages of rock-core and rock package sets could be built.
-The details on which packages are available for each platform can be extracted from the files in the subfolder data/***release***_***architecture***.yml,
+The details on which packages are available for each platform can be extracted from the files in the subfolder data/*release*_*architecture*.yml,
 which can be simply read as an autoproj osdeps file.
 
 
@@ -76,7 +76,8 @@ This should finally install all required Debian packages and remaining required 
 
 ### Features
 
-* in order to enforce the usage of a source package in a workspace create a file autoproj/deb_blacklist.yml containing the name of the particular package. This will disable automatically the use of this debian package and all that depend on that package, e.g., to disable base/types and all packages that start with simulation/ create a deb_blacklist.yml with the following content:
+#### Blacklisting of packages
+In order to enforce the usage of a source package in a workspace create a file autoproj/deb_blacklist.yml containing the name of the particular package. This will disable automatically the use of this debian package and all that depend on that package, e.g., to disable base/types and all packages that start with simulation/ create a deb_blacklist.yml with the following content:
 
 ```
     ---
@@ -89,6 +90,34 @@ You will be informed about the disabled packages:
 Triggered regeneration of rock-osdeps.osdeps: /opt/workspace/rock_autoproj_v2/.autoproj/remotes git_git_github_com_2maz_rock_osdeps_git/lib/../rock-osdeps.osdeps, blacklisted packages: ["base/types"]
 Disabling osdeps: ["base/types", "tools/service_discovery", "tools/pocolog_cpp", ...
 
+#### Identify the version of package
+
+All packages are versioned according to their last (official) commit date, e.g., 0.*date-of-last-commit*
+
+
+```
+    $> dpkg -l rock-master-18.09-base-cmake
+    Desired=Unknown/Install/Remove/Purge/Hold
+    | Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+    |/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+    ||/ Name                                          Version                     Architecture                Description
+    +++-=============================================-===========================-===========================-==============================
+    ii  rock-master-18.09-base-cmake                  0.20170821-1~xenial         amd64                       CMake find scripts and macros
+```
+To identify which exact version of a package is in use you can check the changelog of the package:
+```
+    $> zless /usr/share/doc/rock-master-18.09-base-cmake/changelog.Debian.gz
+    rock-master-18.09-base-cmake (0.20170821-1~xenial) unstable; urgency=low
+
+      * Package automatically built using autoproj-package debian
+      * repository: github:/rock-core/base-cmake.git
+      * branch: refs/heads/master
+      * commit: a1703a0b30dcc0380a5be147ea2ee1ca89fa25b3
+      * tag:
+
+     -- Packaging Daemon <rock-dev@dfki.de>  Mon, 08 Oct 2018 10:39:43 +0200
+```
+
 ### Known Issues
 1.  If you get a message like
     ```
@@ -96,9 +125,12 @@ Disabling osdeps: ["base/types", "tools/service_discovery", "tools/pocolog_cpp",
     ```
 
     Then add the following to install/gems/Gemfile (in the corresponding autoproj installation)
+
     ```
        gem 'yard'
     ```
+
+    The error should not be encountered with 'master-18.09', where yard is also provided as Rock package. This is not the case for master-18.01.
 
 ## References and Publications
 Please reference the following publication when referring to the
@@ -120,4 +152,4 @@ This software is distributed under the [New/3-clause BSD license](https://openso
 
 ## Copyright
 
-(c) Copyright 2014-2018, DFKI GmbH Robotics Innovation Center
+Copyright (c) 2014-2018, DFKI GmbH Robotics Innovation Center
