@@ -17,8 +17,10 @@ class ReleaseHierarchy
         release_hierarchy = [ main_release ]
         if File.exists?(hierarchy_spec)
             spec = YAML::load_file(hierarchy_spec)
-            if spec.has_key?(main_release) and spec[main_release]
-                release_hierarchy << spec[main_release]
+            if spec.has_key?(main_release)
+                if spec[main_release]
+                    release_hierarchy << spec[main_release]
+                end
             else
                 Autoproj.warn "Release file #{hierarchy_spec} does not contain: #{main_release} -- please inform the maintainer of the package_set rock-osdeps"
             end
