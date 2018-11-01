@@ -149,7 +149,7 @@ class PackageSelector
         write_file(filename, blacklist)
     end
 
-    # Write the the osdeps file excluding the blacklisted packages
+    # Write the osdeps file excluding the blacklisted packages
     def write_file(outfile, pkg_blacklist)
         filtered_osdeps = @osdeps.dup
         if pkg_blacklist && !pkg_blacklist.empty?
