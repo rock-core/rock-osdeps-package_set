@@ -16,6 +16,8 @@ class PackageSelector
         end
     end
 
+    # Load the osdeps file considering only the relevant entries
+    # for this platform
     def load_osdeps_file(osdeps_file)
         if !@osdeps
             @osdeps = YAML.load_file(osdeps_file)
@@ -29,6 +31,8 @@ class PackageSelector
         @reverse_dependencies_map ||= {}
 
         distribution, release = PackageSelector::operating_system
+
+        compact_osdeps = {}
         @osdeps.each do |pkg_name, osdeps_list|
             pkgs = osdeps_list[distribution.join(",")]
             if !pkgs || pkgs.empty?
@@ -40,9 +44,13 @@ class PackageSelector
                 if supported_releases.include?(release.first)
                     @pkg_to_deb[pkg_name] = debian_pkg_name
                     @deb_to_pkg[debian_pkg_name] = [pkg_name]
+
+                    compact_osdeps[pkg_name] = Hash.new
+                    compact_osdeps[pkg_name][key] = debian_pkg_name
                 end
             end
         end
+        @osdeps = compact_osdeps
     end
 
     # Retrieve the osdeps file for this release and the current architecture
