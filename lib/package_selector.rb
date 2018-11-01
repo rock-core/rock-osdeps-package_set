@@ -122,7 +122,6 @@ class PackageSelector
             raise ArgumentError, "reverse_dependencies requires an argument"
         end
         output = `apt-cache rdepends --recurse #{debian_pkg_name}`
-        puts output
         package_list = []
         if !output.empty?
             rdeps_found = false
