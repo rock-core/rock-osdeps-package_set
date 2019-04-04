@@ -115,51 +115,56 @@ if Autoproj.user_config('DEB_USE')
             rock_ruby_sitearchdir   = RbConfig::CONFIG['sitearchdir'].gsub("/usr", release_install_dir)
             rock_ruby_libdir        = RbConfig::CONFIG['rubylibdir'].gsub("/usr", release_install_dir)
 
-            Autobuild.env_add_path('PATH',File.join(release_install_dir,"bin"))
-            Autobuild.env_add_path('CMAKE_PREFIX_PATH',release_install_dir)
-            Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(release_install_dir,"lib","pkgconfig"))
-            Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(release_install_dir,"lib",architecture, "pkgconfig"))
+            Autobuild.env.add('PATH',File.join(release_install_dir,"bin"))
+            Autobuild.env.add('CMAKE_PREFIX_PATH',release_install_dir)
+            Autobuild.env.add('PKG_CONFIG_PATH',File.join(release_install_dir,"lib","pkgconfig"))
+            Autobuild.env.add('PKG_CONFIG_PATH',File.join(release_install_dir,"lib",architecture, "pkgconfig"))
 
             # RUBY SETUP
-            Autobuild.env_add_path('RUBYLIB',rock_ruby_archdir)
-            Autobuild.env_add_path('RUBYLIB',rock_ruby_vendordir)
-            Autobuild.env_add_path('RUBYLIB',rock_ruby_vendorarchdir)
-            Autobuild.env_add_path('RUBYLIB',rock_ruby_sitedir)
-            Autobuild.env_add_path('RUBYLIB',rock_ruby_sitearchdir)
-            Autobuild.env_add_path('RUBYLIB',rock_ruby_libdir)
+            Autobuild.env.add('RUBYLIB',rock_ruby_archdir)
+            Autobuild.env.add('RUBYLIB',rock_ruby_vendordir)
+            Autobuild.env.add('RUBYLIB',rock_ruby_vendorarchdir)
+            Autobuild.env.add('RUBYLIB',rock_ruby_sitedir)
+            Autobuild.env.add('RUBYLIB',rock_ruby_sitearchdir)
+            Autobuild.env.add('RUBYLIB',rock_ruby_libdir)
 
             # Needed for qt
-            Autobuild.env_add_path('RUBYLIB',File.join(rock_ruby_archdir.gsub(RbConfig::CONFIG['RUBY_PROGRAM_VERSION'],'')) )
-            Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"/lib/ruby/vendor_ruby/standard"))
-            Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"/lib/ruby/vendor_ruby/core"))
+            Autobuild.env.add('RUBYLIB',File.join(rock_ruby_archdir.gsub(RbConfig::CONFIG['RUBY_PROGRAM_VERSION'],'')) )
+            Autobuild.env.add('RUBYLIB',File.join(release_install_dir,"/lib/ruby/vendor_ruby/standard"))
+            Autobuild.env.add('RUBYLIB',File.join(release_install_dir,"/lib/ruby/vendor_ruby/core"))
 
-            Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"/lib/ruby"))
-            Autobuild.env_add_path('RUBYLIB',File.join(release_install_dir,"lib",architecture, "ruby"))
+            Autobuild.env.add('RUBYLIB',File.join(release_install_dir,"/lib/ruby"))
+            Autobuild.env.add('RUBYLIB',File.join(release_install_dir,"lib",architecture, "ruby"))
 
             # PYTHON SETUP
             if python_version
-                Autobuild.env_add_path('PYTHONPATH', File.join(release_install_dir,"lib","python#{python_version}","site-packages"))
+                Autobuild.env.add('PYTHONPATH', File.join(release_install_dir,"lib","python#{python_version}","site-packages"))
             end
 
             # Runtime setup
-            Autobuild.env_add_path('LD_LIBRARY_PATH',File.join(release_install_dir,"lib"))
-            Autobuild.env_add_path('LD_LIBRARY_PATH',File.join(release_install_dir,"lib",architecture))
+            Autobuild.env.add('LD_LIBRARY_PATH',File.join(release_install_dir,"lib"))
+            Autobuild.env.add('LD_LIBRARY_PATH',File.join(release_install_dir,"lib",architecture))
+            Autobuild.env.add('LD_LIBRARY_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib"))
+            Autobuild.env.add('LD_LIBRARY_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib",architecture))
 
             # Compile time setup -- prefer locally installed packages over debian packages
-            Autobuild.env_add_path('LIBRARY_PATH',File.join(release_install_dir,"lib"))
+            Autobuild.env.add('LIBRARY_PATH',File.join(release_install_dir,"lib",architecture))
+            Autobuild.env.add('LIBRARY_PATH',File.join(release_install_dir,"lib"))
+            Autobuild.env.add('LIBRARY_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib"))
+            Autobuild.env.add('LIBRARY_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib",architecture))
 
-            Autobuild.env_add_path('OROGEN_PLUGIN_PATH', File.join(release_install_dir,"/share/orogen/plugins"))
-            Autobuild.env_add_path('TYPELIB_RUBY_PLUGIN_PATH', File.join(release_install_dir,"/share/typelib/ruby"))
+            Autobuild.env.add('OROGEN_PLUGIN_PATH', File.join(release_install_dir,"/share/orogen/plugins"))
+            Autobuild.env.add('TYPELIB_RUBY_PLUGIN_PATH', File.join(release_install_dir,"/share/typelib/ruby"))
             # gui/vizkit3d specific settings
-            Autobuild.env_add_path('QT_PLUGIN_PATH', File.join(release_install_dir, "/lib/qt"))
-            Autobuild.env_add_path('VIZKIT_PLUGIN_RUBY_PATH', File.join(release_install_dir, "/lib/vizkit"))
-            Autobuild.env_add_path('VIZKIT_PLUGIN_RUBY_PATH', File.join(release_install_dir, "/lib"))
-            Autobuild.env_add_path('OSG_FILE_PATH', File.join(release_install_dir, "/share/vizkit"))
+            Autobuild.env.add('QT_PLUGIN_PATH', File.join(release_install_dir, "/lib/qt"))
+            Autobuild.env.add('VIZKIT_PLUGIN_RUBY_PATH', File.join(release_install_dir, "/lib/vizkit"))
+            Autobuild.env.add('VIZKIT_PLUGIN_RUBY_PATH', File.join(release_install_dir, "/lib"))
+            Autobuild.env.add('OSG_FILE_PATH', File.join(release_install_dir, "/share/vizkit"))
             # Roby plugins: base/scripts, syskit
             ["rock/roby_plugin.rb", "syskit/roby_app/register_plugin.rb"].each do |roby_plugins|
-                Autobuild.env_add_path('ROBY_PLUGIN_PATH', File.join(rock_ruby_vendordir, roby_plugins))
+                Autobuild.env.add('ROBY_PLUGIN_PATH', File.join(rock_ruby_vendordir, roby_plugins))
             end
-            Autobuild.env_add_path('ROCK_BUNDLE_PATH', File.join(release_install_dir, "share/rock/bundles"))
+            Autobuild.env.add('ROCK_BUNDLE_PATH', File.join(release_install_dir, "share/rock/bundles"))
 
             shell_extension = nil
             if ENV.has_key?('SHELL')
@@ -181,16 +186,12 @@ if Autoproj.user_config('DEB_USE')
             end
         end
         Autobuild.env_remove_path('PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","bin"))
-        Autobuild.env_add_path('PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","bin"))
+        Autobuild.env.add('PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","bin"))
 
-        Autobuild.env_add_path('PKG_CONFIG_PATH',File.join("/usr/share/","pkgconfig"))
-        Autobuild.env_add_path('PKG_CONFIG_PATH',File.join("/usr/lib/","pkgconfig"))
-        Autobuild.env_add_path('PKG_CONFIG_PATH',File.join("/usr/lib/",architecture,"pkgconfig"))
-        Autobuild.env_add_path('PKG_CONFIG_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib","pkgconfig"))
-
-        Autobuild.env_add_path('LIBRARY_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib"))
-        Autobuild.env_add_path('LIBRARY_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib",architecture))
-
+        Autobuild.env.add('PKG_CONFIG_PATH',File.join("/usr/share/","pkgconfig"))
+        Autobuild.env.add('PKG_CONFIG_PATH',File.join("/usr/lib/","pkgconfig"))
+        Autobuild.env.add('PKG_CONFIG_PATH',File.join("/usr/lib/",architecture,"pkgconfig"))
+        Autobuild.env.add('PKG_CONFIG_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib","pkgconfig"))
     else
         Autoproj.user_config('DEB_USE_UNAVAILABLE')
     end
