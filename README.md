@@ -8,14 +8,14 @@ Allows you to activate the use of Rock Debian package releases in an autoproj
 installation.
 
 ## Supported Platforms:
-The following distribution and architecture combinations are currently supported.
+The following table lists the distribution and architecture combinations which are currently supported by existing releases.
 
-| Distribution | Architectures | Status |
-|---------|------------|-----------|
-|Ubuntu 16.04  | amd64 | supported |
-|Ubuntu 18.04  | amd64 | supported |
+| Distribution | Architectures | Status |Release|
+|---------|------------|-----------|---------|
+|Ubuntu 16.04  | amd64 | supported |master-18.09, master-18.01 |
+|Ubuntu 18.04  | amd64 | supported |master-18.09               |
 
-Not all packages of rock-core and rock package sets could be built.
+Not all packages of rock-core and rock package sets could be built for all releases.
 The details on which packages are available for each platform can be extracted from the files in the subfolder data/*release*_*architecture*.yml,
 which can be simply read as an autoproj osdeps file.
 
