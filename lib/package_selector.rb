@@ -34,7 +34,12 @@ class PackageSelector
 
         compact_osdeps = {}
         @osdeps.each do |pkg_name, osdeps_list|
-            pkgs = osdeps_list[distribution.join(",")]
+            pkgs = nil
+            if osdeps_list.has_key?(distribution.first)
+                pkgs = osdeps_list[distribution.first]
+            elsif osdeps_list.has_key?(distribution.join(","))
+                pkgs = osdeps_list[distribution.join(",")]
+            end
             if !pkgs || pkgs.empty?
                 raise ArgumentError, "#{self.class}::#{__method__}: #{osdeps_file} does not contain information" \
                     " for package '#{pkg_name}' and distribution '#{distribution.join(",")}'"
@@ -46,7 +51,7 @@ class PackageSelector
                     @deb_to_pkg[debian_pkg_name] = [pkg_name]
 
                     compact_osdeps[pkg_name] = Hash.new
-                    compact_osdeps[pkg_name][key] = debian_pkg_name
+                    compact_osdeps[pkg_name]['default'] = debian_pkg_name
                 end
             end
         end
