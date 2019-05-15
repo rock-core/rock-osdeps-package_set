@@ -1790,10 +1790,10 @@ netrc:
     9,stretch: ruby-netrc
 ffi:
   ubuntu:
-    16.04,xenial,xerus: ruby-ffi
-    18.04,bionic,beaver: ruby-ffi
+    16.04,xenial,xerus: [ruby-ffi, libffi-dev]
+    18.04,bionic,beaver: [ruby-ffi, libffi-dev]
   debian:
-    9,stretch: ruby-ffi
+    9,stretch: [ruby-ffi, libffi-dev]
 msgpack:
   ubuntu:
     16.04,xenial,xerus: ruby-msgpack
