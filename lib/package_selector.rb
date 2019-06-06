@@ -114,6 +114,7 @@ class PackageSelector
         all_reverse_dependencies = []
         pkg_to_deb.each do |autoproj_name, deb_name|
             if autoproj_name =~ /#{pkg_name_pattern}/
+                all_reverse_dependencies << autoproj_name
                 all_reverse_dependencies += reverse_dependencies(autoproj_name)
             end
         end
