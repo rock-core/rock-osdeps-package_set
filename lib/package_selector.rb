@@ -177,7 +177,7 @@ class PackageSelector
                     disabled_pkgs += disable_pkg(pkg_name)
                 end
             end
-            puts "  Disabling osdeps: #{disabled_pkgs}"
+            puts "  Disabling osdeps: #{disabled_pkgs.sort}"
             disabled_pkgs.flatten.each do |pkg|
                 filtered_osdeps.delete(pkg)
             end
