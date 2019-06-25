@@ -1,0 +1,928 @@
+---
+utilrb:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-utilrb
+tools/apaka:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-tools-apaka
+tools/msgpack-c:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-tools-msgpack-c
+typelib:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-typelib
+base/cmake:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-base-cmake
+external/sisl:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-external-sisl
+base/logging:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-base-logging
+gui/osgviz:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-gui-osgviz
+gui/vizkit3d:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-gui-vizkit3d
+base/types:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-base-types
+tools/pocolog_cpp:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-tools-pocolog-cpp
+tools/pocolog2msgpack:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-tools-pocolog2msgpack
+base/console_bridge:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-base-console-bridge
+tools/class_loader:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-tools-class-loader
+tools/pocolog:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-tools-pocolog
+tools/orogen_metadata:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-tools-orogen-metadata
+tools/service_discovery:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-tools-service-discovery
+rtt:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-rtt
+tools/metaruby:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-tools-metaruby
+rtt_typelib:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-rtt-typelib
+tools/orocos_cpp_base:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-tools-orocos-cpp-base
+tools/lib_config:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-tools-lib-config
+orogen:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-orogen
+tools/orogen_cpp_proxies:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-tools-orogen-cpp-proxies
+tools/orogen_model_exporter:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-tools-orogen-model-exporter
+base/orogen/std:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-base-orogen-std
+tools/orocos.rb:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-tools-orocos.rb
+drivers/aggregator:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-drivers-aggregator
+base/orogen/types:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-base-orogen-types
+drivers/transformer:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-drivers-transformer
+tools/logger:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-tools-logger
+drivers/orogen/aggregator:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-drivers-orogen-aggregator
+perception/jpeg_conversion:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-perception-jpeg-conversion
+drivers/orogen/transformer:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-drivers-orogen-transformer
+perception/frame_helper:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-perception-frame-helper
+gui/rock_widget_collection:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-gui-rock-widget-collection
+tools/telemetry:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-tools-telemetry
+tools/rubigen:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-tools-rubigen
+bundles/rock:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-bundles-rock
+base/templates/ruby_lib:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-base-templates-ruby-lib
+base/numeric:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-base-numeric
+base/templates/cmake_lib:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-base-templates-cmake-lib
+base/templates/cmake_vizkit_widget:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-base-templates-cmake-vizkit-widget
+base/templates/vizkit3d_plugin:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-base-templates-vizkit3d-plugin
+base/templates/bundle:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-base-templates-bundle
+base/templates/doc:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-base-templates-doc
+tools/log_tools:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-tools-log-tools
+drivers/iodrivers_base:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-drivers-iodrivers-base
+drivers/orogen/iodrivers_base:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-drivers-orogen-iodrivers-base
+simulation/lib_manager:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-lib-manager
+tools/configmaps:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-tools-configmaps
+simulation/mars/common/graphics/osg_text:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-common-graphics-osg-text
+simulation/mars/common/utils:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-common-utils
+simulation/mars/common/cfg_manager:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-common-cfg-manager
+simulation/mars/common/gui/main_gui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-common-gui-main-gui
+simulation/mars/common/data_broker:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-common-data-broker
+simulation/mars/common/gui/gui_app:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-common-gui-gui-app
+simulation/mars/common/gui/lib_manager_gui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-common-gui-lib-manager-gui
+simulation/mars/common/gui/cfg_manager_gui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-common-gui-cfg-manager-gui
+simulation/mars/common/gui/config_map_gui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-common-gui-config-map-gui
+simulation/mars/interfaces:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-interfaces
+simulation/mars/common/graphics/osg_material_manager:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-common-graphics-osg-material-manager
+bagel/osg_graph_viz:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-bagel-osg-graph-viz
+bagel/bagel_gui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-bagel-bagel-gui
+bagel/bagel_control_gui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-bagel-bagel-control-gui
+bagel/bagel_db:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-bagel-bagel-db
+simulation/mars/common/gui/log_console:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-common-gui-log-console
+simulation/mars/plugins/SkyDomePlugin:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-plugins-skydomeplugin
+simulation/mars/plugins/entity_view:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-plugins-entity-view
+simulation/mars_plugin_collection/data_broker_graph_view:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-plugin-collection-data-broker-graph-view
+models/robots/mantis:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-models-robots-mantis
+simulation/mars/gui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-gui
+simulation/mars/plugins/connexion_plugin:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-plugins-connexion-plugin
+simulation/mars/common/gui/data_broker_gui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-common-gui-data-broker-gui
+simulation/mars/common/gui/data_broker_plotter2:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-common-gui-data-broker-plotter2
+tools/bagel_mars_deploy:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-tools-bagel-mars-deploy
+external/minizip:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-external-minizip
+control/urdfdom_headers:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-control-urdfdom-headers
+mantis/bagel_control:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-mantis-bagel-control
+simulation/mars/scene_loader:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-scene-loader
+control/urdfdom:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-control-urdfdom
+simulation/ode:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-ode
+simulation/mars/common/graphics/osg_terrain:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-common-graphics-osg-terrain
+simulation/mars/common/graphics/osg_lines:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-common-graphics-osg-lines
+simulation/mars/common/graphics/osg_points:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-common-graphics-osg-points
+bagel/c_bagel:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-bagel-c-bagel
+simulation/mars/sim:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-sim
+simulation/mars/graphics:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-graphics
+bagel/cpp_bagel_wrapper:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-bagel-cpp-bagel-wrapper
+simulation/smurf_parser:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-smurf-parser
+bagel/BagelMARS:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-bagel-bagelmars
+simulation/mars/plugins/CameraGUI:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-plugins-cameragui
+simulation/mars/plugins/PythonMars:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-plugins-pythonmars
+simulation/mars/entity_generation/entity_factory:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-entity-generation-entity-factory
+simulation/mars/smurf_loader:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-smurf-loader
+simulation/mars/entity_generation/smurf:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-entity-generation-smurf
+simulation/mars/entity_generation/primitives:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-entity-generation-primitives
+simulation/mars/app:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-mars-app
+mantis/mantis_sim:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-mantis-mantis-sim
+simulation/orogen/mars:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-orogen-mars
+simulation/orogen/mars_addons:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-simulation-orogen-mars-addons
+mantis/orogen/mantis_deployments/simulation:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-mantis-orogen-mantis-deployments-simulation
+bundles/mantis:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-bundles-mantis
+limes/orogen/laser_watchdog:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-limes-orogen-laser-watchdog
+slam/orogen/tilt_scan:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-slam-orogen-tilt-scan
+documentation/mantis:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-documentation-mantis
+drivers/laser_filter:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-drivers-laser-filter
+drivers/controldev:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-drivers-controldev
+control/trajectory_follower:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-control-trajectory-follower
+slam/odometry:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-slam-odometry
+limes/behavior_library:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-limes-behavior-library
+control/joint_dispatcher:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-control-joint-dispatcher
+charlie/spline_interpolator:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-charlie-spline-interpolator
+drivers/orogen/laser_filter:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-drivers-orogen-laser-filter
+control/orogen/trajectory_follower:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-control-orogen-trajectory-follower
+slam/orogen/odometry:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-slam-orogen-odometry
+control/orogen/joint_dispatcher:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-control-orogen-joint-dispatcher
+limes/orogen/demo:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-limes-orogen-demo
+drivers/canbus:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-drivers-canbus
+control/kdl:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-control-kdl
+drivers/orogen/canbus:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-drivers-orogen-canbus
+control/kdl_parser:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-control-kdl-parser
+drivers/orogen/controldev:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-drivers-orogen-controldev
+drivers/stability_evaluation:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-drivers-stability-evaluation
+bagel/orogen/bagel_control:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-bagel-orogen-bagel-control
+mantis/orogen/mantis_bagel_control:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-mantis-orogen-mantis-bagel-control
+mantis/orogen/mantis_deployments/control:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-mantis-orogen-mantis-deployments-control
+gui/osg_plugins/osgdb_bobj:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-gui-osg-plugins-osgdb-bobj
+drivers/vicon:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-drivers-vicon
+drivers/orogen/vicon:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-drivers-orogen-vicon
+bundler:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: bundler
+    16.04,xenial,xerus,default: bundler
+    18.04,bionic,beaver,default: bundler
+  debian:
+    8.1,jessie,default: bundler
+    9.4,stretch,default: bundler
+facets:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-facets
+    16.04,xenial,xerus,default: ruby-facets
+    18.04,bionic,beaver,default: ruby-facets
+  debian:
+    8.1,jessie,default: ruby-facets
+    9.4,stretch,default: ruby-facets
+yard:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: yard
+    16.04,xenial,xerus,default: yard
+    18.04,bionic,beaver,default: yard
+  debian:
+    8.1,jessie,default: yard
+    9.4,stretch,default: yard
+backports:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-backports
+rice:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-rice
+kramdown:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-kramdown
+    16.04,xenial,xerus,default: ruby-kramdown
+    18.04,bionic,beaver,default: ruby-kramdown
+  debian:
+    8.1,jessie,default: ruby-kramdown
+    9.4,stretch,default: ruby-kramdown
+xmlrpc:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-xmlrpc
+rack-cors:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-rack-cors
+    16.04,xenial,xerus,default: ruby-rack-cors
+    18.04,bionic,beaver,default: ruby-rack-cors
+  debian:
+    8.1,jessie,default: ruby-rack-cors
+    9.4,stretch,default: ruby-rack-cors
+state_machine:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-state-machine
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-state-machine
+  debian:
+    8.1,jessie,default: ruby-state-machine
+websocket:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-websocket
+rb-readline:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-rb-readline
+concurrent-ruby:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-concurrent-ruby
+qtbindings:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-qtbindings
+minitest:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-minitest
+    16.04,xenial,xerus,default: ruby-minitest
+    18.04,bionic,beaver,default: ruby-minitest
+  debian:
+    8.1,jessie,default: ruby-minitest
+    9.4,stretch,default: ruby-minitest
+flexmock:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-flexmock
+    16.04,xenial,xerus,default: ruby-flexmock
+    18.04,bionic,beaver,default: ruby-flexmock
+  debian:
+    8.1,jessie,default: ruby-flexmock
+    9.4,stretch,default: ruby-flexmock
+fakefs:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-fakefs
+    16.04,xenial,xerus,default: ruby-fakefs
+    18.04,bionic,beaver,default: ruby-fakefs
+  debian:
+    8.1,jessie,default: ruby-fakefs
+    9.4,stretch,default: ruby-fakefs
+timecop:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-timecop
+    16.04,xenial,xerus,default: ruby-timecop
+    18.04,bionic,beaver,default: ruby-timecop
+  debian:
+    8.1,jessie,default: ruby-timecop
+    9.4,stretch,default: ruby-timecop
+stackprof:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-stackprof
+tty-cursor:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-tty-cursor
+rake:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: rake
+    16.04,xenial,xerus,default: rake
+    18.04,bionic,beaver,default: rake
+  debian:
+    8.1,jessie,default: rake
+    9.4,stretch,default: rake
+daemons:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-daemons
+    16.04,xenial,xerus,default: ruby-daemons
+    18.04,bionic,beaver,default: ruby-daemons
+  debian:
+    8.1,jessie,default: ruby-daemons
+    9.4,stretch,default: ruby-daemons
+eventmachine:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-eventmachine
+    16.04,xenial,xerus,default: ruby-eventmachine
+    18.04,bionic,beaver,default: ruby-eventmachine
+  debian:
+    8.1,jessie,default: ruby-eventmachine
+    9.4,stretch,default: ruby-eventmachine
+rack:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-rack
+    16.04,xenial,xerus,default: ruby-rack
+    18.04,bionic,beaver,default: ruby-rack
+  debian:
+    8.1,jessie,default: ruby-rack
+    9.4,stretch,default: ruby-rack
+builder:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-builder
+    16.04,xenial,xerus,default: ruby-builder
+    18.04,bionic,beaver,default: ruby-builder
+  debian:
+    8.1,jessie,default: ruby-builder
+    9.4,stretch,default: ruby-builder
+debug_inspector:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-debug-inspector
+    18.04,bionic,beaver,default: ruby-debug-inspector
+  debian:
+    9.4,stretch,default: ruby-debug-inspector
+equatable:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-equatable
+tty-color:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-tty-color
+uber:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-uber
+lazy_priority_queue:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-lazy-priority-queue
+stream:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-stream
+netrc:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-netrc
+    18.04,bionic,beaver,default: ruby-netrc
+  debian:
+    9.4,stretch,default: ruby-netrc
+ffi:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-ffi
+    16.04,xenial,xerus,default: ruby-ffi
+    18.04,bionic,beaver,default: ruby-ffi
+  debian:
+    8.1,jessie,default: ruby-ffi
+    9.4,stretch,default: ruby-ffi
+msgpack:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-msgpack
+    16.04,xenial,xerus,default: ruby-msgpack
+    18.04,bionic,beaver,default: ruby-msgpack
+  debian:
+    8.1,jessie,default: ruby-msgpack
+    9.4,stretch,default: ruby-msgpack
+optimist:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-optimist
+necromancer:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-necromancer
+timers:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-timers
+    16.04,xenial,xerus,default: ruby-timers
+    18.04,bionic,beaver,default: ruby-timers
+  debian:
+    8.1,jessie,default: ruby-timers
+    9.4,stretch,default: ruby-timers
+tty-screen:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-tty-screen
+rb-fsevent:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-rb-fsevent
+ruby_dep:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-ruby-dep
+cucumber-expressions:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-cucumber-expressions
+cucumber-wire:
+  debian:
+    9.4,stretch,default: ruby-cucumber-wire
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-cucumber-wire
+diff-lcs:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-diff-lcs
+    16.04,xenial,xerus,default: ruby-diff-lcs
+    18.04,bionic,beaver,default: ruby-diff-lcs
+  debian:
+    8.1,jessie,default: ruby-diff-lcs
+    9.4,stretch,default: ruby-diff-lcs
+gherkin:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-gherkin
+    16.04,xenial,xerus,default: ruby-gherkin
+    18.04,bionic,beaver,default: ruby-gherkin
+  debian:
+    8.1,jessie,default: ruby-gherkin
+    9.4,stretch,default: ruby-gherkin
+multi_json:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-multi-json
+    16.04,xenial,xerus,default: ruby-multi-json
+    18.04,bionic,beaver,default: ruby-multi-json
+  debian:
+    8.1,jessie,default: ruby-multi-json
+    9.4,stretch,default: ruby-multi-json
+multi_test:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-multi-test
+    18.04,bionic,beaver,default: ruby-multi-test
+  debian:
+    8.1,jessie,default: ruby-multi-test
+    9.4,stretch,default: ruby-multi-test
+mustermann:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-mustermann
+equalizer:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-equalizer
+    16.04,xenial,xerus,default: ruby-equalizer
+    18.04,bionic,beaver,default: ruby-equalizer
+  debian:
+    8.1,jessie,default: ruby-equalizer
+    9.4,stretch,default: ruby-equalizer
+websocket-extensions:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-websocket-extensions
+    18.04,bionic,beaver,default: ruby-websocket-extensions
+  debian:
+    9.4,stretch,default: ruby-websocket-extensions
+mime-types-data:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-mime-types-data
+    18.04,bionic,beaver,default: ruby-mime-types-data
+  debian:
+    9.4,stretch,default: ruby-mime-types-data
+wisper:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-wisper
+strings-ansi:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-strings-ansi
+unicode-display_width:
+  debian:
+    9.4,stretch,default: ruby-unicode-display-width
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-unicode-display-width
+unicode_utils:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-unicode-utils
+cucumber-tag_expressions:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-cucumber-tag-expressions
+thread_safe:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-thread-safe
+    16.04,xenial,xerus,default: ruby-thread-safe
+    18.04,bionic,beaver,default: ruby-thread-safe
+  debian:
+    8.1,jessie,default: ruby-thread-safe
+    9.4,stretch,default: ruby-thread-safe
+ice_nine:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-ice-nine
+    18.04,bionic,beaver,default: ruby-ice-nine
+  debian:
+    8.1,jessie,default: ruby-ice-nine
+    9.4,stretch,default: ruby-ice-nine
+unf_ext:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-unf-ext
+    16.04,xenial,xerus,default: ruby-unf-ext
+    18.04,bionic,beaver,default: ruby-unf-ext
+  debian:
+    8.1,jessie,default: ruby-unf-ext
+    9.4,stretch,default: ruby-unf-ext
+hoe:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-hoe
+    16.04,xenial,xerus,default: ruby-hoe
+    18.04,bionic,beaver,default: ruby-hoe
+  debian:
+    8.1,jessie,default: ruby-hoe
+    9.4,stretch,default: ruby-hoe
+hoe-yard:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-hoe-yard
+rake-compiler:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: rake-compiler
+    16.04,xenial,xerus,default: rake-compiler
+    18.04,bionic,beaver,default: rake-compiler
+  debian:
+    8.1,jessie,default: rake-compiler
+    9.4,stretch,default: rake-compiler
+thin:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: thin
+    16.04,xenial,xerus,default: thin
+    18.04,bionic,beaver,default: thin
+  debian:
+    8.1,jessie,default: thin
+    9.4,stretch,default: thin
+sprockets:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-sprockets
+    16.04,xenial,xerus,default: ruby-sprockets
+    18.04,bionic,beaver,default: ruby-sprockets
+  debian:
+    8.1,jessie,default: ruby-sprockets
+    9.4,stretch,default: ruby-sprockets
+binding_of_caller:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-binding-of-caller
+    18.04,bionic,beaver,default: ruby-binding-of-caller
+  debian:
+    9.4,stretch,default: ruby-binding-of-caller
+concurrent-ruby-ext:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-concurrent-ruby-ext
+pastel:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-pastel
+hooks:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-hooks
+rgl:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-rgl
+rbtrace:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-rbtrace
+mustermann-grape:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-mustermann-grape
+rack-accept:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-rack-accept
+    16.04,xenial,xerus,default: ruby-rack-accept
+    18.04,bionic,beaver,default: ruby-rack-accept
+  debian:
+    8.1,jessie,default: ruby-rack-accept
+    9.4,stretch,default: ruby-rack-accept
+websocket-driver:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-websocket-driver
+    18.04,bionic,beaver,default: ruby-websocket-driver
+  debian:
+    9.4,stretch,default: ruby-websocket-driver
+mime-types:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-mime-types
+    16.04,xenial,xerus,default: ruby-mime-types
+    18.04,bionic,beaver,default: ruby-mime-types
+  debian:
+    8.1,jessie,default: ruby-mime-types
+    9.4,stretch,default: ruby-mime-types
+tty-reader:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-tty-reader
+strings:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-strings
+rb-inotify:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-rb-inotify
+    16.04,xenial,xerus,default: ruby-rb-inotify
+    18.04,bionic,beaver,default: ruby-rb-inotify
+  debian:
+    8.1,jessie,default: ruby-rb-inotify
+    9.4,stretch,default: ruby-rb-inotify
+cucumber-core:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-cucumber-core
+    18.04,bionic,beaver,default: ruby-cucumber-core
+  debian:
+    9.4,stretch,default: ruby-cucumber-core
+i18n:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-i18n
+    16.04,xenial,xerus,default: ruby-i18n
+    18.04,bionic,beaver,default: ruby-i18n
+  debian:
+    8.1,jessie,default: ruby-i18n
+    9.4,stretch,default: ruby-i18n
+tzinfo:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-tzinfo
+    16.04,xenial,xerus,default: ruby-tzinfo
+    18.04,bionic,beaver,default: ruby-tzinfo
+  debian:
+    8.1,jessie,default: ruby-tzinfo
+    9.4,stretch,default: ruby-tzinfo
+descendants_tracker:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-descendants-tracker
+    18.04,bionic,beaver,default: ruby-descendants-tracker
+  debian:
+    8.1,jessie,default: ruby-descendants-tracker
+    9.4,stretch,default: ruby-descendants-tracker
+unf:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-unf
+    16.04,xenial,xerus,default: ruby-unf
+    18.04,bionic,beaver,default: ruby-unf
+  debian:
+    8.1,jessie,default: ruby-unf
+    9.4,stretch,default: ruby-unf
+faye-websocket:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-faye-websocket
+autorespawn:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-autorespawn
+tty-prompt:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-tty-prompt
+tty-table:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.05-ruby-tty-table
+listen:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-listen
+    16.04,xenial,xerus,default: ruby-listen
+    18.04,bionic,beaver,default: ruby-listen
+  debian:
+    8.1,jessie,default: ruby-listen
+    9.4,stretch,default: ruby-listen
+cucumber:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: cucumber
+    16.04,xenial,xerus,default: cucumber
+    18.04,bionic,beaver,default: cucumber
+  debian:
+    8.1,jessie,default: cucumber
+    9.4,stretch,default: cucumber
+activesupport:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-activesupport
+    16.04,xenial,xerus,default: ruby-activesupport
+  debian:
+    8.1,jessie,default: ruby-activesupport
+    9.4,stretch,default: ruby-activesupport
+axiom-types:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-axiom-types
+    18.04,bionic,beaver,default: ruby-axiom-types
+  debian:
+    8.1,jessie,default: ruby-axiom-types
+    9.4,stretch,default: ruby-axiom-types
+coercible:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-coercible
+    18.04,bionic,beaver,default: ruby-coercible
+  debian:
+    8.1,jessie,default: ruby-coercible
+    9.4,stretch,default: ruby-coercible
+domain_name:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-domain-name
+    16.04,xenial,xerus,default: ruby-domain-name
+    18.04,bionic,beaver,default: ruby-domain-name
+  debian:
+    8.1,jessie,default: ruby-domain-name
+    9.4,stretch,default: ruby-domain-name
+virtus:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-virtus
+    18.04,bionic,beaver,default: ruby-virtus
+  debian:
+    8.1,jessie,default: ruby-virtus
+    9.4,stretch,default: ruby-virtus
+http-cookie:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-http-cookie
+    16.04,xenial,xerus,default: ruby-http-cookie
+    18.04,bionic,beaver,default: ruby-http-cookie
+  debian:
+    8.1,jessie,default: ruby-http-cookie
+    9.4,stretch,default: ruby-http-cookie
+grape:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-grape
+    18.04,bionic,beaver,default: ruby-grape
+  debian:
+    9.4,stretch,default: ruby-grape
+rest-client:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-rest-client
+    16.04,xenial,xerus,default: ruby-rest-client
+    18.04,bionic,beaver,default: ruby-rest-client
+  debian:
+    8.1,jessie,default: ruby-rest-client
+    9.4,stretch,default: ruby-rest-client
+grape_logging:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-grape-logging
+    18.04,bionic,beaver,default: ruby-grape-logging
+  debian:
+    9.4,stretch,default: ruby-grape-logging
