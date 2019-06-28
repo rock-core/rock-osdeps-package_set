@@ -592,10 +592,10 @@ ffi:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: ruby-ffi
     16.04,xenial,xerus,default: ruby-ffi
-    18.04,bionic,beaver,default: ruby-ffi
+    18.04,bionic,beaver,default: [ruby-ffi, build-essential, dh-autoreconf]
   debian:
-    8.1,jessie,default: ruby-ffi
-    9.4,stretch,default: ruby-ffi
+    8.1,jessie,default: [ruby-ffi, build-essential, dh-autoreconf]
+    9.4,stretch,default: [ruby-ffi, build-essential, dh-autoreconf]
 msgpack:
   ubuntu,debian:
     14.04,14.04.2,trusty,tahr,default: ruby-msgpack
