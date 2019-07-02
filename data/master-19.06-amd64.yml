@@ -1,0 +1,606 @@
+---
+tools/msgpack-c:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-tools-msgpack-c
+utilrb:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-utilrb
+typelib:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-typelib
+base/cmake:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-base-cmake
+external/sisl:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-external-sisl
+base/logging:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-base-logging
+gui/osgviz:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-gui-osgviz
+gui/vizkit3d:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-gui-vizkit3d
+base/types:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-base-types
+tools/pocolog_cpp:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-tools-pocolog-cpp
+tools/pocolog2msgpack:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-tools-pocolog2msgpack
+base/console_bridge:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-base-console-bridge
+tools/class_loader:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-tools-class-loader
+tools/pocolog:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-pocolog
+tools/orogen_metadata:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-tools-orogen-metadata
+tools/service_discovery:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-tools-service-discovery
+rtt:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-rtt
+tools/metaruby:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-metaruby
+rtt_typelib:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-rtt-typelib
+orogen:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-orogen
+base/orogen/std:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-base-orogen-std
+tools/orocos.rb:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-orocos.rb
+tools/rest_api:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-rest-api
+gui/rock_webapp:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-gui-rock-webapp
+tools/roby:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-roby
+drivers/aggregator:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-aggregator
+base/orogen/types:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-base-orogen-types
+base/scripts:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-base-scripts
+drivers/transformer:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-transformer
+tools/logger:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-tools-logger
+drivers/orogen/aggregator:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-aggregator
+perception/jpeg_conversion:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-perception-jpeg-conversion
+drivers/orogen/transformer:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-transformer
+perception/frame_helper:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-perception-frame-helper
+gui/rock_widget_collection:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-gui-rock-widget-collection
+gui/vizkit:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-gui-vizkit
+tools/syskit:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-syskit
+bundles/common_models:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-bundles-common-models
+tools/telemetry:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-telemetry
+tools/rubigen:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-rubigen
+bundles/rock:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-bundles-rock
+base/templates/ruby_lib:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-base-templates-ruby-lib
+base/numeric:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-base-numeric
+base/templates/cmake_lib:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-base-templates-cmake-lib
+base/templates/cmake_vizkit_widget:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-base-templates-cmake-vizkit-widget
+base/templates/vizkit3d_plugin:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-base-templates-vizkit3d-plugin
+base/templates/bundle:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-base-templates-bundle
+base/templates/doc:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-base-templates-doc
+tools/log_tools:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-log-tools
+drivers/iodrivers_base:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-iodrivers-base
+drivers/orogen/iodrivers_base:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-iodrivers-base
+gui/osg_plugins/osgdb_bobj:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-gui-osg-plugins-osgdb-bobj
+tools/apaka:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-apaka
+bundler:
+  ubuntu:
+    16.04,xenial,xerus,default: bundler
+    18.04,bionic,beaver,default: bundler
+  debian:
+    9,stretch,default: bundler
+facets:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-facets
+    18.04,bionic,beaver,default: ruby-facets
+  debian:
+    9,stretch,default: ruby-facets
+backports:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-backports
+rice:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-rice
+kramdown:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-kramdown
+    18.04,bionic,beaver,default: ruby-kramdown
+  debian:
+    9,stretch,default: ruby-kramdown
+yard:
+  ubuntu:
+    16.04,xenial,xerus,default: yard
+    18.04,bionic,beaver,default: yard
+  debian:
+    9,stretch,default: yard
+xmlrpc:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-xmlrpc
+rack-cors:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-rack-cors
+    18.04,bionic,beaver,default: ruby-rack-cors
+  debian:
+    9,stretch,default: ruby-rack-cors
+state_machine:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-state-machine
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-state-machine
+websocket:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-websocket
+rb-readline:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-rb-readline
+concurrent-ruby:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-concurrent-ruby
+qtbindings:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-qtbindings
+minitest:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-minitest
+    18.04,bionic,beaver,default: ruby-minitest
+  debian:
+    9,stretch,default: ruby-minitest
+flexmock:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-flexmock
+    18.04,bionic,beaver,default: ruby-flexmock
+  debian:
+    9,stretch,default: ruby-flexmock
+fakefs:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-fakefs
+    18.04,bionic,beaver,default: ruby-fakefs
+  debian:
+    9,stretch,default: ruby-fakefs
+timecop:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-timecop
+    18.04,bionic,beaver,default: ruby-timecop
+  debian:
+    9,stretch,default: ruby-timecop
+stackprof:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-stackprof
+tty-cursor:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-tty-cursor
+rake:
+  ubuntu:
+    16.04,xenial,xerus,default: rake
+    18.04,bionic,beaver,default: rake
+  debian:
+    9,stretch,default: rake
+daemons:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-daemons
+    18.04,bionic,beaver,default: ruby-daemons
+  debian:
+    9,stretch,default: ruby-daemons
+eventmachine:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-eventmachine
+    18.04,bionic,beaver,default: ruby-eventmachine
+  debian:
+    9,stretch,default: ruby-eventmachine
+rack:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-rack
+    18.04,bionic,beaver,default: ruby-rack
+  debian:
+    9,stretch,default: ruby-rack
+builder:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-builder
+    18.04,bionic,beaver,default: ruby-builder
+  debian:
+    9,stretch,default: ruby-builder
+debug_inspector:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-debug-inspector
+    18.04,bionic,beaver,default: ruby-debug-inspector
+  debian:
+    9,stretch,default: ruby-debug-inspector
+equatable:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-equatable
+tty-color:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-tty-color
+uber:
+  ubuntu:
+    18.04,bionic,beaver,default: ruby-uber
+lazy_priority_queue:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-lazy-priority-queue
+stream:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-stream
+netrc:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-netrc
+    18.04,bionic,beaver,default: ruby-netrc
+  debian:
+    9,stretch,default: ruby-netrc
+ffi:
+  ubuntu:
+    16.04,xenial,xerus,default: [ruby-ffi, build-essential, dh-autoreconf]
+    18.04,bionic,beaver,default: [ruby-ffi, build-essential, dh-autoreconf]
+  debian:
+    9,stretch,default: [ruby-ffi, build-essential, dh-autoreconf]
+msgpack:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-msgpack
+    18.04,bionic,beaver,default: ruby-msgpack
+  debian:
+    9,stretch,default: ruby-msgpack
+optimist:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-optimist
+necromancer:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-necromancer
+timers:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-timers
+    18.04,bionic,beaver,default: ruby-timers
+  debian:
+    9,stretch,default: ruby-timers
+tty-screen:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-tty-screen
+cucumber-expressions:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-cucumber-expressions
+cucumber-wire:
+  ubuntu:
+    18.04,bionic,beaver,default: ruby-cucumber-wire
+  debian:
+    9,stretch,default: ruby-cucumber-wire
+diff-lcs:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-diff-lcs
+    18.04,bionic,beaver,default: ruby-diff-lcs
+  debian:
+    9,stretch,default: ruby-diff-lcs
+gherkin:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-gherkin
+    18.04,bionic,beaver,default: ruby-gherkin
+  debian:
+    9,stretch,default: ruby-gherkin
+multi_json:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-multi-json
+    18.04,bionic,beaver,default: ruby-multi-json
+  debian:
+    9,stretch,default: ruby-multi-json
+multi_test:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-multi-test
+    18.04,bionic,beaver,default: ruby-multi-test
+  debian:
+    9,stretch,default: ruby-multi-test
+mustermann:
+  ubuntu:
+    18.04,bionic,beaver,default: ruby-mustermann
+equalizer:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-equalizer
+    18.04,bionic,beaver,default: ruby-equalizer
+  debian:
+    9,stretch,default: ruby-equalizer
+websocket-extensions:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-websocket-extensions
+    18.04,bionic,beaver,default: ruby-websocket-extensions
+  debian:
+    9,stretch,default: ruby-websocket-extensions
+mime-types-data:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-mime-types-data
+    18.04,bionic,beaver,default: ruby-mime-types-data
+  debian:
+    9,stretch,default: ruby-mime-types-data
+wisper:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-wisper
+strings-ansi:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-strings-ansi
+unicode-display_width:
+  ubuntu:
+    18.04,bionic,beaver,default: ruby-unicode-display-width
+  debian:
+    9,stretch,default: ruby-unicode-display-width
+unicode_utils:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-unicode-utils
+cucumber-tag_expressions:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-cucumber-tag-expressions
+thread_safe:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-thread-safe
+    18.04,bionic,beaver,default: ruby-thread-safe
+  debian:
+    9,stretch,default: ruby-thread-safe
+ice_nine:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-ice-nine
+    18.04,bionic,beaver,default: ruby-ice-nine
+  debian:
+    9,stretch,default: ruby-ice-nine
+unf_ext:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-unf-ext
+    18.04,bionic,beaver,default: ruby-unf-ext
+  debian:
+    9,stretch,default: ruby-unf-ext
+hoe:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-hoe
+    18.04,bionic,beaver,default: ruby-hoe
+  debian:
+    9,stretch,default: ruby-hoe
+hoe-yard:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-hoe-yard
+rake-compiler:
+  ubuntu:
+    16.04,xenial,xerus,default: rake-compiler
+    18.04,bionic,beaver,default: rake-compiler
+  debian:
+    9,stretch,default: rake-compiler
+thin:
+  ubuntu:
+    16.04,xenial,xerus,default: thin
+    18.04,bionic,beaver,default: thin
+  debian:
+    9,stretch,default: thin
+sprockets:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-sprockets
+    18.04,bionic,beaver,default: ruby-sprockets
+  debian:
+    9,stretch,default: ruby-sprockets
+binding_of_caller:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-binding-of-caller
+    18.04,bionic,beaver,default: ruby-binding-of-caller
+  debian:
+    9,stretch,default: ruby-binding-of-caller
+concurrent-ruby-ext:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-concurrent-ruby-ext
+pastel:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-pastel
+hooks:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-hooks
+rgl:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-rgl
+rbtrace:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-rbtrace
+mustermann-grape:
+  ubuntu:
+    18.04,bionic,beaver,default: ruby-mustermann-grape
+rack-accept:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-rack-accept
+    18.04,bionic,beaver,default: ruby-rack-accept
+  debian:
+    9,stretch,default: ruby-rack-accept
+websocket-driver:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-websocket-driver
+    18.04,bionic,beaver,default: ruby-websocket-driver
+  debian:
+    9,stretch,default: ruby-websocket-driver
+mime-types:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-mime-types
+    18.04,bionic,beaver,default: ruby-mime-types
+  debian:
+    9,stretch,default: ruby-mime-types
+tty-reader:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-tty-reader
+strings:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-strings
+rb-inotify:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-rb-inotify
+    18.04,bionic,beaver,default: ruby-rb-inotify
+  debian:
+    9,stretch,default: ruby-rb-inotify
+cucumber-core:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-cucumber-core
+    18.04,bionic,beaver,default: ruby-cucumber-core
+  debian:
+    9,stretch,default: ruby-cucumber-core
+i18n:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-i18n
+    18.04,bionic,beaver,default: ruby-i18n
+  debian:
+    9,stretch,default: ruby-i18n
+tzinfo:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-tzinfo
+    18.04,bionic,beaver,default: ruby-tzinfo
+  debian:
+    9,stretch,default: ruby-tzinfo
+descendants_tracker:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-descendants-tracker
+    18.04,bionic,beaver,default: ruby-descendants-tracker
+  debian:
+    9,stretch,default: ruby-descendants-tracker
+unf:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-unf
+    18.04,bionic,beaver,default: ruby-unf
+  debian:
+    9,stretch,default: ruby-unf
+faye-websocket:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-faye-websocket
+autorespawn:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-autorespawn
+tty-prompt:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-tty-prompt
+tty-table:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-tty-table
+listen:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-listen
+    18.04,bionic,beaver,default: ruby-listen
+  debian:
+    9,stretch,default: ruby-listen
+cucumber:
+  ubuntu:
+    16.04,xenial,xerus,default: cucumber
+    18.04,bionic,beaver,default: cucumber
+  debian:
+    9,stretch,default: cucumber
+activesupport:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-activesupport
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-activesupport
+  debian:
+    9,stretch,default: ruby-activesupport
+axiom-types:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-axiom-types
+    18.04,bionic,beaver,default: ruby-axiom-types
+  debian:
+    9,stretch,default: ruby-axiom-types
+coercible:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-coercible
+    18.04,bionic,beaver,default: ruby-coercible
+  debian:
+    9,stretch,default: ruby-coercible
+domain_name:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-domain-name
+    18.04,bionic,beaver,default: ruby-domain-name
+  debian:
+    9,stretch,default: ruby-domain-name
+virtus:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-virtus
+    18.04,bionic,beaver,default: ruby-virtus
+  debian:
+    9,stretch,default: ruby-virtus
+http-cookie:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-http-cookie
+    18.04,bionic,beaver,default: ruby-http-cookie
+  debian:
+    9,stretch,default: ruby-http-cookie
+grape:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-grape
+    18.04,bionic,beaver,default: ruby-grape
+  debian:
+    9,stretch,default: ruby-grape
+rest-client:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-rest-client
+    18.04,bionic,beaver,default: ruby-rest-client
+  debian:
+    9,stretch,default: ruby-rest-client
+grape_logging:
+  ubuntu:
+    16.04,xenial,xerus,default: ruby-grape-logging
+    18.04,bionic,beaver,default: ruby-grape-logging
+  debian:
+    9,stretch,default: ruby-grape-logging
