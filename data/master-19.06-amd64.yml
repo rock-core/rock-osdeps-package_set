@@ -185,7 +185,7 @@ kramdown:
 yard:
   ubuntu:
     16.04,xenial,xerus,default: yard
-    18.04,bionic,beaver,default: yard
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-yard
   debian:
     9,stretch,default: yard
 xmlrpc:
@@ -604,3 +604,174 @@ grape_logging:
     18.04,bionic,beaver,default: ruby-grape-logging
   debian:
     9,stretch,default: ruby-grape-logging
+simulation/imumodel:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-imumodel
+simulation/orogen/imumodel:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-orogen-imumodel
+simulation/lib_manager:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-lib-manager
+tools/configmaps:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-tools-configmaps
+simulation/mars/common/utils:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-utils
+simulation/mars/common/cfg_manager:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-cfg-manager
+simulation/mars/common/gui/main_gui:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-main-gui
+simulation/mars/common/gui/config_map_gui:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-config-map-gui
+simulation/mars/common/gui/gui_app:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-gui-app
+simulation/mars/common/data_broker:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-data-broker
+simulation/mars/interfaces:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-interfaces
+simulation/ode:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-ode
+simulation/mars/sim:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-sim
+simulation/mars/entity_generation/entity_factory:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-entity-generation-entity-factory
+simulation/mars/entity_generation/primitives:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-entity-generation-primitives
+simulation/mars/plugins/entity_view:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-entity-view
+simulation/mars/plugins/SkyDomePlugin:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-skydomeplugin
+simulation/mars/common/graphics/osg_material_manager:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-material-manager
+simulation/mars/common/graphics/osg_terrain:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-terrain
+simulation/mars/graphics:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-graphics
+simulation/mars/common/graphics/osg_points:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-points
+simulation/mars/common/graphics/osg_lines:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-lines
+simulation/mars/plugins/PythonMars:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-pythonmars
+simulation/mars/common/gui/data_broker_plotter2:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-data-broker-plotter2
+external/minizip:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-external-minizip
+control/urdfdom_headers:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-control-urdfdom-headers
+control/urdfdom:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-control-urdfdom
+simulation/smurf_parser:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-smurf-parser
+simulation/mars/entity_generation/smurf:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-entity-generation-smurf
+simulation/mars/smurf_loader:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-smurf-loader
+simulation/mars/common/graphics/osg_text:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-text
+simulation/mars/common/graphics/osg_text_factory:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-text-factory
+simulation/mars/plugins/Text3D:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-text3d
+simulation/mars/common/gui/cfg_manager_gui:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-cfg-manager-gui
+simulation/mars/common/gui/lib_manager_gui:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-lib-manager-gui
+simulation/mars/common/gui/log_console:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-log-console
+simulation/mars/common/gui/data_broker_gui:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-data-broker-gui
+simulation/mars/common/gui/data_broker_plotter:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-data-broker-plotter
+simulation/mars/gui:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-gui
+simulation/mars/scene_loader:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-scene-loader
+simulation/mars/plugins/connexion_plugin:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-connexion-plugin
+simulation/mars/plugins/constraint_plugin:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-constraint-plugin
+simulation/mars/doc:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-doc
+tools/orocos_cpp_base:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-tools-orocos-cpp-base
+tools/lib_config:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-tools-lib-config
+tools/orogen_cpp_proxies:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-tools-orogen-cpp-proxies
+tools/orogen_model_exporter:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-tools-orogen-model-exporter
+tools/backward:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-tools-backward
+tools/smurf:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-tools-smurf
+tools/orocos_cpp:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-tools-orocos-cpp
+simulation/mars/plugins/CameraGUI:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-cameragui
+simulation/mars/plugins/TerrainPlugin:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-terrainplugin
+simulation/mars/app:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-app
+simulation/mars/viz:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-viz
+simulation/mars/plugins/VirtualJoystickPlugin:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-virtualjoystickplugin
+simulation/orogen/mars:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-orogen-mars
+simulation/orogen/mars_addons:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-orogen-mars-addons

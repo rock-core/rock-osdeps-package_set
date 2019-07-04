@@ -45,3 +45,14 @@ RUN echo "debian_release: master-18.09\n" >> seed-config.yml
 ENV AUTOPROJ_BOOTSTRAP_IGNORE_NONEMPTY_DIR 1
 RUN ruby /home/docker/autoproj_bootstrap git https://github.com/2maz/buildconf.git branch=rock-osdeps --seed-config=seed-config.yml
 RUN /bin/bash -c "source env.sh; autoproj update; autoproj envsh"
+
+### TEST RELEASE master-19.06
+RUN mkdir -p /home/docker/releases/master-19.06
+WORKDIR /home/docker/releases/master-19.06
+# Use the existing seed configuration
+COPY --chown=docker test/autoproj-config.yml seed-config.yml
+RUN echo "debian_release: master-19.06\n" >> seed-config.yml
+
+ENV AUTOPROJ_BOOTSTRAP_IGNORE_NONEMPTY_DIR 1
+RUN ruby /home/docker/autoproj_bootstrap git https://github.com/2maz/buildconf.git branch=rock-osdeps --seed-config=seed-config.yml
+RUN /bin/bash -c "source env.sh; autoproj update; autoproj envsh"

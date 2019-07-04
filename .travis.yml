@@ -16,3 +16,4 @@ install:
 script:
     - docker run 2maz/rock_debian /bin/bash -c "source /home/docker/releases/master-18.01/env.sh; rock-log-level"
     - docker run 2maz/rock_debian /bin/bash -c "source /home/docker/releases/master-18.09/env.sh; rock-log-level"
+    - docker run 2maz/rock_debian /bin/bash -c "source /home/docker/releases/master-19.06/env.sh; rock-log-level"
