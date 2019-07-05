@@ -2,3 +2,6 @@
 master-18.01:
 master-18.09:
 master-19.06:
+
+mantis-19.06:
+  - master-19.06
