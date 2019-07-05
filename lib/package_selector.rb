@@ -11,6 +11,7 @@ class PackageSelector
     attr_reader :blacklist
 
     def initialize(osdeps_file = nil)
+        @osdeps = {}
         if osdeps_file
             load_osdeps_file(osdeps_file)
         end
@@ -18,13 +19,8 @@ class PackageSelector
 
     # Load the osdeps file considering only the relevant entries
     # for this platform
-    def load_osdeps_file(osdeps_file)
-        if !@osdeps
-            @osdeps = YAML.load_file(osdeps_file)
-        else
-            osdeps = YAML.load_file(osdeps_file)
-            @osdeps.merge!(osdeps)
-        end
+    def load_osdeps_file(osdeps_file, allow_override: true)
+        osdeps = YAML.load_file(osdeps_file)
 
         @pkg_to_deb ||= {}
         @deb_to_pkg ||= {}
@@ -33,7 +29,7 @@ class PackageSelector
         distribution, release = PackageSelector::operating_system
 
         compact_osdeps = {}
-        @osdeps.each do |pkg_name, osdeps_list|
+        osdeps.each do |pkg_name, osdeps_list|
             pkgs = nil
             if osdeps_list.has_key?(distribution.first)
                 pkgs = osdeps_list[distribution.first]
@@ -47,6 +43,18 @@ class PackageSelector
             pkgs.each do |key, debian_pkg_name|
                 supported_releases = key.split(",")
                 if supported_releases.include?(release.first)
+                    if @pkg_to_deb.has_key?(pkg_name)
+                        if not allow_override
+                            raise RuntimeError, "#{self.class}::#{__method__}: loading" \
+                                " #{osdeps_file} would override entry for #{pkg_name}," \
+                                " existing '#{@pkg_to_deb[pkg_name]}'," \
+                                " new '#{debian_pkg_name}'"
+                        else
+                            Autoproj.info "#{self.class}::#{__method__}: loading#{osdeps_file} overrides existing entry for #{pkg_name}" \
+                                " existing '#{@pkg_to_deb[pkg_name]}'," \
+                                " new '#{debian_pkg_name}'"
+                        end
+                    end
                     @pkg_to_deb[pkg_name] = debian_pkg_name
                     @deb_to_pkg[debian_pkg_name] = [pkg_name]
 
@@ -55,7 +63,7 @@ class PackageSelector
                 end
             end
         end
-        @osdeps = compact_osdeps
+        @osdeps = @osdeps.merge(compact_osdeps)
     end
 
     # Retrieve the osdeps file for this release and the current architecture
@@ -141,9 +149,12 @@ class PackageSelector
             rdeps_found = false
             output.split("\n").each do |line|
                 if line =~ /Reverse Depends:/
-                    rdeps_found = true
+                    if rdeps_found
+                        break
+                    else
+                        rdeps_found = true
+                    end
                 elsif rdeps_found
-                    rdeps_found = false
                     package_list << line.strip
                 end
             end

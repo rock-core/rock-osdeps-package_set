@@ -1,0 +1,7 @@
+---
+tools/msgpack-c:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-tools-msgpack-c
+utilrb:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-utilrb
