@@ -116,7 +116,8 @@ if Autoproj.user_config('DEB_USE')
             rock_ruby_libdir        = RbConfig::CONFIG['rubylibdir'].gsub("/usr", release_install_dir)
 
             Autobuild.env.add('PATH',File.join(release_install_dir,"bin"))
-            Autobuild.env.add('CMAKE_PREFIX_PATH',release_install_dir)
+            Autobuild.env.add('CMAKE_PREFIX_PATH',File.join(Autoproj.root_dir,"install/share/rock/cmake"))
+            Autobuild.env.add('CMAKE_PREFIX_PATH',File.join(release_install_dir,"share/rock/cmake"))
             Autobuild.env.add('PKG_CONFIG_PATH',File.join(release_install_dir,"lib","pkgconfig"))
             Autobuild.env.add('PKG_CONFIG_PATH',File.join(release_install_dir,"lib",architecture, "pkgconfig"))
 
