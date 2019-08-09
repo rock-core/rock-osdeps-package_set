@@ -47,5 +47,9 @@ Autobuild::Package.each do |name, pkg|
         if !cxx_flags.empty?
             pkg.define "CMAKE_CXX_FLAGS", cxx_flags
         end
+
+        if pkg.depends_on("external/sisl")
+            pkg.define "SISL_PREFIX", "/opt/rock/"+Autoproj.user_config('debian_release')
+        end
     end
 end
