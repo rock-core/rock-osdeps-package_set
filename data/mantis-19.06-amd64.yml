@@ -50,9 +50,6 @@ control/trajectory_follower:
 slam/odometry:
   ubuntu,debian:
     18.04,bionic,beaver,default: rock-mantis-19.06-slam-odometry
-control/joint_dispatcher:
-  ubuntu,debian:
-    18.04,bionic,beaver,default: rock-mantis-19.06-control-joint-dispatcher
 charlie/spline_interpolator:
   ubuntu,debian:
     18.04,bionic,beaver,default: rock-mantis-19.06-charlie-spline-interpolator
