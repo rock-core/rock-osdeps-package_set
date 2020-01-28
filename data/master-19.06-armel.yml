@@ -1,0 +1,82 @@
+---
+external/sisl:
+  debian:
+    8,jessie,default: rock-master-19.06-external-sisl
+rtt:
+  debian:
+    8,jessie,default: rock-master-19.06-rtt
+base/cmake:
+  debian:
+    8,jessie,default: rock-master-19.06-base-cmake
+utilrb:
+  debian:
+    8,jessie,default: rock-master-19.06-ruby-utilrb
+typelib:
+  debian:
+    8,jessie,default: rock-master-19.06-typelib
+base/logging:
+  debian:
+    8,jessie,default: rock-master-19.06-base-logging
+tools/metaruby:
+  debian:
+    8,jessie,default: rock-master-19.06-ruby-tools-metaruby
+gui/osgviz:
+  debian:
+    8,jessie,default: rock-master-19.06-gui-osgviz
+tools/orogen_metadata:
+  debian:
+    8,jessie,default: rock-master-19.06-tools-orogen-metadata
+tools/service_discovery:
+  debian:
+    8,jessie,default: rock-master-19.06-tools-service-discovery
+gui/vizkit3d:
+  debian:
+    8,jessie,default: rock-master-19.06-gui-vizkit3d
+rtt_typelib:
+  debian:
+    8,jessie,default: rock-master-19.06-rtt-typelib
+base/types:
+  debian:
+    8,jessie,default: rock-master-19.06-base-types
+orogen:
+  debian:
+    8,jessie,default: rock-master-19.06-ruby-orogen
+tools/orocos_cpp_base:
+  debian:
+    8,jessie,default: rock-master-19.06-tools-orocos-cpp-base
+tools/lib_config:
+  debian:
+    8,jessie,default: rock-master-19.06-tools-lib-config
+tools/orogen_cpp_proxies:
+  debian:
+    8,jessie,default: rock-master-19.06-tools-orogen-cpp-proxies
+tools/orogen_model_exporter:
+  debian:
+    8,jessie,default: rock-master-19.06-tools-orogen-model-exporter
+base/orogen/std:
+  debian:
+    8,jessie,default: rock-master-19.06-base-orogen-std
+base/orogen/types:
+  debian:
+    8,jessie,default: rock-master-19.06-base-orogen-types
+bundler:
+  debian:
+    8,jessie,default: bundler
+facets:
+  debian:
+    8,jessie,default: ruby-facets
+backports:
+  debian:
+    8,jessie,default: rock-master-19.06-ruby-backports
+kramdown:
+  debian:
+    8,jessie,default: ruby-kramdown
+rice:
+  debian:
+    8,jessie,default: rock-master-19.06-ruby-rice
+yard:
+  debian:
+    8,jessie,default: rock-master-19.06-ruby-yard
+hoe-yard:
+  debian:
+    8,jessie,default: rock-master-19.06-ruby-hoe-yard
