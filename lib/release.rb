@@ -54,6 +54,28 @@ class Release
         end
         return hierarchy
     end
+
+    def retrieve_osdeps_file(architecture, target_dir)
+        filename = "#{@name}-#{architecture}.yml"
+
+        url = repo_url
+        url += "/" unless url =~ /\/$/
+        url += "#{@name}/osdeps/#{filename}"
+
+        FileUtils.mkdir_p target_dir unless File.exists?(target_dir)
+        Dir.chdir(target_dir) do
+            if !File.exists?(filename)
+                cmd = "wget #{url}"
+                msg, status = Open3.capture2e(cmd)
+                if status.success? && status.exitstatus == 0
+                    if !File.exists?(filename)
+                        raise ArgumentError, "Release #{@name} has no package "\
+                            "definition available for #{architecture} -- #{filename} missing"
+                    end
+                end
+            end
+        end
+    end
 end # end Release
 
 end # end DebianPackaging

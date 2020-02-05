@@ -80,6 +80,36 @@ module Rock
             assert(release.public_key =~ /rock.hb.dfki.de/)
             assert(release.hierarchy == ['master-18.01'])
         end
+
+        it "loads the release osdeps" do
+            release = Rock::DebianPackaging::Release.new('master-18.01',
+                                                    File.join(__dir__,"data","releases.yml"))
+            target_dir = "/tmp/rock-core-test"
+            FileUtils.rm_rf(target_dir) if File.exists?(target_dir)
+
+            osdeps_file = File.join(target_dir,"master-18.01-amd64.yml")
+            assert_raises do
+                release.retrieve_osdeps_file(architecture, target_dir)
+            end
+            assert(!File.exists?(osdeps_file))
+
+            FileUtils.mkdir_p(target_dir)
+            File.open(osdeps_file,"w") do |file|
+                file.puts "---"
+            end
+            begin
+                release.retrieve_osdeps_file("amd64", target_dir)
+            rescue Exception => e
+                assert(false)
+            end
+
+            release = Rock::DebianPackaging::Release.new('master-20.01',
+                                                    File.join(__dir__,"data","releases.yml"))
+            target_dir = "/tmp/rock-core-test"
+            osdeps_file = File.join(target_dir,"master-20.01-amd64.yml")
+            release.retrieve_osdeps_file("amd64", target_dir)
+            assert( File.exists?(osdeps_file) )
+        end
     end
 end
 

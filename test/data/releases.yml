@@ -7,3 +7,4 @@ master-19.06:
     depends_on: "master-18.01"
     repo_url: http://myserver.org/release
     public_key: http://mykeyserver.org/public_key
+master-20.01:
