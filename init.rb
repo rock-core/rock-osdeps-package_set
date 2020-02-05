@@ -94,11 +94,15 @@ if Autoproj.user_config('DEB_USE')
         end
 
         # identify the major.minor version of python
-        require 'open3'
-        msg, status = Open3.capture2e("which python")
         python_version=
-        if status.success?
-            python_version=`python -c "import sys; version=sys.version_info[:3]; print('{0}.{1}'.format(*version))"`.strip
+        if Autoproj.config.has_value_for?('python_version')
+            python_version = Autoproj.config.get('python_version')
+        else
+            require 'open3'
+            msg, status = Open3.capture2e("which python")
+            if status.success?
+                python_version=`python -c "import sys; version=sys.version_info[:3]; print('{0}.{1}'.format(*version))"`.strip
+            end
         end
 
         Autoproj.info "Required releases: #{release.hierarchy}"
