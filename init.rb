@@ -1,5 +1,3 @@
-ROCK_DEB_MIRROR_URL="http://rock.hb.dfki.de"
-
 distribution = nil
 release = nil
 if defined?(Autoproj::OSDependencies)
@@ -54,18 +52,23 @@ if Autoproj.user_config('DEB_USE')
             (available are: #{Rock::DebianPackaging::PackageSelector::available_releases.sort.join(',')}) ?",
             "Use the default if you do not know better"]
 
+        releases_spec = File.join(__dir__,'data/releases.yml')
+        require_relative 'lib/release'
+        release = Rock::DebianPackaging::Release.new(
+                        Autoproj.user_config('debian_release'),
+                        releases_spec )
+
         Autoproj.configuration_option 'DEB_AUTOMATIC', 'boolean',
             :default => 'yes',
             :doc => ["Do you want the installation be done automatically?",
             "This installation uses sudo and may ask for your password",
             "You can do the installation yourself with:",
-            "echo 'deb [arch=#{debian_architecture} trusted=yes] #{ROCK_DEB_MIRROR_URL}/rock-releases/#{Autoproj.user_config('debian_release')} #{current_release_name} main' | sudo tee /etc/apt/sources.list.d/rock-#{Autoproj.user_config('debian_release')}.list",
+            "echo 'deb [arch=#{debian_architecture} trusted=yes] #{release.repo_url}/#{release.name} #{current_release_name} main' | sudo tee /etc/apt/sources.list.d/rock-#{release.name}.list",
             "sudo apt-get update > /dev/null",
+            "wget -qO - #{release.public_key} | sudo apt-key add -",
             "##########################################################",
             "This installation uses sudo and may ask for your password",
             "Install automatically?"]
-
-
 
         begin
             flavor = Autoproj.user_config('ROCK_SELECTED_FLAVOR')
@@ -81,9 +84,9 @@ if Autoproj.user_config('DEB_USE')
         end
 
         require 'rbconfig'
-        suffix = "#{Autoproj.user_config('debian_release')}-#{debian_architecture}"
+        suffix = "#{release.name}-#{debian_architecture}"
         if defined?(Autoproj::OSDependencies)
-            Autoproj::OSDependencies.suffixes << "#{Autoproj.user_config('debian_release')}-#{debian_architecture}"
+            Autoproj::OSDependencies.suffixes << "#{release.name}-#{debian_architecture}"
         elsif defined?(Autoproj::OSPackageResolver)
             Autoproj.workspace.osdep_suffixes << suffix
         else
@@ -98,14 +101,8 @@ if Autoproj.user_config('DEB_USE')
             python_version=`python -c "import sys; version=sys.version_info[:3]; print('{0}.{1}'.format(*version))"`.strip
         end
 
-
-        require_relative 'lib/release_hierarchy'
-        release_spec = File.join(__dir__,'data/releases.yml')
-        main_release = Autoproj.user_config('debian_release')
-        release_hierarchy = Rock::DebianPackaging::ReleaseHierarchy.current(main_release, release_spec)
-
-        Autoproj.info "Required releases: #{release_hierarchy}"
-        release_hierarchy.each do |release_name|
+        Autoproj.info "Required releases: #{release.hierarchy}"
+        release.hierarchy.each do |release_name|
             release_install_dir = "/opt/rock/#{release_name}"
 
             rock_ruby_archdir       = RbConfig::CONFIG['archdir'].gsub("/usr", release_install_dir)
@@ -198,10 +195,10 @@ if Autoproj.user_config('DEB_USE')
     end
 
     if Autoproj.user_config('DEB_AUTOMATIC')
-        release_hierarchy.each do |release_name|
+        release.hierarchy.each do |release_name|
             Autoproj.info "Activating release: #{release_name}"
             apt_rock_list_file = "/etc/apt/sources.list.d/rock-#{release_name}.list"
-            apt_source = "[arch=#{debian_architecture} trusted=yes] #{ROCK_DEB_MIRROR_URL}/rock-releases/#{release_name} #{current_release_name} main"
+            apt_source = "[arch=#{debian_architecture} trusted=yes] #{release.repo_url}/#{release.name} #{current_release_name} main"
             update = false
             if !File.exist?(apt_rock_list_file)
                 update = true
@@ -225,21 +222,29 @@ if Autoproj.user_config('DEB_USE')
                     Autoproj.message "Adding deb-src entry"
                     system("echo deb-src #{apt_source} | sudo tee -a #{apt_rock_list_file}")
 
+                    if release.public_key
+                        Autoproj.message "Adding public key for rock-robotics"
+                        if !system("wget -qO - #{release.public_key} | sudo apt-key add -")
+                            Autoproj.warn "Failed to add public key for rock-robotics"
+                        end
+                    end
+
                     Autoproj.message "  Updating package source -- this can take some time"
                     system("sudo apt-get update > /tmp/autoproj-update.log")
+
                 end
             end
         end
 
-        Autoproj.env_set('ROCK_DEB_RELEASE_NAME',Autoproj.config.get('debian_release'))
+        Autoproj.env_set('ROCK_DEB_RELEASE_NAME',release.name)
         hierarchy = ""
-        release_hierarchy.each do |release_name|
-            hierarchy += "#{release_name}:#{ROCK_DEB_MIRROR_URL}/rock-releases/#{release_name};"
+        release.hierarchy.each do |release_name|
+            hierarchy += "#{release.name}:#{release.repo_url}/#{release.name};"
         end
         Autoproj.env_set('ROCK_DEB_RELEASE_HIERARCHY',hierarchy)
     end
 
-    Rock::DebianPackaging::PackageSelector::activate_releases(release_hierarchy)
+    Rock::DebianPackaging::PackageSelector::activate_releases(release.hierarchy)
 else
   Autoproj.message "  Use of rock debian packages is deactivated. (Remove the rock-osdeps-Package from your autoproj/manifest to deactivate this message)"
   osdeps_file = File.join(__dir__, "rock-osdeps.osdeps")

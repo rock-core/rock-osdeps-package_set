@@ -1,4 +1,7 @@
 ---
+default:
+    repo_url: http://rock.hb.dfki.de/rock-releases
+    public_key: http://rock.hb.dfki.de/rock-releases/rock-robotics.public.key
 master-18.01:
 master-18.09:
 master-19.06:
