@@ -117,11 +117,12 @@ if Autoproj.user_config('DEB_USE')
             rock_ruby_libdir        = RbConfig::CONFIG['rubylibdir'].gsub("/usr", release_install_dir)
 
             Autobuild.env.add('PATH',File.join(release_install_dir,"bin"))
-            Autobuild.env.add('CMAKE_PREFIX_PATH',File.join(Autoproj.root_dir,"install/share/rock/cmake"))
             Autobuild.env.add('CMAKE_PREFIX_PATH',File.join(release_install_dir))
             Autobuild.env.add('CMAKE_PREFIX_PATH',File.join(release_install_dir,"share/rock/cmake"))
-            Autobuild.env.add('PKG_CONFIG_PATH',File.join(release_install_dir,"lib","pkgconfig"))
+            Autobuild.env.add('CMAKE_PREFIX_PATH',File.join(Autoproj.root_dir,"install"))
+            Autobuild.env.add('CMAKE_PREFIX_PATH',File.join(Autoproj.root_dir,"install/share/rock/cmake"))
             Autobuild.env.add('PKG_CONFIG_PATH',File.join(release_install_dir,"lib",architecture, "pkgconfig"))
+            Autobuild.env.add('PKG_CONFIG_PATH',File.join(release_install_dir,"lib","pkgconfig"))
 
             # RUBY SETUP
             Autobuild.env.add('RUBYLIB',rock_ruby_archdir)
@@ -136,8 +137,8 @@ if Autoproj.user_config('DEB_USE')
             Autobuild.env.add('RUBYLIB',File.join(release_install_dir,"/lib/ruby/vendor_ruby/standard"))
             Autobuild.env.add('RUBYLIB',File.join(release_install_dir,"/lib/ruby/vendor_ruby/core"))
 
-            Autobuild.env.add('RUBYLIB',File.join(release_install_dir,"/lib/ruby"))
             Autobuild.env.add('RUBYLIB',File.join(release_install_dir,"lib",architecture, "ruby"))
+            Autobuild.env.add('RUBYLIB',File.join(release_install_dir,"/lib/ruby"))
 
             # PYTHON SETUP
             if python_version
@@ -145,16 +146,16 @@ if Autoproj.user_config('DEB_USE')
             end
 
             # Runtime setup
-            Autobuild.env.add('LD_LIBRARY_PATH',File.join(release_install_dir,"lib"))
             Autobuild.env.add('LD_LIBRARY_PATH',File.join(release_install_dir,"lib",architecture))
-            Autobuild.env.add('LD_LIBRARY_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib"))
+            Autobuild.env.add('LD_LIBRARY_PATH',File.join(release_install_dir,"lib"))
             Autobuild.env.add('LD_LIBRARY_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib",architecture))
+            Autobuild.env.add('LD_LIBRARY_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib"))
 
             # Compile time setup -- prefer locally installed packages over debian packages
             Autobuild.env.add('LIBRARY_PATH',File.join(release_install_dir,"lib",architecture))
             Autobuild.env.add('LIBRARY_PATH',File.join(release_install_dir,"lib"))
-            Autobuild.env.add('LIBRARY_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib"))
             Autobuild.env.add('LIBRARY_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib",architecture))
+            Autobuild.env.add('LIBRARY_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib"))
 
             Autobuild.env.add('OROGEN_PLUGIN_PATH', File.join(release_install_dir,"/share/orogen/plugins"))
             Autobuild.env.add('TYPELIB_RUBY_PLUGIN_PATH', File.join(release_install_dir,"/share/typelib/ruby"))
