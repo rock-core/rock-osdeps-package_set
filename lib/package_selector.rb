@@ -103,11 +103,13 @@ class PackageSelector
     # releases it depends upon
     def self.activate_release(release,
                               data_dir: DEFAULT_DATA_DIR,
+                              output_dir: File.join(__dir__,".."),
                               ws: Autoproj.workspace
                              )
         Rock::DebianPackaging::PackageSelector::activate_releases(release.hierarchy,
                                                                   data_dir: data_dir,
                                                                   specfile: release.spec,
+                                                                  output_dir: output_dir,
                                                                   ws: Autoproj.workspace)
     end
 
@@ -116,6 +118,7 @@ class PackageSelector
     def self.activate_releases(release_names,
                                data_dir: DEFAULT_DATA_DIR,
                                specfile: File.join(data_dir, "releases".yml),
+                               output_dir: File.join(__dir__,".."),
                                ws: Autoproj.workspace
                             )
         ps = Rock::DebianPackaging::PackageSelector.new
@@ -126,7 +129,7 @@ class PackageSelector
             ps.load_osdeps_file release_osdeps_file(release_name)
         end
         ps.load_blacklist(ws: ws)
-        ps.write_osdeps_file(data_dir: data_dir)
+        ps.write_osdeps_file(output_dir: output_dir)
     end
 
     # Retrieve the operating system 
@@ -192,8 +195,8 @@ class PackageSelector
 
     # Write the rock-osdeps.osdeps file which allows to overload the existing
     # osdeps definition to include the debian packages
-    def write_osdeps_file(filename: "rock-osdeps.osdeps", data_dir: DEFAULT_DATA_DIR)
-        filename = File.join(data_dir, filename)
+    def write_osdeps_file(filename: "rock-osdeps.osdeps", output_dir: File.join(__dir__,".."))
+        filename = File.join(output_dir, filename)
         Autoproj.message "  Triggered regeneration of rock-osdeps.osdeps: #{filename}, blacklisted packages: #{blacklist}"
         write_file(filename, blacklist)
     end

@@ -141,7 +141,8 @@ module Rock
             release = Rock::DebianPackaging::Release.new('master-20.01',
                                                          File.join(@data_dir,"releases.yml"))
             Rock::DebianPackaging::PackageSelector::activate_release(release,
-                                                                     data_dir: @data_dir)
+                                                                     data_dir: @data_dir,
+                                                                     output_dir: @data_dir)
             assert( File.exists?(File.join(@data_dir, "rock-osdeps.osdeps")) )
         end
     end
