@@ -111,5 +111,39 @@ module Rock
             assert( File.exists?(osdeps_file) )
         end
     end
+
+    describe "release update" do
+        before do
+            # Prepare testdirectory
+            @target_dir = "/tmp/rock-core-test"
+            @data_dir = File.join(@target_dir, "data")
+
+            FileUtils.rm_rf(@target_dir) if File.exists?(@target_dir)
+            FileUtils.mkdir_p(@data_dir)
+
+            FileUtils.cp_r File.join(__dir__,"data"), @target_dir
+        end
+
+        it "update the release osdeps file" do
+
+            release = Rock::DebianPackaging::Release.new('master-20.01',
+                                                         File.join(@data_dir,"releases.yml"))
+            osdeps_file = File.join(@target_dir,"master-20.01-amd64.yml")
+
+            # Create already existing file
+            FileUtils.touch(osdeps_file)
+
+            release.update(@target_dir)
+            assert( File.exists?(osdeps_file) )
+        end
+
+        it "activates the release hierarchy" do
+            release = Rock::DebianPackaging::Release.new('master-20.01',
+                                                         File.join(@data_dir,"releases.yml"))
+            Rock::DebianPackaging::PackageSelector::activate_release(release,
+                                                                     data_dir: @data_dir)
+            assert( File.exists?(File.join(@data_dir, "rock-osdeps.osdeps")) )
+        end
+    end
 end
 

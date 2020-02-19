@@ -1,5 +1,6 @@
 require 'yaml'
 require 'autoproj'
+require_relative 'release'
 
 module Rock
 module DebianPackaging
@@ -10,6 +11,8 @@ class PackageSelector
     attr_reader :deb_to_pkg
     attr_reader :blacklist
 
+    DEFAULT_DATA_DIR = File.join(__dir__,"..","data")
+
     def initialize(osdeps_file = nil)
         @osdeps = {}
         if osdeps_file
@@ -19,6 +22,9 @@ class PackageSelector
 
     # Load the osdeps file considering only the relevant entries
     # for this platform
+    # @param osdeps_file [String] The file to load
+    # @param allow_override [allow_override] Allow entries in the osdeps files
+    #     to override each other
     def load_osdeps_file(osdeps_file, allow_override: true)
         osdeps = YAML.load_file(osdeps_file)
 
@@ -67,19 +73,25 @@ class PackageSelector
     end
 
     # Retrieve the osdeps file for this release and the current architecture
+    # @param release_name [String] name of the release (should be a key in the
+    #   releases.yml file)
+    # @return [String] path to the release file
     def self.release_osdeps_file(release_name)
-        architecture = "#{`dpkg --print-architecture`}".strip
-        release_file = File.join(__dir__,"..","data","#{release_name}-#{architecture}.yml")
+        release_file =
+            File.join(__dir__,"..","data","#{release_name}-#{Release.architecture}.yml")
         if !File.exist?(release_file)
-            raise ArgumentError, "#{self.class}::#{__method__}: rock release '#{release_name}' has no osdeps file for the architecture '#{architecture}' -- #{File.absolute_path(release_file)} missing"
+            raise ArgumentError, "#{self.class}::#{__method__}: rock release '#{release_name}' has no osdeps file for the architecture '#{Release.architecture}' -- #{File.absolute_path(release_file)} missing"
         end
         release_file
     end
 
     # Retrieve the available list of releases
-    def self.available_releases
-        architecture = "#{`dpkg --print-architecture`}".strip
-        glob_filename = File.join(__dir__,"..","data","*-#{architecture}.yml")
+    # @param data_dir [String] directory that contain the information about the
+    #  release and osdeps files
+    # @param [Array<String>] list of release names
+    def self.available_releases(data_dir = DEFAULT_DATA_DIR)
+        architecture = Release.architecture
+        glob_filename = File.join(data_dir,"*-#{architecture}.yml")
         releases = []
         Dir.glob(glob_filename).each do |filename|
             releases << File.basename( filename ).gsub(/-#{architecture}.yml$/,'')
@@ -87,20 +99,34 @@ class PackageSelector
         releases
     end
 
-    def self.activate_releases(release_names)
-        ps = Rock::DebianPackaging::PackageSelector.new
-        release_names.each do |release_name|
-            ps.load_osdeps_file release_osdeps_file(release_name)
-        end
-        ps.load_blacklist
-        ps.write_osdeps_file
+    # Activate the package selection for a particular release - including the
+    # releases it depends upon
+    def self.activate_release(release,
+                              data_dir: DEFAULT_DATA_DIR,
+                              ws: Autoproj.workspace
+                             )
+        Rock::DebianPackaging::PackageSelector::activate_releases(release.hierarchy,
+                                                                  data_dir: data_dir,
+                                                                  specfile: release.spec,
+                                                                  ws: Autoproj.workspace)
     end
 
-    # Activate the package list for a particular debian package release
-    def self.activate_release(release_name)
-        ps = Rock::DebianPackaging::PackageSelector.new release_osdeps_file(release_name)
-        ps.load_blacklist
-        ps.write_osdeps_file
+    # Activate a list of releases, loads the blacklist from the current
+    # workspace's config_dir and writes the temporary active osdeps file
+    def self.activate_releases(release_names,
+                               data_dir: DEFAULT_DATA_DIR,
+                               specfile: File.join(data_dir, "releases".yml),
+                               ws: Autoproj.workspace
+                            )
+        ps = Rock::DebianPackaging::PackageSelector.new
+        release_names.each do |release_name|
+            release = Rock::DebianPackaging::Release.new(release_name, specfile)
+            release.update(data_dir)
+
+            ps.load_osdeps_file release_osdeps_file(release_name)
+        end
+        ps.load_blacklist(ws: ws)
+        ps.write_osdeps_file(data_dir: data_dir)
     end
 
     # Retrieve the operating system 
@@ -166,11 +192,9 @@ class PackageSelector
 
     # Write the rock-osdeps.osdeps file which allows to overload the existing
     # osdeps definition to include the debian packages
-    def write_osdeps_file(filename = nil)
-        if !filename
-            filename = File.join(__dir__,"..","rock-osdeps.osdeps")
-        end
-        puts "  Triggered regeneration of rock-osdeps.osdeps: #{filename}, blacklisted packages: #{blacklist}"
+    def write_osdeps_file(filename: "rock-osdeps.osdeps", data_dir: DEFAULT_DATA_DIR)
+        filename = File.join(data_dir, filename)
+        Autoproj.message "  Triggered regeneration of rock-osdeps.osdeps: #{filename}, blacklisted packages: #{blacklist}"
         write_file(filename, blacklist)
     end
 
@@ -188,7 +212,7 @@ class PackageSelector
                     disabled_pkgs += disable_pkg(pkg_name)
                 end
             end
-            puts "  Disabling osdeps: #{disabled_pkgs.sort}"
+            Autoproj.message "  Disabling osdeps: #{disabled_pkgs.sort}"
             disabled_pkgs.flatten.each do |pkg|
                 filtered_osdeps.delete(pkg)
             end
@@ -208,15 +232,8 @@ class PackageSelector
     #
     # This allows to infer all reverse dependencies that base/types has and
     # so that they are also accounted for in the blacklisting process
-    def load_blacklist
-        config_dir = nil
-        if Autoproj.respond_to?(:workspace)
-            config_dir = Autoproj.workspace.config_dir
-        else
-            config_dir = Autoproj.config_dir
-        end
-
-        blacklist_file = File.join(config_dir, "deb_blacklist.yml")
+    def load_blacklist(ws: Autoproj.workspace)
+        blacklist_file = File.join(ws.config_dir, "deb_blacklist.yml")
         if File.exists?(blacklist_file)
             @blacklist = YAML.load_file(blacklist_file)
         end

@@ -250,7 +250,7 @@ if Autoproj.user_config('DEB_USE')
         Autoproj.env_set('ROCK_DEB_RELEASE_HIERARCHY',hierarchy)
     end
 
-    Rock::DebianPackaging::PackageSelector::activate_releases(release.hierarchy)
+    Rock::DebianPackaging::PackageSelector.activate_release(release)
 else
   Autoproj.message "  Use of rock debian packages is deactivated. (Remove the rock-osdeps-Package from your autoproj/manifest to deactivate this message)"
   osdeps_file = File.join(__dir__, "rock-osdeps.osdeps")
