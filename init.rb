@@ -52,11 +52,10 @@ if Autoproj.user_config('DEB_USE')
             (available are: #{Rock::DebianPackaging::PackageSelector::available_releases.sort.join(',')}) ?",
             "Use the default if you do not know better"]
 
-        releases_spec = File.join(__dir__,'data/releases.yml')
         require_relative 'lib/release'
         release = Rock::DebianPackaging::Release.new(
                         Autoproj.user_config('debian_release'),
-                        releases_spec )
+                        data_dir: File.join(__dir__,'data'))
 
         Autoproj.configuration_option 'DEB_AUTOMATIC', 'boolean',
             :default => 'yes',

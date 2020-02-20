@@ -87,7 +87,7 @@ class PackageSelector
     # @param data_dir [String] directory that contain the information about the
     #  release and osdeps files
     # @param [Array<String>] list of release names
-    def self.available_releases(data_dir = Release.DEFAULT_DATA_DIR)
+    def self.available_releases(data_dir = Release::DEFAULT_DATA_DIR)
         architecture = Release.architecture
         glob_filename = File.join(data_dir,"*-#{architecture}.yml")
         releases = []

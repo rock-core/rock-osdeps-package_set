@@ -10,9 +10,9 @@ if Autoproj.user_config('DEB_USE')
     # Make sure the release path to typelib is used, when there is no local
     # installation
     require_relative 'lib/release'
-    release_spec = File.join(__dir__,'data/releases.yml')
     main_release = Autoproj.user_config('debian_release')
-    release = Rock::DebianPackaging::Release.new(main_release, release_spec)
+    release = Rock::DebianPackaging::Release.new(main_release,
+                                                 data_dir: File.join(__dir__,'data'))
 
     release.hierarchy.each do |release|
         release_dir="/opt/rock/#{release}"
