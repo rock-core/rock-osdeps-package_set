@@ -20,3 +20,5 @@ GITORIOUS_ROOT: https://git.gitorious.org
 GITORIOUS_PUSH_ROOT: https://git.gitorious.org
 GITORIOUS_PRIVATE_ROOT: https://git.gitorious.org
 apt_dpkg_update: true
+USE_PYTHON: false
+noninteractive: true

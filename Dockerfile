@@ -1,9 +1,11 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 MAINTAINER 2maz "https://github.com/2maz"
 
 RUN apt update
 RUN apt upgrade -y
+ENV DEBIAN_FRONTEND=noninteractive
+RUN ln -fs /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 RUN apt install -y ruby ruby-dev wget tzdata locales g++ autotools-dev make cmake sudo git
 RUN echo "Europe/Berlin" > /etc/timezone; dpkg-reconfigure -f noninteractive tzdata
 RUN export LANGUAGE=de_DE.UTF-8; export LANG=de_DE.UTF-8; export LC_ALL=de_DE.UTF-8; locale-gen de_DE.UTF-8; DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
@@ -24,27 +26,27 @@ RUN git config --global user.name "Rock Osdeps"
 
 RUN wget https://raw.githubusercontent.com/rock-core/autoproj/master/bin/autoproj_bootstrap
 
-### TEST RELEASE master-18.01
-RUN mkdir -p /home/docker/releases/master-18.01
-WORKDIR /home/docker/releases/master-18.01
-# Use the existing seed configuration
-COPY --chown=docker test/autoproj-config.yml seed-config.yml
-RUN echo "debian_release: master-18.01\n" >> seed-config.yml
-
-ENV AUTOPROJ_BOOTSTRAP_IGNORE_NONEMPTY_DIR 1
-RUN ruby /home/docker/autoproj_bootstrap git https://github.com/2maz/buildconf.git branch=rock-osdeps --seed-config=seed-config.yml
-RUN /bin/bash -c "source env.sh; autoproj update; autoproj envsh"
-
-### TEST RELEASE master-18.09
-RUN mkdir -p /home/docker/releases/master-18.09
-WORKDIR /home/docker/releases/master-18.09
-# Use the existing seed configuration
-COPY --chown=docker test/autoproj-config.yml seed-config.yml
-RUN echo "debian_release: master-18.09\n" >> seed-config.yml
-
-ENV AUTOPROJ_BOOTSTRAP_IGNORE_NONEMPTY_DIR 1
-RUN ruby /home/docker/autoproj_bootstrap git https://github.com/2maz/buildconf.git branch=rock-osdeps --seed-config=seed-config.yml
-RUN /bin/bash -c "source env.sh; autoproj update; autoproj envsh"
+##### TEST RELEASE master-18.01
+#RUN mkdir -p /home/docker/releases/master-18.01
+#WORKDIR /home/docker/releases/master-18.01
+## Use the existing seed configuration
+#COPY --chown=docker test/autoproj-config.yml seed-config.yml
+#RUN echo "debian_release: master-18.01\n" >> seed-config.yml
+#
+#ENV AUTOPROJ_BOOTSTRAP_IGNORE_NONEMPTY_DIR 1
+#RUN ruby /home/docker/autoproj_bootstrap git https://github.com/2maz/buildconf.git branch=rock-osdeps --seed-config=seed-config.yml
+#RUN /bin/bash -c "source env.sh; autoproj update; autoproj envsh"
+#
+#### TEST RELEASE master-18.09
+#RUN mkdir -p /home/docker/releases/master-18.09
+#WORKDIR /home/docker/releases/master-18.09
+## Use the existing seed configuration
+#COPY --chown=docker test/autoproj-config.yml seed-config.yml
+#RUN echo "debian_release: master-18.09\n" >> seed-config.yml
+#
+#ENV AUTOPROJ_BOOTSTRAP_IGNORE_NONEMPTY_DIR 1
+#RUN ruby /home/docker/autoproj_bootstrap git https://github.com/2maz/buildconf.git branch=rock-osdeps --seed-config=seed-config.yml
+#RUN /bin/bash -c "source env.sh; autoproj update; autoproj envsh"
 
 ### TEST RELEASE master-19.06
 RUN mkdir -p /home/docker/releases/master-19.06
@@ -54,5 +56,17 @@ COPY --chown=docker test/autoproj-config.yml seed-config.yml
 RUN echo "debian_release: master-19.06\n" >> seed-config.yml
 
 ENV AUTOPROJ_BOOTSTRAP_IGNORE_NONEMPTY_DIR 1
-RUN ruby /home/docker/autoproj_bootstrap git https://github.com/2maz/buildconf.git branch=rock-osdeps --seed-config=seed-config.yml
+RUN ruby /home/docker/autoproj_bootstrap git https://github.com/2maz/buildconf.git branch=rock-osdeps-test --seed-config=seed-config.yml
+RUN /bin/bash -c "source env.sh; autoproj update; autoproj envsh"
+
+#### TEST RELEASE master-20.01
+RUN mkdir -p /home/docker/releases/master-20.01
+WORKDIR /home/docker/releases/master-20.01
+# Use the existing seed configuration
+COPY --chown=docker test/autoproj-config.yml seed-config.yml
+RUN echo "debian_release: master-20.01\n" >> seed-config.yml
+
+ENV AUTOPROJ_BOOTSTRAP_IGNORE_NONEMPTY_DIR 1
+ENV AUTOPROJ_NONINTERACTIVE 1
+RUN ruby /home/docker/autoproj_bootstrap git https://github.com/2maz/buildconf.git branch=rock-osdeps-test --seed-config=seed-config.yml
 RUN /bin/bash -c "source env.sh; autoproj update; autoproj envsh"
