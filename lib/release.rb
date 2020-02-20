@@ -16,7 +16,24 @@ class Release
     attr_reader :spec
 
     DEFAULT_DATA_DIR = File.join(__dir__,"..","data")
+    DEFAULT_SPEC_FILE = "releases.yml"
+
     @@arch = "#{`dpkg --print-architecture`}".strip
+
+
+    # Retrieve the available list of releases
+    # @param data_dir [String] directory that contain the information about the
+    #  release and osdeps files
+    # @param [Array<String>] list of release names
+    def self.available(data_dir: nil,
+                                spec_file: nil)
+        data_dir ||= DEFAULT_DATA_DIR
+        spec_file ||= DEFAULT_SPEC_FILE
+
+        releases_spec_file = File.join(data_dir, spec_file)
+        spec = YAML::load_file(releases_spec_file)
+        return spec.keys.select { |x| x !~ /default/ }
+    end
 
     # Retrieve the current release hierarchy from a given release name
     # and a hierarchy spec, which should look like
@@ -48,7 +65,7 @@ class Release
                 " or spec_file"
         end
         if !spec_file && !spec_data
-            spec_file = "releases.yml"
+            spec_file = DEFAULT_SPEC_FILE
         end
 
         if spec_file

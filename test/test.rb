@@ -49,6 +49,11 @@ module Rock
             FileUtils.cp_r File.join(__dir__,"data"), @target_dir
         end
 
+        it "get available" do
+            assert( Rock::DebianPackaging::Release.available == ["master-18.01","master-18.09",
+                 "master-19.06","master-20.01"] )
+        end
+
         it "load_osdeps" do
             @ps = Rock::DebianPackaging::PackageSelector.new
 

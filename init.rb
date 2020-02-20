@@ -47,9 +47,9 @@ if Autoproj.user_config('DEB_USE')
 
         Autoproj.configuration_option 'debian_release', 'string',
             :default => 'master-19.06',
-            :possible_answers => Rock::DebianPackaging::PackageSelector::available_releases,
+            :possible_answers => Rock::DebianPackaging::Release.available,
             :doc => ["Which rock debian release should be used
-            (available are: #{Rock::DebianPackaging::PackageSelector::available_releases.sort.join(',')}) ?",
+            (available are: #{Rock::DebianPackaging::Release::available.sort.join(',')}) ?",
             "Use the default if you do not know better"]
 
         require_relative 'lib/release'

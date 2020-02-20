@@ -83,20 +83,6 @@ class PackageSelector
         release_file
     end
 
-    # Retrieve the available list of releases
-    # @param data_dir [String] directory that contain the information about the
-    #  release and osdeps files
-    # @param [Array<String>] list of release names
-    def self.available_releases(data_dir = Release::DEFAULT_DATA_DIR)
-        architecture = Release.architecture
-        glob_filename = File.join(data_dir,"*-#{architecture}.yml")
-        releases = []
-        Dir.glob(glob_filename).each do |filename|
-            releases << File.basename( filename ).gsub(/-#{architecture}.yml$/,'')
-        end
-        releases
-    end
-
     # Activate the package selection for a particular release - including the
     # releases it depends upon
     # @param release [Release] Release instance
