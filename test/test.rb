@@ -38,13 +38,24 @@ module Rock
     end
 
     describe "hierarchical_release" do
+        before do
+            # Prepare testdirectory
+            @target_dir = "/tmp/rock-core-test"
+            @data_dir = File.join(@target_dir, "data")
+
+            FileUtils.rm_rf(@target_dir) if File.exists?(@target_dir)
+            FileUtils.mkdir_p(@data_dir)
+
+            FileUtils.cp_r File.join(__dir__,"data"), @target_dir
+        end
+
         it "load_osdeps" do
             @ps = Rock::DebianPackaging::PackageSelector.new
 
-            file = File.join(__dir__,"data","master-19.06-amd64.yml")
+            file = File.join(@data_dir,"master-19.06-amd64.yml")
             @ps.load_osdeps_file(file)
 
-            file = File.join(__dir__,"data","derived-19.06-amd64.yml")
+            file = File.join(@data_dir,"derived-19.06-amd64.yml")
             @ps.load_osdeps_file(file)
 
             assert @ps.pkg_to_deb['tools/msgpack-c'] == 'otherpackage'
@@ -53,10 +64,10 @@ module Rock
         it "load_osdeps_no_override" do
             @ps = Rock::DebianPackaging::PackageSelector.new
 
-            file = File.join(__dir__,"data","master-19.06-amd64.yml")
+            file = File.join(@data_dir,"master-19.06-amd64.yml")
             @ps.load_osdeps_file(file)
 
-            file = File.join(__dir__,"data","derived-19.06-amd64.yml")
+            file = File.join(@data_dir,"derived-19.06-amd64.yml")
             assert_raises do
                 @ps.load_osdeps_file(file, allow_override: false)
             end
@@ -64,7 +75,7 @@ module Rock
 
         it "loads the releases spec" do
             release = Rock::DebianPackaging::Release.new('master-19.06',
-                                                    File.join(__dir__,"data","releases.yml"))
+                                                         data_dir: @data_dir)
 
             assert(release.name == 'master-19.06')
             assert(release.repo_url =~ /myserver/)
@@ -74,7 +85,7 @@ module Rock
 
         it "uses defaults in the releases spec" do
             release = Rock::DebianPackaging::Release.new('master-18.01',
-                                                    File.join(__dir__,"data","releases.yml"))
+                                                         data_dir: @data_dir)
             assert(release.name == 'master-18.01')
             assert(release.repo_url =~ /rock.hb.dfki.de/)
             assert(release.public_key =~ /rock.hb.dfki.de/)
@@ -83,31 +94,31 @@ module Rock
 
         it "loads the release osdeps" do
             release = Rock::DebianPackaging::Release.new('master-18.01',
-                                                    File.join(__dir__,"data","releases.yml"))
-            target_dir = "/tmp/rock-core-test"
-            FileUtils.rm_rf(target_dir) if File.exists?(target_dir)
+                                                         data_dir: @data_dir)
+            release_armel = Rock::DebianPackaging::Release.new('master-18.01',
+                                                         data_dir: @data_dir,
+                                                         arch: "armel")
 
-            osdeps_file = File.join(target_dir,"master-18.01-amd64.yml")
+            osdeps_file = File.join(@data_dir,"master-18.01-armel.yml")
             assert_raises do
-                release.retrieve_osdeps_file(architecture, target_dir)
+                release_armel.retrieve_osdeps_file()
             end
             assert(!File.exists?(osdeps_file))
 
-            FileUtils.mkdir_p(target_dir)
             File.open(osdeps_file,"w") do |file|
                 file.puts "---"
             end
+
             begin
-                release.retrieve_osdeps_file("amd64", target_dir)
+                release.retrieve_osdeps_file()
             rescue Exception => e
                 assert(false)
             end
 
             release = Rock::DebianPackaging::Release.new('master-20.01',
-                                                    File.join(__dir__,"data","releases.yml"))
-            target_dir = "/tmp/rock-core-test"
-            osdeps_file = File.join(target_dir,"master-20.01-amd64.yml")
-            release.retrieve_osdeps_file("amd64", target_dir)
+                                                         data_dir: @data_dir)
+            osdeps_file = File.join(@data_dir,"master-20.01-amd64.yml")
+            release.retrieve_osdeps_file()
             assert( File.exists?(osdeps_file) )
         end
     end
@@ -127,21 +138,21 @@ module Rock
         it "update the release osdeps file" do
 
             release = Rock::DebianPackaging::Release.new('master-20.01',
-                                                         File.join(@data_dir,"releases.yml"))
+                                                         data_dir: @data_dir)
             osdeps_file = File.join(@target_dir,"master-20.01-amd64.yml")
 
             # Create already existing file
             FileUtils.touch(osdeps_file)
 
-            release.update(@target_dir)
+            release.update()
             assert( File.exists?(osdeps_file) )
         end
 
         it "activates the release hierarchy" do
             release = Rock::DebianPackaging::Release.new('master-20.01',
-                                                         File.join(@data_dir,"releases.yml"))
+                                                         data_dir: @data_dir)
+
             Rock::DebianPackaging::PackageSelector::activate_release(release,
-                                                                     data_dir: @data_dir,
                                                                      output_dir: @data_dir)
             assert( File.exists?(File.join(@data_dir, "rock-osdeps.osdeps")) )
         end

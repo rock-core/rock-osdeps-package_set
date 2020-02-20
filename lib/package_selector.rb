@@ -11,8 +11,6 @@ class PackageSelector
     attr_reader :deb_to_pkg
     attr_reader :blacklist
 
-    DEFAULT_DATA_DIR = File.join(__dir__,"..","data")
-
     def initialize(osdeps_file = nil)
         @osdeps = {}
         if osdeps_file
@@ -89,7 +87,7 @@ class PackageSelector
     # @param data_dir [String] directory that contain the information about the
     #  release and osdeps files
     # @param [Array<String>] list of release names
-    def self.available_releases(data_dir = DEFAULT_DATA_DIR)
+    def self.available_releases(data_dir = Release.DEFAULT_DATA_DIR)
         architecture = Release.architecture
         glob_filename = File.join(data_dir,"*-#{architecture}.yml")
         releases = []
@@ -101,38 +99,65 @@ class PackageSelector
 
     # Activate the package selection for a particular release - including the
     # releases it depends upon
+    # @param release [Release] Release instance
+    # @param data_dir [String] Path to the data directory, where the osdeps
+    #     files and the releases spec file (releases.yml) resides
+    # @param output_dir [String] Path to the directory for the dynamically generated
+    #     osdeps file - the one that is finally taken into account by autoproj
+    # @return [PackageSelector] A package selector instance containing
+    #     information about blacklisted and used packages
     def self.activate_release(release,
-                              data_dir: DEFAULT_DATA_DIR,
-                              output_dir: File.join(__dir__,".."),
-                              ws: Autoproj.workspace
+                              output_dir: File.join(__dir__,"..")
                              )
         Rock::DebianPackaging::PackageSelector::activate_releases(release.hierarchy,
-                                                                  data_dir: data_dir,
-                                                                  specfile: release.spec,
+                                                                  data_dir: release.data_dir,
+                                                                  spec_data: release.spec,
                                                                   output_dir: output_dir,
-                                                                  ws: Autoproj.workspace)
+                                                                  ws: release.ws)
     end
 
     # Activate a list of releases, loads the blacklist from the current
     # workspace's config_dir and writes the temporary active osdeps file
+    # @param data_dir [String] Path to the data directory, where the osdeps
+    #     files and the releases spec file (releases.yml) resides
+    # @param output_dir [String] Path to the directory for the dynamically generated
+    #     osdeps file - the one that is finally taken into account by autoproj
+    # @return [PackageSelector] A package selector instance containing
+    #     information about blacklisted and used packages
     def self.activate_releases(release_names,
-                               data_dir: DEFAULT_DATA_DIR,
-                               specfile: File.join(data_dir, "releases".yml),
+                               data_dir: nil,
+                               spec_file: nil,
+                               spec_data: nil,
+                               ws: Autoproj.workspace,
                                output_dir: File.join(__dir__,".."),
-                               ws: Autoproj.workspace
+                               auto_update: true
                             )
         ps = Rock::DebianPackaging::PackageSelector.new
+        package_list_updated = false
         release_names.each do |release_name|
-            release = Rock::DebianPackaging::Release.new(release_name, specfile)
-            release.update(data_dir)
+            release = Rock::DebianPackaging::Release.new(release_name,
+                                                         data_dir: data_dir,
+                                                         spec_file: spec_file,
+                                                         spec_data: spec_data,
+                                                         ws: ws)
+            package_list_updated ||= release.update()
 
             ps.load_osdeps_file release_osdeps_file(release_name)
         end
+
+        if package_list_updated && auto_update
+            logfile = "/tmp/autoproj-update-rock-osdeps.log"
+            Autoproj.message "This rock release has new packages. Calling " \
+                "apt-get update to retrieve package information -- this can take some" \
+                "time (see #{logfile})"
+            system("sudo apt-get update > #{logfile}")
+        end
         ps.load_blacklist(ws: ws)
         ps.write_osdeps_file(output_dir: output_dir)
+        ps
     end
 
-    # Retrieve the operating system 
+    # Retrieve the operating system
     def self.operating_system
         if defined?(Autoproj::OSDependencies)
             Autoproj::OSDependencies.operating_system
