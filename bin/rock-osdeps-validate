@@ -1,0 +1,40 @@
+#!/usr/bin/ruby
+
+require 'optparse'
+require_relative "../lib/package_selector"
+
+o_release_name = nil
+o_data_dir = nil
+o_pkg_name = nil
+options = OptionParser.new do |opt|
+    opt.banner = "Usage: rock-osdeps-validate [options]"
+    opt.on("--release-name NAME","Name of the release to validate") do |release_name|
+        o_release_name = release_name
+    end
+    opt.on("--package NAME", "Name of the package to validate") do |pkg_name|
+        o_pkg_name = pkg_name
+    end
+    opt.on("--data-dir DIR", "Directory where the release spec and osdeps file can be found") do |data_dir|
+        o_data_dir = data_dir
+    end
+end
+
+remaining_options = options.parse(ARGV)
+
+if !o_release_name
+    puts options
+    exit 0
+end
+
+if !o_data_dir
+    o_data_dir = File.join(__dir__,"..","data")
+end
+
+release = Rock::DebianPackaging::Release.new(o_release_name, data_dir: o_data_dir)
+release.update()
+
+ps = Rock::DebianPackaging::PackageSelector.new
+osdeps_file = Rock::DebianPackaging::PackageSelector.release_osdeps_file(o_release_name, data_dir: o_data_dir)
+
+ps.load_osdeps_file(osdeps_file)
+ps.validate(o_pkg_name)

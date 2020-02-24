@@ -74,9 +74,12 @@ class PackageSelector
     # @param release_name [String] name of the release (should be a key in the
     #   releases.yml file)
     # @return [String] path to the release file
-    def self.release_osdeps_file(release_name)
+    def self.release_osdeps_file(release_name, data_dir: nil)
+        if !data_dir
+            raise ArgumentError, "PackageSelector.release_osdeps_file: data directory not provided"
+        end
         release_file =
-            File.join(__dir__,"..","data","#{release_name}-#{Release.architecture}.yml")
+            File.join(data_dir,"#{release_name}-#{Release.architecture}.yml")
         if !File.exist?(release_file)
             raise ArgumentError, "#{self.class}::#{__method__}: rock release '#{release_name}' has no osdeps file for the architecture '#{Release.architecture}' -- #{File.absolute_path(release_file)} missing"
         end
@@ -128,7 +131,7 @@ class PackageSelector
                                                          ws: ws)
             package_list_updated ||= release.update()
 
-            ps.load_osdeps_file release_osdeps_file(release_name)
+            ps.load_osdeps_file release_osdeps_file(release_name, data_dir: data_dir)
         end
 
         if package_list_updated && auto_update
@@ -251,6 +254,52 @@ class PackageSelector
         if File.exists?(blacklist_file)
             @blacklist = YAML.load_file(blacklist_file)
         end
+    end
+
+    # Validate the mapping from alias to debian packages in the existin osdeps
+    # file
+    # @param package_name [String] Optionally limit the validation to a single
+    #   package
+    # @return [Array<String>] Return array of packages that failed validation
+    def validate(package_name = nil)
+        missing = {}
+        packages = {}
+        if package_name
+            if @pkg_to_deb.has_key?(package_name)
+                packages[package_name] = @pkg_to_deb[package_name]
+            else
+                raise ArgumentError, "#{self} package '#{package_name}'"\
+                    " is not defined"
+            end
+        else
+            packages = @pkg_to_deb
+        end
+        packages.each do |k,v|
+            if PackageSelector.available?(v)
+                Autoproj.message "#{k} : #{v} [OK]"
+            else
+                Autoproj.warn "#{k} : #{v} [MISSING]"
+                missing[k] = v
+            end
+        end
+
+        if missing.empty?
+            Autoproj.message "Perfect - all packages point to a known Debian package in your osdeps file."
+        else
+            Autoproj.warn "Packages #{missing.keys.join(",")} are listed to have a debian package,"\
+                "but their debian packages are unknown to 'apt'.\nDid you forget "\
+                "to call 'apt update'?"
+        end
+        return missing.keys
+    end
+
+    # Check with 'apt show' if a package with the given name is already installed
+    # @param package_name [String] name of the package
+    # @return [Bool] true if package is already installed, false otherwise
+    def self.available?(package_name)
+        msg, status = Open3.capture2e("apt show #{package_name}")
+        Autoproj.debug msg
+        return status.success?
     end
 end
 
