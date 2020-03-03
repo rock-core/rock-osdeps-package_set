@@ -1,163 +1,1568 @@
 ---
 tools/msgpack-c:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-tools-msgpack-c
     18.04,bionic,beaver,default: rock-master-19.06-tools-msgpack-c
+  debian:
+    9,stretch,default: rock-master-19.06-tools-msgpack-c
 utilrb:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-utilrb
     18.04,bionic,beaver,default: rock-master-19.06-ruby-utilrb
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-utilrb
 typelib:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-typelib
     18.04,bionic,beaver,default: rock-master-19.06-typelib
+  debian:
+    9,stretch,default: rock-master-19.06-typelib
 base/cmake:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-base-cmake
     18.04,bionic,beaver,default: rock-master-19.06-base-cmake
+  debian:
+    9,stretch,default: rock-master-19.06-base-cmake
 external/sisl:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-external-sisl
     18.04,bionic,beaver,default: rock-master-19.06-external-sisl
+  debian:
+    9,stretch,default: rock-master-19.06-external-sisl
 base/logging:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-base-logging
     18.04,bionic,beaver,default: rock-master-19.06-base-logging
+  debian:
+    9,stretch,default: rock-master-19.06-base-logging
 gui/osgviz:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-gui-osgviz
     18.04,bionic,beaver,default: rock-master-19.06-gui-osgviz
+  debian:
+    9,stretch,default: rock-master-19.06-gui-osgviz
 gui/vizkit3d:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-gui-vizkit3d
     18.04,bionic,beaver,default: rock-master-19.06-gui-vizkit3d
+  debian:
+    9,stretch,default: rock-master-19.06-gui-vizkit3d
 base/types:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-base-types
     18.04,bionic,beaver,default: rock-master-19.06-base-types
+  debian:
+    9,stretch,default: rock-master-19.06-base-types
 tools/pocolog_cpp:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-tools-pocolog-cpp
     18.04,bionic,beaver,default: rock-master-19.06-tools-pocolog-cpp
+  debian:
+    9,stretch,default: rock-master-19.06-tools-pocolog-cpp
 tools/pocolog2msgpack:
   ubuntu:
     18.04,bionic,beaver,default: rock-master-19.06-tools-pocolog2msgpack
+  debian:
+    9,stretch,default: rock-master-19.06-tools-pocolog2msgpack
 base/console_bridge:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-base-console-bridge
     18.04,bionic,beaver,default: rock-master-19.06-base-console-bridge
+  debian:
+    9,stretch,default: rock-master-19.06-base-console-bridge
 tools/class_loader:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-tools-class-loader
     18.04,bionic,beaver,default: rock-master-19.06-tools-class-loader
+  debian:
+    9,stretch,default: rock-master-19.06-tools-class-loader
 tools/pocolog:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-tools-pocolog
     18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-pocolog
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-tools-pocolog
 tools/orogen_metadata:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-tools-orogen-metadata
     18.04,bionic,beaver,default: rock-master-19.06-tools-orogen-metadata
+  debian:
+    9,stretch,default: rock-master-19.06-tools-orogen-metadata
 tools/service_discovery:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-tools-service-discovery
     18.04,bionic,beaver,default: rock-master-19.06-tools-service-discovery
+  debian:
+    9,stretch,default: rock-master-19.06-tools-service-discovery
 rtt:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-rtt
     18.04,bionic,beaver,default: rock-master-19.06-rtt
+  debian:
+    9,stretch,default: rock-master-19.06-rtt
 tools/metaruby:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-tools-metaruby
     18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-metaruby
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-tools-metaruby
 rtt_typelib:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-rtt-typelib
     18.04,bionic,beaver,default: rock-master-19.06-rtt-typelib
+  debian:
+    9,stretch,default: rock-master-19.06-rtt-typelib
+tools/orocos_cpp_base:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-tools-orocos-cpp-base
+    18.04,bionic,beaver,default: rock-master-19.06-tools-orocos-cpp-base
+  debian:
+    9,stretch,default: rock-master-19.06-tools-orocos-cpp-base
+tools/lib_config:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-tools-lib-config
+    18.04,bionic,beaver,default: rock-master-19.06-tools-lib-config
+  debian:
+    9,stretch,default: rock-master-19.06-tools-lib-config
 orogen:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-orogen
     18.04,bionic,beaver,default: rock-master-19.06-ruby-orogen
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-orogen
+tools/orogen_cpp_proxies:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-tools-orogen-cpp-proxies
+    18.04,bionic,beaver,default: rock-master-19.06-tools-orogen-cpp-proxies
+  debian:
+    9,stretch,default: rock-master-19.06-tools-orogen-cpp-proxies
+tools/orogen_model_exporter:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-tools-orogen-model-exporter
+    18.04,bionic,beaver,default: rock-master-19.06-tools-orogen-model-exporter
+  debian:
+    9,stretch,default: rock-master-19.06-tools-orogen-model-exporter
 base/orogen/std:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-base-orogen-std
     18.04,bionic,beaver,default: rock-master-19.06-base-orogen-std
+  debian:
+    9,stretch,default: rock-master-19.06-base-orogen-std
 tools/orocos.rb:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-tools-orocos.rb
     18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-orocos.rb
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-tools-orocos.rb
 tools/rest_api:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-tools-rest-api
     18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-rest-api
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-tools-rest-api
 gui/rock_webapp:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-gui-rock-webapp
     18.04,bionic,beaver,default: rock-master-19.06-gui-rock-webapp
+  debian:
+    9,stretch,default: rock-master-19.06-gui-rock-webapp
 tools/roby:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-tools-roby
     18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-roby
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-tools-roby
 drivers/aggregator:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-aggregator
     18.04,bionic,beaver,default: rock-master-19.06-drivers-aggregator
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-aggregator
 base/orogen/types:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-base-orogen-types
     18.04,bionic,beaver,default: rock-master-19.06-base-orogen-types
+  debian:
+    9,stretch,default: rock-master-19.06-base-orogen-types
 base/scripts:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-base-scripts
     18.04,bionic,beaver,default: rock-master-19.06-ruby-base-scripts
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-base-scripts
 drivers/transformer:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-transformer
     18.04,bionic,beaver,default: rock-master-19.06-drivers-transformer
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-transformer
 tools/logger:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-tools-logger
     18.04,bionic,beaver,default: rock-master-19.06-tools-logger
+  debian:
+    9,stretch,default: rock-master-19.06-tools-logger
 drivers/orogen/aggregator:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-aggregator
     18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-aggregator
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-aggregator
 perception/jpeg_conversion:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-perception-jpeg-conversion
     18.04,bionic,beaver,default: rock-master-19.06-perception-jpeg-conversion
+  debian:
+    9,stretch,default: rock-master-19.06-perception-jpeg-conversion
 drivers/orogen/transformer:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-transformer
     18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-transformer
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-transformer
 perception/frame_helper:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-perception-frame-helper
     18.04,bionic,beaver,default: rock-master-19.06-perception-frame-helper
+  debian:
+    9,stretch,default: rock-master-19.06-perception-frame-helper
 gui/rock_widget_collection:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-gui-rock-widget-collection
     18.04,bionic,beaver,default: rock-master-19.06-gui-rock-widget-collection
+  debian:
+    9,stretch,default: rock-master-19.06-gui-rock-widget-collection
 gui/vizkit:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-gui-vizkit
     18.04,bionic,beaver,default: rock-master-19.06-ruby-gui-vizkit
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-gui-vizkit
 tools/syskit:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-tools-syskit
     18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-syskit
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-tools-syskit
 bundles/common_models:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-bundles-common-models
     18.04,bionic,beaver,default: rock-master-19.06-ruby-bundles-common-models
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-bundles-common-models
 tools/telemetry:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-tools-telemetry
     18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-telemetry
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-tools-telemetry
 tools/rubigen:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-tools-rubigen
     18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-rubigen
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-tools-rubigen
 bundles/rock:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-bundles-rock
     18.04,bionic,beaver,default: rock-master-19.06-ruby-bundles-rock
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-bundles-rock
 base/templates/ruby_lib:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-base-templates-ruby-lib
     18.04,bionic,beaver,default: rock-master-19.06-base-templates-ruby-lib
+  debian:
+    9,stretch,default: rock-master-19.06-base-templates-ruby-lib
 base/numeric:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-base-numeric
     18.04,bionic,beaver,default: rock-master-19.06-base-numeric
+  debian:
+    9,stretch,default: rock-master-19.06-base-numeric
 base/templates/cmake_lib:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-base-templates-cmake-lib
     18.04,bionic,beaver,default: rock-master-19.06-base-templates-cmake-lib
+  debian:
+    9,stretch,default: rock-master-19.06-base-templates-cmake-lib
 base/templates/cmake_vizkit_widget:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-base-templates-cmake-vizkit-widget
     18.04,bionic,beaver,default: rock-master-19.06-base-templates-cmake-vizkit-widget
+  debian:
+    9,stretch,default: rock-master-19.06-base-templates-cmake-vizkit-widget
 base/templates/vizkit3d_plugin:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-base-templates-vizkit3d-plugin
     18.04,bionic,beaver,default: rock-master-19.06-base-templates-vizkit3d-plugin
+  debian:
+    9,stretch,default: rock-master-19.06-base-templates-vizkit3d-plugin
 base/templates/bundle:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-base-templates-bundle
     18.04,bionic,beaver,default: rock-master-19.06-base-templates-bundle
+  debian:
+    9,stretch,default: rock-master-19.06-base-templates-bundle
 base/templates/doc:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-base-templates-doc
     18.04,bionic,beaver,default: rock-master-19.06-base-templates-doc
+  debian:
+    9,stretch,default: rock-master-19.06-base-templates-doc
 tools/log_tools:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-tools-log-tools
     18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-log-tools
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-tools-log-tools
 drivers/iodrivers_base:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-iodrivers-base
     18.04,bionic,beaver,default: rock-master-19.06-drivers-iodrivers-base
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-iodrivers-base
 drivers/orogen/iodrivers_base:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-iodrivers-base
     18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-iodrivers-base
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-iodrivers-base
+tools/backward:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-tools-backward
+    18.04,bionic,beaver,default: rock-master-19.06-tools-backward
+  debian:
+    9,stretch,default: rock-master-19.06-tools-backward
+tools/configmaps:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-tools-configmaps
+    18.04,bionic,beaver,default: rock-master-19.06-tools-configmaps
+  debian:
+    9,stretch,default: rock-master-19.06-tools-configmaps
+control/urdfdom_headers:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-urdfdom-headers
+    18.04,bionic,beaver,default: rock-master-19.06-control-urdfdom-headers
+  debian:
+    9,stretch,default: rock-master-19.06-control-urdfdom-headers
+control/urdfdom:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-urdfdom
+    18.04,bionic,beaver,default: rock-master-19.06-control-urdfdom
+  debian:
+    9,stretch,default: rock-master-19.06-control-urdfdom
+simulation/smurf_parser:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-simulation-smurf-parser
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-smurf-parser
+  debian:
+    9,stretch,default: rock-master-19.06-simulation-smurf-parser
+tools/smurf:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-tools-smurf
+    18.04,bionic,beaver,default: rock-master-19.06-tools-smurf
+  debian:
+    9,stretch,default: rock-master-19.06-tools-smurf
+tools/orocos_cpp:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-tools-orocos-cpp
+    18.04,bionic,beaver,default: rock-master-19.06-tools-orocos-cpp
+  debian:
+    9,stretch,default: rock-master-19.06-tools-orocos-cpp
+simulation/imumodel:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-simulation-imumodel
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-imumodel
+  debian:
+    9,stretch,default: rock-master-19.06-simulation-imumodel
+simulation/orogen/imumodel:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-simulation-orogen-imumodel
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-orogen-imumodel
+  debian:
+    9,stretch,default: rock-master-19.06-simulation-orogen-imumodel
+simulation/lib_manager:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-simulation-lib-manager
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-lib-manager
+  debian:
+    9,stretch,default: rock-master-19.06-simulation-lib-manager
+simulation/mars/common/utils:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-utils
+simulation/mars/common/cfg_manager:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-cfg-manager
+simulation/mars/common/gui/main_gui:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-main-gui
+simulation/mars/common/gui/config_map_gui:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-config-map-gui
+simulation/mars/common/gui/gui_app:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-gui-app
+simulation/mars/common/data_broker:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-data-broker
+simulation/mars/interfaces:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-interfaces
+simulation/ode:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-simulation-ode
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-ode
+  debian:
+    9,stretch,default: rock-master-19.06-simulation-ode
+simulation/mars/sim:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-sim
+simulation/mars/entity_generation/entity_factory:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-entity-generation-entity-factory
+simulation/mars/entity_generation/primitives:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-entity-generation-primitives
+simulation/mars/plugins/entity_view:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-entity-view
+simulation/mars/plugins/SkyDomePlugin:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-skydomeplugin
+simulation/mars/common/graphics/osg_material_manager:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-material-manager
+simulation/mars/common/graphics/osg_terrain:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-terrain
+simulation/mars/graphics:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-graphics
+simulation/mars/plugins/CameraGUI:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-cameragui
+simulation/mars/common/graphics/osg_points:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-points
+simulation/mars/plugins/TerrainPlugin:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-terrainplugin
+simulation/mars/common/graphics/osg_lines:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-lines
+simulation/mars/plugins/PythonMars:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-pythonmars
+simulation/mars/common/gui/data_broker_plotter2:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-data-broker-plotter2
+external/minizip:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-external-minizip
+    18.04,bionic,beaver,default: rock-master-19.06-external-minizip
+  debian:
+    9,stretch,default: rock-master-19.06-external-minizip
+simulation/mars/entity_generation/smurf:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-entity-generation-smurf
+simulation/mars/smurf_loader:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-smurf-loader
+simulation/mars/common/graphics/osg_text:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-text
+simulation/mars/common/graphics/osg_text_factory:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-text-factory
+simulation/mars/plugins/Text3D:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-text3d
+simulation/mars/common/gui/cfg_manager_gui:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-cfg-manager-gui
+simulation/mars/common/gui/lib_manager_gui:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-lib-manager-gui
+simulation/mars/common/gui/log_console:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-log-console
+simulation/mars/common/gui/data_broker_gui:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-data-broker-gui
+simulation/mars/common/gui/data_broker_plotter:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-data-broker-plotter
+simulation/mars/gui:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-gui
+simulation/mars/scene_loader:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-scene-loader
+simulation/mars/plugins/connexion_plugin:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-connexion-plugin
+simulation/mars/app:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-app
+simulation/mars/viz:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-viz
+simulation/mars/plugins/VirtualJoystickPlugin:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-virtualjoystickplugin
+simulation/mars/plugins/constraint_plugin:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-constraint-plugin
+simulation/mars/doc:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-doc
+simulation/orogen/mars:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-orogen-mars
+simulation/orogen/mars_addons:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-simulation-orogen-mars-addons
 gui/osg_plugins/osgdb_bobj:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-gui-osg-plugins-osgdb-bobj
     18.04,bionic,beaver,default: rock-master-19.06-gui-osg-plugins-osgdb-bobj
+  debian:
+    9,stretch,default: rock-master-19.06-gui-osg-plugins-osgdb-bobj
 tools/apaka:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-tools-apaka
     18.04,bionic,beaver,default: rock-master-19.06-ruby-tools-apaka
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-tools-apaka
+drivers/orogen/video_streamer_webrtc:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-video-streamer-webrtc
+knowledge_reasoning/factpp:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-knowledge-reasoning-factpp
+    18.04,bionic,beaver,default: rock-master-19.06-knowledge-reasoning-factpp
+  debian:
+    9,stretch,default: rock-master-19.06-knowledge-reasoning-factpp
+utilmm:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-utilmm
+    18.04,bionic,beaver,default: rock-master-19.06-utilmm
+  debian:
+    9,stretch,default: rock-master-19.06-utilmm
+knowledge_reasoning/owlapi:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-knowledge-reasoning-owlapi
+    18.04,bionic,beaver,default: rock-master-19.06-knowledge-reasoning-owlapi
+  debian:
+    9,stretch,default: rock-master-19.06-knowledge-reasoning-owlapi
+external/lemon:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-external-lemon
+    18.04,bionic,beaver,default: rock-master-19.06-external-lemon
+  debian:
+    9,stretch,default: rock-master-19.06-external-lemon
+external/snap:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-external-snap
+external/gexf:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-external-gexf
+    18.04,bionic,beaver,default: rock-master-19.06-external-gexf
+  debian:
+    9,stretch,default: rock-master-19.06-external-gexf
+tools/graph_analysis:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-tools-graph-analysis
+multiagent/fipa_acl:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-multiagent-fipa-acl
+    18.04,bionic,beaver,default: rock-master-19.06-multiagent-fipa-acl
+  debian:
+    9,stretch,default: rock-master-19.06-multiagent-fipa-acl
+multiagent/fipa_services:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-multiagent-fipa-services
+    18.04,bionic,beaver,default: rock-master-19.06-multiagent-fipa-services
+  debian:
+    9,stretch,default: rock-master-19.06-multiagent-fipa-services
+multiagent/orogen/fipa_services:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-multiagent-orogen-fipa-services
+    18.04,bionic,beaver,default: rock-master-19.06-multiagent-orogen-fipa-services
+  debian:
+    9,stretch,default: rock-master-19.06-multiagent-orogen-fipa-services
+bundles/rock_multiagent:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-bundles-rock-multiagent
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-bundles-rock-multiagent
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-bundles-rock-multiagent
+external/libply:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-external-libply
+drivers/imu_an_spatial:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-imu-an-spatial
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-imu-an-spatial
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-imu-an-spatial
+drivers/gps_base:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-gps-base
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-gps-base
+gui/vizkit3d_pcl:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-gui-vizkit3d-pcl
+    18.04,bionic,beaver,default: rock-master-19.06-gui-vizkit3d-pcl
+  debian:
+    9,stretch,default: rock-master-19.06-gui-vizkit3d-pcl
+perception/apriltags:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-perception-apriltags
+    18.04,bionic,beaver,default: rock-master-19.06-perception-apriltags
+  debian:
+    9,stretch,default: rock-master-19.06-perception-apriltags
+control/kdl:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-kdl
+    18.04,bionic,beaver,default: rock-master-19.06-control-kdl
+  debian:
+    9,stretch,default: rock-master-19.06-control-kdl
+control/kdl_parser:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-kdl-parser
+    18.04,bionic,beaver,default: rock-master-19.06-control-kdl-parser
+slam/threed_odometry:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-threed-odometry
+    18.04,bionic,beaver,default: rock-master-19.06-slam-threed-odometry
+control/visp:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-visp
+    18.04,bionic,beaver,default: rock-master-19.06-control-visp
+  debian:
+    9,stretch,default: rock-master-19.06-control-visp
+control/uwv_dynamic_model:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-uwv-dynamic-model
+    18.04,bionic,beaver,default: rock-master-19.06-control-uwv-dynamic-model
+  debian:
+    9,stretch,default: rock-master-19.06-control-uwv-dynamic-model
+slam/mtk:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-mtk
+    18.04,bionic,beaver,default: rock-master-19.06-slam-mtk
+  debian:
+    9,stretch,default: rock-master-19.06-slam-mtk
+slam/pose_estimation:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-pose-estimation
+    18.04,bionic,beaver,default: rock-master-19.06-slam-pose-estimation
+slam/uwv_kalman_filters:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-uwv-kalman-filters
+    18.04,bionic,beaver,default: rock-master-19.06-slam-uwv-kalman-filters
+perception/depth_map_preprocessing:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-perception-depth-map-preprocessing
+    18.04,bionic,beaver,default: rock-master-19.06-perception-depth-map-preprocessing
+  debian:
+    9,stretch,default: rock-master-19.06-perception-depth-map-preprocessing
+drivers/imu_advanced_navigation_anpp:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-imu-advanced-navigation-anpp
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-imu-advanced-navigation-anpp
+control/joint_tools:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-joint-tools
+    18.04,bionic,beaver,default: rock-master-19.06-control-joint-tools
+  debian:
+    9,stretch,default: rock-master-19.06-control-joint-tools
+slam/gtsam:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-gtsam
+drivers/libusb:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-libusb
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-libusb
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-libusb
+slam/ceres_solver:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-ceres-solver
+    18.04,bionic,beaver,default: rock-master-19.06-slam-ceres-solver
+  debian:
+    9,stretch,default: rock-master-19.06-slam-ceres-solver
+bundles/rock_auv:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-bundles-rock-auv
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-bundles-rock-auv
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-bundles-rock-auv
+perception/projection:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-perception-projection
+    18.04,bionic,beaver,default: rock-master-19.06-perception-projection
+  debian:
+    9,stretch,default: rock-master-19.06-perception-projection
+gui/point_cloud:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-gui-point-cloud
+    18.04,bionic,beaver,default: rock-master-19.06-gui-point-cloud
+  debian:
+    9,stretch,default: rock-master-19.06-gui-point-cloud
+gui/qcam_calib:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-gui-qcam-calib
+    18.04,bionic,beaver,default: rock-master-19.06-gui-qcam-calib
+  debian:
+    9,stretch,default: rock-master-19.06-gui-qcam-calib
+perception/viso2:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-perception-viso2
+    18.04,bionic,beaver,default: rock-master-19.06-perception-viso2
+  debian:
+    9,stretch,default: rock-master-19.06-perception-viso2
+planning/randward:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-planning-randward
+    18.04,bionic,beaver,default: rock-master-19.06-planning-randward
+  debian:
+    9,stretch,default: rock-master-19.06-planning-randward
+planning/arvand_herd:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-planning-arvand-herd
+    18.04,bionic,beaver,default: rock-master-19.06-planning-arvand-herd
+  debian:
+    9,stretch,default: rock-master-19.06-planning-arvand-herd
+planning/fd_cedalion:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-planning-fd-cedalion
+    18.04,bionic,beaver,default: rock-master-19.06-planning-fd-cedalion
+  debian:
+    9,stretch,default: rock-master-19.06-planning-fd-cedalion
+planning/fd_uniform:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-planning-fd-uniform
+    18.04,bionic,beaver,default: rock-master-19.06-planning-fd-uniform
+  debian:
+    9,stretch,default: rock-master-19.06-planning-fd-uniform
+planning/bfsf:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-planning-bfsf
+    18.04,bionic,beaver,default: rock-master-19.06-planning-bfsf
+  debian:
+    9,stretch,default: rock-master-19.06-planning-bfsf
+planning/fast_downward:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-planning-fast-downward
+    18.04,bionic,beaver,default: rock-master-19.06-planning-fast-downward
+  debian:
+    9,stretch,default: rock-master-19.06-planning-fast-downward
+planning/lama:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-planning-lama
+    18.04,bionic,beaver,default: rock-master-19.06-planning-lama
+  debian:
+    9,stretch,default: rock-master-19.06-planning-lama
+planning/pddl_planner:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-planning-pddl-planner
+    18.04,bionic,beaver,default: rock-master-19.06-planning-pddl-planner
+  debian:
+    9,stretch,default: rock-master-19.06-planning-pddl-planner
+control/motor_controller:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-motor-controller
+    18.04,bionic,beaver,default: rock-master-19.06-control-motor-controller
+  debian:
+    9,stretch,default: rock-master-19.06-control-motor-controller
+control/hysteresis_model:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-hysteresis-model
+    18.04,bionic,beaver,default: rock-master-19.06-control-hysteresis-model
+  debian:
+    9,stretch,default: rock-master-19.06-control-hysteresis-model
+slam/terrain_estimator:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-terrain-estimator
+    18.04,bionic,beaver,default: rock-master-19.06-slam-terrain-estimator
+  debian:
+    9,stretch,default: rock-master-19.06-slam-terrain-estimator
+slam/odometry:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-odometry
+    18.04,bionic,beaver,default: rock-master-19.06-slam-odometry
+  debian:
+    9,stretch,default: rock-master-19.06-slam-odometry
+slam/gmapping:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-gmapping
+    18.04,bionic,beaver,default: rock-master-19.06-slam-gmapping
+  debian:
+    9,stretch,default: rock-master-19.06-slam-gmapping
+gui/map2d:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-gui-map2d
+    18.04,bionic,beaver,default: rock-master-19.06-gui-map2d
+  debian:
+    9,stretch,default: rock-master-19.06-gui-map2d
+drivers/imu_stim300:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-imu-stim300
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-imu-stim300
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-imu-stim300
+drivers/imu_imar:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-imu-imar
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-imu-imar
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-imu-imar
+drivers/alt_imagenex:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-alt-imagenex
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-alt-imagenex
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-alt-imagenex
+drivers/ctd_seabird:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-ctd-seabird
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-ctd-seabird
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-ctd-seabird
+drivers/mbeam_imagenex:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-mbeam-imagenex
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-mbeam-imagenex
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-mbeam-imagenex
+drivers/pressure_paroscientific:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-pressure-paroscientific
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-pressure-paroscientific
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-pressure-paroscientific
+drivers/base_schilling:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-base-schilling
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-base-schilling
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-base-schilling
+drivers/ucm_schilling:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-ucm-schilling
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-ucm-schilling
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-ucm-schilling
+drivers/act_schilling:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-act-schilling
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-act-schilling
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-act-schilling
+drivers/phins_ixsea:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-phins-ixsea
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-phins-ixsea
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-phins-ixsea
+drivers/aravis:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-aravis
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-aravis
+drivers/camera_interface:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-camera-interface
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-camera-interface
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-camera-interface
+drivers/camera_aravis:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-camera-aravis
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-camera-aravis
+gui/vizkit_3d_plugins:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-gui-vizkit-3d-plugins
+drivers/dps_desertstar_ssp1:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-dps-desertstar-ssp1
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-dps-desertstar-ssp1
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-dps-desertstar-ssp1
+planning/sbpl:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-planning-sbpl
+    18.04,bionic,beaver,default: rock-master-19.06-planning-sbpl
+  debian:
+    9,stretch,default: rock-master-19.06-planning-sbpl
+planning/ompl:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-planning-ompl
+    18.04,bionic,beaver,default: rock-master-19.06-planning-ompl
+  debian:
+    9,stretch,default: rock-master-19.06-planning-ompl
+slam/octomap:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-octomap
+    18.04,bionic,beaver,default: rock-master-19.06-slam-octomap
+  debian:
+    9,stretch,default: rock-master-19.06-slam-octomap
+drivers/freenect:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-freenect
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-freenect
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-freenect
+control/robot_frames:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-robot-frames
+    18.04,bionic,beaver,default: rock-master-19.06-control-robot-frames
+gui/control_ui:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-gui-control-ui
+    18.04,bionic,beaver,default: rock-master-19.06-gui-control-ui
+gui/robot_model:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-gui-robot-model
+    18.04,bionic,beaver,default: rock-master-19.06-gui-robot-model
+control/joint_dispatcher:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-joint-dispatcher
+    18.04,bionic,beaver,default: rock-master-19.06-control-joint-dispatcher
+  debian:
+    9,stretch,default: rock-master-19.06-control-joint-dispatcher
+control/kdl_conversions:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-kdl-conversions
+    18.04,bionic,beaver,default: rock-master-19.06-control-kdl-conversions
+  debian:
+    9,stretch,default: rock-master-19.06-control-kdl-conversions
+data_processing/openann:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-data-processing-openann
+  debian:
+    9,stretch,default: rock-master-19.06-data-processing-openann
+data_processing/type_to_vector:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-data-processing-type-to-vector
+    18.04,bionic,beaver,default: rock-master-19.06-data-processing-type-to-vector
+  debian:
+    9,stretch,default: rock-master-19.06-data-processing-type-to-vector
+drivers/video_capture_vlc:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-video-capture-vlc
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-video-capture-vlc
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-video-capture-vlc
+drivers/video_streamer_vlc:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-video-streamer-vlc
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-video-streamer-vlc
+drivers/phidgets:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-phidgets
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-phidgets
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-phidgets
+control/reflexxes:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-reflexxes
+    18.04,bionic,beaver,default: rock-master-19.06-control-reflexxes
+  debian:
+    9,stretch,default: rock-master-19.06-control-reflexxes
+bundles/rock_ugv_nav:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-bundles-rock-ugv-nav
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-bundles-rock-ugv-nav
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-bundles-rock-ugv-nav
+drivers/ptu_directedperception:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-ptu-directedperception
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-ptu-directedperception
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-ptu-directedperception
+external/yaml-cpp:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-external-yaml-cpp
+    18.04,bionic,beaver,default: rock-master-19.06-external-yaml-cpp
+  debian:
+    9,stretch,default: rock-master-19.06-external-yaml-cpp
+external/yaml-cpp03:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-external-yaml-cpp03
+    18.04,bionic,beaver,default: rock-master-19.06-external-yaml-cpp03
+  debian:
+    9,stretch,default: rock-master-19.06-external-yaml-cpp03
+control/trajectory_follower:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-trajectory-follower
+    18.04,bionic,beaver,default: rock-master-19.06-control-trajectory-follower
+  debian:
+    9,stretch,default: rock-master-19.06-control-trajectory-follower
+drivers/velodyne_lidar:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-velodyne-lidar
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-velodyne-lidar
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-velodyne-lidar
+drivers/canbus:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-canbus
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-canbus
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-canbus
+drivers/mb500:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-mb500
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-mb500
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-mb500
+drivers/hokuyo:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-hokuyo
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-hokuyo
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-hokuyo
+drivers/xsens_imu:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-xsens-imu
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-xsens-imu
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-xsens-imu
+drivers/dynamixel:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-dynamixel
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-dynamixel
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-dynamixel
+drivers/controldev:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-controldev
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-controldev
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-controldev
+drivers/parport:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-parport
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-parport
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-parport
+drivers/camera_prosilica:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-camera-prosilica
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-camera-prosilica
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-camera-prosilica
+drivers/dvl_teledyne:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-dvl-teledyne
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-dvl-teledyne
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-dvl-teledyne
+drivers/camera_firewire:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-camera-firewire
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-camera-firewire
+drivers/fog_kvh:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-fog-kvh
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-fog-kvh
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-fog-kvh
+drivers/iCharger:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-icharger
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-icharger
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-icharger
+drivers/vicon:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-vicon
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-vicon
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-vicon
+drivers/qualisys:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-qualisys
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-qualisys
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-qualisys
+drivers/sonar_tritech:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-sonar-tritech
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-sonar-tritech
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-sonar-tritech
+drivers/laser_filter:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-laser-filter
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-laser-filter
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-laser-filter
+perception/libelas:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-perception-libelas
+    18.04,bionic,beaver,default: rock-master-19.06-perception-libelas
+  debian:
+    9,stretch,default: rock-master-19.06-perception-libelas
+perception/stereo:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-perception-stereo
+  debian:
+    9,stretch,default: rock-master-19.06-perception-stereo
+slam/pose_ekf:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-pose-ekf
+    18.04,bionic,beaver,default: rock-master-19.06-slam-pose-ekf
+  debian:
+    9,stretch,default: rock-master-19.06-slam-pose-ekf
+slam/quater_ikf:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-quater-ikf
+    18.04,bionic,beaver,default: rock-master-19.06-slam-quater-ikf
+  debian:
+    9,stretch,default: rock-master-19.06-slam-quater-ikf
+external/cminpack:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-external-cminpack
+    18.04,bionic,beaver,default: rock-master-19.06-external-cminpack
+  debian:
+    9,stretch,default: rock-master-19.06-external-cminpack
+slam/flann:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-flann
+    18.04,bionic,beaver,default: rock-master-19.06-slam-flann
+slam/hogman:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-hogman
+  debian:
+    9,stretch,default: rock-master-19.06-slam-hogman
+slam/quater_ukf:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-quater-ukf
+    18.04,bionic,beaver,default: rock-master-19.06-slam-quater-ukf
+  debian:
+    9,stretch,default: rock-master-19.06-slam-quater-ukf
+slam/g2o:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-g2o
+    18.04,bionic,beaver,default: rock-master-19.06-slam-g2o
+  debian:
+    9,stretch,default: rock-master-19.06-slam-g2o
+drivers/orogen/imu_an_spatial:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-imu-an-spatial
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-imu-an-spatial
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-imu-an-spatial
+drivers/orogen/gps_base:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-gps-base
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-gps-base
+drivers/orogen/imu_advanced_navigation_anpp:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-imu-advanced-navigation-anpp
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-imu-advanced-navigation-anpp
+slam/orogen/pcl:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-orogen-pcl
+    18.04,bionic,beaver,default: rock-master-19.06-slam-orogen-pcl
+  debian:
+    9,stretch,default: rock-master-19.06-slam-orogen-pcl
+perception/orogen/apriltags:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-perception-orogen-apriltags
+    18.04,bionic,beaver,default: rock-master-19.06-perception-orogen-apriltags
+  debian:
+    9,stretch,default: rock-master-19.06-perception-orogen-apriltags
+control/orogen/auv_control:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-orogen-auv-control
+    18.04,bionic,beaver,default: rock-master-19.06-control-orogen-auv-control
+  debian:
+    9,stretch,default: rock-master-19.06-control-orogen-auv-control
+control/orogen/visp:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-orogen-visp
+control/orogen/uwv_dynamic_model:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-orogen-uwv-dynamic-model
+    18.04,bionic,beaver,default: rock-master-19.06-control-orogen-uwv-dynamic-model
+  debian:
+    9,stretch,default: rock-master-19.06-control-orogen-uwv-dynamic-model
+drivers/orogen/dvl_teledyne:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-dvl-teledyne
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-dvl-teledyne
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-dvl-teledyne
+slam/orogen/uwv_kalman_filters:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-orogen-uwv-kalman-filters
+    18.04,bionic,beaver,default: rock-master-19.06-slam-orogen-uwv-kalman-filters
+perception/orogen/depth_map_preprocessing:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-perception-orogen-depth-map-preprocessing
+    18.04,bionic,beaver,default: rock-master-19.06-perception-orogen-depth-map-preprocessing
+  debian:
+    9,stretch,default: rock-master-19.06-perception-orogen-depth-map-preprocessing
+slam/orogen/simple_pose_integrator:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-orogen-simple-pose-integrator
+    18.04,bionic,beaver,default: rock-master-19.06-slam-orogen-simple-pose-integrator
+  debian:
+    9,stretch,default: rock-master-19.06-slam-orogen-simple-pose-integrator
+control/orogen/robot_frames:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-orogen-robot-frames
+    18.04,bionic,beaver,default: rock-master-19.06-control-orogen-robot-frames
+control/orogen/joint_tools:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-orogen-joint-tools
+    18.04,bionic,beaver,default: rock-master-19.06-control-orogen-joint-tools
+  debian:
+    9,stretch,default: rock-master-19.06-control-orogen-joint-tools
+perception/orogen/image_preprocessing:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-perception-orogen-image-preprocessing
+  debian:
+    9,stretch,default: rock-master-19.06-perception-orogen-image-preprocessing
+slam/orogen/threed_odometry:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-orogen-threed-odometry
+    18.04,bionic,beaver,default: rock-master-19.06-slam-orogen-threed-odometry
+slam/orogen/gmapping:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-orogen-gmapping
+    18.04,bionic,beaver,default: rock-master-19.06-slam-orogen-gmapping
+  debian:
+    9,stretch,default: rock-master-19.06-slam-orogen-gmapping
+perception/orogen/projection:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-perception-orogen-projection
+    18.04,bionic,beaver,default: rock-master-19.06-perception-orogen-projection
+  debian:
+    9,stretch,default: rock-master-19.06-perception-orogen-projection
+perception/orogen/virtual_view:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-perception-orogen-virtual-view
+    18.04,bionic,beaver,default: rock-master-19.06-perception-orogen-virtual-view
+  debian:
+    9,stretch,default: rock-master-19.06-perception-orogen-virtual-view
+control/orogen/trajectory_generation:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-orogen-trajectory-generation
+    18.04,bionic,beaver,default: rock-master-19.06-control-orogen-trajectory-generation
+  debian:
+    9,stretch,default: rock-master-19.06-control-orogen-trajectory-generation
+control/orogen/kdl:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-orogen-kdl
+    18.04,bionic,beaver,default: rock-master-19.06-control-orogen-kdl
+  debian:
+    9,stretch,default: rock-master-19.06-control-orogen-kdl
+drivers/orogen/canbus:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-canbus
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-canbus
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-canbus
+drivers/orogen/controldev:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-controldev
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-controldev
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-controldev
+perception/orogen/video_streamer:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-perception-orogen-video-streamer
+perception/orogen/viso2:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-perception-orogen-viso2
+  debian:
+    9,stretch,default: rock-master-19.06-perception-orogen-viso2
+slam/orogen/north_seeker:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-orogen-north-seeker
+    18.04,bionic,beaver,default: rock-master-19.06-slam-orogen-north-seeker
+  debian:
+    9,stretch,default: rock-master-19.06-slam-orogen-north-seeker
+slam/orogen/odometry:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-orogen-odometry
+    18.04,bionic,beaver,default: rock-master-19.06-slam-orogen-odometry
+  debian:
+    9,stretch,default: rock-master-19.06-slam-orogen-odometry
+perception/orogen/stereo:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-perception-orogen-stereo
+  debian:
+    9,stretch,default: rock-master-19.06-perception-orogen-stereo
+drivers/orogen/velodyne_lidar:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-velodyne-lidar
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-velodyne-lidar
+slam/orogen/localization:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-orogen-localization
+slam/orogen/pose_estimation:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-orogen-pose-estimation
+    18.04,bionic,beaver,default: rock-master-19.06-slam-orogen-pose-estimation
+planning/orogen/pddl_planner:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-planning-orogen-pddl-planner
+    18.04,bionic,beaver,default: rock-master-19.06-planning-orogen-pddl-planner
+  debian:
+    9,stretch,default: rock-master-19.06-planning-orogen-pddl-planner
+planning/orogen/heading_calculator:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-planning-orogen-heading-calculator
+    18.04,bionic,beaver,default: rock-master-19.06-planning-orogen-heading-calculator
+  debian:
+    9,stretch,default: rock-master-19.06-planning-orogen-heading-calculator
+drivers/orogen/phidgets:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-phidgets
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-phidgets
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-phidgets
+drivers/orogen/imu_imar:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-imu-imar
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-imu-imar
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-imu-imar
+drivers/orogen/alt_imagenex:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-alt-imagenex
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-alt-imagenex
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-alt-imagenex
+drivers/orogen/ctd_seabird:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-ctd-seabird
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-ctd-seabird
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-ctd-seabird
+drivers/orogen/mbeam_imagenex:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-mbeam-imagenex
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-mbeam-imagenex
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-mbeam-imagenex
+drivers/orogen/pressure_paroscientific:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-pressure-paroscientific
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-pressure-paroscientific
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-pressure-paroscientific
+drivers/orogen/ucm_schilling:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-ucm-schilling
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-ucm-schilling
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-ucm-schilling
+drivers/orogen/act_schilling:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-act-schilling
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-act-schilling
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-act-schilling
+drivers/orogen/phins_ixsea:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-phins-ixsea
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-phins-ixsea
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-phins-ixsea
+drivers/orogen/camera_base:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-camera-base
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-camera-base
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-camera-base
+drivers/orogen/camera_aravis:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-camera-aravis
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-camera-aravis
+drivers/orogen/kinect:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-kinect
+drivers/orogen/dps_desertstar_ssp1:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-dps-desertstar-ssp1
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-dps-desertstar-ssp1
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-dps-desertstar-ssp1
+drivers/orogen/video_streamer_vlc:
+  ubuntu:
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-video-streamer-vlc
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-video-streamer-vlc
+drivers/orogen/servo_dynamixel:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-servo-dynamixel
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-servo-dynamixel
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-servo-dynamixel
+control/orogen/motor_controller:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-orogen-motor-controller
+    18.04,bionic,beaver,default: rock-master-19.06-control-orogen-motor-controller
+  debian:
+    9,stretch,default: rock-master-19.06-control-orogen-motor-controller
+control/orogen/joint_dispatcher:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-orogen-joint-dispatcher
+    18.04,bionic,beaver,default: rock-master-19.06-control-orogen-joint-dispatcher
+  debian:
+    9,stretch,default: rock-master-19.06-control-orogen-joint-dispatcher
+data_processing/orogen/type_to_vector:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-data-processing-orogen-type-to-vector
+    18.04,bionic,beaver,default: rock-master-19.06-data-processing-orogen-type-to-vector
+  debian:
+    9,stretch,default: rock-master-19.06-data-processing-orogen-type-to-vector
+data_processing/orogen/statistics:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-data-processing-orogen-statistics
+    18.04,bionic,beaver,default: rock-master-19.06-data-processing-orogen-statistics
+  debian:
+    9,stretch,default: rock-master-19.06-data-processing-orogen-statistics
+drivers/orogen/ptu_directedperception:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-ptu-directedperception
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-ptu-directedperception
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-ptu-directedperception
+control/orogen/trajectory_follower:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-orogen-trajectory-follower
+    18.04,bionic,beaver,default: rock-master-19.06-control-orogen-trajectory-follower
+  debian:
+    9,stretch,default: rock-master-19.06-control-orogen-trajectory-follower
+control/orogen/skid4_control:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-control-orogen-skid4-control
+    18.04,bionic,beaver,default: rock-master-19.06-control-orogen-skid4-control
+  debian:
+    9,stretch,default: rock-master-19.06-control-orogen-skid4-control
+drivers/orogen/gps:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-gps
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-gps
+drivers/orogen/hokuyo:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-hokuyo
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-hokuyo
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-hokuyo
+drivers/orogen/xsens_imu:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-xsens-imu
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-xsens-imu
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-xsens-imu
+drivers/orogen/parport:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-parport
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-parport
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-parport
+drivers/orogen/wifimon:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-wifimon
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-wifimon
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-wifimon
+drivers/orogen/camera_prosilica:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-camera-prosilica
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-camera-prosilica
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-camera-prosilica
+drivers/orogen/fog_kvh:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-fog-kvh
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-fog-kvh
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-fog-kvh
+drivers/orogen/camera_firewire:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-camera-firewire
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-camera-firewire
+drivers/orogen/vicon:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-vicon
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-vicon
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-vicon
+drivers/orogen/camera_v4l:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-camera-v4l
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-camera-v4l
+drivers/orogen/sonar_tritech:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-sonar-tritech
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-sonar-tritech
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-sonar-tritech
+drivers/orogen/qualisys:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-qualisys
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-qualisys
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-qualisys
+drivers/orogen/laser_filter:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-laser-filter
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-laser-filter
+  debian:
+    9,stretch,default: rock-master-19.06-drivers-orogen-laser-filter
+drivers/orogen/taskmon:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-drivers-orogen-taskmon
+    18.04,bionic,beaver,default: rock-master-19.06-drivers-orogen-taskmon
+slam/orogen/tilt_scan:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-slam-orogen-tilt-scan
+    18.04,bionic,beaver,default: rock-master-19.06-slam-orogen-tilt-scan
+  debian:
+    9,stretch,default: rock-master-19.06-slam-orogen-tilt-scan
+base/boost_serialization:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-base-boost-serialization
+    18.04,bionic,beaver,default: rock-master-19.06-base-boost-serialization
+  debian:
+    9,stretch,default: rock-master-19.06-base-boost-serialization
+external/ogdf:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-external-ogdf
+    18.04,bionic,beaver,default: rock-master-19.06-external-ogdf
+  debian:
+    9,stretch,default: rock-master-19.06-external-ogdf
+tools/plugin_manager:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-tools-plugin-manager
+    18.04,bionic,beaver,default: rock-master-19.06-tools-plugin-manager
+  debian:
+    9,stretch,default: rock-master-19.06-tools-plugin-manager
+envire/envire_core:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-envire-envire-core
+    18.04,bionic,beaver,default: rock-master-19.06-envire-envire-core
+  debian:
+    9,stretch,default: rock-master-19.06-envire-envire-core
 bundler:
   ubuntu:
     16.04,xenial,xerus,default: bundler
@@ -172,10 +1577,16 @@ facets:
     9,stretch,default: ruby-facets
 backports:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-backports
     18.04,bionic,beaver,default: rock-master-19.06-ruby-backports
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-backports
 rice:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-rice
     18.04,bionic,beaver,default: rock-master-19.06-ruby-rice
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-rice
 kramdown:
   ubuntu:
     16.04,xenial,xerus,default: ruby-kramdown
@@ -184,13 +1595,16 @@ kramdown:
     9,stretch,default: ruby-kramdown
 yard:
   ubuntu:
-    16.04,xenial,xerus,default: yard
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-yard
     18.04,bionic,beaver,default: rock-master-19.06-ruby-yard
   debian:
-    9,stretch,default: yard
+    9,stretch,default: rock-master-19.06-ruby-yard
 xmlrpc:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-xmlrpc
     18.04,bionic,beaver,default: rock-master-19.06-ruby-xmlrpc
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-xmlrpc
 rack-cors:
   ubuntu:
     16.04,xenial,xerus,default: ruby-rack-cors
@@ -201,18 +1615,32 @@ state_machine:
   ubuntu:
     16.04,xenial,xerus,default: ruby-state-machine
     18.04,bionic,beaver,default: rock-master-19.06-ruby-state-machine
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-state-machine
 websocket:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-websocket
     18.04,bionic,beaver,default: rock-master-19.06-ruby-websocket
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-websocket
 rb-readline:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-rb-readline
     18.04,bionic,beaver,default: rock-master-19.06-ruby-rb-readline
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-rb-readline
 concurrent-ruby:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-concurrent-ruby
     18.04,bionic,beaver,default: rock-master-19.06-ruby-concurrent-ruby
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-concurrent-ruby
 qtbindings:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-qtbindings
     18.04,bionic,beaver,default: rock-master-19.06-ruby-qtbindings
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-qtbindings
 minitest:
   ubuntu:
     16.04,xenial,xerus,default: ruby-minitest
@@ -239,10 +1667,22 @@ timecop:
     9,stretch,default: ruby-timecop
 stackprof:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-stackprof
     18.04,bionic,beaver,default: rock-master-19.06-ruby-stackprof
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-stackprof
 tty-cursor:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-tty-cursor
     18.04,bionic,beaver,default: rock-master-19.06-ruby-tty-cursor
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-tty-cursor
+geoutm:
+  ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-geoutm
+    18.04,bionic,beaver,default: rock-master-19.06-ruby-geoutm
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-geoutm
 rake:
   ubuntu:
     16.04,xenial,xerus,default: rake
@@ -281,19 +1721,34 @@ debug_inspector:
     9,stretch,default: ruby-debug-inspector
 equatable:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-equatable
     18.04,bionic,beaver,default: rock-master-19.06-ruby-equatable
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-equatable
 tty-color:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-tty-color
     18.04,bionic,beaver,default: rock-master-19.06-ruby-tty-color
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-tty-color
 uber:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-uber
     18.04,bionic,beaver,default: ruby-uber
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-uber
 lazy_priority_queue:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-lazy-priority-queue
     18.04,bionic,beaver,default: rock-master-19.06-ruby-lazy-priority-queue
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-lazy-priority-queue
 stream:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-stream
     18.04,bionic,beaver,default: rock-master-19.06-ruby-stream
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-stream
 netrc:
   ubuntu:
     16.04,xenial,xerus,default: ruby-netrc
@@ -314,10 +1769,16 @@ msgpack:
     9,stretch,default: ruby-msgpack
 optimist:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-optimist
     18.04,bionic,beaver,default: rock-master-19.06-ruby-optimist
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-optimist
 necromancer:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-necromancer
     18.04,bionic,beaver,default: rock-master-19.06-ruby-necromancer
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-necromancer
 timers:
   ubuntu:
     16.04,xenial,xerus,default: ruby-timers
@@ -326,12 +1787,19 @@ timers:
     9,stretch,default: ruby-timers
 tty-screen:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-tty-screen
     18.04,bionic,beaver,default: rock-master-19.06-ruby-tty-screen
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-tty-screen
 cucumber-expressions:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-cucumber-expressions
     18.04,bionic,beaver,default: rock-master-19.06-ruby-cucumber-expressions
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-cucumber-expressions
 cucumber-wire:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-cucumber-wire
     18.04,bionic,beaver,default: ruby-cucumber-wire
   debian:
     9,stretch,default: ruby-cucumber-wire
@@ -361,7 +1829,10 @@ multi_test:
     9,stretch,default: ruby-multi-test
 mustermann:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-mustermann
     18.04,bionic,beaver,default: ruby-mustermann
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-mustermann
 equalizer:
   ubuntu:
     16.04,xenial,xerus,default: ruby-equalizer
@@ -382,21 +1853,34 @@ mime-types-data:
     9,stretch,default: ruby-mime-types-data
 wisper:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-wisper
     18.04,bionic,beaver,default: rock-master-19.06-ruby-wisper
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-wisper
 strings-ansi:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-strings-ansi
     18.04,bionic,beaver,default: rock-master-19.06-ruby-strings-ansi
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-strings-ansi
 unicode-display_width:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-unicode-display-width
     18.04,bionic,beaver,default: ruby-unicode-display-width
   debian:
     9,stretch,default: ruby-unicode-display-width
 unicode_utils:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-unicode-utils
     18.04,bionic,beaver,default: rock-master-19.06-ruby-unicode-utils
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-unicode-utils
 cucumber-tag_expressions:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-cucumber-tag-expressions
     18.04,bionic,beaver,default: rock-master-19.06-ruby-cucumber-tag-expressions
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-cucumber-tag-expressions
 thread_safe:
   ubuntu:
     16.04,xenial,xerus,default: ruby-thread-safe
@@ -423,7 +1907,10 @@ hoe:
     9,stretch,default: ruby-hoe
 hoe-yard:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-hoe-yard
     18.04,bionic,beaver,default: rock-master-19.06-ruby-hoe-yard
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-hoe-yard
 rake-compiler:
   ubuntu:
     16.04,xenial,xerus,default: rake-compiler
@@ -450,22 +1937,40 @@ binding_of_caller:
     9,stretch,default: ruby-binding-of-caller
 concurrent-ruby-ext:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-concurrent-ruby-ext
     18.04,bionic,beaver,default: rock-master-19.06-ruby-concurrent-ruby-ext
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-concurrent-ruby-ext
 pastel:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-pastel
     18.04,bionic,beaver,default: rock-master-19.06-ruby-pastel
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-pastel
 hooks:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-hooks
     18.04,bionic,beaver,default: rock-master-19.06-ruby-hooks
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-hooks
 rgl:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-rgl
     18.04,bionic,beaver,default: rock-master-19.06-ruby-rgl
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-rgl
 rbtrace:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-rbtrace
     18.04,bionic,beaver,default: rock-master-19.06-ruby-rbtrace
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-rbtrace
 mustermann-grape:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-mustermann-grape
     18.04,bionic,beaver,default: ruby-mustermann-grape
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-mustermann-grape
 rack-accept:
   ubuntu:
     16.04,xenial,xerus,default: ruby-rack-accept
@@ -486,10 +1991,16 @@ mime-types:
     9,stretch,default: ruby-mime-types
 tty-reader:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-tty-reader
     18.04,bionic,beaver,default: rock-master-19.06-ruby-tty-reader
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-tty-reader
 strings:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-strings
     18.04,bionic,beaver,default: rock-master-19.06-ruby-strings
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-strings
 rb-inotify:
   ubuntu:
     16.04,xenial,xerus,default: ruby-rb-inotify
@@ -528,16 +2039,28 @@ unf:
     9,stretch,default: ruby-unf
 faye-websocket:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-faye-websocket
     18.04,bionic,beaver,default: rock-master-19.06-ruby-faye-websocket
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-faye-websocket
 autorespawn:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-autorespawn
     18.04,bionic,beaver,default: rock-master-19.06-ruby-autorespawn
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-autorespawn
 tty-prompt:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-tty-prompt
     18.04,bionic,beaver,default: rock-master-19.06-ruby-tty-prompt
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-tty-prompt
 tty-table:
   ubuntu:
+    16.04,xenial,xerus,default: rock-master-19.06-ruby-tty-table
     18.04,bionic,beaver,default: rock-master-19.06-ruby-tty-table
+  debian:
+    9,stretch,default: rock-master-19.06-ruby-tty-table
 listen:
   ubuntu:
     16.04,xenial,xerus,default: ruby-listen
@@ -604,174 +2127,3 @@ grape_logging:
     18.04,bionic,beaver,default: ruby-grape-logging
   debian:
     9,stretch,default: ruby-grape-logging
-simulation/imumodel:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-imumodel
-simulation/orogen/imumodel:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-orogen-imumodel
-simulation/lib_manager:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-lib-manager
-tools/configmaps:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-tools-configmaps
-simulation/mars/common/utils:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-utils
-simulation/mars/common/cfg_manager:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-cfg-manager
-simulation/mars/common/gui/main_gui:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-main-gui
-simulation/mars/common/gui/config_map_gui:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-config-map-gui
-simulation/mars/common/gui/gui_app:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-gui-app
-simulation/mars/common/data_broker:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-data-broker
-simulation/mars/interfaces:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-interfaces
-simulation/ode:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-ode
-simulation/mars/sim:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-sim
-simulation/mars/entity_generation/entity_factory:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-entity-generation-entity-factory
-simulation/mars/entity_generation/primitives:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-entity-generation-primitives
-simulation/mars/plugins/entity_view:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-entity-view
-simulation/mars/plugins/SkyDomePlugin:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-skydomeplugin
-simulation/mars/common/graphics/osg_material_manager:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-material-manager
-simulation/mars/common/graphics/osg_terrain:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-terrain
-simulation/mars/graphics:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-graphics
-simulation/mars/common/graphics/osg_points:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-points
-simulation/mars/common/graphics/osg_lines:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-lines
-simulation/mars/plugins/PythonMars:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-pythonmars
-simulation/mars/common/gui/data_broker_plotter2:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-data-broker-plotter2
-external/minizip:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-external-minizip
-control/urdfdom_headers:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-control-urdfdom-headers
-control/urdfdom:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-control-urdfdom
-simulation/smurf_parser:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-smurf-parser
-simulation/mars/entity_generation/smurf:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-entity-generation-smurf
-simulation/mars/smurf_loader:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-smurf-loader
-simulation/mars/common/graphics/osg_text:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-text
-simulation/mars/common/graphics/osg_text_factory:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-graphics-osg-text-factory
-simulation/mars/plugins/Text3D:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-text3d
-simulation/mars/common/gui/cfg_manager_gui:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-cfg-manager-gui
-simulation/mars/common/gui/lib_manager_gui:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-lib-manager-gui
-simulation/mars/common/gui/log_console:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-log-console
-simulation/mars/common/gui/data_broker_gui:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-data-broker-gui
-simulation/mars/common/gui/data_broker_plotter:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-common-gui-data-broker-plotter
-simulation/mars/gui:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-gui
-simulation/mars/scene_loader:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-scene-loader
-simulation/mars/plugins/connexion_plugin:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-connexion-plugin
-simulation/mars/plugins/constraint_plugin:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-constraint-plugin
-simulation/mars/doc:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-doc
-tools/orocos_cpp_base:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-tools-orocos-cpp-base
-tools/lib_config:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-tools-lib-config
-tools/orogen_cpp_proxies:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-tools-orogen-cpp-proxies
-tools/orogen_model_exporter:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-tools-orogen-model-exporter
-tools/backward:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-tools-backward
-tools/smurf:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-tools-smurf
-tools/orocos_cpp:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-tools-orocos-cpp
-simulation/mars/plugins/CameraGUI:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-cameragui
-simulation/mars/plugins/TerrainPlugin:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-terrainplugin
-simulation/mars/app:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-app
-simulation/mars/viz:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-viz
-simulation/mars/plugins/VirtualJoystickPlugin:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-mars-plugins-virtualjoystickplugin
-simulation/orogen/mars:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-orogen-mars
-simulation/orogen/mars_addons:
-  ubuntu:
-    18.04,bionic,beaver,default: rock-master-19.06-simulation-orogen-mars-addons

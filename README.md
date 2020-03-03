@@ -10,10 +10,11 @@ installation.
 ## Supported Platforms:
 The following table lists the distribution and architecture combinations which are currently supported by existing releases.
 
-| Distribution | Architectures | Status |Release|
+| Distribution  | Architectures | Status |Release|
 |---------|------------|-----------|---------|
-|Ubuntu 16.04  | amd64 | supported |master-18.09, master-18.01 |
-|Ubuntu 18.04  | amd64 | supported |master-18.09               |
+|Ubuntu 16.04   | amd64 | supported |master-19.06, master-18.09, master-18.01 |
+|Ubuntu 18.04   | amd64 | supported |master-19.06, master-18.09               |
+|Debian Stretch | amd64 | supported |master-19.06, master-18.09               |
 
 Not all packages of rock-core and rock package sets could be built for all releases.
 The details on which packages are available for each platform can be extracted from the files in the subfolder data/*release*_*architecture*.yml,
