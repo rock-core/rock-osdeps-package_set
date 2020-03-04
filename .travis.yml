@@ -8,9 +8,9 @@ matrix:
 cache: bundler
 
 install:
-    - docker build -t rock-osdeps/16.04 -f Dockerfile-16.04 --build-arg PKGSET_BRANCH=rock-osdeps-test .
+    - docker build -t rock-osdeps/16.04 -f Dockerfile-16.04 --build-arg PKGSET_BRANCH=rock-osdeps .
     - docker run -d rock-osdeps/16.04 tail -f /dev/null
-    - docker build -t rock-osdeps/18.04 -f Dockerfile-18.04 --build-arg PKGSET_BRANCH=rock-osdeps-test .
+    - docker build -t rock-osdeps/18.04 -f Dockerfile-18.04 --build-arg PKGSET_BRANCH=rock-osdeps .
     - docker run -d rock-osdeps/18.04 tail -f /dev/null
 
 # overwrite the default build command

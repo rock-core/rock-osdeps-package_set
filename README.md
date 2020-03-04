@@ -9,16 +9,20 @@ installation.
 
 ## Supported Platforms:
 The following table lists the distribution and architecture combinations which are currently supported by existing releases.
+The table below implies that at least base/orogen/types are available for this platform.
 
-| Distribution  | Architectures | Status |Release|
-|---------|------------|-----------|---------|
-|Ubuntu 16.04   | amd64 | supported |master-19.06, master-18.09, master-18.01 |
-|Ubuntu 18.04   | amd64 | supported |master-19.06, master-18.09               |
-|Debian Stretch | amd64 | supported |master-19.06, master-18.09               |
+| Distribution  | master-20.01 |    master-19.06  |     master-18.09 |     master-18.01     |
+|---------|--------------------|------------------|------------------|----------------------|
+|Ubuntu 16.04   | amd64        | amd64            |    amd64         | amd64                |
+|Ubuntu 18.04   | amd64        | amd64            |    amd64         ||
+|Debian Jessie  |              | armel,armhf      |                  ||
+|Debian Stretch |              | amd64            |    amd64         ||
+|Debian Buster  | amd64,arm64  | amd64            |                  ||
 
 Not all packages of rock-core and rock package sets could be built for all releases.
-The details on which packages are available for each platform can be extracted from the files in the subfolder data/*release*_*architecture*.yml,
-which can be simply read as an autoproj osdeps file.
+The details on which packages are available for each platform can be extracted
+from the files in the subfolder in data/*release*_*architecture*.yml after
+activation of the release. The file can be simply read as an autoproj osdeps file.
 
 
 ## How to use an Rock Debian package release
@@ -153,4 +157,4 @@ This software is distributed under the [New/3-clause BSD license](https://openso
 
 ## Copyright
 
-Copyright (c) 2014-2018, DFKI GmbH Robotics Innovation Center
+Copyright (c) 2014-2020, DFKI GmbH Robotics Innovation Center
