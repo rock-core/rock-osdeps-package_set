@@ -157,6 +157,7 @@ if Autoproj.user_config('DEB_USE')
             Autobuild.env.add('LIBRARY_PATH',File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","lib"))
 
             Autobuild.env.add('OROGEN_PLUGIN_PATH', File.join(release_install_dir,"/share/orogen/plugins"))
+            Autobuild.env.add('OROGEN_PLUGIN_PATH', File.join(ENV['AUTOPROJ_CURRENT_ROOT'],"install","share","orogen","plugins"))
             Autobuild.env.add('TYPELIB_RUBY_PLUGIN_PATH', File.join(release_install_dir,"/share/typelib/ruby"))
             # gui/vizkit3d specific settings
             Autobuild.env.add('QT_PLUGIN_PATH', File.join(release_install_dir, "/lib/qt"))
