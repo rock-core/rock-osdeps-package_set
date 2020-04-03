@@ -221,12 +221,12 @@ class PackageSelector
         if pkg_blacklist && !pkg_blacklist.empty?
             disabled_pkgs = pkg_blacklist
             pkg_blacklist.each do |pkg_name|
-                if pkg_name[-1] == "*"
+                if pkg_name =~ /\A[^+*{}(),;]+\z/
+                    disabled_pkgs += disable_pkg(pkg_name)
+                else
                     disabled_pkgs += disable_pkg_by_pattern(pkg_name)
                     # remove pattern from list
                     disabled_pkgs.delete(pkg_name)
-                else
-                    disabled_pkgs += disable_pkg(pkg_name)
                 end
             end
             Autoproj.message "  Disabling osdeps: #{disabled_pkgs.sort}"

@@ -82,12 +82,16 @@ This should finally install all required Debian packages and remaining required 
 ### Features
 
 #### Blacklisting of packages
-In order to enforce the usage of a source package in a workspace create a file autoproj/deb_blacklist.yml containing the name of the particular package. This will disable automatically the use of this debian package and all that depend on that package, e.g., to disable base/types and all packages that start with simulation/ create a deb_blacklist.yml with the following content:
+In order to enforce the usage of a source package in a workspace create a file
+autoproj/deb_blacklist.yml containing the name of the particular package. This
+will disable automatically the use of this debian package and all that depend on
+that package, e.g., to disable the orogen package (which is aliased by autoproj as tools/orogen), base/types and all packages that start with simulation/ create a deb_blacklist.yml with the following content:
 
 ```
     ---
     - base/types
-    - simulation/*
+    - ^orogen$
+    - simulation/.*
 ```
 
 You will be informed about the disabled packages:
