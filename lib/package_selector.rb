@@ -11,11 +11,14 @@ class PackageSelector
     attr_reader :deb_to_pkg
     attr_reader :blacklist
 
+    attr_reader :rdepends_cache_file
+
     def initialize(osdeps_file = nil)
         @osdeps = {}
         if osdeps_file
             load_osdeps_file(osdeps_file)
         end
+        @rdepends_cache_file = File.join(__dir__,"..",".rdepends-cache.yml")
     end
 
     # Load the osdeps file considering only the relevant entries
@@ -181,11 +184,46 @@ class PackageSelector
         reverse_deps.map { |debian_pkg| @deb_to_pkg[debian_pkg] }.flatten.compact
     end
 
+    def apt_update_timestamp()
+        `stat -c %y /var/lib/apt/periodic/update-success-stamp`.strip()
+    end
+
+    def rdepends_update_timestamp()
+        rdepends = YAML.load_file(rdepends_cache_file)
+        rdepends["apt-update-timestamp"] = apt_update_timestamp()
+        File.open(rdepends_cache_file, "w") do |file|
+            file.write(rdepends.to_yaml)
+        end
+    end
+
     # Get reverse dependencies of the debian package
     def reverse_deb_dependencies(debian_pkg_name)
         if !debian_pkg_name
             raise ArgumentError, "reverse_dependencies requires an argument"
         end
+
+        rdepends = {}
+        if File.exists?(rdepends_cache_file)
+            rdepends = YAML.load_file(rdepends_cache_file)
+            timestamp = apt_update_timestamp()
+            if rdepends["apt-update-timestamp"] == timestamp
+                if rdepends.has_key?(debian_pkg_name)
+                    return rdepends[debian_pkg_name]
+                end
+            else
+                # File is outdate so we have to remove it
+                FileUtils.rm(rdepends_cache_file)
+            end
+        end
+        package_list = apt_cache_rdepends(debian_pkg_name)
+        rdepends[debian_pkg_name] = package_list
+        File.open(rdepends_cache_file, "w") do |file|
+            file.write(rdepends.to_yaml)
+        end
+        return package_list
+    end
+
+    def apt_cache_rdepends(debian_pkg_name)
         output = `apt-cache rdepends --recurse #{debian_pkg_name}`
         package_list = []
         if !output.empty?
@@ -234,7 +272,7 @@ class PackageSelector
                 filtered_osdeps.delete(pkg)
             end
         end
-
+        rdepends_update_timestamp()
         File.write(outfile, filtered_osdeps.to_yaml)
         Autoproj.info "rock-osdeps: the following source package usage has been enforced: #{disabled_pkgs}"
     end
