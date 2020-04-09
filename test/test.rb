@@ -114,6 +114,8 @@ module Rock
                 file.puts "---"
             end
 
+            release = Rock::DebianPackaging::Release.new('master-20.01',
+                                                         data_dir: @data_dir)
             begin
                 release.retrieve_osdeps_file()
             rescue Exception => e
