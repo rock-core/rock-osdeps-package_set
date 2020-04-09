@@ -259,7 +259,7 @@ class PackageSelector
         if pkg_blacklist && !pkg_blacklist.empty?
             disabled_pkgs = pkg_blacklist
             pkg_blacklist.each do |pkg_name|
-                if pkg_name =~ /\A[^+*{}(),;]+\z/
+                if pkg_name =~ /\A[^+*{}(),;$]+\z/
                     disabled_pkgs += disable_pkg(pkg_name)
                 else
                     disabled_pkgs += disable_pkg_by_pattern(pkg_name)
