@@ -11,6 +11,16 @@ module Rock
             deps =@ps.reverse_deb_dependencies("rock-master-18.09-base-types")
             assert !deps.include?("rock-master-18.09-base-orogen-std")
         end
+        it "updates the timestamp" do
+            @ps = Rock::DebianPackaging::PackageSelector.new
+            if File.exists?(@ps.rdepends_cache_file)
+                FileUtils.rm @ps.rdepends_cache_file
+            end
+            @ps.rdepends_update_timestamp()
+            assert(File.exists?(@ps.rdepends_cache_file))
+
+            @ps.rdepends_update_timestamp()
+        end
     end
 
     describe "setup_rock_osdeps" do

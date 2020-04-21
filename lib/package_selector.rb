@@ -189,7 +189,12 @@ class PackageSelector
     end
 
     def rdepends_update_timestamp()
-        rdepends = YAML.load_file(rdepends_cache_file)
+        if File.exist?(rdepends_cache_file)
+            rdepends = YAML.load_file(rdepends_cache_file)
+        else
+            rdepends = {}
+        end
+
         rdepends["apt-update-timestamp"] = apt_update_timestamp()
         File.open(rdepends_cache_file, "w") do |file|
             file.write(rdepends.to_yaml)
