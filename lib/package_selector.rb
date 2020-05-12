@@ -185,7 +185,12 @@ class PackageSelector
     end
 
     def apt_update_timestamp()
-        `stat -c %y /var/lib/apt/periodic/update-success-stamp`.strip()
+        ["/var/lib/apt/periodic/update-success-stamp",
+         "/var/cache/apt/pkgcache.bin"].each do |file|
+            if File.exists?(file)
+                return `stat -c %y #{file}`.strip()
+            end
+        end
     end
 
     def rdepends_update_timestamp()
