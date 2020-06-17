@@ -363,8 +363,8 @@ class Release
         Autoproj.env_set('ROCK_DEB_RELEASE_HIERARCHY',env_hierarchy)
     end
 
-    def update_apt_list
-        current_release_name = name
+    # Update apt source list for a current release name, e.g., buster, bionic or focal
+    def update_apt_list(current_release_name = nil)
 
         apt_update_required = false
         hierarchy.each do |release_name|

@@ -28,7 +28,7 @@ Autoproj.configuration_option 'DEB_USE_UNAVAILABLE', 'string',
 #the actual settings if enabled
 if Autoproj.user_config('DEB_USE')
     current_release_name = nil
-    ['jessie','squeeze','stretch','trusty','xenial','bionic'].each do |release_name|
+    ['jessie','squeeze','stretch','buster','trusty','xenial','bionic','focal'].each do |release_name|
         if release.include?(release_name)
             current_release_name = release_name
             break
@@ -92,7 +92,7 @@ if Autoproj.user_config('DEB_USE')
             raise "Unsupported Autoproj API: please inform the developer"
         end
 
-        release.update_apt_list() if Autoproj.user_config('DEB_AUTOMATIC')
+        release.update_apt_list(current_release_name) if Autoproj.user_config('DEB_AUTOMATIC')
         Rock::DebianPackaging::PackageSelector.activate_release(release)
     else
         Autoproj.user_config('DEB_USE_UNAVAILABLE')
