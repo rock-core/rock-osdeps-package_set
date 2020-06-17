@@ -61,3 +61,15 @@ ENV AUTOPROJ_BOOTSTRAP_IGNORE_NONEMPTY_DIR 1
 ENV AUTOPROJ_NONINTERACTIVE 1
 RUN ruby /home/docker/autoproj_bootstrap git https://github.com/rock-core/rock-osdeps-buildconf.git branch=$PKGSET_BRANCH --seed-config=seed-config.yml
 RUN /bin/bash -c "source env.sh; autoproj update; autoproj envsh"
+
+#### TEST RELEASE master-20.06
+RUN mkdir -p /home/docker/releases/master-20.06
+WORKDIR /home/docker/releases/master-20.06
+# Use the existing seed configuration
+COPY --chown=docker test/autoproj-config.yml seed-config.yml
+RUN echo "debian_release: master-20.06\n" >> seed-config.yml
+
+ENV AUTOPROJ_BOOTSTRAP_IGNORE_NONEMPTY_DIR 1
+ENV AUTOPROJ_NONINTERACTIVE 1
+RUN ruby /home/docker/autoproj_bootstrap git https://github.com/rock-core/rock-osdeps-buildconf.git branch=$PKGSET_BRANCH --seed-config=seed-config.yml
+RUN /bin/bash -c "source env.sh; autoproj update; autoproj envsh"
