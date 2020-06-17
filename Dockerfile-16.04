@@ -2,7 +2,23 @@ FROM ubuntu:16.04
 
 MAINTAINER 2maz "https://github.com/2maz"
 
-ARG PKGSET_BRANCH="rock-osdeps"
+## BEGIN BUILD ARGUMENTS
+# Arguments for creation of the Docker imaged,
+# passed via --build-arg
+
+# Optional arguments
+ARG PKG_BRANCH="master"
+ENV PKG_BRANCH=${PKG_BRANCH}
+
+ARG PKG_PULL_REQUEST="false"
+ENV PKG_PULL_REQUEST=${PKG_PULL_REQUEST}
+
+ARG PKG_PULL_REQUEST_BRANCH=""
+ENV PKG_PULL_REQUEST_BRANCH=${PKG_PULL_REQUEST_BRANCH}
+
+ARG PKG_PULL_REQUEST_SLUG=""
+ENV PKG_PULL_REQUEST_SLUG=${PKG_PULL_REQUEST_SLUG}
+## END ARGUMENTS
 
 RUN apt update
 RUN apt upgrade -y
@@ -28,24 +44,10 @@ RUN git config --global user.name "Rock Osdeps"
 
 RUN wget https://raw.githubusercontent.com/rock-core/autoproj/master/bin/autoproj_bootstrap
 
-### TEST RELEASE master-18.01 XENIAL ONLY
-RUN mkdir -p /home/docker/releases/master-18.01
-WORKDIR /home/docker/releases/master-18.01
+### TEST RELEASES
 # Use the existing seed configuration
-COPY --chown=docker test/autoproj-config.yml seed-config.yml
-RUN echo "debian_release: master-18.01\n" >> seed-config.yml
+COPY --chown=docker .ci/autoproj-config.yml /home/docker/seed-config.yml
+COPY --chown=docker .ci/prepare_release.sh /home/docker/prepare_release.sh
 
-ENV AUTOPROJ_BOOTSTRAP_IGNORE_NONEMPTY_DIR 1
-RUN ruby /home/docker/autoproj_bootstrap git https://github.com/rock-core/rock-osdeps-buildconf.git branch=$PKGSET_BRANCH --seed-config=seed-config.yml
-RUN /bin/bash -c "source env.sh; autoproj update; autoproj envsh"
-
-### TEST RELEASE master-18.09
-RUN mkdir -p /home/docker/releases/master-18.09
-WORKDIR /home/docker/releases/master-18.09
-# Use the existing seed configuration
-COPY --chown=docker test/autoproj-config.yml seed-config.yml
-RUN echo "debian_release: master-18.09\n" >> seed-config.yml
-
-ENV AUTOPROJ_BOOTSTRAP_IGNORE_NONEMPTY_DIR 1
-RUN ruby /home/docker/autoproj_bootstrap git https://github.com/rock-core/rock-osdeps-buildconf.git branch=$PKGSET_BRANCH --seed-config=seed-config.yml
-RUN /bin/bash -c "source env.sh; autoproj update; autoproj envsh"
+RUN /bin/bash prepare_release.sh master-18.01
+RUN /bin/bash prepare_release.sh master-18.09

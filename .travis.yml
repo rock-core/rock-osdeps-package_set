@@ -8,10 +8,19 @@ matrix:
 cache: bundler
 
 install:
-    - docker build -t rock-osdeps/16.04 -f Dockerfile-16.04 --build-arg PKGSET_BRANCH=rock-osdeps .
-    - docker run -d rock-osdeps/16.04 tail -f /dev/null
-    - docker build -t rock-osdeps/18.04 -f Dockerfile-18.04 --build-arg PKGSET_BRANCH=rock-osdeps .
-    - docker run -d rock-osdeps/18.04 tail -f /dev/null
+    - while sleep 9m; do echo "=====[ $SECONDS seconds still running ]====="; done &
+    - docker build -t rock-osdeps/16.04 -f Dockerfile-16.04
+            --build-arg PKG_BRANCH="${TRAVIS_BRANCH}"
+            --build-arg PKG_PULL_REQUEST="${TRAVIS_PULL_REQUEST}"
+            --build-arg PKG_PULL_REQUEST_BRANCH="${TRAVIS_PULL_REQUEST_BRANCH}"
+            --build-arg PKG_PULL_REQUEST_SLUG="${TRAVIS_PULL_REQUEST_SLUG}"
+            .
+    - docker build -t rock-osdeps/18.04 -f Dockerfile-18.04
+            --build-arg PKG_BRANCH="${TRAVIS_BRANCH}"
+            --build-arg PKG_PULL_REQUEST="${TRAVIS_PULL_REQUEST}"
+            --build-arg PKG_PULL_REQUEST_BRANCH="${TRAVIS_PULL_REQUEST_BRANCH}"
+            --build-arg PKG_PULL_REQUEST_SLUG="${TRAVIS_PULL_REQUEST_SLUG}"
+            .
 
 # overwrite the default build command
 script:
@@ -19,3 +28,4 @@ script:
     - docker run rock-osdeps/18.04 /bin/bash -c "source /home/docker/releases/master-18.09/env.sh; rock-log-level"
     - docker run rock-osdeps/18.04 /bin/bash -c "source /home/docker/releases/master-19.06/env.sh; rock-log-level"
     - docker run rock-osdeps/18.04 /bin/bash -c "source /home/docker/releases/master-20.01/env.sh; rock-log-level"
+    - docker run rock-osdeps/18.04 /bin/bash -c "source /home/docker/releases/master-20.06/env.sh; rock-log-level"
