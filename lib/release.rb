@@ -14,6 +14,9 @@ class Release
     attr_reader :arch
     attr_reader :data_dir
     attr_reader :spec
+    # Whether the debian packages come with a separate
+    # package prefix
+    attr_reader :separate_prefixes
 
     DEFAULT_DATA_DIR = File.join(__dir__,"..","data")
     DEFAULT_SPEC_FILE = "releases.yml"
@@ -42,11 +45,14 @@ class Release
     # default:
     #     repo_url: http://rock.hb.dfki.de/rock-releases
     #     public_key: http://rock.hb.dfki.de/rock-release/rock-robotics.public.key
+    #     separate_prefixes: true
     # master-18.01:
+    #     separate_prefixes: false
     # master-19.06:
     #     depends_on: ["master-18.06"]
     #     repo_url: http://myserver.org/release
     #     public_key: http://mykeyserver.org/public_key
+    #     separate_prefixes: false
     #
     # @param release_name [String] name of the release
     # @param data_dir [String] path to the directory of the release's osdeps
@@ -86,6 +92,7 @@ class Release
         if @spec.has_key?('default')
             @repo_url = @spec['default']['repo_url']
             @public_key = @spec['default']['public_key']
+            @separate_prefixes = @spec['default']['separate_prefixes']
         end
 
         if !@spec.has_key?(release_name)
@@ -101,6 +108,7 @@ class Release
         return unless data
         @repo_url = data['repo_url'] if data.has_key?('repo_url')
         @public_key = data['public_key'] if data.has_key?('public_key')
+        @separate_prefixes = data['separate_prefixes'] if data.has_key?('separate_prefixes')
     end
 
     def to_s
