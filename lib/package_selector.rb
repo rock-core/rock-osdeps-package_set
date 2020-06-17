@@ -132,6 +132,7 @@ class PackageSelector
                                                          spec_file: spec_file,
                                                          spec_data: spec_data,
                                                          ws: ws)
+            release.update_env
             package_list_updated ||= release.update()
 
             ps.load_osdeps_file release_osdeps_file(release_name, data_dir: data_dir)
