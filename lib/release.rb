@@ -18,6 +18,7 @@ class Release
     # package prefix
     attr_reader :separate_prefixes
 
+    DEFAULT_ENV_SH = "rock-osdeps-env.sh"
     DEFAULT_DATA_DIR = File.join(__dir__,"..","data")
     DEFAULT_SPEC_FILE = "releases.yml"
 
@@ -270,6 +271,13 @@ class Release
                 Dir.glob(File.join(release_install_dir,"*","share","scripts","shell")).each do |dir|
                     enable_shell_extension(dir)
                 end
+
+                # Prepare to source the envsh file for the packages
+                envsh = File.join(__dir__, "..", DEFAULT_ENV_SH)
+                if !File.exists?(envsh)
+                    FileUtils.touch(envsh)
+                end
+                Autoproj.env_source_file(envsh)
 
                 next
             else

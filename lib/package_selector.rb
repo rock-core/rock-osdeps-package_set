@@ -126,6 +126,7 @@ class PackageSelector
                             )
         ps = Rock::DebianPackaging::PackageSelector.new
         package_list_updated = false
+
         release_names.each do |release_name|
             release = Rock::DebianPackaging::Release.new(release_name,
                                                          data_dir: data_dir,
@@ -145,8 +146,9 @@ class PackageSelector
                 "time (see #{logfile})"
             system("sudo apt-get update > #{logfile}")
         end
-        ps.load_blacklist(ws: ws)
-        ps.write_osdeps_file(output_dir: output_dir)
+        filtered_osdeps, disabled_pkgs = ps.load_blacklist(ws: ws)
+        ps.write_osdeps_file(filtered_osdeps, disabled_pkgs, output_dir: output_dir)
+        ps.write_envsh_file(filtered_osdeps, output_dir: output_dir)
         ps
     end
 
@@ -258,14 +260,33 @@ class PackageSelector
 
     # Write the rock-osdeps.osdeps file which allows to overload the existing
     # osdeps definition to include the debian packages
-    def write_osdeps_file(filename: "rock-osdeps.osdeps", output_dir: File.join(__dir__,".."))
-        filename = File.join(output_dir, filename)
+    def write_osdeps_file(filtered_osdeps, disabled_pkgs, filename: "rock-osdeps.osdeps", output_dir: File.join(__dir__,".."))
         Autoproj.message "  Triggered regeneration of rock-osdeps.osdeps: #{filename}, blacklisted packages: #{blacklist}"
-        write_file(filename, blacklist)
+
+        filename = File.join(output_dir, filename)
+        File.write(filename, filtered_osdeps.to_yaml)
+
+        rdepends_update_timestamp()
+        Autoproj.info "rock-osdeps: the following source package usage has been enforced: #{disabled_pkgs}"
     end
 
-    # Write the osdeps file excluding the blacklisted packages
-    def write_file(outfile, pkg_blacklist)
+    def write_envsh_file(filtered_osdeps, filename: Release::DEFAULT_ENV_SH, output_dir: File.join(__dir__,".."))
+        filename = File.join(output_dir, filename)
+        Autoproj.message "  Triggered regeneration of rock-osdeps-env.sh: #{filename}"
+
+        File.open(filename,"w+") do |file|
+            filtered_osdeps.each do |pkg, data|
+                debian_pkg_name = data['default']
+                # Use the package name to infer the installation directory
+                envsh_pattern = File.join("/opt","rock","*",debian_pkg_name,"env.sh")
+                Dir.glob(envsh_pattern).each do |envsh_file|
+                    file.puts ". #{envsh_file}"
+                end
+            end
+        end
+    end
+
+    def filter_osdeps(pkg_blacklist)
         filtered_osdeps = @osdeps.dup
         if pkg_blacklist && !pkg_blacklist.empty?
             disabled_pkgs = pkg_blacklist
@@ -283,9 +304,7 @@ class PackageSelector
                 filtered_osdeps.delete(pkg)
             end
         end
-        rdepends_update_timestamp()
-        File.write(outfile, filtered_osdeps.to_yaml)
-        Autoproj.info "rock-osdeps: the following source package usage has been enforced: #{disabled_pkgs}"
+        [filtered_osdeps, disabled_pkgs]
     end
 
     # Check on the availability of a file named 'deb_blacklist.yml'
@@ -298,11 +317,14 @@ class PackageSelector
     #
     # This allows to infer all reverse dependencies that base/types has and
     # so that they are also accounted for in the blacklisting process
+    # return filtered osdeps, disabled pkgs
     def load_blacklist(ws: Autoproj.workspace)
         blacklist_file = File.join(ws.config_dir, "deb_blacklist.yml")
         if File.exists?(blacklist_file)
             @blacklist = YAML.load_file(blacklist_file)
         end
+
+        filter_osdeps(@blacklist)
     end
 
     # Validate the mapping from alias to debian packages in the existin osdeps
