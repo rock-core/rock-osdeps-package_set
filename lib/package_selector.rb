@@ -44,8 +44,9 @@ class PackageSelector
                 pkgs = osdeps_list[distribution.join(",")]
             end
             if !pkgs || pkgs.empty?
-                raise ArgumentError, "#{self.class}::#{__method__}: #{osdeps_file} does not contain information" \
+                Autoproj.warn "#{self.class}::#{__method__}: #{osdeps_file} does not contain information" \
                     " for package '#{pkg_name}' and distribution '#{distribution.join(",")}'"
+                next
             end
             pkgs.each do |key, debian_pkg_name|
                 supported_releases = key.split(",")
