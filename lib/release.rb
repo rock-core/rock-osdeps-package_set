@@ -226,6 +226,25 @@ class Release
         end
     end
 
+    def enable_shell_extension(extension_dir)
+        shell_extension = nil
+        if ENV.has_key?('SHELL')
+            ["zsh","bash","sh"].each do |shell|
+                if ENV['SHELL'].include?("/#{shell}")
+                    shell_extension = File.join(extension_dir, shell)
+                    break
+                end
+            end
+        else
+            Autoproj.warn "Failed to identify active shell type, "
+                "cannot select a shell extension"
+        end
+
+        if shell_extension and File.exist?(shell_extension)
+            Autobuild.env_source_file(shell_extension)
+        end
+    end
+
     # Update the environmental setting
     def update_env
         # identify the major.minor version of python
@@ -243,6 +262,19 @@ class Release
         Autoproj.info "Updating env for required releases: #{hierarchy}"
         hierarchy.each do |release_name|
             release_install_dir = "/opt/rock/#{release_name}"
+
+            sub_release = by_name(release_name)
+            if sub_release.separate_prefixes
+                # Activate available shell extensions (and account for pkg
+                # prefix in path)
+                Dir.glob(File.join(release_install_dir,"*","share","scripts","shell")).each do |dir|
+                    enable_shell_extension(dir)
+                end
+
+                next
+            else
+                enable_shell_extension(File.join(release_install_dir, "share","scripts","shell"))
+            end
 
             rock_ruby_archdir       = RbConfig::CONFIG['archdir'].gsub("/usr", release_install_dir)
             rock_ruby_vendordir     = File.join(release_install_dir,"/lib/ruby/vendor_ruby")
@@ -304,26 +336,8 @@ class Release
                 Autobuild.env.add('ROBY_PLUGIN_PATH', File.join(rock_ruby_vendordir, roby_plugins))
             end
             Autobuild.env.add('ROCK_BUNDLE_PATH', File.join(release_install_dir, "share/rock/bundles"))
-
-            shell_extension = nil
-            if ENV.has_key?('SHELL')
-                if ENV['SHELL'].include?('/zsh')
-                    shell_extension = File.join(release_install_dir,"share/scripts/shell/zsh")
-                elsif ENV['SHELL'].include?('/bash')
-                    shell_extension = File.join(release_install_dir,"share/scripts/shell/bash")
-                elsif ENV['SHELL'].include?('/sh')
-                    shell_extension = File.join(release_install_dir,"share/scripts/shell/sh")
-                end
-            else
-                Autoproj.warn "Failed to identify active shell type, "
-                    "cannot select a shell extension "
-                    " from #{File.join(release_install_dir,'share/scripts/shell')}"
-            end
-
-            if shell_extension and File.exist?(shell_extension)
-                Autobuild.env_source_file(shell_extension)
-            end
         end
+
         Autobuild.env_remove_path('PATH',File.join(ws.root_dir,"install","bin"))
         Autobuild.env.add('PATH',File.join(ws.root_dir,"install","bin"))
 
