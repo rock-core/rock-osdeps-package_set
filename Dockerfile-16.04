@@ -49,5 +49,5 @@ RUN wget https://raw.githubusercontent.com/rock-core/autoproj/master/bin/autopro
 COPY --chown=docker .ci/autoproj-config.yml /home/docker/seed-config.yml
 COPY --chown=docker .ci/prepare_release.sh /home/docker/prepare_release.sh
 
-RUN /bin/bash prepare_release.sh master-18.01
-RUN /bin/bash prepare_release.sh master-18.09
+RUN /bin/bash prepare_release.sh master-18.01 xenial_16.04
+RUN /bin/bash prepare_release.sh master-18.09 xenial_16.04

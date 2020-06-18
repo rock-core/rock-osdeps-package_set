@@ -1,7 +1,15 @@
 #!/bin/bash
 RELEASE_NAME=$1
+BUILD_CONF=https://github.com/rock-core/rock-osdeps-buildconf.git
 # Branch of buildconf to use for CI
-PKGSET_BRANCH=rock-osdeps
+BUILD_CONF_BRANCH=rock-osdeps
+
+DIST_RELEASE=$2
+if [ "$DIST_RELEASE" != "" ]; then
+    BUILD_CONF_BRANCH=rock-osdeps-$DIST_RELEASE
+fi
+
+echo "Prepare release: $RELEASE_NAME using buildconf: $BUILD_CONF on branch: $BUILD_CONF_BRANCH"
 
 if [ "$PKG_PULL_REQUEST_SLUG"  != "" ]; then
     PACKAGE_SET_URL="https://github.com/${PKG_PULL_REQUEST_SLUG}"
@@ -28,7 +36,7 @@ cp /home/docker/seed-config.yml seed-config.yml
 echo "debian_release: $RELEASE_NAME" >> seed-config.yml
 
 export AUTOPROJ_BOOTSTRAP_IGNORE_NONEMPTY_DIR=1
-ruby /home/docker/autoproj_bootstrap git https://github.com/rock-core/rock-osdeps-buildconf.git branch=$PKGSET_BRANCH --seed-config=seed-config.yml
+ruby /home/docker/autoproj_bootstrap git $BUILD_CONF branch=$BUILD_CONF_BRANCH --seed-config=seed-config.yml
 
 ## Check if this a pull request and change to pull request
 ## accordingly
