@@ -150,6 +150,7 @@ class PackageSelector
         filtered_osdeps, disabled_pkgs = ps.load_blacklist(ws: ws)
         ps.write_osdeps_file(filtered_osdeps, disabled_pkgs, output_dir: output_dir)
         ps.write_envsh_file(filtered_osdeps, output_dir: output_dir)
+        ps.activate_package_envsh(filtered_osdeps, ws: ws)
         ps
     end
 
@@ -271,17 +272,42 @@ class PackageSelector
         Autoproj.info "rock-osdeps: the following source package usage has been enforced: #{disabled_pkgs}"
     end
 
-    def write_envsh_file(filtered_osdeps, filename: Release::DEFAULT_ENV_SH, output_dir: File.join(__dir__,".."))
+    def each_package_envsh(filtered_osdeps)
+        return enum_for(:each_package_envsh, filter_osdeps) unless block_given?
+
+        filtered_osdeps.each do |pkg, data|
+            debian_pkg_name = data['default']
+            # Use the package name to infer the installation directory
+            envsh_pattern = File.join("/opt","rock","*",debian_pkg_name,"env.sh")
+            Dir.glob(envsh_pattern).each do |envsh_file|
+                yield envsh_file
+            end
+        end
+    end
+
+    def write_envsh_file(filtered_osdeps, filename: Release::DEFAULT_ENV_SH,
+                         output_dir: File.join(__dir__,".."))
         filename = File.join(output_dir, filename)
         Autoproj.message "  Triggered regeneration of rock-osdeps-env.sh: #{filename}"
 
         File.open(filename,"w+") do |file|
-            filtered_osdeps.each do |pkg, data|
-                debian_pkg_name = data['default']
-                # Use the package name to infer the installation directory
-                envsh_pattern = File.join("/opt","rock","*",debian_pkg_name,"env.sh")
-                Dir.glob(envsh_pattern).each do |envsh_file|
-                    file.puts ". #{envsh_file}"
+            each_package_envsh(filtered_osdeps) do |envsh_file|
+                file.puts ". #{envsh_file}"
+            end
+        end
+    end
+
+    def activate_package_envsh(filter_osdeps, ws: Autoproj.workspace)
+        each_package_envsh(filter_osdeps) do |envsh_file|
+            File.open(envsh_file).each do |line|
+                if line =~ /^(.*)=(.*)/
+                    varname = $1.strip
+                    values = $2.strip.split(":")
+                    values.each do |value|
+                        if File.directory?(value)
+                            ws.env.add_path(varname,value)
+                        end
+                    end
                 end
             end
         end
