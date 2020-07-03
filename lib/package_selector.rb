@@ -297,16 +297,43 @@ class PackageSelector
         end
     end
 
-    def activate_package_envsh(filter_osdeps, ws: Autoproj.workspace)
-        each_package_envsh(filter_osdeps) do |envsh_file|
-            File.open(envsh_file).each do |line|
+    # Load an env.sh file in a sandbox for evaluation, i.e. to extract the
+    # actual set environment variables
+    # return [Hash<String,Array<String>] List of environment variables and values
+    def eval_envsh(envsh_file)
+        if !File.exist?(envsh_file)
+            raise ArgumentError, "#{self.class}.#{__method__} File #{envsh_file} does not exist"
+        end
+
+        env = Hash.new
+        msg, status = Open3.capture2e("env -i /bin/sh -c \"unset PATH; .  #{envsh_file}; /usr/bin/env\"")
+        if status.success?
+            msg.each_line do |line|
                 if line =~ /^(.*)=(.*)/
                     varname = $1.strip
                     values = $2.strip.split(":")
-                    values.each do |value|
-                        if File.directory?(value)
-                            ws.env.add_path(varname,value)
-                        end
+                    next if varname =~ /PWD/
+                    env[varname] = values
+                end
+            end
+        else
+            raise "Rock::DebianPackaging::PackageSelector.load_env_in_sandbox"
+                " failed to extract environment variables from #{envsh_file}"
+        end
+        env
+    end
+
+    # Activate and envsh, by making the values known to autoproj for internal
+    # usage
+    # Note, that autoproj permits to isolate the environment, so that
+    # required environment variables for packages have to be set explicitely
+    def activate_package_envsh(filter_osdeps, ws: Autoproj.workspace)
+        each_package_envsh(filter_osdeps) do |envsh_file|
+            env = eval_envsh(envsh_file)
+            env.each do |varname, values|
+                values.each do |value|
+                    if File.directory?(value)
+                        ws.env.add_path(varname,value)
                     end
                 end
             end
