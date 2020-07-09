@@ -8,16 +8,20 @@ Allows you to activate the use of Rock Debian package releases in an autoproj
 installation.
 
 ## Supported Platforms:
-The following table lists the distribution and architecture combinations which are currently supported by existing releases.
+The following table lists the distribution and architecture combinations which
+are currently supported by existing releases.
+Currently releases are named after the (dominating) branch name 'master' plus
+the year and month in YY.mm format.
 The table below implies that at least base/orogen/types are available for this platform.
 
-| Distribution  | master-20.01 |    master-19.06  |     master-18.09 |     master-18.01     |
-|---------|--------------------|------------------|------------------|----------------------|
-|Ubuntu 16.04   | amd64        | amd64            |    amd64         | amd64                |
-|Ubuntu 18.04   | amd64        | amd64            |    amd64         ||
-|Debian Jessie  |              | armel,armhf      |                  ||
-|Debian Stretch |              | amd64            |    amd64         ||
-|Debian Buster  | amd64,arm64  | amd64            |                  ||
+| Distribution  | [master-20.06 (beta)](doc/master-20.06.md) | master-20.01 |    master-19.06  |     master-18.09 |     master-18.01     |
+|---------------|--------------------|------------------|------------------|----------------------|-----------|
+|Ubuntu 16.04   |              |amd64        | amd64            |    amd64         | amd64                |
+|Ubuntu 18.04   | amd64        |amd64        | amd64            |    amd64         ||
+|Ubuntu 20.04   |              |             |                  |                  ||
+|Debian Jessie  |              |             | armel,armhf      |                  ||
+|Debian Stretch |              |             | amd64            |    amd64         ||
+|Debian Buster  |              |amd64,arm64  | amd64            |                  ||
 
 Not all packages of rock-core and rock package sets could be built for all releases.
 The details on which packages are available for each platform can be extracted
@@ -79,6 +83,21 @@ Follow the questions for configuration and select a release for the Debian packa
 Finally start a new shell, reload the env.sh and call amake.
 This should finally install all required Debian packages and remaining required packages, which might have not been packaged.
 
+### Switching to the test (or other custom) branches
+
+New releases are prepare such that they can activated via switching to the
+package_set's 'test' branch.
+You can do this by changing the package_set definition in the autoproj/manifest
+file as follows:
+
+```
+    package_sets:
+    - rock-osdeps:
+      type: git
+      url: git@github.com:rock-core/rock-osdeps-package_set.git
+      branch: test
+```
+
 ### Features
 
 #### Blacklisting of packages
@@ -126,6 +145,15 @@ To identify which exact version of a package is in use you can check the changel
 
      -- Packaging Daemon <rock-dev@dfki.de>  Mon, 08 Oct 2018 10:39:43 +0200
 ```
+
+#### Browse the documentation
+
+Just open /opt/rock/master-XX.XX/share/doc/index.html to see the doxygen / rdoc/
+yard documentation for all installed packages of the corresponding release.
+
+Note that till master-20.01 the ruby documentation generation did use rdoc (due
+to a bug).
+master-20.06 starts to use yard generated documentation.
 
 ### Known Issues
 1.  If you get a message like
