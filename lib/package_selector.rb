@@ -149,8 +149,7 @@ class PackageSelector
         end
         filtered_osdeps, disabled_pkgs = ps.load_blacklist(ws: ws)
         ps.write_osdeps_file(filtered_osdeps, disabled_pkgs, output_dir: output_dir)
-        ps.write_envsh_file(filtered_osdeps, output_dir: output_dir)
-        ps.activate_package_envsh(filtered_osdeps, ws: ws)
+        ps.activate_package_env(filtered_osdeps, ws: ws)
         ps
     end
 
@@ -272,68 +271,70 @@ class PackageSelector
         Autoproj.info "rock-osdeps: the following source package usage has been enforced: #{disabled_pkgs}"
     end
 
-    def each_package_envsh(filtered_osdeps)
-        return enum_for(:each_package_envsh, filter_osdeps) unless block_given?
+    def each_package_envyml(filtered_osdeps)
+        return enum_for(:each_package_envyml, filter_osdeps) unless block_given?
 
         filtered_osdeps.each do |pkg, data|
             debian_pkg_name = data['default']
             # Use the package name to infer the installation directory
-            envsh_pattern = File.join("/opt","rock","*",debian_pkg_name,"env.sh")
-            Dir.glob(envsh_pattern).each do |envsh_file|
-                yield envsh_file
+            envyml_pattern = File.join("/opt","rock","*",debian_pkg_name,"env.yml")
+            files = Dir.glob(envyml_pattern)
+            files.each do |envsh_file|
+                yield envsh_file unless File.empty?(envsh_file)
             end
         end
-    end
-
-    def write_envsh_file(filtered_osdeps, filename: Release::DEFAULT_ENV_SH,
-                         output_dir: File.join(__dir__,".."))
-        filename = File.join(output_dir, filename)
-        Autoproj.message "  Triggered regeneration of rock-osdeps-env.sh: #{filename}"
-
-        File.open(filename,"w+") do |file|
-            each_package_envsh(filtered_osdeps) do |envsh_file|
-                file.puts ". #{envsh_file}"
-            end
-        end
-    end
-
-    # Load an env.sh file in a sandbox for evaluation, i.e. to extract the
-    # actual set environment variables
-    # return [Hash<String,Array<String>] List of environment variables and values
-    def eval_envsh(envsh_file)
-        if !File.exist?(envsh_file)
-            raise ArgumentError, "#{self.class}.#{__method__} File #{envsh_file} does not exist"
-        end
-
-        env = Hash.new
-        msg, status = Open3.capture2e("env -i /bin/sh -c \"unset PATH; .  #{envsh_file}; /usr/bin/env\"")
-        if status.success?
-            msg.each_line do |line|
-                if line =~ /^(.*)=(.*)/
-                    varname = $1.strip
-                    values = $2.strip.split(":")
-                    next if varname =~ /PWD/
-                    env[varname] = values
-                end
-            end
-        else
-            raise "Rock::DebianPackaging::PackageSelector.load_env_in_sandbox"
-                " failed to extract environment variables from #{envsh_file}"
-        end
-        env
     end
 
     # Activate and envsh, by making the values known to autoproj for internal
     # usage
     # Note, that autoproj permits to isolate the environment, so that
     # required environment variables for packages have to be set explicitely
-    def activate_package_envsh(filter_osdeps, ws: Autoproj.workspace)
-        each_package_envsh(filter_osdeps) do |envsh_file|
-            env = eval_envsh(envsh_file)
-            env.each do |varname, values|
-                values.each do |value|
-                    if File.directory?(value)
-                        ws.env.add_path(varname,value)
+    def activate_package_env(filter_osdeps, ws: Autoproj.workspace)
+        each_package_envyml(filter_osdeps) do |envyml_file|
+            yaml = YAML.load_file(envyml_file)
+            delayed_handling = {}
+            replace_variable = {}
+            yaml.each do |varname, data|
+                if data.has_key?(:priority) and data[:priority] < 0
+                    delayed_handling[varname] = data
+                    next
+                end
+
+                data[:values].each do |value|
+                    case data[:type]
+                    when :set
+                        if varname =~ /APAKA__/
+                            replace_variable[varname] = value
+                        else
+                           ws.env.set_path(varname, value)
+                        end
+                    when :add_path
+                        ws.env.add_path(varname, value)
+                    when :add
+                        ws.env.add_path(varname, value)
+                    when :add_prefix
+                        ws.env.add_prefix(varname, value)
+                    end
+                end
+            end
+
+            delayed_handling.each do |varname, data|
+                replace_variable.each do |v,r|
+                    data[:values].each do |value|
+                        value.gsub!(/\${#{v}}/,r)
+                    end
+                end
+
+                data[:values].each do |value|
+                    case data[:type]
+                    when :set
+                        ws.env.set_path(varname, value)
+                    when :add_path
+                        ws.env.add_path(varname, value)
+                    when :add
+                        ws.env.add_path(varname, value)
+                    when :add_prefix
+                        ws.env.add_prefix(varname, value)
                     end
                 end
             end
