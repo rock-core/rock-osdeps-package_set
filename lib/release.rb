@@ -409,8 +409,6 @@ class Release
         if apt_update_required
             Autoproj.message "  Updating package source -- this can take some time"
             system("sudo apt-get update > /tmp/autoproj-update.log")
-            Autoproj.message "  Updating and install libyaml-libyaml-perl -- workaround till release gets updated"
-            system("sudo apt install libyaml-libyaml-perl")
         end
     end
 end # end Release
