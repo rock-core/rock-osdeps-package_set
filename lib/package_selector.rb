@@ -306,11 +306,11 @@ class PackageSelector
                         if varname =~ /APAKA__/
                             replace_variable[varname] = value
                         else
-                           ws.env.set_path(varname, value)
+                           ws.env.set(varname, value)
                         end
-                    when :add_path
-                        ws.env.add_path(varname, value)
                     when :add
+                        ws.env.add(varname, value)
+                    when :add_path
                         ws.env.add_path(varname, value)
                     when :add_prefix
                         ws.env.add_prefix(varname, value)
@@ -328,10 +328,10 @@ class PackageSelector
                 data[:values].each do |value|
                     case data[:type]
                     when :set
-                        ws.env.set_path(varname, value)
-                    when :add_path
-                        ws.env.add_path(varname, value)
+                        ws.env.set(varname, value)
                     when :add
+                        ws.env.add(varname, value)
+                    when :add_path
                         ws.env.add_path(varname, value)
                     when :add_prefix
                         ws.env.add_prefix(varname, value)
