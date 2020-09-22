@@ -14,14 +14,14 @@ Currently releases are named after the (dominating) branch name 'master' plus
 the year and month in YY.mm format.
 The table below implies that at least base/orogen/types are available for this platform.
 
-| Distribution  | [master-20.06 (beta)](doc/master-20.06.md) | master-20.01 |    master-19.06  |     master-18.09 |     master-18.01     |
+| Distribution  | [master-20.06](doc/master-20.06.md) | master-20.01 |    master-19.06  |     master-18.09 |     master-18.01     |
 |---------------|--------------------|------------------|------------------|----------------------|-----------|
 |Ubuntu 16.04   |              |amd64        | amd64            |    amd64         | amd64                |
 |Ubuntu 18.04   | amd64        |amd64        | amd64            |    amd64         ||
 |Ubuntu 20.04   |              |             |                  |                  ||
 |Debian Jessie  |              |             | armel,armhf      |                  ||
 |Debian Stretch |              |             | amd64            |    amd64         ||
-|Debian Buster  |              |amd64,arm64  | amd64            |                  ||
+|Debian Buster  |amd64,arm64   |amd64,arm64  | amd64            |                  ||
 
 Not all packages of rock-core and rock package sets could be built for all releases.
 The details on which packages are available for each platform can be extracted
@@ -30,6 +30,41 @@ activation of the release. The file can be simply read as an autoproj osdeps fil
 
 
 ## How to use an Rock Debian package release
+
+### PPA-Style usage (from master-20.06 onwards)
+
+Add the package respository (verify URLs by information provided in
+data/releases.yml):
+```
+    wget -qO - http://rock.hb.dfki.de/rock-releases/rock-robotics.public.key | sudo apt-key add -
+    echo 'deb [arch=amd64 trusted=yes] http://rock.hb.dfki.de/rock-releases/master-20.06 bionic main' | sudo tee /etc/apt/sources.list.d/rock-master-20.06.list
+    sudo apt update
+```
+
+Now, you can either choose to install individual packages, such as base-types
+with:
+```
+    sudo apt install rock-master-20.06-base-types
+```
+
+or install all available Rock packages for your platform
+
+```
+    sudo apt install rock-master-20.06-meta-full
+```
+
+To use the release, you will still have to update your
+environmental settings, e.g., when using the full release this is straight
+forward:
+
+```
+    source /opt/rock/master-20.06/rock-master-20.06-meta-full/env.sh
+```
+
+Activation of individual packages is also possible, but currently somewhat
+inconveniant see Section "Known Issues -> 2."
+
+### As part of an Autoproj-based workspace
 Either start with a fresh bootstrap:
 
 ```
@@ -45,14 +80,14 @@ If you want to use an already defined build configuration then replace the last 
 or remove the install folder in order to get rid of old packages.
 
 If a release has been created with default settings all its Debian Packages
-install their files into /opt/rock/release-name and now to activate debian
-packages for your autoproj workspace:
+install their files into /opt/rock/release-name.
+To activate Debian packages for your autoproj workspace:
 
 adapt the autoproj/manifest to contain only the packages in the layout that you require as source packages. However, the layout section should not be empty, e.g. to bootstrap all precompiled packages of the rock-core package set add:
 
 ```
-layout:
-- rock.core
+    layout:
+    - rock.core
 
 ```
 
@@ -168,6 +203,31 @@ master-20.06 starts to use yard generated documentation.
     ```
 
     The error should not be encountered with 'master-18.09', where yard is also provided as Rock package. This is not the case for master-18.01.
+
+
+2.  For PPA-style usage (master-20.06 onwards):
+    if you only want to source an individual package you currently will have to generate your
+    own env.sh script, since the env.sh setup of a package does only cover the
+    package itself and not its dependencies. Hence to identify the env.sh file of
+    the dependencies, e.g., here for master-20.06 and base/types you can do the
+    following:
+
+```
+        $>apt-cache depends rock-master-20.06-base-types | grep rock | grep Depends | cut -d' ' -f4 | xargs -I{} echo ". /opt/rock/master-20.06/{}/env.sh"
+        . /opt/rock/master-20.06/rock-master-20.06-base-cmake/env.sh
+        . /opt/rock/master-20.06/rock-master-20.06-base-logging/env.sh
+        . /opt/rock/master-20.06/rock-master-20.06-external-sisl/env.sh
+        . /opt/rock/master-20.06/rock-master-20.06-gui-vizkit3d/env.sh
+        . /opt/rock/master-20.06/rock-master-20.06-ruby-rice/env.sh
+```
+
+        Also add the env.sh of you package to your custom setup.sh script:
+
+```
+        . /opt/rock/master-20.06/rock-master-20.06-base-types/env.sh
+```
+
+
 
 ## References and Publications
 Please reference the following publication when referring to the

@@ -63,8 +63,8 @@ if Autoproj.user_config('DEB_USE')
             "This installation uses sudo and may ask for your password",
             "You can do the installation yourself with:",
             "echo 'deb [arch=#{debian_architecture} trusted=yes] #{release.repo_url}/#{release.name} #{current_release_name} main' | sudo tee /etc/apt/sources.list.d/rock-#{release.name}.list",
-            "sudo apt-get update > /dev/null",
             "wget -qO - #{release.public_key} | sudo apt-key add -",
+            "sudo apt-get update > /dev/null",
             "##########################################################",
             "This installation uses sudo and may ask for your password",
             "Install automatically?"]
