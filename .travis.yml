@@ -24,8 +24,8 @@ install:
 
 # overwrite the default build command
 script:
-    - docker run rock-osdeps/16.04 /bin/bash -c "source /home/docker/releases/master-18.01/env.sh; rock-log-level"
-    - docker run rock-osdeps/18.04 /bin/bash -c "source /home/docker/releases/master-18.09/env.sh; rock-log-level"
-    - docker run rock-osdeps/18.04 /bin/bash -c "source /home/docker/releases/master-19.06/env.sh; rock-log-level"
-    - docker run rock-osdeps/18.04 /bin/bash -c "source /home/docker/releases/master-20.01/env.sh; rock-log-level"
-    - docker run rock-osdeps/18.04 /bin/bash -c "source /home/docker/releases/master-20.06/env.sh; rock-log-level"
+    - docker run rock-osdeps/16.04 /bin/bash -c "/home/docker/test_release.sh master-18.01"
+    - docker run rock-osdeps/18.04 /bin/bash -c "/home/docker/test_release.sh master-18.09"
+    - docker run rock-osdeps/18.04 /bin/bash -c "/home/docker/test_release.sh master-19.06"
+    - docker run rock-osdeps/18.04 /bin/bash -c "/home/docker/test_release.sh master-20.01"
+    - docker run rock-osdeps/18.04 /bin/bash -c "/home/docker/test_release.sh master-20.06"

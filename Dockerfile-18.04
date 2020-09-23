@@ -24,7 +24,7 @@ RUN apt update
 RUN apt upgrade -y
 ENV DEBIAN_FRONTEND=noninteractive
 RUN ln -fs /usr/share/zoneinfo/Europe/Berlin /etc/localtime
-RUN apt install -y ruby ruby-dev wget tzdata locales g++ autotools-dev make cmake sudo git
+RUN apt install -y ruby ruby-dev wget tzdata locales g++ autotools-dev make cmake sudo git gnupg
 RUN echo "Europe/Berlin" > /etc/timezone; dpkg-reconfigure -f noninteractive tzdata
 RUN export LANGUAGE=de_DE.UTF-8; export LANG=de_DE.UTF-8; export LC_ALL=de_DE.UTF-8; locale-gen de_DE.UTF-8; DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 
@@ -48,6 +48,8 @@ RUN wget https://raw.githubusercontent.com/rock-core/autoproj/master/bin/autopro
 # Use the existing seed configuration
 COPY --chown=docker .ci/autoproj-config.yml /home/docker/seed-config.yml
 COPY --chown=docker .ci/prepare_release.sh /home/docker/prepare_release.sh
+COPY --chown=docker .ci/test_release.sh /home/docker/test_release.sh
+RUN chmod 755 /home/docker/test_release.sh
 
 RUN /bin/bash prepare_release.sh master-18.09
 RUN /bin/bash prepare_release.sh master-19.06
