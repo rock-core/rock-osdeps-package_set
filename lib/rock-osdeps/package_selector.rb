@@ -1,5 +1,6 @@
 require 'yaml'
 require 'autoproj'
+require 'erb'
 require_relative 'release'
 
 module Rock
@@ -153,7 +154,9 @@ class PackageSelector
         end
         filtered_osdeps, disabled_pkgs = ps.load_blacklist(ws: ws)
         ps.write_osdeps_file(filtered_osdeps, disabled_pkgs, output_dir: output_dir)
+
         ps.activate_package_env(filtered_osdeps, ws: ws)
+        ps.activate_rubygems_integrations(filtered_osdeps, ws: ws)
         ps
     end
 
@@ -165,6 +168,94 @@ class PackageSelector
             Autoproj::OSPackageResolver.autodetect_operating_system
         else
             raise "#{self.class}::#{__method__}: unsupported Autoproj API: please inform the developer"
+        end
+    end
+
+    # To allow the `gem` command to work properly within a workspace, the
+    # available rubygems hook has to be used, i.e. writing
+    #     rubygems/defaults/operating_system.rb
+    # 
+    # The package rubygems-integration already does this, but has not way to
+    # inject a custom path. Therefore, we inject our own slightly modified
+    # version, such that paths can be added via the environmental variable
+    #     RUBYGEMS_INTEGRATION_EXTRA_PATHS
+    #
+    # Now to activate gems selectively in a workspace, a subfolder (here .rubygems-integration)
+    # is used as main integration path, which receives links into the file
+    # system.
+    #
+    # Example: to activate a particular gemspec lying in the release
+    #     folder, e.g., /opt/rock/master-20.06/rock-master-20.06-ruby-rice/share/rubygems-integration/all/specifications/rice-2.2.0.gemspec
+    # will be referred from 
+    #     /yourworkspace/.rubygems-integration/all/specification/rice-2.0.0.gemspec
+    # while the environment needs to be setup, so that the path can be injected
+    # via the operating_system.rb hook into gems:
+    #    export  RUBYGEMS_INTEGRATION_EXTRA_PATHS=/yourworkspace/.rubgems-integration/all:/yourworkspace>/.rubgems-integration/2.5.0
+    #
+    # The list of gems depends upon the correspondingly activated packages
+    # (filtered_osdeps), according to the settings in deb_blacklist.yml
+    def activate_rubygems_integrations(filtered_osdeps, ws: Autoproj.workspace)
+        # Setup integration directories
+        rubygems_integration_dir = File.expand_path(File.join(ws.root_dir, ".rubygems-integration"))
+        rubygems_integration_libdir = File.join(rubygems_integration_dir, "lib")
+        FileUtils.mkdir_p rubygems_integration_libdir unless File.directory?(rubygems_integration_libdir)
+
+        rubygems_integration_alldir = File.join(rubygems_integration_dir, "all")
+        FileUtils.mkdir_p rubygems_integration_alldir unless File.directory?(rubygems_integration_alldir)
+
+        # With the template file we inject
+        # the option to add a path to RUBYGEMS_INTEGRATION_EXTRA_PATHS
+        template_file =
+            File.join(PACKAGE_SET_DIR,"templates","operating_system.rb")
+
+        template = ERB.new(File.read(template_file), nil, "%<>")
+        rendered = template.result(binding)
+
+        target_dir =
+            File.join(rubygems_integration_libdir,"rubygems","defaults")
+        FileUtils.mkdir_p target_dir unless File.directory?(target_dir)
+
+        target_path = File.join(target_dir, "operating_system.rb")
+        File.open(target_path, "w") do |io|
+            io.write(rendered)
+        end
+
+        ws.env.add_path("RUBYLIB", rubygems_integration_libdir)
+        integration_paths = []
+        Dir.glob(File.join(rubygems_integration_dir,"*","specifications")).each do |dir|
+            FileUtils.rm_rf dir
+        end
+        Dir.glob(File.join(rubygems_integration_dir,"*","gems")).each do |dir|
+            FileUtils.rm_rf dir
+        end
+        each_gem_spec(filtered_osdeps) do |gem_spec|
+            if gem_spec =~ /(\/opt\/rock\/.*)\/share\/rubygems-integration\/(.*)\/specifications\/(.*).gemspec/
+                pkg_content = $1
+                ruby_version = $2
+                versioned_gem = $3
+
+                integration_paths << File.join(rubygems_integration_dir,ruby_version)
+
+                # Link gemspec into local rubygems-integration folder
+                # This folder has to be known to rubygems via
+                # rubygems/default/operating_system.rb -- which is now patched
+                # so that we can use an environmental setting of RUBYGEMS_INTEGRATION_EXTRA_PATHS
+                spec_dir = File.join(rubygems_integration_dir,ruby_version,"specifications")
+                FileUtils.mkdir_p spec_dir unless File.exist?(spec_dir)
+
+                gems_dir = File.join(rubygems_integration_dir,ruby_version,"gems")
+                FileUtils.mkdir_p gems_dir unless File.exist?(gems_dir)
+
+                # Link gemspec into local rubygems-integration folder
+                FileUtils.ln_s gem_spec,
+                    File.join(rubygems_integration_dir,ruby_version,"specifications","#{versioned_gem}.gemspec")
+
+                # Link contents of gem into local rubygems-integration folder
+                FileUtils.ln_s pkg_content, File.join(rubygems_integration_dir, ruby_version, "gems",versioned_gem)
+            end
+        end
+        integration_paths.uniq.each do |path|
+            ws.env.add_path("RUBYGEMS_INTEGRATION_EXTRA_PATHS", path)
         end
     end
 
@@ -275,6 +366,7 @@ class PackageSelector
         Autoproj.info "rock-osdeps: the following source package usage has been enforced: #{disabled_pkgs}"
     end
 
+    # Enumerator for all env.yml files in activated packages
     def each_package_envyml(filtered_osdeps)
         return enum_for(:each_package_envyml, filter_osdeps) unless block_given?
 
@@ -285,6 +377,23 @@ class PackageSelector
             files = Dir.glob(envyml_pattern)
             files.each do |envsh_file|
                 yield envsh_file unless File.empty?(envsh_file)
+            end
+        end
+    end
+
+    # Enumerator for all *.gemspec files in activated packages, i.e. to identify
+    # packaged gems
+    def each_gem_spec(filtered_osdeps)
+        return enum_for(:each_gem_spec, filter_osdeps) unless block_given?
+
+        filtered_osdeps.each do |pkg, data|
+            debian_pkg_name = data['default']
+            # Use the package name to infer the installation directory
+            gemspec_pattern =
+                File.join("/opt","rock","*",debian_pkg_name,"share","rubygems-integration","**","*.gemspec")
+            files = Dir.glob(gemspec_pattern)
+            files.each do |gemspec_file|
+                yield gemspec_file unless File.empty?(gemspec_file)
             end
         end
     end
