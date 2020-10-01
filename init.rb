@@ -8,7 +8,7 @@ else
     raise "Unsupported Autoproj API: please inform the developer"
 end
 
-require_relative 'lib/package_selector'
+require_relative 'lib/rock-osdeps/package_selector'
 
 #Add rock-debs
 Autoproj.configuration_option 'DEB_USE', 'boolean',
@@ -52,7 +52,7 @@ if Autoproj.user_config('DEB_USE')
             (available are: #{Rock::DebianPackaging::Release::available.sort.join(',')}) ?",
             "Use the default if you do not know better"]
 
-        require_relative 'lib/release'
+        require_relative 'lib/rock-osdeps/release'
         release = Rock::DebianPackaging::Release.new(
                         Autoproj.user_config('debian_release'),
                         data_dir: File.join(__dir__,'data'))
