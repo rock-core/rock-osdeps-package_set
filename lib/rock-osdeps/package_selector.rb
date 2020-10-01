@@ -18,7 +18,7 @@ class PackageSelector
         if osdeps_file
             load_osdeps_file(osdeps_file)
         end
-        @rdepends_cache_file = File.join(__dir__,"..",".rdepends-cache.yml")
+        @rdepends_cache_file = File.join(PACKAGE_SET_DIR,".rdepends-cache.yml")
     end
 
     # Load the osdeps file considering only the relevant entries
@@ -100,7 +100,7 @@ class PackageSelector
     # @return [PackageSelector] A package selector instance containing
     #     information about blacklisted and used packages
     def self.activate_release(release,
-                              output_dir: File.join(__dir__,"..")
+                              output_dir: PACKAGE_SET_DIR
                              )
         Rock::DebianPackaging::PackageSelector::activate_releases(release.hierarchy,
                                                                   data_dir: release.data_dir,
@@ -122,7 +122,7 @@ class PackageSelector
                                spec_file: nil,
                                spec_data: nil,
                                ws: Autoproj.workspace,
-                               output_dir: File.join(__dir__,".."),
+                               output_dir: PACKAGE_SET_DIR,
                                auto_update: true
                             )
         ps = Rock::DebianPackaging::PackageSelector.new

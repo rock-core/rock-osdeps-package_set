@@ -1,8 +1,8 @@
 require 'autoproj'
 require 'minitest/autorun'
 
-require_relative '../lib/package_selector'
-require_relative '../lib/release'
+require_relative '../lib/rock-osdeps/package_selector'
+require_relative '../lib/rock-osdeps/release'
 
 module Rock
     describe "reverse_dependency" do

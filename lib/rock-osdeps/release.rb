@@ -4,6 +4,8 @@ require 'readline'
 module Rock
 module DebianPackaging
 
+PACKAGE_SET_DIR = File.expand_path(File.join(__dir__,"..",".."))
+
 class Release
     attr_reader :name
     attr_reader :hierarchy
@@ -19,7 +21,7 @@ class Release
     attr_reader :separate_prefixes
 
     DEFAULT_ENV_SH = "rock-osdeps-env.sh"
-    DEFAULT_DATA_DIR = File.join(__dir__,"..","data")
+    DEFAULT_DATA_DIR = File.join(PACKAGE_SET_DIR,"data")
     DEFAULT_SPEC_FILE = "releases.yml"
 
     @@multi_arch = "#{`gcc -print-multiarch`}".strip
@@ -273,7 +275,7 @@ class Release
                 end
 
                 # Prepare to source the envsh file for the packages
-                envsh = File.join(__dir__, "..", DEFAULT_ENV_SH)
+                envsh = File.join(PACKAGE_SET_DIR, DEFAULT_ENV_SH)
                 if !File.exists?(envsh)
                     FileUtils.touch(envsh)
                 end
