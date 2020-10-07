@@ -14,6 +14,8 @@ class PackageSelector
 
     attr_reader :rdepends_cache_file
 
+    DEFAULT_INACTIVE_SELECTION = "rock-osdeps.inactive"
+
     def initialize(osdeps_file = nil)
         @osdeps = {}
         if osdeps_file
@@ -153,6 +155,9 @@ class PackageSelector
             system("sudo apt-get update > #{logfile}")
         end
         filtered_osdeps, disabled_pkgs = ps.load_blacklist(ws: ws)
+        File.open( File.join(PACKAGE_SET_DIR, DEFAULT_INACTIVE_SELECTION),"w") do |file|
+            file.write(disabled_pkgs.to_yaml)
+        end
         ps.write_osdeps_file(filtered_osdeps, disabled_pkgs, output_dir: output_dir)
 
         ps.activate_package_env(filtered_osdeps, ws: ws)
