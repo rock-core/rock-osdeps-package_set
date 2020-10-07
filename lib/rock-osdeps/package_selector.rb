@@ -36,7 +36,7 @@ class PackageSelector
         @deb_to_pkg ||= {}
         @reverse_dependencies_map ||= {}
 
-        distribution, release = PackageSelector::operating_system
+        distribution, release = PackageSelector.operating_system
 
         compact_osdeps = {}
         osdeps.each do |pkg_name, osdeps_list|
@@ -52,8 +52,7 @@ class PackageSelector
                 next
             end
             pkgs.each do |key, debian_pkg_name|
-                supported_releases = key.split(",")
-                if supported_releases.include?(release.first)
+                if matching_release?(key, release)
                     if @pkg_to_deb.has_key?(pkg_name)
                         if not allow_override
                             raise RuntimeError, "#{self.class}::#{__method__}: loading" \
@@ -75,6 +74,24 @@ class PackageSelector
             end
         end
         @osdeps = @osdeps.merge(compact_osdeps)
+    end
+
+    # Test if a given keyentry in a osdeps file matches the current os
+    def matching_release?(key, active_release_names)
+        supported_releases = key.split(",")
+        # key - from osdeps file, e.g., "18.04,bionic,beaver,default"
+        # release - from autoproj's autodetection ["18.04", "18.04.5", "lts", "bionic", "beaver", "default"]
+
+        active_release_names.each do |name|
+            if name == "default"
+                next
+            end
+
+            if supported_releases.include?(name)
+                return true
+            end
+        end
+        false
     end
 
     # Retrieve the osdeps file for this release and the current architecture
@@ -166,11 +183,11 @@ class PackageSelector
     end
 
     # Retrieve the operating system
-    def self.operating_system
+    def self.operating_system(ws: Autoproj.workspace)
         if defined?(Autoproj::OSDependencies)
             Autoproj::OSDependencies.operating_system
         elsif defined?(Autoproj::OSPackageResolver)
-            Autoproj::OSPackageResolver.autodetect_operating_system
+            ws.os_package_resolver.operating_system
         else
             raise "#{self.class}::#{__method__}: unsupported Autoproj API: please inform the developer"
         end

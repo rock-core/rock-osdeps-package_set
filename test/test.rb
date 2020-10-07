@@ -76,6 +76,33 @@ module Rock
             assert @ps.pkg_to_deb['tools/msgpack-c'] == 'otherpackage'
         end
 
+        it "load_osdeps_on_debian" do
+            current_os = Autoproj.workspace.os_package_resolver.operating_system
+
+            Autoproj.workspace.os_package_resolver.operating_system =
+                [["debian"], ["123","novel","default"]]
+            Autoproj.workspace.os_package_resolver.invalidate_resolve_package_cache
+
+            @ps = Rock::DebianPackaging::PackageSelector.new
+            file = File.join(@data_dir, "master-20.06-amd64.yml")
+            @ps.load_osdeps_file(file)
+            assert @ps.pkg_to_deb.empty?, @ps.pkg_to_deb
+
+            Autoproj.workspace.os_package_resolver.operating_system =
+                [["debian"], ["10","buster","default"]]
+            Autoproj.workspace.os_package_resolver.invalidate_resolve_package_cache
+
+            @ps = Rock::DebianPackaging::PackageSelector.new
+            file = File.join(@data_dir, "master-20.06-amd64.yml")
+            @ps.load_osdeps_file(file)
+
+            Autoproj.workspace.os_package_resolver.operating_system = current_os
+            Autoproj.workspace.os_package_resolver.invalidate_resolve_package_cache
+
+            assert(!@ps.pkg_to_deb.empty?)
+
+        end
+
         it "load_osdeps_no_override" do
             @ps = Rock::DebianPackaging::PackageSelector.new
 
