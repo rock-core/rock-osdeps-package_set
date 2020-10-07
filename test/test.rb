@@ -61,7 +61,7 @@ module Rock
 
         it "get available" do
             assert( Rock::DebianPackaging::Release.available == ["master-18.01","master-18.09",
-                 "master-19.06","master-20.01"] )
+                                                                 "master-19.06","master-20.01","master-20.06"] )
         end
 
         it "load_osdeps" do
