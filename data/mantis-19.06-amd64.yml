@@ -1,0 +1,127 @@
+---
+bagel/osg_graph_viz:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-bagel-osg-graph-viz
+bagel/bagel_gui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-bagel-bagel-gui
+bagel/bagel_control_gui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-bagel-bagel-control-gui
+bagel/bagel_db:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-bagel-bagel-db
+simulation/mars_plugin_collection/data_broker_graph_view:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-simulation-mars-plugin-collection-data-broker-graph-view
+models/robots/mantis:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-models-robots-mantis
+tools/bagel_mars_deploy:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-tools-bagel-mars-deploy
+mantis/bagel_control:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-mantis-bagel-control
+mantis/orogen/mantis_deployments/simulation:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-mantis-orogen-mantis-deployments-simulation
+bundles/mantis:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-ruby-bundles-mantis
+limes/orogen/laser_watchdog:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-limes-orogen-laser-watchdog
+slam/orogen/tilt_scan:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-slam-orogen-tilt-scan
+documentation/mantis:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-documentation-mantis
+drivers/laser_filter:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-drivers-laser-filter
+drivers/controldev:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-drivers-controldev
+control/trajectory_follower:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-control-trajectory-follower
+slam/odometry:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-slam-odometry
+control/joint_dispatcher:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-control-joint-dispatcher
+charlie/spline_interpolator:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-charlie-spline-interpolator
+drivers/orogen/laser_filter:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-drivers-orogen-laser-filter
+control/orogen/trajectory_follower:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-control-orogen-trajectory-follower
+slam/orogen/odometry:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-slam-orogen-odometry
+control/orogen/joint_dispatcher:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-control-orogen-joint-dispatcher
+limes/orogen/demo:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-limes-orogen-demo
+drivers/canbus:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-drivers-canbus
+control/kdl:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-control-kdl
+drivers/orogen/canbus:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-drivers-orogen-canbus
+control/kdl_parser:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-control-kdl-parser
+drivers/orogen/controldev:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-drivers-orogen-controldev
+drivers/stability_evaluation:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-drivers-stability-evaluation
+gui/control_ui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-gui-control-ui
+drivers/vicon:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-drivers-vicon
+drivers/orogen/vicon:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-drivers-orogen-vicon
+bagel/c_bagel:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-bagel-c-bagel
+bagel/cpp_bagel_wrapper:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-bagel-cpp-bagel-wrapper
+bagel/BagelMARS:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-bagel-bagelmars
+mantis/mantis_sim:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-mantis-mantis-sim
+limes/behavior_library:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-limes-behavior-library
+bagel/orogen/bagel_control:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-bagel-orogen-bagel-control
+mantis/orogen/mantis_bagel_control:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-mantis-orogen-mantis-bagel-control
+mantis/orogen/mantis_deployments/control:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-mantis-orogen-mantis-deployments-control
+gui/robot_model:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-mantis-19.06-gui-robot-model
