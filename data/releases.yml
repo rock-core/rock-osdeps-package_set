@@ -11,7 +11,7 @@ master-19.06:
     separate_prefixes: false
 mantis-19.06:
     separate_prefixes: false
-    - master-19.06
+    hierarchy: master-19.06
 master-20.01:
     separate_prefixes: false
 master-20.06:
