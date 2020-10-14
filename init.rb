@@ -93,7 +93,12 @@ if Autoproj.user_config('DEB_USE')
         end
 
         release.update_apt_list(current_release_name) if Autoproj.user_config('DEB_AUTOMATIC')
-        Rock::DebianPackaging::PackageSelector.activate_release(release)
+        begin
+            Rock::DebianPackaging::PackageSelector.activate_release(release)
+        rescue Exception => e
+            puts "#{e} #{e.backtrace.join("\n\t")}"
+            raise
+        end
     else
         Autoproj.user_config('DEB_USE_UNAVAILABLE')
     end
