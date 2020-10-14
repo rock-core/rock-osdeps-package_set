@@ -39,6 +39,8 @@ class PackageSelector
         distribution, release = PackageSelector.operating_system
 
         compact_osdeps = {}
+        return unless osdeps
+
         osdeps.each do |pkg_name, osdeps_list|
             pkgs = nil
             if osdeps_list.has_key?(distribution.first)

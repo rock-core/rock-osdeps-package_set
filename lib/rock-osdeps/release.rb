@@ -112,7 +112,7 @@ class Release
         end
 
         if !@spec.has_key?(release_name)
-            raise ArgumentError, "Release file #{@spec} does not contain: #{release_name} -- please inform the maintainer of the package_set rock-osdeps"
+            raise ArgumentError, "Release file #{@spec} does not contain: #{release_name} (available keys are: #{@spec.keys} -- please inform the maintainer of the package_set rock-osdeps"
         end
         @name = release_name
         @ws = ws
@@ -392,6 +392,7 @@ class Release
             end
 
             if update
+                Autoproj.message "Creating #{apt_rock_list_file}"
                 if !system("echo deb #{apt_source} | sudo tee #{apt_rock_list_file}")
                     Autoproj.warn "Failed to install apt source: #{apt_source}"
                 else
