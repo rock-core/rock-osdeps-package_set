@@ -16,12 +16,12 @@ The table below implies that at least base/orogen/types are available for this p
 
 | Distribution  | [master-20.06](doc/master-20.06.md) | master-20.01 |    master-19.06  |     master-18.09 |     master-18.01     |
 |---------------|--------------------|------------------|------------------|----------------------|-----------|
-|Ubuntu 16.04   |              |amd64        | amd64            |    amd64         | amd64                |
-|Ubuntu 18.04   | amd64        |amd64        | amd64            |    amd64         ||
-|Ubuntu 20.04   |              |             |                  |                  ||
-|Debian Jessie  |              |             | armel,armhf      |                  ||
-|Debian Stretch |              |             | amd64            |    amd64         ||
-|Debian Buster  |amd64,arm64   |amd64,arm64  | amd64            |                  ||
+|Ubuntu 16.04   |              | amd64        | amd64            |    amd64         | amd64                |
+|Ubuntu 18.04   | amd64,arm64  | amd64        | amd64            |    amd64         ||
+|Ubuntu 20.04   |              |              |                  |                  ||
+|Debian Jessie  |              |              | armel,armhf      |                  ||
+|Debian Stretch |              |              | amd64            |    amd64         ||
+|Debian Buster  | amd64,arm64  | amd64,arm64  | amd64            |                  ||
 
 Not all packages of rock-core and rock package sets could be built for all releases.
 The details on which packages are available for each platform can be extracted
@@ -62,7 +62,7 @@ forward:
 ```
 
 Activation of individual packages is also possible, but currently somewhat
-inconveniant see Section "Known Issues -> 2."
+inconvenient see Section "Known Issues -> 2."
 
 ### As part of an Autoproj-based workspace
 Either start with a fresh bootstrap:
