@@ -1,7 +1,17 @@
 ---
+default:
+    repo_url: http://rock.hb.dfki.de/rock-releases
+    public_key: http://rock.hb.dfki.de/rock-releases/rock-robotics.public.key
+    separate_prefixes: true
 master-18.01:
+    separate_prefixes: false
 master-18.09:
+    separate_prefixes: false
 master-19.06:
-
+    separate_prefixes: false
 mantis-19.06:
-  - master-19.06
+    separate_prefixes: false
+    depends_on: master-19.06
+master-20.01:
+    separate_prefixes: false
+master-20.06:

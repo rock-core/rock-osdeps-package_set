@@ -1,0 +1,10 @@
+---
+default:
+    repo_url: http://rock.hb.dfki.de/rock-releases
+    public_key: http://rock.hb.dfki.de/rock-release/rock-robotics.public.key
+master-18.01:
+master-19.06:
+    depends_on: "master-18.01"
+    repo_url: http://myserver.org/release
+    public_key: http://mykeyserver.org/public_key
+master-20.01:

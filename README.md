@@ -8,20 +8,63 @@ Allows you to activate the use of Rock Debian package releases in an autoproj
 installation.
 
 ## Supported Platforms:
-The following table lists the distribution and architecture combinations which are currently supported by existing releases.
+The following table lists the distribution and architecture combinations which
+are currently supported by existing releases.
+Currently releases are named after the (dominating) branch name 'master' plus
+the year and month in YY.mm format.
+The table below implies that at least base/orogen/types are available for this platform.
 
-| Distribution  | Architectures | Status |Release|
-|---------|------------|-----------|---------|
-|Ubuntu 16.04   | amd64 | supported |master-19.06, master-18.09, master-18.01 |
-|Ubuntu 18.04   | amd64 | supported |master-19.06, master-18.09               |
-|Debian Stretch | amd64 | supported |master-19.06, master-18.09               |
+| Distribution  | [master-20.06](doc/master-20.06.md) | master-20.01 |    master-19.06  |     master-18.09 |     master-18.01     |
+|---------------|--------------------|------------------|------------------|----------------------|-----------|
+|Ubuntu 16.04   |              |amd64        | amd64            |    amd64         | amd64                |
+|Ubuntu 18.04   | amd64        |amd64        | amd64            |    amd64         ||
+|Ubuntu 20.04   |              |             |                  |                  ||
+|Debian Jessie  |              |             | armel,armhf      |                  ||
+|Debian Stretch |              |             | amd64            |    amd64         ||
+|Debian Buster  |amd64,arm64   |amd64,arm64  | amd64            |                  ||
 
 Not all packages of rock-core and rock package sets could be built for all releases.
-The details on which packages are available for each platform can be extracted from the files in the subfolder data/*release*_*architecture*.yml,
-which can be simply read as an autoproj osdeps file.
+The details on which packages are available for each platform can be extracted
+from the files in the subfolder in data/*release*_*architecture*.yml after
+activation of the release. The file can be simply read as an autoproj osdeps file.
 
 
 ## How to use an Rock Debian package release
+
+### PPA-Style usage (from master-20.06 onwards)
+
+Add the package respository (verify URLs by information provided in
+data/releases.yml):
+```
+    wget -qO - http://rock.hb.dfki.de/rock-releases/rock-robotics.public.key | sudo apt-key add -
+    echo 'deb [arch=amd64 trusted=yes] http://rock.hb.dfki.de/rock-releases/master-20.06 bionic main' | sudo tee /etc/apt/sources.list.d/rock-master-20.06.list
+    sudo apt update
+```
+
+Now, you can either choose to install individual packages, such as base-types
+with:
+```
+    sudo apt install rock-master-20.06-base-types
+```
+
+or install all available Rock packages for your platform
+
+```
+    sudo apt install rock-master-20.06-meta-full
+```
+
+To use the release, you will still have to update your
+environmental settings, e.g., when using the full release this is straight
+forward:
+
+```
+    source /opt/rock/master-20.06/rock-master-20.06-meta-full/env.sh
+```
+
+Activation of individual packages is also possible, but currently somewhat
+inconveniant see Section "Known Issues -> 2."
+
+### As part of an Autoproj-based workspace
 Either start with a fresh bootstrap:
 
 ```
@@ -37,14 +80,14 @@ If you want to use an already defined build configuration then replace the last 
 or remove the install folder in order to get rid of old packages.
 
 If a release has been created with default settings all its Debian Packages
-install their files into /opt/rock/release-name and now to activate debian
-packages for your autoproj workspace:
+install their files into /opt/rock/release-name.
+To activate Debian packages for your autoproj workspace:
 
 adapt the autoproj/manifest to contain only the packages in the layout that you require as source packages. However, the layout section should not be empty, e.g. to bootstrap all precompiled packages of the rock-core package set add:
 
 ```
-layout:
-- rock.core
+    layout:
+    - rock.core
 
 ```
 
@@ -75,15 +118,34 @@ Follow the questions for configuration and select a release for the Debian packa
 Finally start a new shell, reload the env.sh and call amake.
 This should finally install all required Debian packages and remaining required packages, which might have not been packaged.
 
+### Switching to the test (or other custom) branches
+
+New releases are prepare such that they can activated via switching to the
+package_set's 'test' branch.
+You can do this by changing the package_set definition in the autoproj/manifest
+file as follows:
+
+```
+    package_sets:
+    - rock-osdeps:
+      type: git
+      url: git@github.com:rock-core/rock-osdeps-package_set.git
+      branch: test
+```
+
 ### Features
 
 #### Blacklisting of packages
-In order to enforce the usage of a source package in a workspace create a file autoproj/deb_blacklist.yml containing the name of the particular package. This will disable automatically the use of this debian package and all that depend on that package, e.g., to disable base/types and all packages that start with simulation/ create a deb_blacklist.yml with the following content:
+In order to enforce the usage of a source package in a workspace create a file
+autoproj/deb_blacklist.yml containing the name of the particular package. This
+will disable automatically the use of this debian package and all that depend on
+that package, e.g., to disable the orogen package (which is aliased by autoproj as tools/orogen), base/types and all packages that start with simulation/ create a deb_blacklist.yml with the following content:
 
 ```
     ---
     - base/types
-    - simulation/*
+    - ^orogen$
+    - simulation/.*
 ```
 
 You will be informed about the disabled packages:
@@ -119,6 +181,15 @@ To identify which exact version of a package is in use you can check the changel
      -- Packaging Daemon <rock-dev@dfki.de>  Mon, 08 Oct 2018 10:39:43 +0200
 ```
 
+#### Browse the documentation
+
+Just open /opt/rock/master-XX.XX/share/doc/index.html to see the doxygen / rdoc/
+yard documentation for all installed packages of the corresponding release.
+
+Note that till master-20.01 the ruby documentation generation did use rdoc (due
+to a bug).
+master-20.06 starts to use yard generated documentation.
+
 ### Known Issues
 1.  If you get a message like
     ```
@@ -132,6 +203,31 @@ To identify which exact version of a package is in use you can check the changel
     ```
 
     The error should not be encountered with 'master-18.09', where yard is also provided as Rock package. This is not the case for master-18.01.
+
+
+2.  For PPA-style usage (master-20.06 onwards):
+    if you only want to source an individual package you currently will have to generate your
+    own env.sh script, since the env.sh setup of a package does only cover the
+    package itself and not its dependencies. Hence to identify the env.sh file of
+    the dependencies, e.g., here for master-20.06 and base/types you can do the
+    following:
+
+```
+        $>apt-cache depends rock-master-20.06-base-types | grep rock | grep Depends | cut -d' ' -f4 | xargs -I{} echo ". /opt/rock/master-20.06/{}/env.sh"
+        . /opt/rock/master-20.06/rock-master-20.06-base-cmake/env.sh
+        . /opt/rock/master-20.06/rock-master-20.06-base-logging/env.sh
+        . /opt/rock/master-20.06/rock-master-20.06-external-sisl/env.sh
+        . /opt/rock/master-20.06/rock-master-20.06-gui-vizkit3d/env.sh
+        . /opt/rock/master-20.06/rock-master-20.06-ruby-rice/env.sh
+```
+
+        Also add the env.sh of you package to your custom setup.sh script:
+
+```
+        . /opt/rock/master-20.06/rock-master-20.06-base-types/env.sh
+```
+
+
 
 ## References and Publications
 Please reference the following publication when referring to the
@@ -153,4 +249,4 @@ This software is distributed under the [New/3-clause BSD license](https://openso
 
 ## Copyright
 
-Copyright (c) 2014-2018, DFKI GmbH Robotics Innovation Center
+Copyright (c) 2014-2020, DFKI GmbH Robotics Innovation Center

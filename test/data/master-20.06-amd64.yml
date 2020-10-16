@@ -1,0 +1,6 @@
+---
+utilrb:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ubuntu-package
+  debian:
+    10.4,buster,default: debian-package
