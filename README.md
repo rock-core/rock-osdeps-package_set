@@ -41,6 +41,13 @@ data/releases.yml):
     sudo apt update
 ```
 
+To verify the key:
+```
+pub   rsa4096 2019-04-16 [SC]
+      50A81F9A03A9D861A2C8CA48AE1C10781C3E5ED9
+uid           Rock Developers (Maintainers of the Robot Construction Kit aka Rock) <rock-dev@dfki.de>
+```
+
 Now, you can either choose to install individual packages, such as base-types
 with:
 ```
