@@ -21,9 +21,9 @@ Hence, package maintainers should not rely on a shared folder, but base resource
 ### Run Rock without autoproj via shipped env.sh
 As a major change compared to previous releases you can now run rock without autoproj:
 ```
-echo "deb [arch=amd64 trusted=yes] http://rock.hb.dfki.de/rock-releases/master-20.06 bionic main" | sudo tee /etc/apt/sources.list.d/rock-master-20.06.list
-echo "deb-src [arch=amd64 trusted=yes] http://rock.hb.dfki.de/rock-releases/master-20.06 bionic main" | sudo tee /etc/apt/sources.list.d/rock-master-20.06.list
-wget -qO - http://rock.hb.dfki.de/rock-releases/rock-robotics.public.key | sudo apt-key add -
+echo "deb [arch=amd64 trusted=yes] https://rock.hb.dfki.de/rock-releases/master-20.06 bionic main" | sudo tee /etc/apt/sources.list.d/rock-master-20.06.list
+echo "deb-src [arch=amd64 trusted=yes] https://rock.hb.dfki.de/rock-releases/master-20.06 bionic main" | sudo tee /etc/apt/sources.list.d/rock-master-20.06.list
+wget -qO - https://rock.hb.dfki.de/rock-releases/rock-robotics.public.key | sudo apt-key add -
 sudo apt-get update > /dev/null
 
 sudo apt install rock-master-20.06-meta-full

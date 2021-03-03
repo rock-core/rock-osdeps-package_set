@@ -1,7 +1,7 @@
 ---
 default:
-    repo_url: http://rock.hb.dfki.de/rock-releases
-    public_key: http://rock.hb.dfki.de/rock-releases/rock-robotics.public.key
+    repo_url: https://rock.hb.dfki.de/rock-releases
+    public_key: https://rock.hb.dfki.de/rock-releases/rock-robotics.public.key
     separate_prefixes: true
 backports:
     separate_prefixes: false

@@ -33,11 +33,11 @@ activation of the release. The file can be simply read as an autoproj osdeps fil
 
 ### PPA-Style usage (from master-20.06 onwards)
 
-Add the package respository (verify URLs by information provided in
+Add the package repository (verify URLs by information provided in
 data/releases.yml):
 ```
-    wget -qO - http://rock.hb.dfki.de/rock-releases/rock-robotics.public.key | sudo apt-key add -
-    echo 'deb [arch=amd64 trusted=yes] http://rock.hb.dfki.de/rock-releases/master-20.06 bionic main' | sudo tee /etc/apt/sources.list.d/rock-master-20.06.list
+    wget -qO - https://rock.hb.dfki.de/rock-releases/rock-robotics.public.key | sudo apt-key add -
+    echo 'deb [arch=amd64 trusted=yes] https://rock.hb.dfki.de/rock-releases/master-20.06 bionic main' | sudo tee /etc/apt/sources.list.d/rock-master-20.06.list
     sudo apt update
 ```
 
@@ -256,4 +256,4 @@ This software is distributed under the [New/3-clause BSD license](https://openso
 
 ## Copyright
 
-Copyright (c) 2014-2020, DFKI GmbH Robotics Innovation Center
+Copyright (c) 2014-2021, DFKI GmbH Robotics Innovation Center

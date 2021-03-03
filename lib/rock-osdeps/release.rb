@@ -58,8 +58,8 @@ class Release
     #
     # ---
     # default:
-    #     repo_url: http://rock.hb.dfki.de/rock-releases
-    #     public_key: http://rock.hb.dfki.de/rock-release/rock-robotics.public.key
+    #     repo_url: https://rock.hb.dfki.de/rock-releases
+    #     public_key: https://rock.hb.dfki.de/rock-release/rock-robotics.public.key
     #     separate_prefixes: true
     # master-18.01:
     #     separate_prefixes: false
