@@ -55,4 +55,5 @@ RUN /bin/bash prepare_release.sh master-18.09
 RUN /bin/bash prepare_release.sh master-19.06
 RUN /bin/bash prepare_release.sh master-20.01
 RUN /bin/bash prepare_release.sh master-20.06
+RUN /bin/bash prepare_release.sh master-20.10
 

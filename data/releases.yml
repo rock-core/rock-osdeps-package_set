@@ -15,3 +15,5 @@ master-20.01:
     separate_prefixes: false
 master-20.06:
     depends_on: "backports"
+master-20.10:
+    depends_on: "backports"
