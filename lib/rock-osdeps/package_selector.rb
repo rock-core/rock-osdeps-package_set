@@ -491,6 +491,7 @@ class PackageSelector
                     disabled_pkgs.delete(pkg_name)
                 end
             end
+            disabled_pkgs.uniq!
             Autoproj.message "  Disabling osdeps: #{disabled_pkgs.sort}"
             disabled_pkgs.flatten.each do |pkg|
                 filtered_osdeps.delete(pkg)
