@@ -13,10 +13,10 @@ jobs:
         id: current_branch
 
       - name: Build 16.04
-        run: docker build -t rock-osdeps/16.04 -f Dockerfile-16.04 --build-arg PKG_BRANCH=${{ steps.current_branch.outputs.branch }}
+        run: docker build -t rock-osdeps/16.04 -f Dockerfile-16.04 . --build-arg PKG_BRANCH=${{ steps.current_branch.outputs.branch }}
 
       - name: Build 18.04
-        run: docker build -t rock-osdeps/16.04 -f Dockerfile-18.04 --build-arg PKG_BRANCH=${{ steps.current_branch.outputs.branch }}
+        run: docker build -t rock-osdeps/18.04 -f Dockerfile-18.04 . --build-arg PKG_BRANCH=${{ steps.current_branch.outputs.branch }}
 
       - name: Test-18.01-on-ubuntu:16.04
         run: docker run rock-osdeps/16.04 /bin/bash -c "/home/docker/test_release.sh master-18.01"
