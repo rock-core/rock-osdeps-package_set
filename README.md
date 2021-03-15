@@ -1,5 +1,5 @@
 # Package set: rock-osdeps
-[![Build Status](https://travis-ci.org/rock-core/rock-osdeps-package_set.svg?brach=master)](https:///travis-ci.org/rock-core/rock-osdeps-package_set)
+[![Build Status](https://github.com/rock-core/rock-osdeps-package_set/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/rock-core/rock-osdeps-package_set/actions/workflows/test.yml)
 
 
 * https://github.com/rock-core/rock-osdeps-package_set
