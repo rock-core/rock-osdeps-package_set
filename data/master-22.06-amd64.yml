@@ -1,0 +1,1237 @@
+---
+utilrb:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-utilrb
+typelib:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-typelib
+rtt:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-rtt
+tools/metaruby:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-tools-metaruby
+rtt_typelib:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-rtt-typelib
+orogen:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-orogen
+utilmm:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-utilmm
+tools/msgpack-c:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-msgpack-c
+base/cmake:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-base-cmake
+external/sisl:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-external-sisl
+base/logging:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-base-logging
+gui/osg_qt4:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-gui-osg-qt4
+gui/osgviz:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-gui-osgviz
+gui/vizkit3d:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-gui-vizkit3d
+base/types:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-base-types
+tools/pocolog_cpp:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-pocolog-cpp
+tools/pocolog2msgpack:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-pocolog2msgpack
+base/console_bridge:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-base-console-bridge
+tools/class_loader:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-class-loader
+tools/pocolog:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-tools-pocolog
+tools/orogen_metadata:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-orogen-metadata
+tools/service_discovery:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-service-discovery
+tools/orocos_cpp_base:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-orocos-cpp-base
+tools/lib_config:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-lib-config
+tools/orogen_cpp_proxies:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-orogen-cpp-proxies
+tools/orogen_model_exporter:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-orogen-model-exporter
+base/orogen/std:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-base-orogen-std
+tools/orocos.rb:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-tools-orocos.rb
+tools/rest_api:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-tools-rest-api
+gui/rock_webapp:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-gui-rock-webapp
+tools/roby:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-tools-roby
+drivers/aggregator:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-aggregator
+base/orogen/types:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-base-orogen-types
+base/scripts:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-base-scripts
+drivers/transformer:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-transformer
+tools/logger:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-logger
+drivers/orogen/aggregator:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-aggregator
+perception/jpeg_conversion:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-perception-jpeg-conversion
+drivers/orogen/transformer:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-transformer
+perception/frame_helper:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-perception-frame-helper
+gui/rock_widget_collection:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-gui-rock-widget-collection
+gui/vizkit:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-gui-vizkit
+tools/syskit:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-tools-syskit
+bundles/common_models:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-bundles-common-models
+tools/telemetry:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-tools-telemetry
+bundles/rock:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-bundles-rock
+base/templates/ruby_lib:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-base-templates-ruby-lib
+base/numeric:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-base-numeric
+base/templates/cmake_lib:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-base-templates-cmake-lib
+base/templates/cmake_vizkit_widget:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-base-templates-cmake-vizkit-widget
+base/templates/vizkit3d_plugin:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-base-templates-vizkit3d-plugin
+base/templates/bundle:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-base-templates-bundle
+base/templates/doc:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-base-templates-doc
+drivers/iodrivers_base:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-iodrivers-base
+drivers/orogen/iodrivers_base:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-iodrivers-base
+control/joint_control_base:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-joint-control-base
+tools/qxcfg:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-qxcfg
+tools/gecode:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-gecode
+gui/vizkit3d_debug_drawings:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-gui-vizkit3d-debug-drawings
+gui/orogen/vizkit3d_debug_drawings:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-gui-orogen-vizkit3d-debug-drawings
+drivers/orogen/video_streamer_webrtc:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-video-streamer-webrtc
+knowledge_reasoning/factpp:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-knowledge-reasoning-factpp
+knowledge_reasoning/owlapi:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-knowledge-reasoning-owlapi
+external/lemon:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-external-lemon
+external/snap:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-external-snap
+external/gexf:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-external-gexf
+tools/graph_analysis:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-graph-analysis
+multiagent/fipa_acl:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-multiagent-fipa-acl
+multiagent/fipa_services:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-multiagent-fipa-services
+multiagent/orogen/fipa_services:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-multiagent-orogen-fipa-services
+bundles/rock_multiagent:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-bundles-rock-multiagent
+external/libply:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-external-libply
+slam/envire:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-envire
+planning/exploration:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-planning-exploration
+drivers/gps_base:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-gps-base
+gui/vizkit3d_pcl:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-gui-vizkit3d-pcl
+perception/apriltags:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-perception-apriltags
+control/kdl:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-kdl
+control/urdfdom_headers:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-urdfdom-headers
+control/urdfdom:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-urdfdom
+control/kdl_parser:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-kdl-parser
+slam/threed_odometry:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-threed-odometry
+control/uwv_dynamic_model:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-uwv-dynamic-model
+slam/mtk:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-mtk
+slam/pose_estimation:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-pose-estimation
+slam/uwv_kalman_filters:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-uwv-kalman-filters
+perception/depth_map_preprocessing:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-perception-depth-map-preprocessing
+drivers/imu_advanced_navigation_anpp:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-imu-advanced-navigation-anpp
+drivers/canbus:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-canbus
+drivers/canopen_master:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-canopen-master
+control/joint_tools:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-joint-tools
+tools/seasocks:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-seasocks
+slam/gtsam:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-gtsam
+drivers/libusb:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-libusb
+slam/ceres_solver:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-ceres-solver
+bundles/rock_auv:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-bundles-rock-auv
+gui/point_cloud:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-gui-point-cloud
+perception/viso2:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-perception-viso2
+planning/randward:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-planning-randward
+planning/arvand_herd:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-planning-arvand-herd
+planning/fd_cedalion:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-planning-fd-cedalion
+planning/fd_uniform:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-planning-fd-uniform
+planning/bfsf:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-planning-bfsf
+planning/fast_downward:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-planning-fast-downward
+planning/lama:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-planning-lama
+planning/pddl_planner:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-planning-pddl-planner
+control/motor_controller:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-motor-controller
+control/hysteresis_model:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-hysteresis-model
+slam/terrain_estimator:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-terrain-estimator
+slam/gmapping:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-gmapping
+gui/map2d:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-gui-map2d
+drivers/imu_stim300:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-imu-stim300
+drivers/imu_imar:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-imu-imar
+drivers/alt_imagenex:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-alt-imagenex
+drivers/ctd_seabird:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-ctd-seabird
+drivers/mbeam_imagenex:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-mbeam-imagenex
+drivers/pressure_paroscientific:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-pressure-paroscientific
+drivers/base_schilling:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-base-schilling
+drivers/ucm_schilling:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-ucm-schilling
+drivers/act_schilling:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-act-schilling
+drivers/phins_ixsea:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-phins-ixsea
+gui/vizkit_3d_plugins:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-gui-vizkit-3d-plugins
+drivers/dps_desertstar_ssp1:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-dps-desertstar-ssp1
+planning/sbpl:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-planning-sbpl
+external/aruco:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-external-aruco
+simulation/imumodel:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-imumodel
+drivers/freenect:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-freenect
+control/robot_frames:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-robot-frames
+gui/control_ui:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-gui-control-ui
+gui/robot_model:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-gui-robot-model
+control/joint_dispatcher:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-joint-dispatcher
+control/kdl_conversions:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-kdl-conversions
+data_processing/openann:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-data-processing-openann
+data_processing/type_to_vector:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-data-processing-type-to-vector
+drivers/video_capture_vlc:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-video-capture-vlc
+drivers/video_streamer_vlc:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-video-streamer-vlc
+drivers/phidgets:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-phidgets
+control/reflexxes:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-reflexxes
+bundles/rock_ugv_nav:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-bundles-rock-ugv-nav
+drivers/ptu_directedperception:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-ptu-directedperception
+control/trajectory_follower:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-trajectory-follower
+drivers/velodyne_lidar:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-velodyne-lidar
+drivers/mb500:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-mb500
+drivers/hokuyo:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-hokuyo
+drivers/xsens_imu:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-xsens-imu
+drivers/dynamixel:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-dynamixel
+drivers/controldev:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-controldev
+drivers/parport:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-parport
+drivers/camera_interface:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-camera-interface
+drivers/camera_prosilica:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-camera-prosilica
+drivers/camera_usb:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-camera-usb
+drivers/dvl_teledyne:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-dvl-teledyne
+drivers/camera_firewire:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-camera-firewire
+drivers/fog_kvh:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-fog-kvh
+drivers/vicon:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-vicon
+drivers/qualisys:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-qualisys
+drivers/sonar_tritech:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-sonar-tritech
+drivers/laserscanner_sick:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-laserscanner-sick
+drivers/laser_filter:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-laser-filter
+perception/libelas:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-perception-libelas
+planning/vfh_star:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-planning-vfh-star
+planning/corridor_navigation:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-planning-corridor-navigation
+slam/pose_ekf:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-pose-ekf
+slam/quater_ikf:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-quater-ikf
+external/cminpack:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-external-cminpack
+slam/quater_ukf:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-quater-ukf
+slam/odometry:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-odometry
+slam/g2o:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-g2o
+drivers/orogen/transforms:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-transforms
+slam/orogen/envire:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-orogen-envire
+planning/orogen/exploration:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-planning-orogen-exploration
+drivers/orogen/canbus:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-canbus
+drivers/orogen/canopen_master:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-canopen-master
+drivers/orogen/gps_base:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-gps-base
+drivers/orogen/imu_advanced_navigation_anpp:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-imu-advanced-navigation-anpp
+slam/orogen/pcl:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-orogen-pcl
+control/orogen/uwv_dynamic_model:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-orogen-uwv-dynamic-model
+slam/orogen/simple_pose_integrator:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-orogen-simple-pose-integrator
+control/orogen/robot_frames:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-orogen-robot-frames
+control/orogen/joint_tools:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-orogen-joint-tools
+gui/orogen/qt_base:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-gui-orogen-qt-base
+slam/orogen/threed_odometry:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-orogen-threed-odometry
+slam/orogen/gmapping:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-orogen-gmapping
+control/orogen/trajectory_generation:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-orogen-trajectory-generation
+drivers/orogen/controldev:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-controldev
+control/orogen/auv_control:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-orogen-auv-control
+control/orogen/auv_raw_command_converter:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-orogen-auv-raw-command-converter
+slam/orogen/north_seeker:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-orogen-north-seeker
+slam/orogen/pose_estimation:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-orogen-pose-estimation
+planning/orogen/pddl_planner:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-planning-orogen-pddl-planner
+planning/orogen/heading_calculator:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-planning-orogen-heading-calculator
+planning/orogen/traversability:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-planning-orogen-traversability
+drivers/orogen/imu_imar:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-imu-imar
+drivers/orogen/ctd_seabird:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-ctd-seabird
+drivers/orogen/pressure_paroscientific:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-pressure-paroscientific
+drivers/orogen/ucm_schilling:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-ucm-schilling
+drivers/orogen/act_schilling:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-act-schilling
+drivers/orogen/phins_ixsea:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-phins-ixsea
+drivers/orogen/velodyne_lidar:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-velodyne-lidar
+drivers/orogen/dps_desertstar_ssp1:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-dps-desertstar-ssp1
+drivers/orogen/video_streamer_vlc:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-video-streamer-vlc
+simulation/orogen/imumodel:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-orogen-imumodel
+drivers/orogen/servo_dynamixel:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-servo-dynamixel
+control/orogen/motor_controller:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-orogen-motor-controller
+control/orogen/joint_dispatcher:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-orogen-joint-dispatcher
+data_processing/orogen/type_to_vector:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-data-processing-orogen-type-to-vector
+data_processing/orogen/statistics:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-data-processing-orogen-statistics
+drivers/orogen/ptu_directedperception:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-ptu-directedperception
+control/orogen/trajectory_follower:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-orogen-trajectory-follower
+control/orogen/skid4_control:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-control-orogen-skid4-control
+drivers/orogen/gps:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-gps
+drivers/orogen/hokuyo:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-hokuyo
+drivers/orogen/xsens_imu:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-xsens-imu
+drivers/orogen/controldev_websocket:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-controldev-websocket
+drivers/orogen/parport:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-parport
+drivers/orogen/wifimon:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-wifimon
+drivers/orogen/camera_base:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-camera-base
+drivers/orogen/dvl_teledyne:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-dvl-teledyne
+drivers/orogen/camera_usb:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-camera-usb
+drivers/orogen/camera_firewire:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-camera-firewire
+drivers/orogen/vicon:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-vicon
+drivers/orogen/sonar_tritech:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-sonar-tritech
+drivers/orogen/laserscanner_sick:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-laserscanner-sick
+drivers/orogen/qualisys:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-qualisys
+drivers/orogen/laser_filter:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-laser-filter
+drivers/orogen/taskmon:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-drivers-orogen-taskmon
+slam/orogen/odometry:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-orogen-odometry
+slam/orogen/tilt_scan:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-orogen-tilt-scan
+simulation/lib_manager:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-lib-manager
+tools/configmaps:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-configmaps
+simulation/mars/common/utils:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-utils
+simulation/mars/common/cfg_manager:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-cfg-manager
+simulation/mars/common/gui/main_gui:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-gui-main-gui
+simulation/mars/common/gui/config_map_gui:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-gui-config-map-gui
+simulation/mars/common/gui/gui_app:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-gui-gui-app
+simulation/mars/common/data_broker:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-data-broker
+simulation/mars/interfaces:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-interfaces
+simulation/ode-16:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-ode-16
+simulation/mars/sim:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-sim
+simulation/mars/entity_generation/entity_factory:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-entity-generation-entity-factory
+simulation/mars/entity_generation/primitives:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-entity-generation-primitives
+simulation/mars/plugins/entity_view:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-plugins-entity-view
+simulation/mars/common/graphics/osg_material_manager:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-graphics-osg-material-manager
+simulation/mars/plugins/SkyDomePlugin:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-plugins-skydomeplugin
+simulation/mars/common/graphics/osg_terrain:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-graphics-osg-terrain
+simulation/mars/common/graphics/osg_lines:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-graphics-osg-lines
+simulation/mars/common/graphics/osg_frames:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-graphics-osg-frames
+external/osgQt:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-external-osgqt
+simulation/mars/graphics:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-graphics
+simulation/mars/plugins/CameraGUI:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-plugins-cameragui
+simulation/mars/common/graphics/osg_points:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-graphics-osg-points
+simulation/mars/plugins/TerrainPlugin:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-plugins-terrainplugin
+simulation/mars/scene_loader:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-scene-loader
+simulation/mars/gui:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-gui
+simulation/mars/plugins/connexion_plugin:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-plugins-connexion-plugin
+simulation/mars/common/gui/data_broker_gui:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-gui-data-broker-gui
+simulation/mars/common/gui/cfg_manager_gui:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-gui-cfg-manager-gui
+simulation/mars/common/gui/lib_manager_gui:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-gui-lib-manager-gui
+simulation/mars/common/gui/log_console:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-gui-log-console
+simulation/mars/common/gui/data_broker_plotter2:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-gui-data-broker-plotter2
+simulation/mars/smurf_loader:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-smurf-loader
+simulation/mars/plugins/connectors:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-plugins-connectors
+simulation/smurf_parser:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-smurf-parser
+simulation/mars/entity_generation/smurf:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-entity-generation-smurf
+simulation/mars/app:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-app
+simulation/mars/plugins/PythonMars:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-plugins-pythonmars
+simulation/mars/common/graphics/osg_text:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-graphics-osg-text
+bagel/osg_graph_viz:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-bagel-osg-graph-viz
+simulation/mars_extensions/data_broker_graph_view:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-extensions-data-broker-graph-view
+simulation/mars/common/graphics/osg_text_factory:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-graphics-osg-text-factory
+simulation/mars/plugins/Text3D:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-plugins-text3d
+simulation/mars/common/gui/data_broker_plotter:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-common-gui-data-broker-plotter
+simulation/mars/viz:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-viz
+simulation/mars/plugins/VirtualJoystickPlugin:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-plugins-virtualjoystickplugin
+simulation/mars/plugins/constraint_plugin:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-plugins-constraint-plugin
+simulation/mars/doc:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-mars-doc
+simulation/ode:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-ode
+models/robots/robo2:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-models-robots-robo2
+models/robots/robo3:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-models-robots-robo3
+models/robots/turtlebot:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-models-robots-turtlebot
+models/robots/stick_insect:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-models-robots-stick-insect
+models/robots/wheelchair:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-models-robots-wheelchair
+models/environments/area1:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-models-environments-area1
+models/environments/area2:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-models-environments-area2
+models/environments/office1:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-models-environments-office1
+models/environments/lecture_room:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-models-environments-lecture-room
+simulation/orogen/mars:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-orogen-mars
+simulation/orogen/mars_addons:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-simulation-orogen-mars-addons
+tools/backward:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-backward
+tools/orocos_cpp:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-orocos-cpp
+tools/smurf:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-smurf
+tools/backward-cpp:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-backward-cpp
+gui/rock_replay:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-gui-rock-replay
+base/boost_serialization:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-base-boost-serialization
+external/ogdf:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-external-ogdf
+tools/plugin_manager:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-tools-plugin-manager
+envire/envire_core:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-envire-envire-core
+slam/maps:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-slam-maps
+envire/envire_gis:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-envire-envire-gis
+envire/envire_maps:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-envire-envire-maps
+envire/envire_smurf:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-envire-envire-smurf
+gui/vizkit3d_plugin_information:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-gui-vizkit3d-plugin-information
+envire/libccd:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-envire-libccd
+envire/orogen/envire_orogen:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-envire-orogen-envire-orogen
+envire/orogen/envire_core:
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-envire-orogen-envire-core
+concurrent-ruby:
+  debian:
+    8,jessie,default: concurrent-ruby
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-concurrent-ruby
+minitest:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-minitest
+    16.04,xenial,xerus,default: ruby-minitest
+    18.04,bionic,beaver,default: ruby-minitest
+    20.04,focal,fossa,default: ruby-minitest
+  debian:
+    8,jessie,default: minitest
+    9,stretch,default: ruby-minitest
+    10,buster,default: ruby-minitest
+    11,bullseye,default: ruby-minitest
+pastel:
+  debian:
+    8,jessie,default: pastel
+    11,bullseye,default: ruby-pastel
+  ubuntu,debian:
+    20.04,focal,fossa,default: ruby-pastel
+tty-cursor:
+  debian:
+    8,jessie,default: tty-cursor
+    11,bullseye,default: ruby-tty-cursor
+  ubuntu,debian:
+    20.04,focal,fossa,default: ruby-tty-cursor
+tty-prompt:
+  debian:
+    8,jessie,default: tty-prompt
+    11,bullseye,default: ruby-tty-prompt
+  ubuntu,debian:
+    20.04,focal,fossa,default: ruby-tty-prompt
+facets:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-facets
+    16.04,xenial,xerus,default: ruby-facets
+    18.04,bionic,beaver,default: ruby-facets
+    20.04,focal,fossa,default: rock-master-22.06-ruby-facets
+  debian:
+    8,jessie,default: facets
+    9,stretch,default: ruby-facets
+    10,buster,default: ruby-facets
+backports:
+  debian:
+    8,jessie,default: backports
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-backports
+bundler:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: bundler
+    16.04,xenial,xerus,default: bundler
+    18.04,bionic,beaver,default: bundler
+    20.04,focal,fossa,default: bundler
+  debian:
+    8,jessie,default: bundler
+    9,stretch,default: bundler
+    10,buster,default: bundler
+    11,bullseye,default: bundler
+rgl:
+  debian:
+    8,jessie,default: ruby-rgl
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-rgl
+hooks:
+  debian:
+    8,jessie,default: hooks
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-hooks
+autorespawn:
+  debian:
+    8,jessie,default: autorespawn
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-autorespawn
+binding_of_caller:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-binding-of-caller
+    18.04,bionic,beaver,default: ruby-binding-of-caller
+    20.04,focal,fossa,default: ruby-binding-of-caller
+  debian:
+    8,jessie,default: binding_of_caller
+    9,stretch,default: ruby-binding-of-caller
+    10,buster,default: ruby-binding-of-caller
+    11,bullseye,default: ruby-binding-of-caller
+concurrent-ruby-ext:
+  debian:
+    8,jessie,default: concurrent-ruby-ext
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-concurrent-ruby-ext
+fakefs:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-fakefs
+    16.04,xenial,xerus,default: ruby-fakefs
+    18.04,bionic,beaver,default: ruby-fakefs
+    20.04,focal,fossa,default: ruby-fakefs
+  debian:
+    8,jessie,default: fakefs
+    9,stretch,default: ruby-fakefs
+    10,buster,default: ruby-fakefs
+    11,bullseye,default: ruby-fakefs
+faye-websocket:
+  debian:
+    8,jessie,default: faye-websocket
+    10,buster,default: ruby-faye-websocket
+    11,bullseye,default: ruby-faye-websocket
+  ubuntu,debian:
+    20.04,focal,fossa,default: ruby-faye-websocket
+flexmock:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-flexmock
+    16.04,xenial,xerus,default: ruby-flexmock
+    18.04,bionic,beaver,default: ruby-flexmock
+    20.04,focal,fossa,default: ruby-flexmock
+  debian:
+    8,jessie,default: flexmock
+    9,stretch,default: ruby-flexmock
+    10,buster,default: ruby-flexmock
+    11,bullseye,default: ruby-flexmock
+ftpd:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ftpd
+    16.04,xenial,xerus,default: ftpd
+    18.04,bionic,beaver,default: ftpd
+    20.04,focal,fossa,default: ftpd
+  debian:
+    8,jessie,default: ftpd
+    9,stretch,default: ftpd
+    11,bullseye,default: ftpd
+ruby2_keywords:
+  debian:
+    8,jessie,default: ruby2_keywords
+    11,bullseye,default: ruby-ruby2-keywords
+  ubuntu,debian:
+    20.04,focal,fossa,default: ruby-ruby2-keywords
+grape:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-grape
+    18.04,bionic,beaver,default: ruby-grape
+    20.04,focal,fossa,default: ruby-grape
+  debian:
+    8,jessie,default: grape
+    9,stretch,default: ruby-grape
+    10,buster,default: ruby-grape
+    11,bullseye,default: ruby-grape
+grape_logging:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-grape-logging
+    18.04,bionic,beaver,default: ruby-grape-logging
+    20.04,focal,fossa,default: ruby-grape-logging
+  debian:
+    8,jessie,default: grape_logging
+    9,stretch,default: ruby-grape-logging
+    10,buster,default: ruby-grape-logging
+    11,bullseye,default: ruby-grape-logging
+hoe:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-hoe
+    16.04,xenial,xerus,default: ruby-hoe
+    18.04,bionic,beaver,default: ruby-hoe
+    20.04,focal,fossa,default: ruby-hoe
+  debian:
+    8,jessie,default: hoe
+    9,stretch,default: ruby-hoe
+    10,buster,default: ruby-hoe
+    11,bullseye,default: ruby-hoe
+yard:
+  debian:
+    8,jessie,default: ruby-yard
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-yard
+hoe-yard:
+  debian:
+    8,jessie,default: hoe-yard
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-hoe-yard
+kramdown:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-kramdown
+    16.04,xenial,xerus,default: ruby-kramdown
+    18.04,bionic,beaver,default: ruby-kramdown
+    20.04,focal,fossa,default: kramdown
+  debian:
+    8,jessie,default: kramdown
+    9,stretch,default: ruby-kramdown
+    10,buster,default: ruby-kramdown
+    11,bullseye,default: kramdown
+listen:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-listen
+    16.04,xenial,xerus,default: ruby-listen
+    18.04,bionic,beaver,default: ruby-listen
+    20.04,focal,fossa,default: ruby-listen
+  debian:
+    8,jessie,default: listen
+    9,stretch,default: ruby-listen
+    10,buster,default: ruby-listen
+    11,bullseye,default: ruby-listen
+net-ftp:
+  debian:
+    8,jessie,default: net-ftp
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-net-ftp
+qtbindings:
+  debian:
+    8,jessie,default: qtbindings
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-qtbindings
+rack-cors:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-rack-cors
+    16.04,xenial,xerus,default: ruby-rack-cors
+    18.04,bionic,beaver,default: ruby-rack-cors
+    20.04,focal,fossa,default: ruby-rack-cors
+  debian:
+    8,jessie,default: rack-cors
+    9,stretch,default: ruby-rack-cors
+    10,buster,default: ruby-rack-cors
+    11,bullseye,default: ruby-rack-cors
+rake-compiler:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: rake-compiler
+    16.04,xenial,xerus,default: rake-compiler
+    18.04,bionic,beaver,default: rake-compiler
+    20.04,focal,fossa,default: rake-compiler
+  debian:
+    8,jessie,default: rake-compiler
+    9,stretch,default: rake-compiler
+    10,buster,default: rake-compiler
+    11,bullseye,default: rake-compiler
+rb-readline:
+  debian:
+    8,jessie,default: rb-readline
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-rb-readline
+rbtrace:
+  debian:
+    8,jessie,default: rbtrace
+    10,buster,default: ruby-rbtrace
+    11,bullseye,default: ruby-rbtrace
+  ubuntu,debian:
+    20.04,focal,fossa,default: ruby-rbtrace
+rest-client:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-rest-client
+    16.04,xenial,xerus,default: ruby-rest-client
+    18.04,bionic,beaver,default: ruby-rest-client
+    20.04,focal,fossa,default: ruby-rest-client
+  debian:
+    8,jessie,default: rest-client
+    9,stretch,default: ruby-rest-client
+    10,buster,default: ruby-rest-client
+    11,bullseye,default: ruby-rest-client
+rice:
+  debian:
+    8,jessie,default: rice
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-rice
+sprockets:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-sprockets
+    16.04,xenial,xerus,default: ruby-sprockets
+    18.04,bionic,beaver,default: ruby-sprockets
+    20.04,focal,fossa,default: ruby-sprockets
+  debian:
+    8,jessie,default: sprockets
+    9,stretch,default: ruby-sprockets
+    10,buster,default: ruby-sprockets
+    11,bullseye,default: ruby-sprockets
+stackprof:
+  debian:
+    8,jessie,default: stackprof
+    11,bullseye,default: ruby-stackprof
+  ubuntu,debian:
+    20.04,focal,fossa,default: ruby-stackprof
+state_machine:
+  ubuntu,debian:
+    16.04,xenial,xerus,default: ruby-state-machine
+    20.04,focal,fossa,default: rock-master-22.06-ruby-state-machine
+  debian:
+    8,jessie,default: state_machine
+thin:
+  debian:
+    8,jessie,default: ruby-thin
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-thin
+timecop:
+  ubuntu,debian:
+    14.04,14.04.2,trusty,tahr,default: ruby-timecop
+    16.04,xenial,xerus,default: ruby-timecop
+    18.04,bionic,beaver,default: ruby-timecop
+    20.04,focal,fossa,default: ruby-timecop
+  debian:
+    8,jessie,default: timecop
+    9,stretch,default: ruby-timecop
+    10,buster,default: ruby-timecop
+    11,bullseye,default: ruby-timecop
+tty-progressbar:
+  debian:
+    8,jessie,default: tty-progressbar
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-tty-progressbar
+tty-table:
+  debian:
+    8,jessie,default: tty-table
+  ubuntu,debian:
+    20.04,focal,fossa,default: rock-master-22.06-ruby-tty-table
+websocket:
+  debian:
+    8,jessie,default: websocket
+    10,buster,default: ruby-websocket
+    11,bullseye,default: ruby-websocket
+  ubuntu,debian:
+    20.04,focal,fossa,default: ruby-websocket
+xmlrpc:
+  debian:
+    8,jessie,default: xmlrpc
+    10,buster,default: ruby-xmlrpc
+    11,bullseye,default: ruby-xmlrpc
+  ubuntu,debian:
+    20.04,focal,fossa,default: ruby-xmlrpc
