@@ -18,5 +18,3 @@ master-20.06:
 master-20.10:
     depends_on: "backports"
 master-22.06:
-    repo_url: http://rock.dfki.uni-bremen.de
-    public_key: http://rock.dfki.uni-bremen.de/rock-robotics.public.key
