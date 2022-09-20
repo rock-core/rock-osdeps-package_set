@@ -17,3 +17,4 @@ master-20.06:
     depends_on: "backports"
 master-20.10:
     depends_on: "backports"
+master-22.06:
