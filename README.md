@@ -1,6 +1,5 @@
 # Package set: rock-osdeps
 [![Build Status](https://github.com/rock-core/rock-osdeps-package_set/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/rock-core/rock-osdeps-package_set/actions/workflows/test.yml)
-
 [![Build Status](https://github.com/rock-core/rock-osdeps-package_set/actions/workflows/test_ubuntu-20.04.yml/badge.svg?branch=master)](https://github.com/rock-core/rock-osdeps-package_set/actions/workflows/test_ubuntu-20.04.yml)
 
 
