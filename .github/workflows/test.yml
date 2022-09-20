@@ -23,24 +23,3 @@ jobs:
 
       - name: Test-20.10-on-ubuntu:18.04
         run: docker run rock-osdeps/18.04 /bin/bash -c "/home/docker/test_release.sh master-20.10"
-
-name: ubuntu-20.04
-on: [push]
-jobs:
-  unittests:
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: current_branch
-
-      - name: Build 20.04
-        run: docker build -t rock-osdeps/20.04 -f Dockerfile-20.04 . --build-arg PKG_BRANCH=${{ steps.current_branch.outputs.branch }}
-
-      - name: Test-22.06-on-ubuntu:20.04
-        run: docker run rock-osdeps/20.04 /bin/bash -c "/home/docker/test_release.sh master-22.06"
-
