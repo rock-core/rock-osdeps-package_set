@@ -1,4 +1,4 @@
-name: test
+name: ubuntu-18.04
 on: [push]
 jobs:
   unittests:
@@ -23,4 +23,3 @@ jobs:
 
       - name: Test-20.10-on-ubuntu:18.04
         run: docker run rock-osdeps/18.04 /bin/bash -c "/home/docker/test_release.sh master-20.10"
-
