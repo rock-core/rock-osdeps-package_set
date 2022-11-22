@@ -1,0 +1,2008 @@
+---
+utilrb:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-utilrb
+  debian:
+    10,buster,default: rock-master-20.06-ruby-utilrb
+typelib:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-typelib
+  debian:
+    10,buster,default: rock-master-20.06-typelib
+rtt:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-rtt
+  debian:
+    10,buster,default: rock-master-20.06-rtt
+tools/metaruby:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-tools-metaruby
+  debian:
+    10,buster,default: rock-master-20.06-ruby-tools-metaruby
+rtt_typelib:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-rtt-typelib
+  debian:
+    10,buster,default: rock-master-20.06-rtt-typelib
+orogen:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-orogen
+  debian:
+    10,buster,default: rock-master-20.06-ruby-orogen
+utilmm:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-utilmm
+  debian:
+    10,buster,default: rock-master-20.06-utilmm
+tools/msgpack-c:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-msgpack-c
+  debian:
+    10,buster,default: rock-master-20.06-tools-msgpack-c
+base/cmake:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-base-cmake
+  debian:
+    10,buster,default: rock-master-20.06-base-cmake
+external/sisl:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-external-sisl
+  debian:
+    10,buster,default: rock-master-20.06-external-sisl
+base/logging:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-base-logging
+  debian:
+    10,buster,default: rock-master-20.06-base-logging
+gui/osgviz:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-osgviz
+  debian:
+    10,buster,default: rock-master-20.06-gui-osgviz
+gui/vizkit3d:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-vizkit3d
+  debian:
+    10,buster,default: rock-master-20.06-gui-vizkit3d
+base/types:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-base-types
+  debian:
+    10,buster,default: rock-master-20.06-base-types
+tools/pocolog_cpp:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-pocolog-cpp
+  debian:
+    10,buster,default: rock-master-20.06-tools-pocolog-cpp
+tools/pocolog2msgpack:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-pocolog2msgpack
+  debian:
+    10,buster,default: rock-master-20.06-tools-pocolog2msgpack
+base/console_bridge:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-base-console-bridge
+  debian:
+    10,buster,default: rock-master-20.06-base-console-bridge
+tools/class_loader:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-class-loader
+  debian:
+    10,buster,default: rock-master-20.06-tools-class-loader
+tools/pocolog:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-tools-pocolog
+  debian:
+    10,buster,default: rock-master-20.06-ruby-tools-pocolog
+tools/orogen_metadata:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-orogen-metadata
+  debian:
+    10,buster,default: rock-master-20.06-tools-orogen-metadata
+tools/service_discovery:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-service-discovery
+  debian:
+    10,buster,default: rock-master-20.06-tools-service-discovery
+tools/orocos_cpp_base:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-orocos-cpp-base
+  debian:
+    10,buster,default: rock-master-20.06-tools-orocos-cpp-base
+tools/lib_config:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-lib-config
+  debian:
+    10,buster,default: rock-master-20.06-tools-lib-config
+tools/orogen_cpp_proxies:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-orogen-cpp-proxies
+  debian:
+    10,buster,default: rock-master-20.06-tools-orogen-cpp-proxies
+tools/orogen_model_exporter:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-orogen-model-exporter
+  debian:
+    10,buster,default: rock-master-20.06-tools-orogen-model-exporter
+base/orogen/std:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-base-orogen-std
+  debian:
+    10,buster,default: rock-master-20.06-base-orogen-std
+tools/orocos.rb:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-tools-orocos.rb
+  debian:
+    10,buster,default: rock-master-20.06-ruby-tools-orocos.rb
+tools/rest_api:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-tools-rest-api
+  debian:
+    10,buster,default: rock-master-20.06-ruby-tools-rest-api
+gui/rock_webapp:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-rock-webapp
+  debian:
+    10,buster,default: rock-master-20.06-gui-rock-webapp
+tools/roby:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-tools-roby
+  debian:
+    10,buster,default: rock-master-20.06-ruby-tools-roby
+drivers/aggregator:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-aggregator
+  debian:
+    10,buster,default: rock-master-20.06-drivers-aggregator
+base/orogen/types:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-base-orogen-types
+  debian:
+    10,buster,default: rock-master-20.06-base-orogen-types
+base/scripts:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-base-scripts
+  debian:
+    10,buster,default: rock-master-20.06-ruby-base-scripts
+drivers/transformer:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-transformer
+  debian:
+    10,buster,default: rock-master-20.06-drivers-transformer
+tools/logger:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-logger
+  debian:
+    10,buster,default: rock-master-20.06-tools-logger
+drivers/orogen/aggregator:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-aggregator
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-aggregator
+perception/jpeg_conversion:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-perception-jpeg-conversion
+  debian:
+    10,buster,default: rock-master-20.06-perception-jpeg-conversion
+drivers/orogen/transformer:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-transformer
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-transformer
+perception/frame_helper:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-perception-frame-helper
+  debian:
+    10,buster,default: rock-master-20.06-perception-frame-helper
+gui/rock_widget_collection:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-rock-widget-collection
+  debian:
+    10,buster,default: rock-master-20.06-gui-rock-widget-collection
+gui/vizkit:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-gui-vizkit
+  debian:
+    10,buster,default: rock-master-20.06-ruby-gui-vizkit
+tools/syskit:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-tools-syskit
+  debian:
+    10,buster,default: rock-master-20.06-ruby-tools-syskit
+bundles/common_models:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-bundles-common-models
+  debian:
+    10,buster,default: rock-master-20.06-ruby-bundles-common-models
+tools/telemetry:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-tools-telemetry
+  debian:
+    10,buster,default: rock-master-20.06-ruby-tools-telemetry
+bundles/rock:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-bundles-rock
+  debian:
+    10,buster,default: rock-master-20.06-ruby-bundles-rock
+base/numeric:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-base-numeric
+  debian:
+    10,buster,default: rock-master-20.06-base-numeric
+drivers/iodrivers_base:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-iodrivers-base
+  debian:
+    10,buster,default: rock-master-20.06-drivers-iodrivers-base
+drivers/orogen/iodrivers_base:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-iodrivers-base
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-iodrivers-base
+control/joint_control_base:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-joint-control-base
+  debian:
+    10,buster,default: rock-master-20.06-control-joint-control-base
+tools/qxcfg:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-qxcfg
+  debian:
+    10,buster,default: rock-master-20.06-tools-qxcfg
+tools/gecode:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-gecode
+  debian:
+    10,buster,default: rock-master-20.06-tools-gecode
+gui/vizkit3d_debug_drawings:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-vizkit3d-debug-drawings
+  debian:
+    10,buster,default: rock-master-20.06-gui-vizkit3d-debug-drawings
+gui/orogen/vizkit3d_debug_drawings:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-orogen-vizkit3d-debug-drawings
+  debian:
+    10,buster,default: rock-master-20.06-gui-orogen-vizkit3d-debug-drawings
+knowledge_reasoning/factpp:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-knowledge-reasoning-factpp
+  debian:
+    10,buster,default: rock-master-20.06-knowledge-reasoning-factpp
+knowledge_reasoning/owlapi:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-knowledge-reasoning-owlapi
+external/lemon:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-external-lemon
+  debian:
+    10,buster,default: rock-master-20.06-external-lemon
+external/snap:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-external-snap
+  debian:
+    10,buster,default: rock-master-20.06-external-snap
+external/gexf:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-external-gexf
+  debian:
+    10,buster,default: rock-master-20.06-external-gexf
+tools/graph_analysis:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-graph-analysis
+  debian:
+    10,buster,default: rock-master-20.06-tools-graph-analysis
+multiagent/fipa_acl:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-multiagent-fipa-acl
+  debian:
+    10,buster,default: rock-master-20.06-multiagent-fipa-acl
+multiagent/fipa_services:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-multiagent-fipa-services
+  debian:
+    10,buster,default: rock-master-20.06-multiagent-fipa-services
+multiagent/orogen/fipa_services:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-multiagent-orogen-fipa-services
+  debian:
+    10,buster,default: rock-master-20.06-multiagent-orogen-fipa-services
+bundles/rock_multiagent:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-bundles-rock-multiagent
+  debian:
+    10,buster,default: rock-master-20.06-ruby-bundles-rock-multiagent
+external/libply:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-external-libply
+  debian:
+    10,buster,default: rock-master-20.06-external-libply
+slam/envire:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-envire
+  debian:
+    10,buster,default: rock-master-20.06-slam-envire
+planning/exploration:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-exploration
+  debian:
+    10,buster,default: rock-master-20.06-planning-exploration
+drivers/imu_an_spatial:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-imu-an-spatial
+  debian:
+    10,buster,default: rock-master-20.06-drivers-imu-an-spatial
+drivers/gps_base:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-gps-base
+  debian:
+    10,buster,default: rock-master-20.06-drivers-gps-base
+gui/vizkit3d_pcl:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-vizkit3d-pcl
+  debian:
+    10,buster,default: rock-master-20.06-gui-vizkit3d-pcl
+perception/apriltags:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-perception-apriltags
+  debian:
+    10,buster,default: rock-master-20.06-perception-apriltags
+control/kdl:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-kdl
+  debian:
+    10,buster,default: rock-master-20.06-control-kdl
+control/urdfdom_headers:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-urdfdom-headers
+  debian:
+    10,buster,default: rock-master-20.06-control-urdfdom-headers
+control/urdfdom:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-urdfdom
+  debian:
+    10,buster,default: rock-master-20.06-control-urdfdom
+control/kdl_parser:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-kdl-parser
+  debian:
+    10,buster,default: rock-master-20.06-control-kdl-parser
+slam/threed_odometry:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-threed-odometry
+  debian:
+    10,buster,default: rock-master-20.06-slam-threed-odometry
+gui/pose3d_editor:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-pose3d-editor
+  debian:
+    10,buster,default: rock-master-20.06-gui-pose3d-editor
+control/visp:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-visp
+  debian:
+    10,buster,default: rock-master-20.06-control-visp
+control/uwv_dynamic_model:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-uwv-dynamic-model
+  debian:
+    10,buster,default: rock-master-20.06-control-uwv-dynamic-model
+slam/mtk:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-mtk
+  debian:
+    10,buster,default: rock-master-20.06-slam-mtk
+slam/pose_estimation:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-pose-estimation
+  debian:
+    10,buster,default: rock-master-20.06-slam-pose-estimation
+slam/uwv_kalman_filters:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-uwv-kalman-filters
+  debian:
+    10,buster,default: rock-master-20.06-slam-uwv-kalman-filters
+perception/depth_map_preprocessing:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-perception-depth-map-preprocessing
+  debian:
+    10,buster,default: rock-master-20.06-perception-depth-map-preprocessing
+drivers/imu_advanced_navigation_anpp:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-imu-advanced-navigation-anpp
+  debian:
+    10,buster,default: rock-master-20.06-drivers-imu-advanced-navigation-anpp
+drivers/canbus:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-canbus
+  debian:
+    10,buster,default: rock-master-20.06-drivers-canbus
+drivers/canopen_master:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-canopen-master
+  debian:
+    10,buster,default: rock-master-20.06-drivers-canopen-master
+control/joint_tools:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-joint-tools
+  debian:
+    10,buster,default: rock-master-20.06-control-joint-tools
+tools/seasocks:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-seasocks
+  debian:
+    10,buster,default: rock-master-20.06-tools-seasocks
+drivers/libusb:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-libusb
+  debian:
+    10,buster,default: rock-master-20.06-drivers-libusb
+gui/collada_dom:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-collada-dom
+  debian:
+    10,buster,default: rock-master-20.06-gui-collada-dom
+gui/collada_osg:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-collada-osg
+  debian:
+    10,buster,default: rock-master-20.06-gui-collada-osg
+slam/ceres_solver:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-ceres-solver
+  debian:
+    10,buster,default: rock-master-20.06-slam-ceres-solver
+bundles/rock_auv:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-bundles-rock-auv
+  debian:
+    10,buster,default: rock-master-20.06-ruby-bundles-rock-auv
+perception/projection:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-perception-projection
+  debian:
+    10,buster,default: rock-master-20.06-perception-projection
+gui/point_cloud:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-point-cloud
+  debian:
+    10,buster,default: rock-master-20.06-gui-point-cloud
+gui/qcam_calib:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-qcam-calib
+  debian:
+    10,buster,default: rock-master-20.06-gui-qcam-calib
+perception/viso2:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-perception-viso2
+  debian:
+    10,buster,default: rock-master-20.06-perception-viso2
+planning/randward:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-randward
+  debian:
+    10,buster,default: rock-master-20.06-planning-randward
+planning/arvand_herd:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-arvand-herd
+  debian:
+    10,buster,default: rock-master-20.06-planning-arvand-herd
+planning/fd_cedalion:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-fd-cedalion
+  debian:
+    10,buster,default: rock-master-20.06-planning-fd-cedalion
+planning/fd_uniform:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-fd-uniform
+  debian:
+    10,buster,default: rock-master-20.06-planning-fd-uniform
+planning/bfsf:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-bfsf
+  debian:
+    10,buster,default: rock-master-20.06-planning-bfsf
+planning/fast_downward:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-fast-downward
+  debian:
+    10,buster,default: rock-master-20.06-planning-fast-downward
+planning/lama:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-lama
+  debian:
+    10,buster,default: rock-master-20.06-planning-lama
+planning/pddl_planner:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-pddl-planner
+  debian:
+    10,buster,default: rock-master-20.06-planning-pddl-planner
+control/motor_controller:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-motor-controller
+  debian:
+    10,buster,default: rock-master-20.06-control-motor-controller
+control/hysteresis_model:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-hysteresis-model
+  debian:
+    10,buster,default: rock-master-20.06-control-hysteresis-model
+slam/terrain_estimator:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-terrain-estimator
+  debian:
+    10,buster,default: rock-master-20.06-slam-terrain-estimator
+slam/odometry:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-odometry
+  debian:
+    10,buster,default: rock-master-20.06-slam-odometry
+slam/gmapping:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-gmapping
+  debian:
+    10,buster,default: rock-master-20.06-slam-gmapping
+gui/map2d:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-map2d
+  debian:
+    10,buster,default: rock-master-20.06-gui-map2d
+drivers/imu_stim300:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-imu-stim300
+  debian:
+    10,buster,default: rock-master-20.06-drivers-imu-stim300
+drivers/imu_imar:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-imu-imar
+  debian:
+    10,buster,default: rock-master-20.06-drivers-imu-imar
+drivers/alt_imagenex:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-alt-imagenex
+  debian:
+    10,buster,default: rock-master-20.06-drivers-alt-imagenex
+drivers/ctd_seabird:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-ctd-seabird
+  debian:
+    10,buster,default: rock-master-20.06-drivers-ctd-seabird
+drivers/mbeam_imagenex:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-mbeam-imagenex
+  debian:
+    10,buster,default: rock-master-20.06-drivers-mbeam-imagenex
+drivers/pressure_paroscientific:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-pressure-paroscientific
+  debian:
+    10,buster,default: rock-master-20.06-drivers-pressure-paroscientific
+drivers/base_schilling:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-base-schilling
+  debian:
+    10,buster,default: rock-master-20.06-drivers-base-schilling
+drivers/ucm_schilling:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-ucm-schilling
+  debian:
+    10,buster,default: rock-master-20.06-drivers-ucm-schilling
+drivers/act_schilling:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-act-schilling
+  debian:
+    10,buster,default: rock-master-20.06-drivers-act-schilling
+drivers/phins_ixsea:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-phins-ixsea
+  debian:
+    10,buster,default: rock-master-20.06-drivers-phins-ixsea
+drivers/camera_interface:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-camera-interface
+  debian:
+    10,buster,default: rock-master-20.06-drivers-camera-interface
+drivers/dps_desertstar_ssp1:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-dps-desertstar-ssp1
+  debian:
+    10,buster,default: rock-master-20.06-drivers-dps-desertstar-ssp1
+planning/sbpl:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-sbpl
+  debian:
+    10,buster,default: rock-master-20.06-planning-sbpl
+planning/ompl:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-ompl
+  debian:
+    10,buster,default: rock-master-20.06-planning-ompl
+external/aruco:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-external-aruco
+  debian:
+    10,buster,default: rock-master-20.06-external-aruco
+simulation/imumodel:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-imumodel
+  debian:
+    10,buster,default: rock-master-20.06-simulation-imumodel
+drivers/freenect:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-freenect
+  debian:
+    10,buster,default: rock-master-20.06-drivers-freenect
+control/robot_frames:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-robot-frames
+  debian:
+    10,buster,default: rock-master-20.06-control-robot-frames
+gui/control_ui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-control-ui
+  debian:
+    10,buster,default: rock-master-20.06-gui-control-ui
+gui/robot_model:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-robot-model
+  debian:
+    10,buster,default: rock-master-20.06-gui-robot-model
+control/joint_dispatcher:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-joint-dispatcher
+  debian:
+    10,buster,default: rock-master-20.06-control-joint-dispatcher
+control/kdl_conversions:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-kdl-conversions
+  debian:
+    10,buster,default: rock-master-20.06-control-kdl-conversions
+data_processing/openann:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-data-processing-openann
+  debian:
+    10,buster,default: rock-master-20.06-data-processing-openann
+data_processing/type_to_vector:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-data-processing-type-to-vector
+  debian:
+    10,buster,default: rock-master-20.06-data-processing-type-to-vector
+drivers/video_capture_vlc:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-video-capture-vlc
+  debian:
+    10,buster,default: rock-master-20.06-drivers-video-capture-vlc
+drivers/video_streamer_vlc:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-video-streamer-vlc
+  debian:
+    10,buster,default: rock-master-20.06-drivers-video-streamer-vlc
+drivers/phidgets:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-phidgets
+  debian:
+    10,buster,default: rock-master-20.06-drivers-phidgets
+control/reflexxes:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-reflexxes
+  debian:
+    10,buster,default: rock-master-20.06-control-reflexxes
+bundles/rock_ugv_nav:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-bundles-rock-ugv-nav
+  debian:
+    10,buster,default: rock-master-20.06-ruby-bundles-rock-ugv-nav
+drivers/ptu_directedperception:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-ptu-directedperception
+  debian:
+    10,buster,default: rock-master-20.06-drivers-ptu-directedperception
+control/trajectory_follower:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-trajectory-follower
+  debian:
+    10,buster,default: rock-master-20.06-control-trajectory-follower
+drivers/velodyne_lidar:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-velodyne-lidar
+  debian:
+    10,buster,default: rock-master-20.06-drivers-velodyne-lidar
+drivers/mb500:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-mb500
+  debian:
+    10,buster,default: rock-master-20.06-drivers-mb500
+drivers/hokuyo:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-hokuyo
+  debian:
+    10,buster,default: rock-master-20.06-drivers-hokuyo
+drivers/xsens_imu:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-xsens-imu
+  debian:
+    10,buster,default: rock-master-20.06-drivers-xsens-imu
+drivers/dynamixel:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-dynamixel
+  debian:
+    10,buster,default: rock-master-20.06-drivers-dynamixel
+drivers/controldev:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-controldev
+  debian:
+    10,buster,default: rock-master-20.06-drivers-controldev
+drivers/parport:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-parport
+  debian:
+    10,buster,default: rock-master-20.06-drivers-parport
+drivers/camera_prosilica:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-camera-prosilica
+  debian:
+    10,buster,default: rock-master-20.06-drivers-camera-prosilica
+drivers/camera_usb:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-camera-usb
+drivers/dvl_teledyne:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-dvl-teledyne
+  debian:
+    10,buster,default: rock-master-20.06-drivers-dvl-teledyne
+drivers/camera_firewire:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-camera-firewire
+  debian:
+    10,buster,default: rock-master-20.06-drivers-camera-firewire
+drivers/fog_kvh:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-fog-kvh
+  debian:
+    10,buster,default: rock-master-20.06-drivers-fog-kvh
+drivers/vicon:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-vicon
+  debian:
+    10,buster,default: rock-master-20.06-drivers-vicon
+drivers/qualisys:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-qualisys
+  debian:
+    10,buster,default: rock-master-20.06-drivers-qualisys
+drivers/sonar_tritech:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-sonar-tritech
+  debian:
+    10,buster,default: rock-master-20.06-drivers-sonar-tritech
+drivers/laserscanner_sick:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-laserscanner-sick
+  debian:
+    10,buster,default: rock-master-20.06-drivers-laserscanner-sick
+drivers/laser_filter:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-laser-filter
+  debian:
+    10,buster,default: rock-master-20.06-drivers-laser-filter
+perception/libelas:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-perception-libelas
+  debian:
+    10,buster,default: rock-master-20.06-perception-libelas
+planning/vfh_star:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-vfh-star
+  debian:
+    10,buster,default: rock-master-20.06-planning-vfh-star
+planning/corridor_navigation:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-corridor-navigation
+  debian:
+    10,buster,default: rock-master-20.06-planning-corridor-navigation
+planning/motion_planning_libraries:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-motion-planning-libraries
+  debian:
+    10,buster,default: rock-master-20.06-planning-motion-planning-libraries
+slam/pose_ekf:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-pose-ekf
+  debian:
+    10,buster,default: rock-master-20.06-slam-pose-ekf
+slam/quater_ikf:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-quater-ikf
+  debian:
+    10,buster,default: rock-master-20.06-slam-quater-ikf
+external/cminpack:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-external-cminpack
+  debian:
+    10,buster,default: rock-master-20.06-external-cminpack
+slam/flann:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-flann
+slam/quater_ukf:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-quater-ukf
+  debian:
+    10,buster,default: rock-master-20.06-slam-quater-ukf
+slam/orogen/envire:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-orogen-envire
+  debian:
+    10,buster,default: rock-master-20.06-slam-orogen-envire
+drivers/orogen/canbus:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-canbus
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-canbus
+drivers/orogen/canopen_master:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-canopen-master
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-canopen-master
+drivers/orogen/gps_base:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-gps-base
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-gps-base
+drivers/orogen/imu_advanced_navigation_anpp:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-imu-advanced-navigation-anpp
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-imu-advanced-navigation-anpp
+slam/orogen/pcl:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-orogen-pcl
+  debian:
+    10,buster,default: rock-master-20.06-slam-orogen-pcl
+perception/orogen/apriltags:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-perception-orogen-apriltags
+  debian:
+    10,buster,default: rock-master-20.06-perception-orogen-apriltags
+control/orogen/auv_control:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-orogen-auv-control
+  debian:
+    10,buster,default: rock-master-20.06-control-orogen-auv-control
+control/orogen/uwv_dynamic_model:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-orogen-uwv-dynamic-model
+  debian:
+    10,buster,default: rock-master-20.06-control-orogen-uwv-dynamic-model
+drivers/orogen/dvl_teledyne:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-dvl-teledyne
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-dvl-teledyne
+slam/orogen/uwv_kalman_filters:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-orogen-uwv-kalman-filters
+  debian:
+    10,buster,default: rock-master-20.06-slam-orogen-uwv-kalman-filters
+slam/orogen/simple_pose_integrator:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-orogen-simple-pose-integrator
+  debian:
+    10,buster,default: rock-master-20.06-slam-orogen-simple-pose-integrator
+control/orogen/robot_frames:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-orogen-robot-frames
+  debian:
+    10,buster,default: rock-master-20.06-control-orogen-robot-frames
+control/orogen/joint_tools:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-orogen-joint-tools
+  debian:
+    10,buster,default: rock-master-20.06-control-orogen-joint-tools
+gui/orogen/qt_base:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-orogen-qt-base
+  debian:
+    10,buster,default: rock-master-20.06-gui-orogen-qt-base
+slam/orogen/threed_odometry:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-orogen-threed-odometry
+  debian:
+    10,buster,default: rock-master-20.06-slam-orogen-threed-odometry
+slam/orogen/gmapping:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-orogen-gmapping
+  debian:
+    10,buster,default: rock-master-20.06-slam-orogen-gmapping
+perception/orogen/projection:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-perception-orogen-projection
+  debian:
+    10,buster,default: rock-master-20.06-perception-orogen-projection
+perception/orogen/virtual_view:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-perception-orogen-virtual-view
+  debian:
+    10,buster,default: rock-master-20.06-perception-orogen-virtual-view
+control/orogen/trajectory_generation:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-orogen-trajectory-generation
+  debian:
+    10,buster,default: rock-master-20.06-control-orogen-trajectory-generation
+drivers/orogen/controldev:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-controldev
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-controldev
+control/orogen/auv_raw_command_converter:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-orogen-auv-raw-command-converter
+  debian:
+    10,buster,default: rock-master-20.06-control-orogen-auv-raw-command-converter
+slam/orogen/north_seeker:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-orogen-north-seeker
+  debian:
+    10,buster,default: rock-master-20.06-slam-orogen-north-seeker
+slam/orogen/odometry:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-orogen-odometry
+  debian:
+    10,buster,default: rock-master-20.06-slam-orogen-odometry
+drivers/orogen/velodyne_lidar:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-velodyne-lidar
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-velodyne-lidar
+slam/orogen/pose_estimation:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-orogen-pose-estimation
+  debian:
+    10,buster,default: rock-master-20.06-slam-orogen-pose-estimation
+planning/orogen/pddl_planner:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-orogen-pddl-planner
+  debian:
+    10,buster,default: rock-master-20.06-planning-orogen-pddl-planner
+planning/orogen/heading_calculator:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-orogen-heading-calculator
+  debian:
+    10,buster,default: rock-master-20.06-planning-orogen-heading-calculator
+planning/orogen/traversability:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-orogen-traversability
+  debian:
+    10,buster,default: rock-master-20.06-planning-orogen-traversability
+drivers/orogen/imu_imar:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-imu-imar
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-imu-imar
+drivers/orogen/ctd_seabird:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-ctd-seabird
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-ctd-seabird
+drivers/orogen/pressure_paroscientific:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-pressure-paroscientific
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-pressure-paroscientific
+drivers/orogen/ucm_schilling:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-ucm-schilling
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-ucm-schilling
+drivers/orogen/act_schilling:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-act-schilling
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-act-schilling
+drivers/orogen/phins_ixsea:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-phins-ixsea
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-phins-ixsea
+drivers/orogen/camera_base:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-camera-base
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-camera-base
+drivers/orogen/dps_desertstar_ssp1:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-dps-desertstar-ssp1
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-dps-desertstar-ssp1
+drivers/orogen/video_streamer_vlc:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-video-streamer-vlc
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-video-streamer-vlc
+simulation/orogen/imumodel:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-orogen-imumodel
+  debian:
+    10,buster,default: rock-master-20.06-simulation-orogen-imumodel
+drivers/orogen/servo_dynamixel:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-servo-dynamixel
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-servo-dynamixel
+control/orogen/motor_controller:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-orogen-motor-controller
+  debian:
+    10,buster,default: rock-master-20.06-control-orogen-motor-controller
+control/orogen/joint_dispatcher:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-orogen-joint-dispatcher
+  debian:
+    10,buster,default: rock-master-20.06-control-orogen-joint-dispatcher
+drivers/orogen/ptu_directedperception:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-ptu-directedperception
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-ptu-directedperception
+control/orogen/trajectory_follower:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-orogen-trajectory-follower
+  debian:
+    10,buster,default: rock-master-20.06-control-orogen-trajectory-follower
+control/orogen/skid4_control:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-control-orogen-skid4-control
+  debian:
+    10,buster,default: rock-master-20.06-control-orogen-skid4-control
+drivers/orogen/gps:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-gps
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-gps
+drivers/orogen/hokuyo:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-hokuyo
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-hokuyo
+drivers/orogen/xsens_imu:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-xsens-imu
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-xsens-imu
+drivers/orogen/controldev_websocket:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-controldev-websocket
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-controldev-websocket
+drivers/orogen/parport:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-parport
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-parport
+drivers/orogen/wifimon:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-wifimon
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-wifimon
+drivers/orogen/camera_prosilica:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-camera-prosilica
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-camera-prosilica
+drivers/orogen/camera_usb:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-camera-usb
+drivers/orogen/camera_firewire:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-camera-firewire
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-camera-firewire
+drivers/orogen/vicon:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-vicon
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-vicon
+drivers/orogen/sonar_tritech:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-sonar-tritech
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-sonar-tritech
+drivers/orogen/laserscanner_sick:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-laserscanner-sick
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-laserscanner-sick
+drivers/orogen/qualisys:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-qualisys
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-qualisys
+drivers/orogen/laser_filter:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-laser-filter
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-laser-filter
+drivers/orogen/taskmon:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-orogen-taskmon
+  debian:
+    10,buster,default: rock-master-20.06-drivers-orogen-taskmon
+slam/orogen/tilt_scan:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-orogen-tilt-scan
+  debian:
+    10,buster,default: rock-master-20.06-slam-orogen-tilt-scan
+planning/orogen/motion_planning_libraries:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-planning-orogen-motion-planning-libraries
+  debian:
+    10,buster,default: rock-master-20.06-planning-orogen-motion-planning-libraries
+tools/backward:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-backward
+  debian:
+    10,buster,default: rock-master-20.06-tools-backward
+tools/orocos_cpp:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-orocos-cpp
+  debian:
+    10,buster,default: rock-master-20.06-tools-orocos-cpp
+gui/rock_replay:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-rock-replay
+  debian:
+    10,buster,default: rock-master-20.06-gui-rock-replay
+tools/configmaps:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-configmaps
+  debian:
+    10,buster,default: rock-master-20.06-tools-configmaps
+simulation/smurf_parser:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-smurf-parser
+  debian:
+    10,buster,default: rock-master-20.06-simulation-smurf-parser
+tools/smurf:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-smurf
+  debian:
+    10,buster,default: rock-master-20.06-tools-smurf
+gui/rock-display:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-rock-display
+  debian:
+    10,buster,default: rock-master-20.06-gui-rock-display
+simulation/lib_manager:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-lib-manager
+  debian:
+    10,buster,default: rock-master-20.06-simulation-lib-manager
+simulation/mars/common/utils:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-utils
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-utils
+simulation/mars/common/cfg_manager:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-cfg-manager
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-cfg-manager
+simulation/mars/common/gui/main_gui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-gui-main-gui
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-gui-main-gui
+simulation/mars/common/gui/config_map_gui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-gui-config-map-gui
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-gui-config-map-gui
+simulation/mars/common/gui/gui_app:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-gui-gui-app
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-gui-gui-app
+simulation/mars/common/data_broker:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-data-broker
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-data-broker
+simulation/mars/interfaces:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-interfaces
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-interfaces
+simulation/ode:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-ode
+  debian:
+    10,buster,default: rock-master-20.06-simulation-ode
+simulation/mars/sim:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-sim
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-sim
+simulation/mars/entity_generation/entity_factory:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-entity-generation-entity-factory
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-entity-generation-entity-factory
+simulation/mars/entity_generation/primitives:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-entity-generation-primitives
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-entity-generation-primitives
+simulation/mars/plugins/entity_view:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-plugins-entity-view
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-plugins-entity-view
+simulation/mars/plugins/SkyDomePlugin:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-plugins-skydomeplugin
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-plugins-skydomeplugin
+simulation/mars/common/graphics/osg_material_manager:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-graphics-osg-material-manager
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-graphics-osg-material-manager
+simulation/mars/common/graphics/osg_terrain:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-graphics-osg-terrain
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-graphics-osg-terrain
+simulation/mars/graphics:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-graphics
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-graphics
+simulation/mars/plugins/CameraGUI:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-plugins-cameragui
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-plugins-cameragui
+simulation/mars/common/graphics/osg_points:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-graphics-osg-points
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-graphics-osg-points
+simulation/mars/plugins/TerrainPlugin:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-plugins-terrainplugin
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-plugins-terrainplugin
+simulation/mars/common/graphics/osg_lines:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-graphics-osg-lines
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-graphics-osg-lines
+simulation/mars/gui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-gui
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-gui
+simulation/mars/plugins/connexion_plugin:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-plugins-connexion-plugin
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-plugins-connexion-plugin
+simulation/mars/common/gui/data_broker_gui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-gui-data-broker-gui
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-gui-data-broker-gui
+simulation/mars/common/gui/cfg_manager_gui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-gui-cfg-manager-gui
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-gui-cfg-manager-gui
+simulation/mars/common/gui/lib_manager_gui:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-gui-lib-manager-gui
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-gui-lib-manager-gui
+simulation/mars/common/gui/log_console:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-gui-log-console
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-gui-log-console
+simulation/mars/common/gui/data_broker_plotter2:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-gui-data-broker-plotter2
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-gui-data-broker-plotter2
+simulation/mars/plugins/connectors:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-plugins-connectors
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-plugins-connectors
+external/minizip:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-external-minizip
+  debian:
+    10,buster,default: rock-master-20.06-external-minizip
+simulation/mars/scene_loader:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-scene-loader
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-scene-loader
+simulation/mars/entity_generation/smurf:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-entity-generation-smurf
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-entity-generation-smurf
+simulation/mars/smurf_loader:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-smurf-loader
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-smurf-loader
+simulation/mars/app:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-app
+simulation/mars/plugins/PythonMars:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-plugins-pythonmars
+simulation/mars/common/graphics/osg_text:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-graphics-osg-text
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-graphics-osg-text
+bagel/osg_graph_viz:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-bagel-osg-graph-viz
+  debian:
+    10,buster,default: rock-master-20.06-bagel-osg-graph-viz
+simulation/mars_extensions/data_broker_graph_view:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-extensions-data-broker-graph-view
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-extensions-data-broker-graph-view
+simulation/mars/common/graphics/osg_text_factory:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-graphics-osg-text-factory
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-graphics-osg-text-factory
+simulation/mars/plugins/Text3D:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-plugins-text3d
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-plugins-text3d
+simulation/mars/common/gui/data_broker_plotter:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-common-gui-data-broker-plotter
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-common-gui-data-broker-plotter
+simulation/mars/viz:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-viz
+simulation/mars/plugins/VirtualJoystickPlugin:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-plugins-virtualjoystickplugin
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-plugins-virtualjoystickplugin
+simulation/mars/plugins/constraint_plugin:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-plugins-constraint-plugin
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-plugins-constraint-plugin
+simulation/mars/doc:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-mars-doc
+  debian:
+    10,buster,default: rock-master-20.06-simulation-mars-doc
+simulation/ode-16:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-simulation-ode-16
+  debian:
+    10,buster,default: rock-master-20.06-simulation-ode-16
+models/robots/robo2:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-models-robots-robo2
+  debian:
+    10,buster,default: rock-master-20.06-models-robots-robo2
+models/robots/robo3:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-models-robots-robo3
+  debian:
+    10,buster,default: rock-master-20.06-models-robots-robo3
+models/robots/turtlebot:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-models-robots-turtlebot
+  debian:
+    10,buster,default: rock-master-20.06-models-robots-turtlebot
+models/robots/stick_insect:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-models-robots-stick-insect
+  debian:
+    10,buster,default: rock-master-20.06-models-robots-stick-insect
+models/robots/wheelchair:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-models-robots-wheelchair
+  debian:
+    10,buster,default: rock-master-20.06-models-robots-wheelchair
+models/environments/area1:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-models-environments-area1
+  debian:
+    10,buster,default: rock-master-20.06-models-environments-area1
+models/environments/area2:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-models-environments-area2
+  debian:
+    10,buster,default: rock-master-20.06-models-environments-area2
+models/environments/office1:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-models-environments-office1
+  debian:
+    10,buster,default: rock-master-20.06-models-environments-office1
+models/environments/lecture_room:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-models-environments-lecture-room
+  debian:
+    10,buster,default: rock-master-20.06-models-environments-lecture-room
+gui/osg_plugins/osgdb_bobj:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-gui-osg-plugins-osgdb-bobj
+  debian:
+    10,buster,default: rock-master-20.06-gui-osg-plugins-osgdb-bobj
+base/boost_serialization:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-base-boost-serialization
+  debian:
+    10,buster,default: rock-master-20.06-base-boost-serialization
+external/ogdf:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-external-ogdf
+  debian:
+    10,buster,default: rock-master-20.06-external-ogdf
+tools/plugin_manager:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-tools-plugin-manager
+  debian:
+    10,buster,default: rock-master-20.06-tools-plugin-manager
+envire/envire_core:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-envire-envire-core
+  debian:
+    10,buster,default: rock-master-20.06-envire-envire-core
+envire/orogen/envire_orogen:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-envire-orogen-envire-orogen
+  debian:
+    10,buster,default: rock-master-20.06-envire-orogen-envire-orogen
+envire/orogen/envire_core:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-envire-orogen-envire-core
+  debian:
+    10,buster,default: rock-master-20.06-envire-orogen-envire-core
+bundler:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: bundler
+    20.04,focal,fossa,default: bundler
+  debian:
+    10,buster,default: bundler
+facets:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-facets
+  debian:
+    10,buster,default: ruby-facets
+backports:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-backports
+  debian:
+    10,buster,default: rock-master-20.06-ruby-backports
+rice:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-rice
+  debian:
+    10,buster,default: rock-master-20.06-ruby-rice
+yard:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-yard
+  debian:
+    10,buster,default: rock-master-20.06-ruby-yard
+xmlrpc:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-xmlrpc
+    20.04,focal,fossa,default: ruby-xmlrpc
+  debian:
+    10,buster,default: ruby-xmlrpc
+state_machine:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-state-machine
+  debian:
+    10,buster,default: rock-master-20.06-ruby-state-machine
+websocket:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-websocket
+    20.04,focal,fossa,default: ruby-websocket
+  debian:
+    10,buster,default: ruby-websocket
+rb-readline:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-rb-readline
+  debian:
+    10,buster,default: rock-master-20.06-ruby-rb-readline
+concurrent-ruby:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-concurrent-ruby
+  debian:
+    10,buster,default: rock-master-20.06-ruby-concurrent-ruby
+qtbindings:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-qtbindings
+  debian:
+    10,buster,default: rock-master-20.06-ruby-qtbindings
+minitest:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-minitest
+    20.04,focal,fossa,default: ruby-minitest
+  debian:
+    10,buster,default: ruby-minitest
+flexmock:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-flexmock
+    20.04,focal,fossa,default: ruby-flexmock
+  debian:
+    10,buster,default: ruby-flexmock
+fakefs:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-fakefs
+    20.04,focal,fossa,default: ruby-fakefs
+  debian:
+    10,buster,default: ruby-fakefs
+timecop:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-timecop
+    20.04,focal,fossa,default: ruby-timecop
+  debian:
+    10,buster,default: ruby-timecop
+stackprof:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-stackprof
+    20.04,focal,fossa,default: ruby-stackprof
+  debian:
+    10,buster,default: rock-master-20.06-ruby-stackprof
+tty-cursor:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-tty-cursor
+    20.04,focal,fossa,default: ruby-tty-cursor
+  debian:
+    10,buster,default: rock-master-20.06-ruby-tty-cursor
+geoutm:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-geoutm
+  debian:
+    10,buster,default: rock-master-20.06-ruby-geoutm
+rexml:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-rexml
+  debian:
+    10,buster,default: rock-master-20.06-ruby-rexml
+rake:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rake
+    20.04,focal,fossa,default: rake
+  debian:
+    10,buster,default: rake
+daemons:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-daemons
+    20.04,focal,fossa,default: ruby-daemons
+  debian:
+    10,buster,default: ruby-daemons
+eventmachine:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-eventmachine
+    20.04,focal,fossa,default: ruby-eventmachine
+  debian:
+    10,buster,default: ruby-eventmachine
+rack:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-rack
+    20.04,focal,fossa,default: ruby-rack
+  debian:
+    10,buster,default: ruby-rack
+builder:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-builder
+    20.04,focal,fossa,default: ruby-builder
+  debian:
+    10,buster,default: ruby-builder
+debug_inspector:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-debug-inspector
+    20.04,focal,fossa,default: ruby-debug-inspector
+  debian:
+    10,buster,default: ruby-debug-inspector
+equatable:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-equatable
+    20.04,focal,fossa,default: ruby-equatable
+  debian:
+    10,buster,default: rock-master-20.06-ruby-equatable
+tty-color:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-tty-color
+    20.04,focal,fossa,default: ruby-tty-color
+  debian:
+    10,buster,default: rock-master-20.06-ruby-tty-color
+uber:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-uber
+    20.04,focal,fossa,default: ruby-uber
+  debian:
+    10,buster,default: ruby-uber
+lazy_priority_queue:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-lazy-priority-queue
+  debian:
+    10,buster,default: rock-master-20.06-ruby-lazy-priority-queue
+stream:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-stream
+  debian:
+    10,buster,default: rock-master-20.06-ruby-stream
+http-accept:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-http-accept
+  debian:
+    10,buster,default: rock-master-20.06-ruby-http-accept
+netrc:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-netrc
+    20.04,focal,fossa,default: ruby-netrc
+  debian:
+    10,buster,default: ruby-netrc
+ffi:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-ffi
+    20.04,focal,fossa,default: ruby-ffi
+  debian:
+    10,buster,default: ruby-ffi
+msgpack:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-msgpack
+    20.04,focal,fossa,default: ruby-msgpack
+  debian:
+    10,buster,default: ruby-msgpack
+optimist:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-optimist
+    20.04,focal,fossa,default: ruby-optimist
+  debian:
+    10,buster,default: rock-master-20.06-ruby-optimist
+necromancer:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-necromancer
+    20.04,focal,fossa,default: ruby-necromancer
+  debian:
+    10,buster,default: rock-master-20.06-ruby-necromancer
+timers:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-timers
+    20.04,focal,fossa,default: ruby-timers
+  debian:
+    10,buster,default: ruby-timers
+tty-screen:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-tty-screen
+    20.04,focal,fossa,default: ruby-tty-screen
+  debian:
+    10,buster,default: rock-master-20.06-ruby-tty-screen
+rb-fsevent:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-rb-fsevent
+  debian:
+    10,buster,default: rock-master-20.06-ruby-rb-fsevent
+zeitwerk:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-zeitwerk
+    20.04,focal,fossa,default: ruby-zeitwerk
+  debian:
+    10,buster,default: rock-master-20.06-ruby-zeitwerk
+dry-equalizer:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-dry-equalizer
+    20.04,focal,fossa,default: ruby-dry-equalizer
+  debian:
+    10,buster,default: rock-master-20.06-ruby-dry-equalizer
+dry-inflector:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-dry-inflector
+    20.04,focal,fossa,default: ruby-dry-inflector
+  debian:
+    10,buster,default: rock-master-20.06-ruby-dry-inflector
+websocket-extensions:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-websocket-extensions
+    20.04,focal,fossa,default: ruby-websocket-extensions
+  debian:
+    10,buster,default: ruby-websocket-extensions
+mime-types-data:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-mime-types-data
+    20.04,focal,fossa,default: ruby-mime-types-data
+  debian:
+    10,buster,default: ruby-mime-types-data
+wisper:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-wisper
+    20.04,focal,fossa,default: ruby-wisper
+  debian:
+    10,buster,default: rock-master-20.06-ruby-wisper
+strings-ansi:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-strings-ansi
+  debian:
+    10,buster,default: rock-master-20.06-ruby-strings-ansi
+unicode-display_width:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-unicode-display-width
+    20.04,focal,fossa,default: ruby-unicode-display-width
+  debian:
+    10,buster,default: ruby-unicode-display-width
+unicode_utils:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-unicode-utils
+    20.04,focal,fossa,default: ruby-unicode-utils
+  debian:
+    10,buster,default: rock-master-20.06-ruby-unicode-utils
+thread_safe:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-thread-safe
+    20.04,focal,fossa,default: ruby-thread-safe
+  debian:
+    10,buster,default: ruby-thread-safe
+ruby2_keywords:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-ruby2-keywords
+    20.04,focal,fossa,default: ruby-ruby2-keywords
+  debian:
+    10,buster,default: rock-master-20.06-ruby-ruby2-keywords
+unf_ext:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-unf-ext
+    20.04,focal,fossa,default: ruby-unf-ext
+  debian:
+    10,buster,default: ruby-unf-ext
+kramdown:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-kramdown
+    20.04,focal,fossa,default: kramdown
+  debian:
+    10,buster,default: ruby-kramdown
+hoe:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-hoe
+    20.04,focal,fossa,default: ruby-hoe
+  debian:
+    10,buster,default: ruby-hoe
+hoe-yard:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-hoe-yard
+  debian:
+    10,buster,default: rock-master-20.06-ruby-hoe-yard
+rake-compiler:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rake-compiler
+    20.04,focal,fossa,default: rake-compiler
+  debian:
+    10,buster,default: rake-compiler
+thin:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-thin
+  debian:
+    10,buster,default: rock-master-20.06-ruby-thin
+rack-cors:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-rack-cors
+    20.04,focal,fossa,default: ruby-rack-cors
+  debian:
+    10,buster,default: ruby-rack-cors
+sprockets:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-sprockets
+    20.04,focal,fossa,default: ruby-sprockets
+  debian:
+    10,buster,default: ruby-sprockets
+binding_of_caller:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-binding-of-caller
+    20.04,focal,fossa,default: ruby-binding-of-caller
+  debian:
+    10,buster,default: ruby-binding-of-caller
+concurrent-ruby-ext:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-concurrent-ruby-ext
+  debian:
+    10,buster,default: rock-master-20.06-ruby-concurrent-ruby-ext
+pastel:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-pastel
+    20.04,focal,fossa,default: ruby-pastel
+  debian:
+    10,buster,default: rock-master-20.06-ruby-pastel
+hooks:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-hooks
+  debian:
+    10,buster,default: rock-master-20.06-ruby-hooks
+rgl:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-rgl
+  debian:
+    10,buster,default: rock-master-20.06-ruby-rgl
+rbtrace:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-rbtrace
+    20.04,focal,fossa,default: ruby-rbtrace
+  debian:
+    10,buster,default: ruby-rbtrace
+rack-accept:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-rack-accept
+    20.04,focal,fossa,default: ruby-rack-accept
+  debian:
+    10,buster,default: ruby-rack-accept
+websocket-driver:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-websocket-driver
+    20.04,focal,fossa,default: ruby-websocket-driver
+  debian:
+    10,buster,default: ruby-websocket-driver
+mime-types:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-mime-types
+    20.04,focal,fossa,default: ruby-mime-types
+  debian:
+    10,buster,default: ruby-mime-types
+tty-reader:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-tty-reader
+    20.04,focal,fossa,default: ruby-tty-reader
+  debian:
+    10,buster,default: rock-master-20.06-ruby-tty-reader
+strings:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-strings
+  debian:
+    10,buster,default: rock-master-20.06-ruby-strings
+rb-inotify:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-rb-inotify
+    20.04,focal,fossa,default: ruby-rb-inotify
+  debian:
+    10,buster,default: ruby-rb-inotify
+i18n:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-i18n
+    20.04,focal,fossa,default: ruby-i18n
+  debian:
+    10,buster,default: ruby-i18n
+tzinfo:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-tzinfo
+    20.04,focal,fossa,default: ruby-tzinfo
+  debian:
+    10,buster,default: ruby-tzinfo
+dry-core:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-dry-core
+    20.04,focal,fossa,default: ruby-dry-core
+  debian:
+    10,buster,default: rock-master-20.06-ruby-dry-core
+mustermann:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-mustermann
+    20.04,focal,fossa,default: ruby-mustermann
+  debian:
+    10,buster,default: ruby-mustermann
+unf:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-unf
+    20.04,focal,fossa,default: ruby-unf
+  debian:
+    10,buster,default: ruby-unf
+faye-websocket:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-faye-websocket
+    20.04,focal,fossa,default: ruby-faye-websocket
+  debian:
+    10,buster,default: ruby-faye-websocket
+autorespawn:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-autorespawn
+  debian:
+    10,buster,default: rock-master-20.06-ruby-autorespawn
+tty-prompt:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-tty-prompt
+    20.04,focal,fossa,default: ruby-tty-prompt
+  debian:
+    10,buster,default: rock-master-20.06-ruby-tty-prompt
+tty-table:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-tty-table
+  debian:
+    10,buster,default: rock-master-20.06-ruby-tty-table
+listen:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-listen
+    20.04,focal,fossa,default: ruby-listen
+  debian:
+    10,buster,default: ruby-listen
+activesupport:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-activesupport
+    20.04,focal,fossa,default: ruby-activesupport
+  debian:
+    10,buster,default: ruby-activesupport
+mustermann-grape:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-mustermann-grape
+    20.04,focal,fossa,default: ruby-mustermann-grape
+  debian:
+    10,buster,default: ruby-mustermann-grape
+dry-logic:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-dry-logic
+    20.04,focal,fossa,default: ruby-dry-logic
+  debian:
+    10,buster,default: rock-master-20.06-ruby-dry-logic
+domain_name:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-domain-name
+    20.04,focal,fossa,default: ruby-domain-name
+  debian:
+    10,buster,default: ruby-domain-name
+dry-configurable:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-dry-configurable
+    20.04,focal,fossa,default: ruby-dry-configurable
+  debian:
+    10,buster,default: rock-master-20.06-ruby-dry-configurable
+http-cookie:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-http-cookie
+    20.04,focal,fossa,default: ruby-http-cookie
+  debian:
+    10,buster,default: ruby-http-cookie
+dry-container:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-dry-container
+    20.04,focal,fossa,default: ruby-dry-container
+  debian:
+    10,buster,default: rock-master-20.06-ruby-dry-container
+rest-client:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-rest-client
+    20.04,focal,fossa,default: ruby-rest-client
+  debian:
+    10,buster,default: ruby-rest-client
+dry-types:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-ruby-dry-types
+    20.04,focal,fossa,default: ruby-dry-types
+  debian:
+    10,buster,default: rock-master-20.06-ruby-dry-types
+grape:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-grape
+    20.04,focal,fossa,default: ruby-grape
+  debian:
+    10,buster,default: ruby-grape
+grape_logging:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: ruby-grape-logging
+    20.04,focal,fossa,default: ruby-grape-logging
+  debian:
+    10,buster,default: ruby-grape-logging
+slam/gtsam:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-slam-gtsam
+  debian:
+    10,buster,default: rock-master-20.06-slam-gtsam
+drivers/glfw:
+  ubuntu,debian:
+    18.04,bionic,beaver,default: rock-master-20.06-drivers-glfw
