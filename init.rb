@@ -11,7 +11,7 @@ end
 require_relative 'lib/rock-osdeps/package_selector'
 
 #Add rock-debs
-Autoproj.configuration_option 'DEB_USE', 'boolean',
+Autoproj.config.declare 'DEB_USE', 'boolean',
         :default => 'yes',
         :doc => ["Use rock debian packages ?",
           "This enables the usage of precompiled Debian-Packages.",
@@ -21,7 +21,7 @@ Autoproj.configuration_option 'DEB_USE', 'boolean',
           "/opt/rock/<rock-debian-release>/. You will be later asked to select the rock",
           "debian release. So, use rock debian packages? "]
 
-Autoproj.configuration_option 'DEB_USE_UNAVAILABLE', 'string',
+Autoproj.config.declare 'DEB_USE_UNAVAILABLE', 'string',
         :default => 'ok',
         :doc => "Debian packages are not provided for your operating system: #{distribution}, #{release}"
 
@@ -45,7 +45,7 @@ if Autoproj.user_config('DEB_USE')
         architecture = "#{`gcc -print-multiarch`}".strip
         debian_architecture = "#{`dpkg --print-architecture`}".strip
 
-        Autoproj.configuration_option 'debian_release', 'string',
+        Autoproj.config.declare 'debian_release', 'string',
             :default => 'master-20.06',
             :possible_answers => Rock::DebianPackaging::Release.available,
             :doc => ["Which rock debian release should be used
@@ -57,7 +57,7 @@ if Autoproj.user_config('DEB_USE')
                         Autoproj.user_config('debian_release'),
                         data_dir: File.join(__dir__,'data'))
 
-        Autoproj.configuration_option 'DEB_AUTOMATIC', 'boolean',
+        Autoproj.config.declare 'DEB_AUTOMATIC', 'boolean',
             :default => 'yes',
             :doc => ["Do you want the installation be done automatically?",
             "This installation uses sudo and may ask for your password",
