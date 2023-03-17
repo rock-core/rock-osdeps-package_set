@@ -1,0 +1,55 @@
+FROM ubuntu:22.04
+
+LABEL authors="Thomas Roehr"
+
+## BEGIN BUILD ARGUMENTS
+# Arguments for creation of the Docker imaged,
+# passed via --build-arg
+
+# Optional arguments
+ARG PKG_BRANCH="master"
+ENV PKG_BRANCH=${PKG_BRANCH}
+
+ARG PKG_PULL_REQUEST="false"
+ENV PKG_PULL_REQUEST=${PKG_PULL_REQUEST}
+
+ARG PKG_PULL_REQUEST_BRANCH=""
+ENV PKG_PULL_REQUEST_BRANCH=${PKG_PULL_REQUEST_BRANCH}
+
+ARG PKG_PULL_REQUEST_SLUG=""
+ENV PKG_PULL_REQUEST_SLUG=${PKG_PULL_REQUEST_SLUG}
+## END ARGUMENTS
+
+RUN apt update
+RUN apt upgrade -y
+ENV DEBIAN_FRONTEND=noninteractive
+RUN ln -fs /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+RUN apt install -y ruby ruby-dev wget tzdata locales g++ autotools-dev make cmake sudo git gnupg
+RUN echo "Europe/Berlin" > /etc/timezone; dpkg-reconfigure -f noninteractive tzdata
+
+RUN useradd -ms /bin/bash docker
+RUN echo "docker ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+
+USER docker
+WORKDIR /home/docker
+
+ENV LANG de_DE.UTF-8
+ENV LANGUAGE de_DE:de
+RUN locale-gen de_DE.UTF-8; DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
+
+ENV SHELL /bin/bash
+
+RUN git config --global user.email "rock-users@dfki.de"
+RUN git config --global user.name "Rock Osdeps"
+
+#RUN wget https://raw.githubusercontent.com/rock-core/autoproj/master/bin/autoproj_bootstrap
+RUN wget https://raw.githubusercontent.com/rock-core/2maz/master/bin/autoproj_bootstrap
+
+### TEST RELEASES
+# Use the existing seed configuration
+COPY --chown=docker .ci/autoproj-config.yml /home/docker/seed-config.yml
+COPY --chown=docker .ci/prepare_release.sh /home/docker/prepare_release.sh
+COPY --chown=docker .ci/test_release.sh /home/docker/test_release.sh
+RUN chmod 755 /home/docker/test_release.sh
+
+RUN /bin/bash prepare_release.sh master-22.06

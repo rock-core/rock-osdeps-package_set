@@ -28,7 +28,7 @@ Autoproj.config.declare 'DEB_USE_UNAVAILABLE', 'string',
 #the actual settings if enabled
 if Autoproj.user_config('DEB_USE')
     current_release_name = nil
-    ['jessie','squeeze','stretch','buster','trusty','xenial','bionic','focal'].each do |release_name|
+    ['jessie','squeeze','stretch','buster','trusty','xenial','bionic','focal','jammy'].each do |release_name|
         if release.include?(release_name)
             current_release_name = release_name
             break
