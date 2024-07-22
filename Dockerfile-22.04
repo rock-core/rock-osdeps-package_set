@@ -30,20 +30,19 @@ RUN echo "Europe/Berlin" > /etc/timezone; dpkg-reconfigure -f noninteractive tzd
 RUN useradd -ms /bin/bash docker
 RUN echo "docker ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
-USER docker
-WORKDIR /home/docker
-
 ENV LANG de_DE.UTF-8
 ENV LANGUAGE de_DE:de
 RUN locale-gen de_DE.UTF-8; DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
+
+USER docker
+WORKDIR /home/docker
 
 ENV SHELL /bin/bash
 
 RUN git config --global user.email "rock-users@dfki.de"
 RUN git config --global user.name "Rock Osdeps"
 
-#RUN wget https://raw.githubusercontent.com/rock-core/autoproj/master/bin/autoproj_bootstrap
-RUN wget https://raw.githubusercontent.com/rock-core/2maz/master/bin/autoproj_bootstrap
+RUN wget https://raw.githubusercontent.com/rock-core/autoproj/master/bin/autoproj_bootstrap
 
 ### TEST RELEASES
 # Use the existing seed configuration
